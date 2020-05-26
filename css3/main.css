@@ -10,15 +10,21 @@
 }
 body
 {
+    padding: 0 4px;
+
     margin: 0 auto;
 
     min-width: 350px;
 
     max-width: 1200px;
+
+    background: rgb(161, 161, 161);
 }
 body > #div_logo
 {
     padding: 10px 0;
+
+    border-radius: 5px 5px 0 0;
 
     background: rgba(89, 88, 141, 0.808);
 }
@@ -36,7 +42,7 @@ body > #div_main
 {
     height: 100vh;
 
-    background: rgb(245, 245, 253);
+    background: white;
 }
 body > #div_main > .div_titulo
 {
