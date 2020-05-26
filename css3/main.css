@@ -12,15 +12,13 @@
 }
 body
 {
-    padding: 0 4px;
+    padding: 1PX 5px;
 
     margin: 0 auto;
 
     min-width: 350px;
 
     max-width: 1200px;
-
-    background: rgb(161, 161, 161);
 }
 body > #div_logo
 {
@@ -154,13 +152,11 @@ body > #div_main > #div_calcular > #input_digito
 }
 hr
 {
+    width: 80%;
+
     display: block;
 
     margin: 0 auto;
 
-    width: 400px;
-
-    border-style: solid;
-    
     border-color: rgba(174, 173, 228, 0.459);
 }
