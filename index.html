@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        
+        <meta charset="utf-8">
+
+        <title> LISTA DE ITENS </title>
+
+        <link rel="shortcut icon" href="imagens/logo_icon.png">
+        
+        <link rel="stylesheet" href="css3/main.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"> 
+        
+        <script type="text/javascript" src="javaScript/main.js"> </script>
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    
+    </head>
+
+    <body>
+
+        <div id=div_logo>
+
+            <img id="img_logo" src="imagens/logo.png">
+
+        </div>
+
+        <div id=div_main>
+
+            <div class=div_titulo>
+
+                <div class=div_imagem>
+                    
+                    <img src="imagens/icon_lista.png"> 
+                
+                </div>
+
+                <div>
+                    
+                    <h1> LISTA DE ITENS </h1>
+
+                </div>
+
+            </div>
+
+            <div id=div_pesquisa>
+
+                <form id=form_pesquisa>
+
+                    <input id=input_pesquisa type="search" list="produtos" placeholder="Pesquisar produto">
+
+                    <img class=img_btn src="imagens/lupa.png">
+
+                    <datalist id=produtos>
+                        
+                        <option value="produto um"> </option>
+
+                        <option value="produto dois"> </option>
+
+                        <option value="produto tres"> </option>
+                   
+                    </datalist>
+                    
+                </form>
+            
+            </div>
+
+            <hr>
+
+            <div class=div_titulo>
+
+                <div class="div_imagem">
+                    
+                    <img src="imagens/icon_calcular.png"> 
+                
+                </div>
+
+                <div>
+                    
+                    <h1> ULTIMO DIGITO </h1>
+
+                </div>
+
+            </div>
+
+            <div id=div_calcular>
+        
+                <form id=form_calcular>
+                    
+                    <input id=input_item  type="tel" placeholder="Codigo do item" maxlength="9" minlength="6" onkeypress="return char(event)">
+                    
+                    <img class=img_btn src="imagens/go.png" onclick="calcular(this.event)">
+
+                </form>
+
+                <input id=input_digito value="0" readonly>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

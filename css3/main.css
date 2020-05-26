@@ -1,0 +1,158 @@
+*
+{
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: 'Roboto';
+}
+body
+{
+    margin: 0 auto;
+
+    min-width: 350px;
+
+    max-width: 1200px;
+}
+body > #div_logo
+{
+    padding: 10px 0;
+
+    background: rgba(89, 88, 141, 0.808);
+}
+body > #div_logo > #img_logo
+{
+    display: block;
+
+    margin: 0 auto;
+
+    width: 150px;
+
+    height: 150px;
+}
+body > #div_main
+{
+    height: 100vh;
+
+    background: rgb(245, 245, 253);
+}
+body > #div_main > .div_titulo
+{
+    color: rgb(41, 41, 41);
+
+    font-size: 16px;
+
+    padding: 70px 0 0 0;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+}
+body > #div_main > .div_titulo > .div_imagem
+{
+   margin: 0 30px 0 0;
+}
+body > #div_main > #div_pesquisa,
+
+        body > #div_main > #div_calcular
+        {
+            text-align: center;
+            
+            padding: 40px 0;
+        }
+body > #div_main > #div_pesquisa > #form_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular
+        {
+            width: 309px;
+
+            height: 32px;
+
+            margin: 0 auto;
+        }
+body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular > #input_item
+        {
+            width: 275px;
+
+            height: 32px;
+
+            text-align: center;
+
+            font-size: 17px;
+
+            padding: 0 0 0 8px;
+
+            margin: 0 2px 0 0;
+
+            float: left;
+
+            border-style: solid;
+
+            border-width: 1px;
+
+            border-radius: 5px 0 0 5px;
+
+            border-color: rgb(201, 201, 201);
+        }
+body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa:focus,
+
+        body > #div_main > #div_calcular > #form_calcular > #input_item:focus
+        {
+                border-color: rgba(255, 87, 87, 0.829);
+        }
+body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
+
+        body > #div_main > #div_calcular > #form_calcular > .img_btn
+        {
+            width: 32px;
+
+            height: 32px;
+
+            padding: 3px;
+
+            border-radius: 0 5px 5px 0;
+
+            background: rgba(255, 87, 87, 0.829);
+
+            cursor: pointer;
+        }
+body > #div_main > #div_calcular > #input_digito
+{
+    text-align: center;
+
+    font-size: 19px;
+
+    margin: 20px 0;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-style: solid;
+
+    border-width: 1px;
+
+    border-radius: 8px;
+
+    border-color: rgba(255, 87, 87, 0.829);
+
+    background: transparent;
+}
+hr
+{
+    display: block;
+
+    margin: 0 auto;
+
+    width: 400px;
+
+    border-style: solid;
+    
+    border-color: rgba(174, 173, 228, 0.459);
+}
