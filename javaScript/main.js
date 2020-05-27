@@ -28,6 +28,11 @@ function calcular()
         
         calc = 10 - (calc % 10);
 
+        if (calc == 10)
+        {
+            calc = 0;
+        }
+
         document.getElementById("input_digito").value=calc;
     }
     else if (str.length == 6)
@@ -41,6 +46,11 @@ function calcular()
                                     Number(str.substr(4, 1));
         
         calc = 10 - (calc % 10);
+
+        if (calc == 10)
+        {
+            calc = 0;
+        }
 
         document.getElementById("input_digito").value=calc;
     }
