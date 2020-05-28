@@ -55,3 +55,26 @@ function calcular()
         document.getElementById("input_digito").value=calc;
     }
 }
+function produtos()
+{
+    var str = document.getElementById("input_pesquisa").value;
+
+    var codigo = Number(str.substr(3, 2));
+
+    var itens =
+        [980012483, 980010188, 980014188, 980014531, 264731, 722449, 131592, 321994, 250879, 395489,
+         228664, 228657, 980013689, 980013849, 499404, 396938, 840908];
+
+    var verifica = itens[codigo];
+
+    if (verifica == undefined)
+    {
+        document.getElementById("input_pesquisa").value = "ERRO";
+    }
+    else
+    {
+        document.getElementById("input_item").value = verifica;
+
+        calcular();
+    }
+}

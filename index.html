@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="pt-br">
 
@@ -6,7 +6,7 @@
         
         <meta charset="utf-8">
 
-        <title> LISTA DE ITENS </title>
+        <title> Lista de Itens </title>
 
         <link rel="shortcut icon" href="imagens/logo_icon.png">
         
@@ -50,19 +50,31 @@
 
                 <form id=form_pesquisa>
 
-                    <input id=input_pesquisa type="search" list="produtos" placeholder="Pesquisar produto">
+                    <input type="search" id=input_pesquisa list="dlist" placeholder="Pesquisar produto">
 
-                    <img class=img_btn src="imagens/lupa.png">
-
-                    <datalist id=produtos>
+                    <datalist id=dlist>
                         
-                        <option value="produto um"> </option>
-
-                        <option value="produto dois"> </option>
-
-                        <option value="produto tres"> </option>
+                        <option value="COD00 PURE PICME 6X100G"> PURE PICME 6X100G </option>
+                        <option value="COD01 KIT VHO ALT VIST MALBEL 750+375ML"> KIT VHO ALT VIST MALBEL 750+375ML </option>
+                        <option value="COD02 CONJ 10 CABIDES EM ALUMINIO"> CONJ 10 CABIDES EM ALUMINIO </option>
+                        <option value="COD03 TENIS INFANTIL LK FILA"> TENIS INFANTIL LK FILA </option>
+                        <option value="COD04 CERVEJA BRAHMA ZERO 12X350ML"> CERVEJA BRAHMA ZERO 12X350ML </option>
+                        <option value="COD05 ABACAXI PEROLA"> ABACAXI PEROLA </option>
+                        <option value="COD06 MELANCIA"> MELANCIA </option>
+                        <option value="COD07 LIMPOL LIQ 6X500ML DETER LIQ NATURAL"> LIMPOL LIQ 6X500ML DETER LIQ NATURAL </option>
+                        <option value="COD08 SAPONACEO CREMOSO 1L PINHO"> SAPONACEO CREMOSO 1L PINHO </option>
+                        <option value="COD09 KIT 3 BODIES MC MENINO"> KIT 3 BODIES MC MENINO </option>
+                        <option value="COD10 CAFE 3 CORACOES VP TRAD 4X500G"> CAFE 3 CORACOES VP TRAD 4X500G </option>
+                        <option value="COD11 CAFE 3 CORACOES VP EXT FORTE 4X500G"> CAFE 3 CORACOES VP EXT FORTE 4X500G </option>
+                        <option value="COD12 CERVEJA CORONITA EXTRA 6X210ML"> CERVEJA CORONITA EXTRA 6X210ML </option>
+                        <option value="COD13 CERVEJA CORONA 6X330ML"> CERVEJA CORONA 6X330ML </option>
+                        <option value="COD14 AGUA SAO LOURENCO C GAS 6X510ML"> AGUA SAO LOURENCO C GAS 6X510ML </option>
+                        <option value="COD15 REMOVEDOR ZULU PERFUMADO 2X900ML"> REMOVEDOR ZULU PERFUMADO 2X900ML </option>
+                        <option value="COD16 LIMPOL GEL 3X511ML DETERG CONCENTRADO"> LIMPOL GEL 3X511ML DETERG CONCENTRADO </option>
                    
                     </datalist>
+
+                    <img class=img_btn src="imagens/lupa.png" onclick="produtos()">
                     
                 </form>
             
@@ -102,7 +114,7 @@
 
         <div id=div_footer>
 
-            <p id=p_copy> Copyright ©Lucas Mathiazi - Todos os direitos reservados </p>
+            <p id=p_copy> Copyright ©Lucas Mathiazi - Todos os direitos reservados. </p>
 
         </div>
 
