@@ -12,8 +12,6 @@
 }
 body
 {
-    padding: 0 5px;
-
     margin: 0 auto;
 
     min-width: 350px;
@@ -22,17 +20,15 @@ body
 }
 body > #div_logo
 {
-    background: rgb(128, 128, 255);
+    padding: 15px 0;
+
+    background: rgb(203, 203, 255);
 }
 body > #div_logo > #img_logo
 {
     display: block;
 
     margin: 0 auto;
-
-    width: 130px;
-
-    height: 130px;
 }
 body > #div_main > .div_titulo
 {
@@ -58,7 +54,7 @@ body > #div_main > #div_pesquisa,
         {
             text-align: center;
             
-            padding: 40px 0;
+            padding: 30px 0 20px 0;
         }
 body > #div_main > #div_pesquisa > #form_pesquisa,
 
