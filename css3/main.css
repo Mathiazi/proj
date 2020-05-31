@@ -18,23 +18,22 @@ body
 
     max-width: 1200px;
 
-    background-image: url(../imagens/bg.png);
+    background: url(../imagens/bg.png);
 }
 body > #div_logo
 {
     padding: 15px 0;
 
-    background: rgba(26, 26, 255, 0.185);
+    background: rgba(74, 74, 255, 0.418);
 }
-body > #div_logo > #img_logo
-{
-    display: block;
 
-    margin: 0 auto;
+body > #div_main
+{
+    background: rgba(0, 0, 0, 0.541);
 }
 body > #div_main > .div_titulo
 {
-    color: rgb(202, 202, 202);
+    color: rgb(124, 124, 124);
 
     font-size: 18px;
 
@@ -147,6 +146,8 @@ body > #div_footer
     border-top-width: 1px;
 
     border-color: darkgray;
+
+    background: rgba(0, 0, 0, 0.541);
 }
 body > #div_footer > #p_copy
 {
