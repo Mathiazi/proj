@@ -24,12 +24,11 @@ body > #div_logo
 {
     padding: 15px 0;
 
-    background: rgba(74, 74, 255, 0.418);
+    background: rgba(32, 32, 255, 0.418);
 }
-
 body > #div_main
 {
-    background: rgba(0, 0, 0, 0.541);
+    background: rgba(0, 0, 0, 0.651);
 }
 body > #div_main > .div_titulo
 {
@@ -79,7 +78,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             font-size: 15px;
 
-            color: rgb(63, 63, 63);
+            color: rgb(0, 0, 0);
 
             float: left;
 
@@ -89,13 +88,13 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             border-radius: 5px 0 0 5px;
 
-            border-color: rgba(255, 87, 87, 0.829);
+            border-color: rgba(57, 255, 74, 0.671);
         }
 body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa:focus,
 
         body > #div_main > #div_calcular > #form_calcular > #input_item:focus
         {
-                border-color: rgba(255, 87, 87, 0.829);
+                border-color: rgba(57, 255, 74, 0.671);
         }
 body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -109,7 +108,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
             border-radius: 0 5px 5px 0;
 
-            background: rgba(255, 87, 87, 0.829);
+            background: rgba(57, 255, 74, 0.671);
 
             cursor: pointer;
         }
@@ -117,7 +116,7 @@ body > #div_main > #div_calcular > #input_digito
 {
     text-align: center;
 
-    color: rgb(63, 63, 63);
+    color: rgb(0, 0, 0);
 
     font-size: 17px;
 
@@ -133,9 +132,9 @@ body > #div_main > #div_calcular > #input_digito
 
     border-radius: 8px;
 
-    border-color: rgba(255, 87, 87, 0.829);
+    border-color: rgba(57, 255, 74, 0.671);
 
-    background: rgba(255, 87, 87, 0.829);
+    background: rgba(57, 255, 74, 0.671);
 }
 body > #div_footer
 {
@@ -147,7 +146,7 @@ body > #div_footer
 
     border-color: darkgray;
 
-    background: rgba(0, 0, 0, 0.541);
+    background: rgba(0, 0, 0, 0.651);
 }
 body > #div_footer > #p_copy
 {
@@ -159,5 +158,5 @@ body > #div_footer > #p_copy
 
     font-size: 12px;
 
-    color: rgb(202, 202, 202);
+    color: rgb(124, 124, 124);
 }
