@@ -5,10 +5,11 @@ function char(e)
     if (charCode != 8 && charCode != 9)
     {  
         if (charCode < 48 || charCode > 57)
-            
-            return false;
+        
+        return false;
     }
 }
+
 function calcular()
 {
     var str = document.getElementById("input_item").value;
@@ -55,6 +56,7 @@ function calcular()
         document.getElementById("input_digito").value=calc;
     }
 }
+
 function produtos()
 {
     var str = document.getElementById("input_pesquisa").value;
@@ -63,7 +65,8 @@ function produtos()
 
     var itens =
         [980012483, 980010188, 980014188, 980014531, 264731, 722449, 131592, 321994, 250879, 395489,
-         228664, 228657, 980013689, 980013849, 499404, 396938, 840908, 980008232, 310746, 980012412];
+         228664, 228657, 980013689, 980013849, 499404, 396938, 840908, 980008232, 310746, 980012412,
+         332065, 980003563];
 
     var verifica = itens[codigo];
 
