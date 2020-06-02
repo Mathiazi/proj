@@ -64,7 +64,7 @@ body > #div_main > .div_titulo
 }
 body > #div_main > .div_titulo > .div_imagem
 {
-   margin: 0 30px 0 0;
+   margin: 0 15px 0 0;
 }
 body > #div_main > #div_pesquisa,
 
@@ -78,7 +78,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular
         {
-            width: 312px;
+            width: 292px;
 
             height: 32px;
 
@@ -88,7 +88,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular > #input_item
         {
-            width: 280px;
+            width: 260px;
 
             height: 32px;
 
@@ -167,7 +167,7 @@ body > #div_footer
 }
 body > #div_footer > #div_copy
 {
-    width: 400px;
+    width: 100%;
 
     margin: 0 auto;
 
