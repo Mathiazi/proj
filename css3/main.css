@@ -10,12 +10,6 @@
 
     font-family: 'Roboto';
 }
-p
-{
-    margin: 0;
-
-    padding: 0;
-}
 body
 {
     margin: 0 auto;
@@ -23,38 +17,24 @@ body
     min-width: 350px;
 
     max-width: 1000px;
-
-    background: url(../imagens/bg.png);
 }
 body > #div_logo
 {
-    padding: 10px 0;
+    padding: 20px 0 20px 10px;
 
-    background: rgba(0, 0, 0, 0.726);
+    background: rgb(173, 173, 255);
 }
 body > #div_logo > #img_logo
 {
-    display: block;
+    width: 65px;
 
-    margin: 0 auto;
+    height: 65px;
 
-    width: 120px;
-
-    height: 120px;
-
-    filter: drop-shadow(25px 2px 10px #ababcc);
-}
-body > #div_main
-{
-    background: rgba(0, 0, 0, 0.726);
+    filter: drop-shadow(25px 2px 10px #4141ff);
 }
 body > #div_main > .div_titulo
 {
-    color: rgb(124, 124, 124);
-
-    font-size: 18px;
-
-    padding: 70px 0 0 0;
+    padding: 80px 0 0 0;
 
     display: flex;
 
@@ -64,23 +44,29 @@ body > #div_main > .div_titulo
 }
 body > #div_main > .div_titulo > .div_imagem
 {
-   margin: 0 15px 0 0;
+   margin: 0 25px 0 0;
+}
+body > #div_main > .div_titulo > .div_imagem > .img_icon
+{
+    width: 40px;
+
+    height: 40px;
 }
 body > #div_main > #div_pesquisa,
 
         body > #div_main > #div_calcular
         {
             text-align: center;
-            
-            padding: 30px;
+
+            padding: 30px 0;
         }
 body > #div_main > #div_pesquisa > #form_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular
         {
-            width: 292px;
+            width: 295px;
 
-            height: 32px;
+            height: 35px;
 
             margin: 0 auto;
         }
@@ -90,13 +76,9 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
         {
             width: 260px;
 
-            height: 32px;
+            height: 35px;
 
-            text-align: center;
-
-            font-size: 15px;
-
-            color: rgb(0, 0, 0);
+            padding: 0 0 0 5px;
 
             float: left;
 
@@ -105,39 +87,27 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
             border-width: 1px;
 
             border-radius: 5px 0 0 5px;
-
-            border-color: rgba(255, 57, 57, 0.671);
         }
 
-body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa:focus,
-
-        body > #div_main > #div_calcular > #form_calcular > #input_item:focus
-        {
-            border-color: rgba(255, 57, 57, 0.671);
-        }
 body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         body > #div_main > #div_calcular > #form_calcular > .img_btn
         {
-            width: 32px;
+            width: 35px;
 
-            height: 32px;
+            height: 35px;
 
-            padding: 5px;
+            padding: 7px;
 
             border-radius: 0 5px 5px 0;
 
-            background: rgba(255, 57, 57, 0.671);
+            background: rgb(146, 146, 146);
 
             cursor: pointer;
         }
 body > #div_main > #div_calcular > #input_digito
 {
     text-align: center;
-
-    color: rgb(0, 0, 0);
-
-    font-size: 17px;
 
     margin: 30px 0 0 0;
 
@@ -149,7 +119,7 @@ body > #div_main > #div_calcular > #input_digito
 
     border-radius: 9px;
 
-    background: rgba(255, 57, 57, 0.671);
+    background: rgb(146, 146, 146);
 }
 body > #div_footer
 {
@@ -161,19 +131,15 @@ body > #div_footer
 
     border-top-width: 1px;
 
-    border-color: rgb(70, 70, 70);
-
-    background: rgba(0, 0, 0, 0.726);
+    border-color: rgb(201, 201, 201);
 }
 body > #div_footer > #div_copy
 {
-    width: 100%;
-
     margin: 0 auto;
 
     text-align: center;
 
     font-size: 12px;
 
-    color: gray;
+    color: rgb(146, 146, 146);
 }
