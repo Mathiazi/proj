@@ -20,21 +20,21 @@ body
 }
 body > #div_logo
 {
-    padding: 20px 0 20px 10px;
-
-    background: rgb(173, 173, 255);
+    background: rgb(195, 195, 255);
 }
 body > #div_logo > #img_logo
 {
-    width: 65px;
+    width: 200px;
 
-    height: 65px;
+    height: 200px;
 
-    filter: drop-shadow(25px 2px 10px #4141ff);
+    filter: drop-shadow(25px 2px 10px #494949);
 }
 body > #div_main > .div_titulo
 {
-    padding: 80px 0 0 0;
+    margin: 100px 0 0 0;
+
+    color: rgb(104, 104, 104);
 
     display: flex;
 
@@ -42,15 +42,13 @@ body > #div_main > .div_titulo
 
     justify-content: center;
 }
-body > #div_main > .div_titulo > .div_imagem
-{
-   margin: 0 25px 0 0;
-}
 body > #div_main > .div_titulo > .div_imagem > .img_icon
 {
-    width: 40px;
+    width: 46px;
 
-    height: 40px;
+    height: 46px;
+
+    margin: 0 20px 0 0;
 }
 body > #div_main > #div_pesquisa,
 
@@ -78,15 +76,23 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             height: 35px;
 
-            padding: 0 0 0 5px;
+            padding: 0 0 0 3px;
+
+            color: rgb(104, 104, 104);
 
             float: left;
 
             border-style: solid;
 
+            border-right: none;
+
             border-width: 1px;
 
             border-radius: 5px 0 0 5px;
+
+            border-color: rgb(245, 56, 94);
+
+            font-size: 15px;
         }
 
 body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
@@ -97,35 +103,42 @@ body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
             height: 35px;
 
-            padding: 7px;
+            padding: 2px;
 
             border-radius: 0 5px 5px 0;
 
-            background: rgb(146, 146, 146);
+            background: rgb(245, 56, 94);
 
             cursor: pointer;
         }
+body > #div_main > #div_calcular
+{
+    margin: 0 0 75px 0;
+}
+
 body > #div_main > #div_calcular > #input_digito
 {
     text-align: center;
 
-    margin: 30px 0 0 0;
+    margin: 25px 0 0 0;
 
     width: 35px;
 
     height: 35px;
 
+    font-size: 15px;
+
     border: none;
 
     border-radius: 9px;
 
-    background: rgb(146, 146, 146);
+    background: rgb(245, 56, 94);
 }
 body > #div_footer
 {
     height: 150px;
 
-    padding: 75px 0 0 0;
+    padding: 120px 0 0 0;
 
     border-top-style: solid;
 
@@ -141,5 +154,5 @@ body > #div_footer > #div_copy
 
     font-size: 12px;
 
-    color: rgb(146, 146, 146);
+    color: rgb(104, 104, 104);
 }

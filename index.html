@@ -6,7 +6,7 @@
         
         <meta charset="utf-8">
 
-        <title> Lista de Itens </title>
+        <title> ITEMLIST </title>
 
         <link rel="shortcut icon" href="imagens/icon.png">
         
@@ -40,7 +40,7 @@
 
                 <div>
                     
-                    <h1> Lista de Itens </h1>
+                    <h1> LISTA DE ITENS </h1>
 
                 </div>
 
@@ -50,7 +50,7 @@
 
                 <form id=form_pesquisa>
 
-                    <input type="search" id=input_pesquisa list="dlist" placeholder="Pesquisar produto">
+                    <input type="search" id=input_pesquisa list="dlist">
 
                     <datalist id=dlist>
                         
@@ -78,6 +78,7 @@
                         <option value="COD21 BACON FATIADO 200G"> BACON FATIADO 200G </option>
                         <option value="COD22 CHOCOLATE MINI PRALINÉS LINDT 100G"> CHOCOLATE MINI PRALINÉS LINDT 100G </option>
                         <option value="COD23 AGUA MINALBA PREMIUM C GAS 300ML"> AGUA MINALBA PREMIUM C GAS 300ML </option>
+                        <option value="COD24 DESTAC PISOS LAMINADOS 3X750ML"> DESTAC PISOS LAMINADOS 3X750ML </option>
                    
                     </datalist>
 
@@ -97,7 +98,7 @@
 
                 <div>
                     
-                    <h1> Último Dígito </h1>
+                    <h1> ÚLTIMO DÍGITO </h1>
 
                 </div>
 
@@ -107,7 +108,7 @@
         
                 <form id=form_calcular>
                     
-                    <input id=input_item  type="tel" placeholder="Codigo do item" maxlength="9" onkeypress="return char(event)">
+                    <input id=input_item  type="tel" maxlength="9" onkeypress="return char(event)">
                     
                     <img class=img_btn src="imagens/go.png" onclick="calcular()">
 
