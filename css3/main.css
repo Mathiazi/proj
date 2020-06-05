@@ -22,7 +22,7 @@ body
 }
 body > #div_logo
 {
-   background: url(../imagens/bg_logo.png);
+   background: rgb(65, 65, 150);
 }
 body > #div_logo > #img_logo
 {
@@ -30,13 +30,13 @@ body > #div_logo > #img_logo
 
     height: 200px;
 
-    filter: drop-shadow(25px 2px 10px #a8a8a8);
+    filter: drop-shadow(25px 2px 10px #363636);
 }
 body > #div_main > .div_titulo
 {
     margin: 100px 0 0 0;
 
-    color: rgb(104, 104, 104);
+    color: rgb(175, 175, 175);
 
     display: flex;
 
@@ -80,7 +80,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             padding: 0 0 0 3px;
 
-            color: rgb(104, 104, 104);
+            color: rgb(175, 175, 175);
 
             float: left;
 
@@ -156,5 +156,5 @@ body > #div_footer > #div_copy
 
     font-size: 12px;
 
-    color: rgb(104, 104, 104);
+    color: rgb(175, 175, 175);
 }
