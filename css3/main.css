@@ -80,7 +80,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             padding: 0 0 0 3px;
 
-            color: rgb(175, 175, 175);
+            color: rgb(49, 49, 49);
 
             float: left;
 
@@ -135,6 +135,8 @@ body > #div_main > #div_calcular > #input_digito
     border-radius: 9px;
 
     background: rgb(245, 56, 94);
+
+    color: rgb(49, 49, 49);
 }
 body > #div_footer
 {
