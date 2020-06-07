@@ -34,7 +34,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("input_digito").value=calc;
+        document.getElementById("lbl_resultado").innerHTML="O resultado é " + calc + ".";
     }
     else if (str.length == 6)
     {
@@ -53,7 +53,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("input_digito").value=calc;
+        document.getElementById("lbl_resultado").innerHTML="O resultado é " + calc + ".";
     }
 }
 
@@ -81,7 +81,7 @@ function produtos()
 
     if (verifica == undefined)
     {
-        document.getElementById("input_pesquisa").value = "ERRO";
+        document.getElementById("lbl_resultado").innerHTML = "Erro ao calcular :( ";
     }
     else
     {

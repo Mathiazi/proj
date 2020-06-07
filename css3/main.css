@@ -34,9 +34,9 @@ body > #div_logo > #img_logo
 }
 body > #div_main > .div_titulo
 {
-    margin: 100px 0 0 0;
+    margin: 100px 40px 0 0;
 
-    color: rgb(175, 175, 175);
+    color: rgb(168, 28, 157);
 
     display: flex;
 
@@ -50,7 +50,7 @@ body > #div_main > .div_titulo > .div_imagem > .img_icon
 
     height: 46px;
 
-    margin: 0 20px 0 0;
+    margin: 0 25px 0 0;
 }
 body > #div_main > #div_pesquisa,
 
@@ -64,17 +64,20 @@ body > #div_main > #div_pesquisa > #form_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular
         {
-            width: 295px;
+            width: 335px;
 
             height: 35px;
 
             margin: 0 auto;
         }
+
 body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular > #input_item
         {
-            width: 260px;
+            text-align: center;
+            
+            width: 300px;
 
             height: 35px;
 
@@ -92,7 +95,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             border-radius: 5px 0 0 5px;
 
-            border-color: rgb(245, 56, 94);
+            border-color: rgb(132, 255, 75);
 
             font-size: 15px;
         }
@@ -109,7 +112,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
             border-radius: 0 5px 5px 0;
 
-            background: rgb(245, 56, 94);
+            background: rgb(132, 255, 75);
 
             cursor: pointer;
         }
@@ -117,26 +120,17 @@ body > #div_main > #div_calcular
 {
     margin: 0 0 75px 0;
 }
-
-body > #div_main > #div_calcular > #input_digito
+body > #div_main > #div_calcular > div
 {
-    text-align: center;
-
-    margin: 25px 0 0 0;
-
-    width: 35px;
-
-    height: 35px;
-
-    font-size: 15px;
-
-    border: none;
-
-    border-radius: 9px;
-
-    background: rgb(245, 56, 94);
-
-    color: rgb(49, 49, 49);
+    margin: 30px 0 0 0;
+}
+body > #div_main > #div_calcular > div > #lbl_status
+{
+    color: rgb(132, 255, 75);
+}
+body > #div_main > #div_calcular > div > #lbl_resultado
+{
+    color: rgb(175, 175, 175);
 }
 body > #div_footer
 {
