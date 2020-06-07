@@ -34,7 +34,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + calc + ".";
+        document.getElementById("lbl_resultado").innerHTML="O dígito final é " + '"' + calc + '".';
     }
     else if (str.length == 6)
     {
@@ -53,7 +53,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + calc + ".";
+        document.getElementById("lbl_resultado").innerHTML="O dígito final é " + '"' + calc + '".';
     }
 }
 
@@ -81,7 +81,7 @@ function produtos()
 
     if (verifica == undefined)
     {
-        document.getElementById("lbl_resultado").innerHTML = "Erro ao calcular :( ";
+        document.getElementById("lbl_resultado").innerHTML = "Erro ao calcular :(";
     }
     else
     {
