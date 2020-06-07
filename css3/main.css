@@ -9,6 +9,8 @@
     outline: none;
 
     font-family: 'Roboto';
+
+    letter-spacing: 1px;
 }
 body
 {
@@ -36,7 +38,7 @@ body > #div_main > .div_titulo
 {
     margin: 100px 40px 0 0;
 
-    color: rgb(168, 28, 157);
+    color: rgb(175, 175, 175);
 
     display: flex;
 

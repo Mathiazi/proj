@@ -34,7 +34,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O dígito final é " + '"' + calc + '".';
+        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
     }
     else if (str.length == 6)
     {
@@ -53,7 +53,7 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O dígito final é " + '"' + calc + '".';
+        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
     }
 }
 
