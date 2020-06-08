@@ -13,136 +13,64 @@
         <link rel="stylesheet" href="css3/main.css">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"> 
-        
+
+        <!-- JQuery é responável por compartilhar informações do JavaScript com o HTML -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
         <script type="text/javascript" src="javaScript/main.js"> </script>
 
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     
     </head>
 
-    <body>
-
+    <body onload="main();">
         <div id=div_logo>
-
             <img id="img_logo" src="imagens/logo.png">
-
         </div>
 
         <div id=div_main>
-
             <div class=div_titulo>
-
                 <div class=div_imagem>
-                    
                     <img class=img_icon src="imagens/icon_lista.png"> 
-                
                 </div>
-
                 <div>
-                    
                     <h1> LISTA DE ITENS </h1>
-
                 </div>
-
             </div>
 
             <div id=div_pesquisa>
-
                 <form id=form_pesquisa>
-
                     <input type="search" id=input_pesquisa list="dlist">
-
-                    <datalist id=dlist>
-                        
-                        <option value="#00 pure picme 6v100g"> pure picme 6v100G </option>
-                        <option value="#01 kit vho alt vist malbel 750&375ml "> kit vho alt vist malbel 750&375ml </option>
-                        <option value="#02 conj 10 cabides em alumin"> conj 10 cabides em alumin </option>
-                        <option value="#03 tênis infantil lk fila"> tênis infantil lk fila </option>
-                        <option value="#04 cerveja brahma zero 12v350ml"> cerveja brahma zero 12v350ml </option>
-                        <option value="#05 abacaxi perola"> abacaxi perola </option>
-                        <option value="#06 melancia"> melancia </option>
-                        <option value="#07 limpol liq natural 6v500ml"> limpol liq natural 6v500ml </option>
-                        <option value="#08 saponaceo cremoso pinho 1l"> saponaceo cremoso pinho 1l </option>
-                        <option value="#09 kit 3 bodies man curt menino"> kit 3 bodies man curt menino </option>
-                        <option value="#10 cafe 3 coracoes vp trad 4v500g"> cafe 3 coracoes vp trad 4v500g </option>
-                        <option value="#11 cafe 3 coracoes vp ext fort 4v500g"> cafe 3 coracoes vp ext fort 4v500g </option>
-                        <option value="#12 cerveja coronita extra 6v210ml"> cerveja coronita extra 6v210ml </option>
-                        <option value="#13 cerveja corona 6v330ml"> cerveja corona 6v330ml </option>
-                        <option value="#14 agua sao lourenco c gas 6v510ml"> agua sao lourenco c gas 6v510ml </option>
-                        <option value="#15 removedor zulu perfumado 2v900ml"> removedor zulu perfumado 2v900ml </option>
-                        <option value="#16 limpol gel deter concentrado 3v511ml"> limpol gel deter concentrado 3v511ml </option>
-                        <option value="#17 saco umbro"> saco umbro </option>
-                        <option value="#18 ketchup heinz 2v397g"> ketchup heinz 2v397g </option>
-                        <option value="#19 conj 3 formas p gelo"> conj 3 formas p gelo </option>
-                        <option value="#20 miojo nissin gal caipira 6v75g"> miojo nissin gal caipira 6v75g </option>
-                        <option value="#21 bacon fatiado 200g"> bacon fatiado 200g </option>
-                        <option value="#22 choc mini pralinés lindt 100g">  choc mini pralinés lindt 100g </option>
-                        <option value="#23 agua minalba premium c gas 300ml"> agua minalba premium c gas 300ml </option>
-                        <option value="#24 destac pisos laminados 3v750ml"> destac pisos laminados 3v750ml </option>
-                        <option value="#25 sapolio radium 2v450ml"> sapolio radium 2v450ml </option>
-                        <option value="#26 creme avela nutella 650g"> creme avela nutella 650g </option>
-                        <option value="#27 pipoca de mic nat c sal verm 2v100g "> pipoca de mic nat c sal verm 2v100g </option>
-                        <option value="#28 pipoca de mic nat amarelo 2v100g"> pipoca de mic nat amarelo 2v100g </option>
-                        <option value="#29 pipoca de mic manteiga azul 2v100g"> pipoca de mic manteiga azul 2v100g </option>
-                        <option value="#30 veja cozinha 3v500ml"> veja cozinha 3v500ml </option>
-                        <option value="#31 batata 2kg"> batata 2kg </option>
-                        <option value="#32 bandeja milho verde"> bandeja milho verde </option>
-                        <option value="#33 cerveja wals pilsen 600ml"> cerveja wals pilsen 600ml </option>
-
-                    </datalist>
-
+                    <datalist id=dlist></datalist>
                     <img class=img_btn src="imagens/lupa.png" onclick="produtos()">
-                    
                 </form>
-            
             </div>
 
             <div class=div_titulo>
-
                 <div class="div_imagem">
-                    
                     <img class=img_icon src="imagens/icon_calcular.png"> 
-                
                 </div>
-
                 <div>
-                    
                     <h1> ÚLTIMO DÍGITO </h1>
-
                 </div>
-
             </div>
 
             <div id=div_calcular>
-        
                 <form id=form_calcular>
-                    
                     <input id=input_item  type="tel" maxlength="9" onkeypress="return char(event)">
-                    
                     <img class=img_btn src="imagens/go.png" onclick="calcular()">
-
                 </form>
-
                 <div>
-
                     <label id=lbl_status> STATUS: </label>
-
                     <label id=lbl_resultado> Aguardando usuário ... </label>
-
                 </div>
-
             </div>
-
         </div>
 
         <div id=div_footer>
-
             <div id=div_copy>
                 Copyright ©Lucas Mathiazi - Todos os direitos reservados.
             </div>
-
         </div>
-
     </body>
-
 </html>
