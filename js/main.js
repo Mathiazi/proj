@@ -12,11 +12,44 @@ function char(e)
 
 function calcular()
 {
-    var str = document.getElementById("input_item").value;
+    const str = document.getElementById("input_item").value;
 
-    if (str.length == 9)
+    var i = (str.length);
+
+    var resposta, calc;
+
+    if (i != 6 & i != 9)
     {
-        calc = Number(str.substr(0, 1)) + 
+        if (i == 0)
+        {
+            resposta = 'Digite o código do item ...';
+        }
+        else
+        {
+            resposta = 'O código do item é inválido ...';
+        }
+    }  
+    else if (i == 6)
+    {
+        calc = Number(str.substr(1, 1)) + 
+                    Number(str.substr(3, 1)) + 
+                        Number(str.substr(5, 1));
+
+        calc = (calc * 3) + Number(str.substr(0, 1)) +
+                                Number(str.substr(2, 1)) +
+                                    Number(str.substr(4, 1));
+        calc = 10 - (calc % 10);
+
+        if (calc == 10)
+        {
+            calc = 0;
+        }
+
+        resposta = "O resultado do calculo é '" + calc + "'.";
+    }
+    else
+    {
+        calc =  Number(str.substr(0, 1)) + 
                     Number(str.substr(2, 1)) + 
                         Number(str.substr(4, 1)) + 
                             Number(str.substr(6, 1)) + 
@@ -26,7 +59,6 @@ function calcular()
                                 Number(str.substr(3, 1)) +
                                     Number(str.substr(5, 1)) +
                                         Number(str.substr(7, 1));
-        
         calc = 10 - (calc % 10);
 
         if (calc == 10)
@@ -34,27 +66,10 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
+        resposta = "O resultado do calculo é '" + calc + "'.";
     }
-    else if (str.length == 6)
-    {
-        calc = Number(str.substr(1, 1)) + 
-                    Number(str.substr(3, 1)) + 
-                        Number(str.substr(5, 1));
 
-        calc = (calc * 3) + Number(str.substr(0, 1)) +
-                                Number(str.substr(2, 1)) +
-                                    Number(str.substr(4, 1));
-        
-        calc = 10 - (calc % 10);
-
-        if (calc == 10)
-        {
-            calc = 0;
-        }
-
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
-    }
+    document.getElementById("lbl_resultado").innerHTML = resposta;
 }
 
 function produtos()
