@@ -96,7 +96,7 @@ function produtos()
 
     if (verifica == undefined)
     {
-        document.getElementById("lbl_resultado").innerHTML = "Erro ao calcular :(";
+        document.getElementById("lbl_resultado").innerHTML = "Item não encontrado :(";
     }
     else
     {
