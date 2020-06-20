@@ -76,7 +76,7 @@ function produtos()
 {
     var str = document.getElementById("input_pesquisa").value;
 
-    var codigo = Number(str.substr(1, 2));
+    var codigo = Number(str.substr(0, 2));
 
     var itens =
         [980012483, 980010188, 980014188,
