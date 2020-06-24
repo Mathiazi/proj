@@ -33,8 +33,6 @@ body > #div_logo > #img_logo
     width: 180px;
 
     height: 180px;
-
-    filter: drop-shadow(30px 1px 5px #2e2e2e);
 }
 body > #div_main > .div_titulo
 {
