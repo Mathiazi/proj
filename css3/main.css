@@ -10,7 +10,7 @@
 
     font-family: 'Roboto';
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 body
 {
@@ -24,9 +24,9 @@ body
 }
 body > #div_logo
 {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 15px 15px;
     
-    background: rgb(65, 65, 150);
+    background: rgb(37, 37, 104);
 }
 body > #div_logo > #img_logo
 {
@@ -34,7 +34,7 @@ body > #div_logo > #img_logo
 
     height: 180px;
 
-    filter: drop-shadow(25px 2px 10px #252525);
+    filter: drop-shadow(30px 1px 5px #2e2e2e);
 }
 body > #div_main > .div_titulo
 {
