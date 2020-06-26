@@ -10,7 +10,7 @@
 
     font-family: 'Roboto';
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 body
 {
@@ -26,13 +26,13 @@ body > #div_logo
 {
     border-radius: 0 0 15px 15px;
     
-    background: rgb(37, 37, 104);
+    background: rgb(29, 29, 29);
 }
 body > #div_logo > #img_logo
 {
-    width: 180px;
+    width: 160px;
 
-    height: 180px;
+    height: 160px;
 }
 body > #div_main > .div_titulo
 {
@@ -42,7 +42,7 @@ body > #div_main > .div_titulo
 
     justify-content: center;
 
-    color: rgb(65, 65, 150);
+    color: rgb(0, 0, 0);
 }
 body > #div_main > #div_pesquisa,
 
@@ -68,7 +68,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             margin: 0 2px 0 0;
 
-            color: rgb(56, 56, 56);
+            color: rgb(0, 0, 0);
 
             float: left;
 
@@ -78,7 +78,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
             border-radius: 5px;
 
-            border-color: rgb(179, 179, 179);
+            border-color: rgb(155, 148, 219);
 
             font-size: 15px;
         }
@@ -94,7 +94,7 @@ body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
             border-radius: 5px;
 
-            background: rgb(255, 145, 145);
+            background: rgb(140, 151, 255);
 
             cursor: pointer;
         }
@@ -110,23 +110,35 @@ body > #div_main > #div_calcular > div
 }
 body > #div_main > #div_calcular > div > #lbl_status
 {
-    color: rgb(220, 20, 60);
+    color: red;
 }
 body > #div_main > #div_calcular > div > #lbl_resultado
 {
-    color: rgb(0, 0, 0);
+    color: rgb(94, 179, 73);
+
+    font-style: italic;
 }
 body > #div_footer
 {
     height: 150px;
 
-    padding: 120px 0 0 0;
-
     border-top-style: solid;
 
     border-top-width: 1px;
 
-    border-color: rgb(110, 110, 110);
+    border-color: rgb(140, 151, 255);
+}
+body > #div_footer > #div_wpp
+{
+    margin: 10px 0 90px 0;
+}
+body > #div_footer > #div_wpp > a > #img_wpp
+{
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 5px;
 }
 body > #div_footer > #div_copy
 {
@@ -140,7 +152,7 @@ body > #div_footer > #div_copy
 {
     body > #div_main > .div_titulo
     {
-        font-size: 35px;
+        font-size: 30px;
 
         margin: 80px 0 0 0;
     }
@@ -179,10 +191,9 @@ body > #div_footer > #div_copy
 
     body > #div_footer > #div_copy
     {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
-
 @media screen and (min-width: 361px) and (max-width: 399px)
 {
     body > #div_main > .div_titulo
@@ -229,7 +240,6 @@ body > #div_footer > #div_copy
         font-size: 12px;
     }
 }
-
 @media screen and (min-width: 400px)
 {
     body > #div_main > .div_titulo
@@ -276,3 +286,4 @@ body > #div_footer > #div_copy
         font-size: 12px;
     }
 }
+
