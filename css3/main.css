@@ -26,7 +26,7 @@ body > #div_logo
 {
     border-radius: 0 0 15px 15px;
     
-    background: rgb(29, 29, 29);
+    background: rgb(51, 51, 51);
 }
 body > #div_logo > #img_logo
 {
@@ -42,7 +42,7 @@ body > #div_main > .div_titulo
 
     justify-content: center;
 
-    color: rgb(0, 0, 0);
+    color: rgb(51, 51, 51);
 }
 body > #div_main > #div_pesquisa,
 
@@ -130,7 +130,7 @@ body > #div_footer
 }
 body > #div_footer > #div_wpp
 {
-    margin: 10px 0 90px 0;
+    margin: 20px 0 65px 0;
 }
 body > #div_footer > #div_wpp > a > #img_wpp
 {
@@ -146,7 +146,7 @@ body > #div_footer > #div_copy
 
     text-align: center;
 
-    color: rgb(0, 0, 0);
+    color: rgb(51, 51, 51);
 }
 @media screen and (max-width: 360px)
 {
