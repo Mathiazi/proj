@@ -16,8 +16,8 @@
 
         <!-- JQuery é responável por compartilhar informações do JavaScript com o HTML -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-        <script type="text/javascript" src="javaScript/main.js"> </script>
+        
+        <script type="text/javascript" src="js/main.js"> </script>
 
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     
@@ -34,14 +34,17 @@
                     <img class=img_icon src="imagens/icon_lista.png"> 
                 </div>
                 <div>
-                    <h1> LISTA DE ITENS </h1>
+                    
+                    <label> LISTA DE ITENS </label>
+
                 </div>
             </div>
 
             <div id=div_pesquisa>
                 <form id=form_pesquisa>
-                    <input type="search" id=input_pesquisa list="dlist">
-                    <datalist id=dlist></datalist>
+                    <input type="search" id=input_pesquisa list="produtos">
+                    <datalist id=produtos></datalist>
+
                     <img class=img_btn src="imagens/lupa.png" onclick="produtos()">
                 </form>
             </div>
@@ -51,7 +54,9 @@
                     <img class=img_icon src="imagens/icon_calcular.png"> 
                 </div>
                 <div>
-                    <h1> ÚLTIMO DÍGITO </h1>
+                    
+                    <label> ÚLTIMO DÍGITO </label>
+
                 </div>
             </div>
 
@@ -68,6 +73,17 @@
         </div>
 
         <div id=div_footer>
+
+            <div id=div_wpp>
+
+                <a href="https://bit.ly/3i13Upv" target="_blank">
+
+                    <img id=img_wpp src="imagens/wpp.png">
+
+                </a>
+
+            </div>
+
             <div id=div_copy>
                 Copyright ©Lucas Mathiazi - Todos os direitos reservados.
             </div>

@@ -38,15 +38,24 @@ function main() {
         'veja cozinha 3v500ml',
         'batata 2kg',
         'bandeja milho verde',
-        'cerveja wals pilsen 600ml'
+        'cerveja wals pilsen 600ml',
+        'JAQUETA MASC GUESS',
+        'CAFE MELITA VP TRAD 4x500G',
+        'COCO VERDE',
+        'CANECA WINX ZAINI 33G',
+        'CEBOLA 2KG',
+        'LARANJA 10KG',
+        'CENOURA BABY 250G',
+        'DOG CHOW DUO INTEGRAL 1KG',
+        'KIT DIVERSAO PRAIA C/ 19PCS'
     ];
 
     // Etapa: Laço de repetição que informa o produto unitário e o index do mesmo tentro do array { products }.
     products.forEach((product, index) => {
-        // Etapa: Pega o ID do HTML que corresponda { dlist } e insere <option> com os valores da correspondentes.
-        $('#dlist').append($('<option>', {
-            value: `#${index < 10 ? `0${index}` : index} ${product}`,
-            text: product
+        // Etapa: Pega o ID do HTML que corresponda { produtos } e insere <option> com os valores da correspondentes.
+        $('#produtos').append($('<option>', {
+            value: `${index < 10 ? `0${index}` : index} ${product.toUpperCase()}`,
+            text: product.toUpperCase()
         }));
     });
 };
@@ -65,7 +74,7 @@ function char(e)
 
 function calcular() 
 {
-    var str = document.getElementById("input_item").value;
+    const str = document.getElementById("input_item").value;
 
     // Etapa: Validação para que um campo não seja vázio ou nulo.
     if (!str || str === undefined || str === null) {
@@ -73,9 +82,42 @@ function calcular()
         return;
     }
 
-    if (str.length == 9)
+    var i = (str.length);
+
+    var resposta, calc;
+
+    if (i != 6 & i != 9)
     {
-        calc = Number(str.substr(0, 1)) + 
+        if (i == 0)
+        {
+            resposta = 'Digite o código do item ...';
+        }
+        else
+        {
+            resposta = 'O código do item é inválido ...';
+        }
+    }  
+    else if (i == 6)
+    {
+        calc = Number(str.substr(1, 1)) + 
+                    Number(str.substr(3, 1)) + 
+                        Number(str.substr(5, 1));
+
+        calc = (calc * 3) + Number(str.substr(0, 1)) +
+                                Number(str.substr(2, 1)) +
+                                    Number(str.substr(4, 1));
+        calc = 10 - (calc % 10);
+
+        if (calc == 10)
+        {
+            calc = 0;
+        }
+
+        resposta = "O resultado do calculo é '" + calc + "'.";
+    }
+    else
+    {
+        calc =  Number(str.substr(0, 1)) + 
                     Number(str.substr(2, 1)) + 
                         Number(str.substr(4, 1)) + 
                             Number(str.substr(6, 1)) + 
@@ -85,7 +127,6 @@ function calcular()
                                 Number(str.substr(3, 1)) +
                                     Number(str.substr(5, 1)) +
                                         Number(str.substr(7, 1));
-        
         calc = 10 - (calc % 10);
 
         if (calc == 10)
@@ -93,27 +134,10 @@ function calcular()
             calc = 0;
         }
 
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
+        resposta = "O resultado do calculo é '" + calc + "'.";
     }
-    else if (str.length == 6)
-    {
-        calc = Number(str.substr(1, 1)) + 
-                    Number(str.substr(3, 1)) + 
-                        Number(str.substr(5, 1));
 
-        calc = (calc * 3) + Number(str.substr(0, 1)) +
-                                Number(str.substr(2, 1)) +
-                                    Number(str.substr(4, 1));
-        
-        calc = 10 - (calc % 10);
-
-        if (calc == 10)
-        {
-            calc = 0;
-        }
-
-        document.getElementById("lbl_resultado").innerHTML="O resultado é " + "'" + calc + "'.";
-    }
+    document.getElementById("lbl_resultado").innerHTML = resposta;
 }
 
 function produtos() 
@@ -126,7 +150,7 @@ function produtos()
         return;
     }
 
-    var codigo = Number(str.substr(1, 2));
+    var codigo = Number(str.substr(0, 2));
 
     var itens =
         [980012483, 980010188, 980014188,
@@ -140,13 +164,15 @@ function produtos()
                 980008164, 980008344, 332992,
         623681, 177614, 177607,
             378850, 226151, 166645,
-                980008177];
+                980008177, 980015615, 204527,
+        227853, 980014577, 226158,
+            628106, 980007145, 147339, 372529];
 
     var verifica = itens[codigo];
 
     if (verifica == undefined)
     {
-        document.getElementById("lbl_resultado").innerHTML = "Erro ao calcular :(";
+        document.getElementById("lbl_resultado").innerHTML = "Item não encontrado :(";
     }
     else
     {

@@ -16,92 +16,72 @@ body
 {
     margin: 0 auto;
 
-    min-width: 350px;
+    min-width: 325px;
 
-    max-width: 1000px;
+    max-width: 1366px;
 
-    background: url(../imagens/bg.png);
+    padding: 0 3px;
 }
 body > #div_logo
 {
-   background: rgb(65, 65, 150);
+    border-radius: 0 0 15px 15px;
+    
+    background: rgb(51, 51, 51);
 }
 body > #div_logo > #img_logo
 {
-    width: 200px;
+    width: 160px;
 
-    height: 200px;
-
-    filter: drop-shadow(25px 2px 10px #363636);
+    height: 160px;
 }
 body > #div_main > .div_titulo
 {
-    margin: 100px 40px 0 0;
-
-    color: rgb(175, 175, 175);
-
     display: flex;
 
     flex-direction: row;
 
     justify-content: center;
-}
-body > #div_main > .div_titulo > .div_imagem > .img_icon
-{
-    width: 46px;
 
-    height: 46px;
-
-    margin: 0 25px 0 0;
+    color: rgb(51, 51, 51);
 }
 body > #div_main > #div_pesquisa,
 
         body > #div_main > #div_calcular
         {
-            text-align: center;
-
-            padding: 30px 0;
+            padding: 20px 0 0 0;
         }
 body > #div_main > #div_pesquisa > #form_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular
         {
-            width: 335px;
-
-            height: 35px;
-
             margin: 0 auto;
         }
-
 body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
 
         body > #div_main > #div_calcular > #form_calcular > #input_item
         {
-            text-align: center;
-            
             width: 300px;
 
             height: 35px;
 
             padding: 0 0 0 3px;
 
-            color: rgb(49, 49, 49);
+            margin: 0 2px 0 0;
+
+            color: rgb(0, 0, 0);
 
             float: left;
 
             border-style: solid;
 
-            border-right: none;
-
             border-width: 1px;
 
-            border-radius: 5px 0 0 5px;
+            border-radius: 5px;
 
-            border-color: rgb(132, 255, 75);
+            border-color: rgb(155, 148, 219);
 
             font-size: 15px;
         }
-
 body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         body > #div_main > #div_calcular > #form_calcular > .img_btn
@@ -110,41 +90,55 @@ body > #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
             height: 35px;
 
-            padding: 2px;
+            padding: 7px;
 
-            border-radius: 0 5px 5px 0;
+            border-radius: 5px;
 
-            background: rgb(132, 255, 75);
+            background: rgb(140, 151, 255);
 
             cursor: pointer;
         }
 body > #div_main > #div_calcular
 {
-    margin: 0 0 75px 0;
+    margin: 0 0 80px 0;
 }
 body > #div_main > #div_calcular > div
 {
-    margin: 30px 0 0 0;
+    margin: 28px auto 0 auto;
+
+    text-align: left;
 }
 body > #div_main > #div_calcular > div > #lbl_status
 {
-    color: rgb(132, 255, 75);
+    color: red;
 }
 body > #div_main > #div_calcular > div > #lbl_resultado
 {
-    color: rgb(175, 175, 175);
+    color: rgb(94, 179, 73);
+
+    font-style: italic;
 }
 body > #div_footer
 {
     height: 150px;
 
-    padding: 120px 0 0 0;
-
     border-top-style: solid;
 
     border-top-width: 1px;
 
-    border-color: rgb(24, 24, 24);
+    border-color: rgb(140, 151, 255);
+}
+body > #div_footer > #div_wpp
+{
+    margin: 20px 0 65px 0;
+}
+body > #div_footer > #div_wpp > a > #img_wpp
+{
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 5px;
 }
 body > #div_footer > #div_copy
 {
@@ -152,7 +146,144 @@ body > #div_footer > #div_copy
 
     text-align: center;
 
-    font-size: 12px;
-
-    color: rgb(175, 175, 175);
+    color: rgb(51, 51, 51);
 }
+@media screen and (max-width: 360px)
+{
+    body > #div_main > .div_titulo
+    {
+        font-size: 30px;
+
+        margin: 80px 0 0 0;
+    }
+    
+    body > #div_main > .div_titulo > .div_imagem > .img_icon
+    {
+        width: 35px;
+
+        height: 35px;
+
+        margin: 0 8px 0 0;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular
+        {
+            width: 310px;
+        }
+
+    body > #div_main > #div_calcular > div
+    {
+        width: 310px;
+        
+        font-size: 14px;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular > #input_item
+        {
+            width: 270px;
+            
+            font-size: 14px;
+        }
+
+    body > #div_footer > #div_copy
+    {
+        font-size: 11px;
+    }
+}
+@media screen and (min-width: 361px) and (max-width: 399px)
+{
+    body > #div_main > .div_titulo
+    {
+        font-size: 35px;
+
+        margin: 80px 0 0 0;
+    }
+    
+    body > #div_main > .div_titulo > .div_imagem > .img_icon
+    {
+        width: 35px;
+
+        height: 35px;
+
+        margin: 0 15px 0 0;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular
+        {
+            width: 340px;
+        }
+
+    body > #div_main > #div_calcular > div
+    {
+        width: 340px;
+        
+        font-size: 14px;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular > #input_item
+        {
+            width: 300px;
+            
+            font-size: 14px;
+        }
+
+    body > #div_footer > #div_copy
+    {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 400px)
+{
+    body > #div_main > .div_titulo
+    {
+        font-size: 38px;
+
+        margin: 80px 0 0 0;
+    }
+    
+    body > #div_main > .div_titulo > .div_imagem > .img_icon
+    {
+        width: 40px;
+
+        height: 40px;
+
+        margin: 0 24px 0 0;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular
+        {
+            width: 380px;
+        }
+
+    body > #div_main > #div_calcular > div
+    {
+        width: 380px;
+        
+        font-size: 14px;
+    }
+
+    body > #div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
+
+        body > #div_main > #div_calcular > #form_calcular > #input_item
+        {
+            width: 340px;
+
+            font-size: 15px;
+        }
+
+    body > #div_footer > #div_copy
+    {
+        font-size: 12px;
+    }
+}
+
