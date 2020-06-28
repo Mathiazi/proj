@@ -3,61 +3,27 @@
  * Esta função não retorna nenhum valor.
  */
 function main() {
-    // Etapa: Variável do tipo constante para armazenar os produtos do estábelecimento. desta forma é melhor do que escrever outra <option> no HTML.
-    const products = [
-        'pure picme 6v100G',
-        'kit vho alt vist malbel 750&375ml',
-        'conj 10 cabides em alumin',
-        'tênis infantil lk fila',
-        'cerveja brahma zero 12v350ml',
-        'abacaxi perola',
-        'melancia',
-        'limpol liq natural 6v500ml',
-        'saponaceo cremoso pinho 1l',
-        'kit 3 bodies man curt menino',
-        'cafe 3 coracoes vp trad 4v500g',
-        'cafe 3 coracoes vp ext fort 4v500g',
-        'cerveja coronita extra 6v210ml',
-        'cerveja corona 6v330ml',
-        'agua sao lourenco c gas 6v510ml',
-        'removedor zulu perfumado 2v900ml',
-        'limpol gel deter concentrado 3v511ml',
-        'saco umbro',
-        'ketchup heinz 2v397g',
-        'conj 3 formas p gelo',
-        'miojo nissin gal caipira 6v75g',
-        'bacon fatiado 200g',
-        'choc mini pralinés lindt 100g',
-        'agua minalba premium c gas 300ml',
-        'destac pisos laminados 3v750ml',
-        'sapolio radium 2v450ml',
-        'creme avela nutella 650g',
-        'pipoca de mic nat c sal verm 2v100g',
-        'pipoca de mic nat amarelo 2v100g',
-        'pipoca de mic manteiga azul 2v100g', 
-        'veja cozinha 3v500ml',
-        'batata 2kg',
-        'bandeja milho verde',
-        'cerveja wals pilsen 600ml',
-        'JAQUETA MASC GUESS',
-        'CAFE MELITA VP TRAD 4x500G',
-        'COCO VERDE',
-        'CANECA WINX ZAINI 33G',
-        'CEBOLA 2KG',
-        'LARANJA 10KG',
-        'CENOURA BABY 250G',
-        'DOG CHOW DUO INTEGRAL 1KG',
-        'KIT DIVERSAO PRAIA C/ 19PCS'
-    ];
+    fetch('https://us-central1-item-list-281621.cloudfunctions.net/get-items')
+        .then((response) => {
+            // Etapa: Transforma a resposta do back-end em JSON.
+            return response.json();
+        })
+        .then((products) => {
+            // Etapa: Laço de repetição que informa o produto unitário e o index do mesmo tentro do array { products }.
+            products.forEach((product, index) => {
+                if (product.title) {
+                    // Etapa: Pega o ID do HTML que corresponda { produtos } e insere <option> com os valores da correspondentes.
+                    $('#produtos').append($('<option>', {
+                        value: `${index < 10 ? `0${index}` : index} ${product.title.toUpperCase()}`,
+                        text: product.title.toUpperCase()
+                    }));
+                }
+            });
 
-    // Etapa: Laço de repetição que informa o produto unitário e o index do mesmo tentro do array { products }.
-    products.forEach((product, index) => {
-        // Etapa: Pega o ID do HTML que corresponda { produtos } e insere <option> com os valores da correspondentes.
-        $('#produtos').append($('<option>', {
-            value: `${index < 10 ? `0${index}` : index} ${product.toUpperCase()}`,
-            text: product.toUpperCase()
-        }));
-    });
+            // Etapa: Desativa o loading da tela assim que todos os dados são carregados!
+            document.getElementById('loading').style.display = 'none';
+        })
+        .catch((err) => console.log(err));
 };
 
 function char(e) 

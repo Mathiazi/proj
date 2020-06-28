@@ -287,3 +287,18 @@ body > #div_footer > #div_copy
     }
 }
 
+#loading {
+    width: 100%;
+    max-width: 1366px;
+    height: 100vh;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loading img {
+    width: 100px;
+}
