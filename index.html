@@ -6,7 +6,7 @@
         
         <meta charset="utf-8">
 
-        <title> ITEMLIST </title>
+        <title> itemList </title>
 
         <link rel="shortcut icon" href="imagens/icon.png">
         
@@ -50,7 +50,7 @@
 
                 <form id=form_pesquisa>
 
-                    <input type="search" id=input_pesquisa list="produtos">
+                    <input type="search" id=input_pesquisa list="produtos" placeholder="Pesquise um item">
 
                     <datalist id=produtos>
 
@@ -126,7 +126,7 @@
         
                 <form id=form_calcular>
                     
-                    <input id=input_item  type="tel" maxlength="9" onkeypress="return char(event)">
+                    <input id=input_item  type="tel" maxlength="9" placeholder="Digite o código do item" onkeypress="return char(event)">
                     
                     <img class=img_btn src="imagens/go.png" onclick="calcular()">
 
@@ -157,9 +157,13 @@
             </div>
 
             <div id=div_copy>
+                
                 Copyright ©Lucas Mathiazi - Todos os direitos reservados.
+            
             </div>
 
         </div>
+
     </body>
+
 </html>

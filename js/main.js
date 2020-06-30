@@ -72,36 +72,36 @@ function calcular()
     document.getElementById("lbl_resultado").innerHTML = resposta;
 }
 
-function produtos()
-{
+function produtos() {
+
+    var itens =
+            [980012483, 980010188, 980014188, 980014531, 264731, 722449, 131592, 321994, 250879,
+        
+            395489, 228664, 228657, 980013689, 980013849, 499404, 396938, 840908, 980008232,
+        
+            310746,980012412, 332065, 980003563, 980014457, 463156, 980008164, 980008344, 332992,
+        
+            623681, 177614, 177607, 378850, 226151, 166645, 980008177, 980015615, 204527,
+        
+            227853, 980014577, 226158, 628106, 980007145, 147339, 372529];
+
     var str = document.getElementById("input_pesquisa").value;
+
+    if (str == "") {
+
+        document.getElementById("lbl_resultado").innerHTML = "Pesquise um item para continuar...";
+
+        return 0;
+    }
 
     var codigo = Number(str.substr(0, 2));
 
-    var itens =
-        [980012483, 980010188, 980014188,
-            980014531, 264731, 722449,
-                131592, 321994, 250879,
-        395489, 228664, 228657,
-            980013689, 980013849, 499404,
-                396938,840908, 980008232,
-        310746,980012412, 332065,
-            980003563, 980014457, 463156,
-                980008164, 980008344, 332992,
-        623681, 177614, 177607,
-            378850, 226151, 166645,
-                980008177, 980015615, 204527,
-        227853, 980014577, 226158,
-            628106, 980007145, 147339, 372529];
-
     var verifica = itens[codigo];
 
-    if (verifica == undefined)
-    {
+    if (verifica == undefined) {
         document.getElementById("lbl_resultado").innerHTML = "Item não encontrado :(";
     }
-    else
-    {
+    else {
         document.getElementById("input_item").value = verifica;
 
         calcular();
