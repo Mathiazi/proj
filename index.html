@@ -3,7 +3,6 @@
 <html lang="pt-br">
 
     <head>
-        
         <meta charset="utf-8">
 
         <title> itemList </title>
@@ -17,31 +16,24 @@
         <script type="text/javascript" src="js/main.js"> </script>
 
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    
     </head>
 
-    <body>
+    <body onload="carregar_itens()">
 
         <div id=div_logo>
-
             <img id="img_logo" src="imagens/logo.png">
-
         </div>
 
         <div id=div_main>
-
+            
             <div class=div_titulo>
 
                 <div class=div_imagem>
-                    
                     <img class=img_icon src="imagens/icon_lista.png"> 
-                
                 </div>
 
-                <div>
-                    
+                <div> 
                     <label> LISTA DE ITENS </label>
-
                 </div>
 
             </div>
@@ -49,75 +41,23 @@
             <div id=div_pesquisa>
 
                 <form id=form_pesquisa>
+                    <input id=input_pesquisa type="search" list="lista" placeholder="Pesquise um item">
 
-                    <input type="search" id=input_pesquisa list="produtos" placeholder="Pesquise um item">
+                    <datalist id=lista> </datalist>
 
-                    <datalist id=produtos>
-
-                        <option value="00 PURE PICME 6x100G">
-                        <option value="01 KIT VHO ALT VIST MALBEL 750-375ML">
-                        <option value="02 CONJ 10 CABIDES ALUMÍNIO">
-                        <option value="03 TÊNIS INFANTIL LK FILA">
-                        <option value="04 CERVEJA BRAHMA ZERO 12x350ML">
-                        <option value="05 ABACAXI PEROLA">
-                        <option value="06 MELANCIA">
-                        <option value="07 LIMPOL LIQ NATURAL 6x500ML">
-                        <option value="08 SAPONACEO CREMOSO PINHO 1L">
-                        <option value="09 KIT 3 BODIES MANGA CURTA MENINO">
-                        <option value="10 CAFE 3 CORACOES VP TRAD 4x500G">
-                        <option value="11 CAFE 3 CORACOES VP EXTRA FORTE 4x500G">
-                        <option value="12 CERVEJA CORONITA EXTRA 6x210ML">
-                        <option value="13 CERVEJA CORONA 6x330ML">
-                        <option value="14 ÁGUA SÃO LORENCO C/GÁS 6x510ML">
-                        <option value="15 REMOVEDOR ZULU PERFUMADO 2x900ML">
-                        <option value="16 LIMPOL GEL DETER CONCENTRADO 3x511ML">
-                        <option value="17 SACO UMBRO">
-                        <option value="18 KETCHUP HEINZ 2x397G">
-                        <option value="19 CONJUNTO 3 FORMA P/GELO">
-                        <option value="20 MIOJO NISSIN GALINHA CAIPIRA 6x75G">
-                        <option value="21 BACON FATIADO 200G">
-                        <option value="22 CHOCO MINI PRALINÉS LINDT 100G">
-                        <option value="23 AGUA MINALBA PREMIUM C/GÁS 300ML">
-                        <option value="24 DESTAC PISOS LAMINADOS 3x750ML">
-                        <option value="25 SAPÓLIO RADIUM 2x450ML">
-                        <option value="26 CREME AVELÃ NUTELLA 650G">
-                        <option value="27 PIPOCA DE MIC NATURAL C/SAL VERM 2x100G">
-                        <option value="28 PIPOCA DE MIC NATURAL AMARELO 2x100G">
-                        <option value="29 PIPOCA DE MIC MANTEIGA AZUL 2x100G">
-                        <option value="30 VEJA COZINHA 3x500ML">
-                        <option value="31 BATATA 2KG">
-                        <option value="32 BANDEJA MILHO VERDE">
-                        <option value="33 CERVEJA WALS PILSEN 600ML">
-                        <option value="34 JAQUETA MASC GUESS">
-                        <option value="35 CAFE MELITA VP TRAD 4x500G">
-                        <option value="36 COCO VERDE">
-                        <option value="37 CANECA WINX ZAINI 33G">
-                        <option value="38 CEBOLA 2KG">
-                        <option value="39 LARANJA 10KG">
-                        <option value="40 CENOURA BABY 250G">
-                        <option value="41 DOG CHOW DUO INTEGRAL 1KG">
-                        <option value="42 KIT DIVERSAO PRAIA C/ 19PCS">
-
-                    </datalist>
-
-                    <img class=img_btn src="imagens/lupa.png" onclick="produtos()">
-                    
+                    <img class=img_btn src="imagens/lupa.png" onclick="obter_codigo()">   
                 </form>
             
             </div>
 
             <div class=div_titulo>
 
-                <div class="div_imagem">
-                    
-                    <img class=img_icon src="imagens/icon_calcular.png"> 
-                
+                <div class=div_imagem>
+                    <img class=img_icon src="imagens/icon_calcular.png">              
                 </div>
 
                 <div>
-                    
                     <label> ÚLTIMO DÍGITO </label>
-
                 </div>
 
             </div>
@@ -125,19 +65,15 @@
             <div id=div_calcular>
         
                 <form id=form_calcular>
-                    
                     <input id=input_item  type="tel" maxlength="9" placeholder="Digite o código do item" onkeypress="return char(event)">
                     
-                    <img class=img_btn src="imagens/go.png" onclick="calcular()">
-
+                    <img class=img_btn src="imagens/go.png" onclick="obter_final()">
                 </form>
 
                 <div>
-
                     <label id=lbl_status> STATUS: </label>
 
                     <label id=lbl_resultado> Aguardando usuário ... </label>
-
                 </div>
 
             </div>
@@ -147,19 +83,15 @@
         <div id=div_footer>
 
             <div id=div_wpp>
-
                 <a href="https://bit.ly/3i13Upv" target="_blank">
 
                     <img id=img_wpp src="imagens/wpp.png">
 
                 </a>
-
             </div>
 
             <div id=div_copy>
-                
                 Copyright ©Lucas Mathiazi - Todos os direitos reservados.
-            
             </div>
 
         </div>
