@@ -7,6 +7,7 @@ function char(e) {
         return false;
     }
 }
+
 function obter_final() {
     const cod = document.getElementById("input_item").value;
     
@@ -19,7 +20,7 @@ function obter_final() {
             status = 'Digite o código do item ...';
         }
         else {
-            status = 'O código do item é inválido ...';
+            status = 'Código do item é inválido ...';
         }
     }
     else if (tamanho == 6) {
@@ -36,7 +37,7 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O digito final é '" + digito + "'.";
+        status = "O último digito é '" + digito + "'.";
     }
     else {
         digito =  Number(cod.substr(0, 1)) + 
@@ -55,11 +56,14 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O resultado do calculo é '" + digito + "'.";
+        status = "O último digito é '" + digito + "'.";
     }
     document.getElementById("lbl_resultado").innerHTML = status;
 }
+
 function obter_codigo() {
+
+    var status = document.getElementById("lbl_resultado");
 
     const cod = [      
         '980012483',
@@ -156,7 +160,7 @@ function obter_codigo() {
     const item_selecionado = document.getElementById("input_pesquisa").value;
           
     if (item_selecionado == "") {
-        document.getElementById("lbl_resultado").innerHTML = "Pesquise um item para continuar...";
+        status.innerHTML = "Pesquise um item ...";
     }
     else{
         const posicao = Number(item_selecionado.substr(0, 2));
@@ -164,7 +168,7 @@ function obter_codigo() {
         const verifica = cod[posicao];
     
         if (verifica == undefined) {
-            document.getElementById("lbl_resultado").innerHTML = "O item não encontrado :(";
+            status.innerHTML = "item não encontrado ...";
         }
         else {
             document.getElementById("input_item").value = verifica;
@@ -173,12 +177,13 @@ function obter_codigo() {
         }
     }
 }
+
 function carregar_itens() {
 
     const itens = [
         '00 pure picme 6x100g',
 
-        '01 kit vho alt vist malbel 750 e 375ml',
+        '01 kit vho alt vista malbel 750 e 375ml',
 
         '02 conj 10 cabides de alumínio',
 
@@ -190,11 +195,11 @@ function carregar_itens() {
         
         '06 melancia',
         
-        '07 limpol liquido natural 6x500ml',
+        '07 limpol líquido natural 6x500ml',
         
         '08 saponaceo cremoso pinho 1l',
         
-        '09 kit 3 bodyes manga curta menino',
+        '09 kit 3 bodies manga curta menino',
         
         '10 cafe 3 coracoes vp trad 4x500g',
         
@@ -212,11 +217,11 @@ function carregar_itens() {
        
         '17 saco umbro',
        
-        '18 ketchup heinz 2x397G',
+        '18 ketchup heinz 2x397g',
        
         '19 conjunto 3 formas para gelo',
        
-        '20 miojo nissin galinha caipira 6x75G',
+        '20 miojo nissin galinha caipira 6x75g',
        
         '21 bacon fatiado 200g',
        
@@ -244,17 +249,17 @@ function carregar_itens() {
        
         '33 cerveja wals pilsen 600ml',
        
-        '34 jaqueta masculina gues',
+        '34 jaqueta masculina guess',
        
-        '35 cafe melira vp tradicional 4x500g',
+        '35 cafe melita vp tradicional 4x500g',
        
         '36 coco verde',
        
-        '37 caneca winx zaini 33G',
+        '37 caneca winx zaini 33g',
        
-        '38 cebola 2KG',
+        '38 cebola 2kg',
        
-        '39 laranja 10KG',
+        '39 laranja 10kg',
        
         '40 cenoura baby 250g',
        

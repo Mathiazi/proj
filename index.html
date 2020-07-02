@@ -3,6 +3,7 @@
 <html lang="pt-br">
 
     <head>
+
         <meta charset="utf-8">
 
         <title> itemList </title>
@@ -16,12 +17,15 @@
         <script type="text/javascript" src="js/main.js"> </script>
 
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        
     </head>
 
     <body onload="carregar_itens()">
 
         <div id=div_logo>
+            
             <img id="img_logo" src="imagens/logo.png">
+        
         </div>
 
         <div id=div_main>
@@ -29,11 +33,15 @@
             <div class=div_titulo>
 
                 <div class=div_imagem>
+                    
                     <img class=img_icon src="imagens/icon_lista.png"> 
+                
                 </div>
 
                 <div> 
+                    
                     <label> LISTA DE ITENS </label>
+                
                 </div>
 
             </div>
@@ -41,11 +49,13 @@
             <div id=div_pesquisa>
 
                 <form id=form_pesquisa>
+                    
                     <input id=input_pesquisa type="search" list="lista" placeholder="Pesquise um item">
 
                     <datalist id=lista> </datalist>
 
                     <img class=img_btn src="imagens/lupa.png" onclick="obter_codigo()">   
+                
                 </form>
             
             </div>
@@ -53,11 +63,15 @@
             <div class=div_titulo>
 
                 <div class=div_imagem>
+                    
                     <img class=img_icon src="imagens/icon_calcular.png">              
+               
                 </div>
 
                 <div>
+                    
                     <label> ÚLTIMO DÍGITO </label>
+               
                 </div>
 
             </div>
@@ -65,15 +79,19 @@
             <div id=div_calcular>
         
                 <form id=form_calcular>
-                    <input id=input_item  type="tel" maxlength="9" placeholder="Digite o código do item" onkeypress="return char(event)">
+                   
+                    <input id=input_item  type="tel" maxlength="9" placeholder="Código do item" onkeypress="return char(event)">
                     
                     <img class=img_btn src="imagens/go.png" onclick="obter_final()">
+               
                 </form>
 
                 <div>
+                    
                     <label id=lbl_status> STATUS: </label>
 
-                    <label id=lbl_resultado> Aguardando usuário ... </label>
+                    <label id=lbl_resultado> Aguardando ... </label>
+
                 </div>
 
             </div>
@@ -83,15 +101,19 @@
         <div id=div_footer>
 
             <div id=div_wpp>
+                
                 <a href="https://bit.ly/3i13Upv" target="_blank">
-
+                    
                     <img id=img_wpp src="imagens/wpp.png">
 
                 </a>
+
             </div>
 
             <div id=div_copy>
+                
                 Copyright ©Lucas Mathiazi - Todos os direitos reservados.
+            
             </div>
 
         </div>
