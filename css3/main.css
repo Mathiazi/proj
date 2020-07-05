@@ -20,12 +20,12 @@ body {
 
     padding: 0 3px;
 
-    background-image: url('../imagens/bg.png');
+    background: url("../imagens/bg.png");
 }
 #div_logo {
     border-radius: 0 0 15px 15px;
     
-    background-image: linear-gradient(to left, transparent, rgb(12, 12, 12));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.932));
 }
 #div_logo > #img_logo {
     width: 160px;
@@ -39,7 +39,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(184, 184, 184);
+    color: rgb(58, 58, 58);
 }
 #div_main > #div_pesquisa,
 
@@ -56,13 +56,13 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 300px;
 
-            height: 35px;
+            height: 31px;
 
             padding: 0 0 0 3px;
 
             margin: 0 2px 0 0;
 
-            color: rgb(59, 59, 59);
+            color: rgb(58, 58, 58);
 
             float: left;
 
@@ -72,22 +72,26 @@ body {
 
             border-radius: 5px;
 
-            border-color: rgb(155, 148, 219);
+            border-color: rgb(187, 187, 187);
+
+            text-align: center;
 
             font-size: 15px;
+
+            background: rgba(252, 252, 252, 0.418);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         #div_main > #div_calcular > #form_calcular > .img_btn {
-            width: 35px;
+            width: 31px;
 
-            height: 35px;
+            height: 31px;
 
             padding: 2px;
 
             border-radius: 5px;
 
-            background: rgb(156, 166, 255);
+            background: rgba(255, 255, 255, 0);
 
             cursor: pointer;
         }
@@ -100,12 +104,10 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(255, 0, 0);
+    color: rgb(155, 0, 0);
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(69, 216, 32);
-
-    font-style: italic;
+    color: rgb(95, 214, 91);
 }
 #div_footer {
     height: 150px;
@@ -114,24 +116,20 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(73, 73, 73);
+    border-color: rgb(187, 187, 187);
 }
 #div_footer > #div_wpp {
-    margin: 20px 0 65px 0;
+    margin: 10px 0 0 25px;
 }
 #div_footer > #div_wpp > a > #img_wpp {
-    display: block;
-
-    margin: 0 auto;
-
     border-radius: 5px;
 }
 #div_footer > #div_copy {
-    margin: 0 auto;
+    padding: 80px 0 0 0;
 
     text-align: center;
 
-    color: rgb(165, 165, 165);
+    color: rgb(168, 168, 168);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
