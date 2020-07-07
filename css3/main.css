@@ -18,19 +18,19 @@ body {
 
     max-width: 1366px;
 
-    padding: 0 3px;
-
     background: url("../imagens/bg.png");
 }
 #div_logo {
-    border-radius: 0 0 15px 15px;
-    
-    background-image: linear-gradient(to top, transparent, rgb(0, 0, 0));
+    background-image: linear-gradient(to left, transparent, rgb(0, 0, 0));
 }
 #div_logo > #img_logo {
     width: 160px;
 
     height: 160px;
+
+    display: block;
+
+    margin: 0 auto;
 }
 #div_main > .div_titulo {
     display: flex;
@@ -44,7 +44,7 @@ body {
 #div_main > #div_pesquisa,
 
         #div_main > #div_calcular {
-            padding: 23px 0 0 0;
+            padding: 30px 0 0 0;
         }
 #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -94,20 +94,19 @@ body {
             background: rgba(255, 255, 255, 0);
 
             cursor: pointer;
+
+            background-image: linear-gradient(to left, transparent, rgb(125, 134, 255));
         }
 #div_main > #div_calcular {
-    margin: 0 0 130px 0;
+    margin: 0 0 140px 0;
 }
 #div_main > #div_calcular > div {
-    margin: 28px auto 0 auto;
+    margin: 15px auto 0 auto;
 
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
     color: rgb(155, 0, 0);
-}
-#div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(95, 214, 91);
 }
 #div_footer {
     height: 150px;
@@ -135,22 +134,24 @@ body {
     #div_main > .div_titulo {
         font-size: 30px;
 
-        margin: 80px 0 0 0;
+        margin: 90px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 35px;
 
         height: 35px;
 
-        margin: 0 8px 0 0;
+        margin: 0 0 0 -57px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 310px;
+            width: 303px;
+
+            height: 31px;
         }
     #div_main > #div_calcular > div {
-        width: 310px;
+        width: 303px;
         
         font-size: 14px;
     }
@@ -169,22 +170,24 @@ body {
     #div_main > .div_titulo {
         font-size: 35px;
 
-        margin: 80px 0 0 0;
+        margin: 90px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 35px;
 
         height: 35px;
 
-        margin: 0 15px 0 0;
+        margin: 0 0 0 -57px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 340px;
+            width: 333px;
+
+            height: 31px;
         }
     #div_main > #div_calcular > div {
-        width: 340px;
+        width: 333px;
         
         font-size: 14px;
     }
@@ -203,22 +206,24 @@ body {
     #div_main > .div_titulo {
         font-size: 38px;
 
-        margin: 80px 0 0 0;
+        margin: 90px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 40px;
 
         height: 40px;
 
-        margin: 0 24px 0 0;
+        margin: 0 0 0 -67px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 380px;
+            width: 373px;
+
+            height: 31px;
         }
     #div_main > #div_calcular > div {
-        width: 380px;
+        width: 373px;
         
         font-size: 14px;
     }
