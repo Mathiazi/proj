@@ -18,10 +18,12 @@ body {
 
     max-width: 1366px;
 
-    background: rgba(0, 0, 0);
+    background: rgb(34, 34, 34);
 }
 #div_logo {
-    background-image: linear-gradient(to top, transparent, rgb(189, 189, 189));
+    background-image: linear-gradient(to top, rgb(12, 12, 12), transparent);
+
+    border-radius: 15px;
 }
 #div_logo > #img_logo {
     width: 160px;
@@ -39,7 +41,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(136, 136, 136);
+    color: rgb(163, 163, 163);
 }
 #div_main > #div_pesquisa,
 
@@ -62,7 +64,7 @@ body {
 
             margin: 0 2px 0 0;
 
-            color: rgb(0, 0, 0);
+            color: rgb(145, 145, 145);
 
             float: left;
 
@@ -72,13 +74,13 @@ body {
 
             border-radius: 5px;
 
-            border-color: rgb(0, 0, 0);
-
+            border-color: transparent;
+            
             text-align: center;
 
             font-size: 15px;
 
-            background: rgba(252, 252, 252, 0.418);
+            background: rgb(15, 15, 15);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -89,7 +91,7 @@ body {
 
             padding: 2px;
 
-            border-radius: 5px;
+            border-radius: 10px;
 
             cursor: pointer;
 
@@ -104,7 +106,7 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(201, 0, 0);
+    color: rgb(228, 59, 59);
 
 }
 #div_main > #div_calcular > div > #lbl_resultado {
@@ -117,7 +119,7 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(187, 187, 187);
+    border-color: rgb(53, 53, 53);
 
     padding: 25px;
 }
@@ -148,7 +150,7 @@ body {
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 303px;
+            width: 308px;
 
             height: 31px;
         }
@@ -163,6 +165,8 @@ body {
             width: 270px;
             
             font-size: 14px;
+
+            margin: 0 5px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 11px;
