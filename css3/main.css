@@ -64,23 +64,19 @@ body {
 
             margin: 0 2px 0 0;
 
-            color: rgb(145, 145, 145);
+            color: rgb(0, 0, 0);
 
             float: left;
+            
+            border-radius: 10px;
 
-            border-style: solid;
-
-            border-width: 1px;
-
-            border-radius: 5px;
-
-            border-color: transparent;
+            border: none;
             
             text-align: center;
 
             font-size: 15px;
 
-            background: rgb(15, 15, 15);
+            background: rgb(99, 99, 99);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -188,7 +184,7 @@ body {
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 333px;
+            width: 338px;
 
             height: 31px;
         }
@@ -203,6 +199,8 @@ body {
             width: 300px;
             
             font-size: 14px;
+
+            margin: 0 5px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
@@ -224,7 +222,7 @@ body {
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
-            width: 373px;
+            width: 378px;
 
             height: 31px;
         }
@@ -239,6 +237,8 @@ body {
             width: 340px;
 
             font-size: 15px;
+
+            margin: 0 5px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
