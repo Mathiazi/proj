@@ -18,10 +18,10 @@ body {
 
     max-width: 1366px;
 
-    background: url("../imagens/bg.png");
+    background: rgba(0, 0, 0);
 }
 #div_logo {
-    background-image: linear-gradient(to left, transparent, rgb(0, 0, 0));
+    background-image: linear-gradient(to top, transparent, rgb(189, 189, 189));
 }
 #div_logo > #img_logo {
     width: 160px;
@@ -39,7 +39,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(58, 58, 58);
+    color: rgb(136, 136, 136);
 }
 #div_main > #div_pesquisa,
 
@@ -62,7 +62,7 @@ body {
 
             margin: 0 2px 0 0;
 
-            color: rgb(58, 58, 58);
+            color: rgb(0, 0, 0);
 
             float: left;
 
@@ -72,7 +72,7 @@ body {
 
             border-radius: 5px;
 
-            border-color: rgb(187, 187, 187);
+            border-color: rgb(0, 0, 0);
 
             text-align: center;
 
@@ -91,11 +91,9 @@ body {
 
             border-radius: 5px;
 
-            background: rgba(255, 255, 255, 0);
-
             cursor: pointer;
 
-            background-image: linear-gradient(to left, transparent, rgb(125, 134, 255));
+            background-image: linear-gradient(to right, transparent, rgb(65, 160, 214));
         }
 #div_main > #div_calcular {
     margin: 0 0 140px 0;
@@ -106,7 +104,11 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(155, 0, 0);
+    color: rgb(201, 0, 0);
+
+}
+#div_main > #div_calcular > div > #lbl_resultado {
+    color: rgb(136, 136, 136);
 }
 #div_footer {
     height: 150px;
@@ -128,7 +130,7 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(168, 168, 168);
+    color: rgb(136, 136, 136);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
