@@ -18,10 +18,10 @@ body {
 
     max-width: 1366px;
 
-    background: rgb(34, 34, 34);
+    background: rgb(39, 39, 39);
 }
 #div_logo {
-    background-image: linear-gradient(to top, rgb(12, 12, 12), transparent);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
 
     border-radius: 15px;
 }
@@ -33,6 +33,8 @@ body {
     display: block;
 
     margin: 0 auto;
+
+    filter: drop-shadow(40px 0 4px rgba(65, 159, 214, 0.315));
 }
 #div_main > .div_titulo {
     display: flex;
@@ -97,13 +99,14 @@ body {
     margin: 0 0 140px 0;
 }
 #div_main > #div_calcular > div {
-    margin: 15px auto 0 auto;
+    margin: 40px auto 0 auto;
 
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
     color: rgb(228, 59, 59);
 
+    margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
     color: rgb(136, 136, 136);
