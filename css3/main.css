@@ -81,13 +81,9 @@ body {
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         #div_main > #div_calcular > #form_calcular > .img_btn {
-            width: 31px;
+            width: 25px;
 
-            height: 31px;
-
-            padding: 2px;
-
-            border-radius: 10px;
+            height: 25px;
 
             cursor: pointer;
         }
@@ -133,7 +129,7 @@ body {
     #div_main > .div_titulo {
         font-size: 30px;
 
-        margin: 90px 0 0 0;
+        margin: 100px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 35px;
@@ -158,10 +154,12 @@ body {
 
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 270px;
+
+            height: 26px;
             
             font-size: 14px;
 
-            margin: 0 5px 0 0;
+            margin: 0 10px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 11px;
@@ -196,10 +194,12 @@ body {
 
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 300px;
+
+            height: 26px;
             
             font-size: 14px;
 
-            margin: 0 5px 0 0;
+            margin: 0 10px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
@@ -235,9 +235,11 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 340px;
 
+            height: 26px;
+
             font-size: 15px;
 
-            margin: 0 5px 0 0;
+            margin: 0 10px 0 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
