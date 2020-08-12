@@ -26,15 +26,13 @@ body {
     border-radius: 15px;
 }
 #div_logo > #img_logo {
-    width: 160px;
+    width: 135px;
 
     height: 160px;
 
     display: block;
 
     margin: 0 auto;
-
-    filter: drop-shadow(40px 0 4px rgba(65, 159, 214, 0.315));
 }
 #div_main > .div_titulo {
     display: flex;
@@ -92,8 +90,6 @@ body {
             border-radius: 10px;
 
             cursor: pointer;
-
-            background-image: linear-gradient(to right, transparent, rgb(65, 160, 214));
         }
 #div_main > #div_calcular {
     margin: 0 0 140px 0;
