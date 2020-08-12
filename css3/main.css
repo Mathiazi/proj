@@ -17,11 +17,9 @@ body {
     min-width: 325px;
 
     max-width: 1366px;
-
-    background: rgb(39, 39, 39);
 }
 #div_logo {
-    background: rgba(0, 0, 0, 0.377);
+    background: rgb(209, 224, 255);
 
     border-radius: 0 0 25px 25px;
 
@@ -43,7 +41,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(148, 182, 255);
+    color: rgb(70, 70, 70);
 }
 #div_main > #div_pesquisa,
 
@@ -66,7 +64,7 @@ body {
 
             margin: 0 2px 0 0;
 
-            color: rgb(0, 0, 0);
+            color: rgb(68, 68, 68);
 
             float: left;
             
@@ -78,7 +76,7 @@ body {
 
             font-size: 15px;
 
-            background: rgb(104, 104, 104);
+            background: rgb(209, 224, 255);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -87,7 +85,7 @@ body {
 
             height: 27px;
 
-            background: rgb(70, 70, 70);
+            background: rgb(209, 224, 255);
 
             padding: 3px;
             
@@ -104,15 +102,15 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(121, 228, 59);
+    color: rgb(202, 44, 44);
 
     margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(167, 167, 167);
+    color: rgb(68, 68, 68);
 }
 #div_update {
-    color:rgb(0, 0, 0);
+    color: rgb(68, 68, 68);
 
     text-align: right;
 
@@ -127,7 +125,7 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(53, 53, 53);
+    border-color: rgb(150, 150, 150);
 
     padding: 25px;
 }
@@ -140,7 +138,7 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(167, 167, 167);
+    color: rgb(68, 68, 68);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
