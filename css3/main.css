@@ -103,6 +103,15 @@ body {
 #div_main > #div_calcular > div > #lbl_resultado {
     color: rgb(167, 167, 167);
 }
+#div_update {
+    color:rgb(0, 0, 0);
+
+    text-align: right;
+
+    font-size: 11px;
+
+    margin: 0 30px 8px 0;
+}
 #div_footer {
     height: 150px;
 
