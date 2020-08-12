@@ -21,7 +21,7 @@ body {
     background: rgb(39, 39, 39);
 }
 #div_logo {
-    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    background: rgb(17, 17, 17);
 
     border-radius: 15px;
 }
@@ -41,7 +41,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(163, 163, 163);
+    color: rgb(167, 167, 167);
 }
 #div_main > #div_pesquisa,
 
@@ -76,7 +76,7 @@ body {
 
             font-size: 15px;
 
-            background: rgb(99, 99, 99);
+            background: rgb(139, 139, 139);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -100,12 +100,12 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(228, 59, 59);
+    color: rgb(121, 228, 59);
 
     margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(136, 136, 136);
+    color: rgb(167, 167, 167);
 }
 #div_footer {
     height: 150px;
@@ -127,7 +127,7 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(136, 136, 136);
+    color: rgb(167, 167, 167);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
