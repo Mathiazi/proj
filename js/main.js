@@ -1,3 +1,13 @@
+{
+    $(document).ready(function(){
+
+        $(window).load(function(){
+            
+            $('#preloader').fadeOut(1500);
+        });
+        
+    });
+}
 function char(e) { 
     var charCode = e.charCode ? e.charCode : e.keyCode;
 
@@ -7,7 +17,6 @@ function char(e) {
         return false;
     }
 }
-
 function obter_final() {
     const cod = document.getElementById("input_item").value;
     
@@ -60,7 +69,6 @@ function obter_final() {
     }
     document.getElementById("lbl_resultado").innerHTML = status;
 }
-
 function obter_codigo() {
 
     var status = document.getElementById("lbl_resultado");
@@ -148,7 +156,6 @@ function obter_codigo() {
         }
     }
 }
-
 function carregar_itens() {
 
     const itens = [
