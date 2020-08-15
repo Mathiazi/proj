@@ -133,7 +133,9 @@ function obter_codigo() {
         '980004138',
             '886396',
         '980014527',
-            '980000485'
+            '980000485',
+        '103360',
+            '980014286'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -218,7 +220,9 @@ function carregar_itens() {
         '56 guarda sol',
         '57 bisnaguinha pullman 300g',
         '58 gola de lã feminina',
-        '59 vho giancarlo moscato 750ml'
+        '59 vho giancarlo moscato 750ml',
+        '60 granado - sabonete liquido glicerina 2x250ml',
+        '61 manta infantil com capuz'
     ];
 
     const lista = document.getElementById('lista');

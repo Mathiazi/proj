@@ -30,7 +30,7 @@ body {
 #div_logo {
     background: rgb(209, 224, 255);
 
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 30px 30px;
 
     height: 140px;
 }
@@ -90,15 +90,15 @@ body {
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         #div_main > #div_calcular > #form_calcular > .img_btn {
-            width: 27px;
+            width: 28px;
 
-            height: 27px;
+            height: 28px;
 
             background: rgb(209, 224, 255);
 
             padding: 3px;
             
-            border-radius: 7px;
+            border-radius: 9px;
 
             cursor: pointer;
         }
@@ -111,7 +111,7 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(202, 44, 44);
+    color: rgb(57, 202, 44);
 
     margin: 0 6px 0 0;
 }
@@ -179,7 +179,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 270px;
 
-            height: 26px;
+            height: 28px;
             
             font-size: 14px;
 
@@ -219,7 +219,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 300px;
 
-            height: 26px;
+            height: 28px;
             
             font-size: 14px;
 
@@ -259,7 +259,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 340px;
 
-            height: 26px;
+            height: 28px;
 
             font-size: 15px;
 
