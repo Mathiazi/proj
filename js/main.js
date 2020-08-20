@@ -126,7 +126,10 @@ function obter_codigo() {
         /*58*/'980014527',
         /*59*/'980000485',
         /*60*/'103360',
-        /*61*/'980014286'
+        /*61*/'980014286',
+        /*62*/'226263',
+        /*63*/'980001710',
+        /*64*/'980015086'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -213,7 +216,10 @@ function carregar_itens() {
         '58 gola de lã feminina',
         '59 vho giancarlo moscato 750ml',
         '60 granado - sabonete liquido glicerina 2x250ml',
-        '61 manta infantil com capuz'
+        '61 manta infantil com capuz',
+        '62 limão taiti',
+        '63 fanta peach 355ml',
+        '64 coca cola cherry 355ml'
     ];
 
     const lista = document.getElementById('lista');
