@@ -235,18 +235,18 @@ function carregar_itens() {
     );
 }
 function char(e) { 
-    var key=e.keyCode || e.which;
+
+    var charCode = e.charCode ? e.charCode : e.keyCode;
     
-    if (key==13){
+    if (charCode==13){
     
         obter_final();
     }
-    
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-
-    if (charCode != 8 && charCode != 9) {  
-        if (charCode < 48 || charCode > 57)
+    else if (charCode != 8 && charCode != 9) {  
         
-        return false;
+        if (charCode < 48 || charCode > 57) {
+
+            return false;
+        }
     }
 }
