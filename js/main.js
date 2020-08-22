@@ -129,7 +129,8 @@ function obter_codigo() {
         /*61*/'980014286',
         /*62*/'226263',
         /*63*/'980001710',
-        /*64*/'980015086'
+        /*64*/'980015086',
+        /*65*/'391282'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -219,7 +220,8 @@ function carregar_itens() {
         '61 manta infantil com capuz',
         '62 limão taiti',
         '63 fanta peach 355ml',
-        '64 coca cola cherry 355ml'
+        '64 coca cola cherry 355ml',
+        '65 sabonete granado glicerina 6x90g'
     ];
 
     const lista = document.getElementById('lista');

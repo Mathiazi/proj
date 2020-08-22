@@ -55,7 +55,7 @@ body {
 #div_main > #div_pesquisa,
 
         #div_main > #div_calcular {
-            padding: 40px 0 0 0;
+            padding: 30px 0 0 0;
         }
 #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -111,7 +111,7 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(57, 202, 44);
+    color: rgb(202, 44, 44);
 
     margin: 0 6px 0 0;
 }
@@ -156,11 +156,11 @@ body {
         margin: 100px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 35px;
+        width: 33px;
 
-        height: 35px;
+        height: 33px;
 
-        margin: 0 0 0 -57px;
+        margin: 0 0 0 -43px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -200,7 +200,7 @@ body {
 
         height: 35px;
 
-        margin: 0 0 0 -57px;
+        margin: 0 0 0 -40px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -240,7 +240,7 @@ body {
 
         height: 40px;
 
-        margin: 0 0 0 -67px;
+        margin: 0 0 0 -49px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
