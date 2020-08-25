@@ -3,7 +3,7 @@
 
         $(window).load(function(){
             
-            $('#preloader').fadeOut(1500);
+            $('#preloader').fadeOut(1000);
         });
         
     });
@@ -17,10 +17,10 @@ function obter_final() {
 
     if (tamanho != 6 & tamanho != 9) {
         if (tamanho == 0) {
-            status = 'Digite o código do item ...';
+            status = 'Digite a numeração do item ...';
         }
         else {
-            status = 'Código do item é inválido ...';
+            status = 'O item é inválido ...';
         }
     }
     else if (tamanho == 6) {
@@ -37,7 +37,7 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O último digito é '" + digito + "'.";
+        status = "O dígito final é '" + digito + "'.";
     }
     else {
         digito =  Number(cod.substr(0, 1)) + 
@@ -56,7 +56,7 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O último digito é '" + digito + "'.";
+        status = "O dígito final é '" + digito + "'.";
     }
     document.getElementById("lbl_resultado").innerHTML = status;
 }
@@ -136,7 +136,7 @@ function obter_codigo() {
     const item_selecionado = document.getElementById("input_pesquisa").value;
           
     if (item_selecionado == "") {
-        status.innerHTML = "Pesquise um item ...";
+        status.innerHTML = "Pesquise um item pré-definido ...";
     }
     else{
         const posicao = Number(item_selecionado.substr(0, 2));
@@ -144,7 +144,7 @@ function obter_codigo() {
         const verifica = cod[posicao];
     
         if (verifica == undefined) {
-            status.innerHTML = "item não encontrado ...";
+            status.innerHTML = "O item não foi encontrado ...";
         }
         else {
             document.getElementById("input_item").value = verifica;
