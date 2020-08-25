@@ -30,7 +30,7 @@ body {
 #div_logo {
     background: rgb(209, 224, 255);
 
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 10px 10px;
 
     height: 140px;
 }
@@ -77,7 +77,7 @@ body {
 
             float: left;
             
-            border-radius: 10px;
+            border-radius: 7px 0 0 7px;
 
             border: none;
             
@@ -94,11 +94,11 @@ body {
 
             height: 28px;
 
-            background: rgb(209, 224, 255);
+            background: rgb(66, 89, 136);
 
             padding: 3px;
             
-            border-radius: 9px;
+            border-radius: 0 7px 7px 0;
 
             cursor: pointer;
         }
@@ -160,7 +160,7 @@ body {
 
         height: 33px;
 
-        margin: 0 0 0 -43px;
+        margin: 0 0 0 -60px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -183,7 +183,7 @@ body {
             
             font-size: 14px;
 
-            margin: 0 10px 0 0;
+            margin: 0;
         }
     #div_footer > #div_copy {
         font-size: 11px;
@@ -200,7 +200,7 @@ body {
 
         height: 35px;
 
-        margin: 0 0 0 -40px;
+        margin: 0 0 0 -60px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -223,7 +223,7 @@ body {
             
             font-size: 14px;
 
-            margin: 0 10px 0 0;
+            margin: 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
@@ -240,7 +240,7 @@ body {
 
         height: 40px;
 
-        margin: 0 0 0 -49px;
+        margin: 0 0 0 -70px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -263,7 +263,7 @@ body {
 
             font-size: 15px;
 
-            margin: 0 10px 0 0;
+            margin: 0;
         }
     #div_footer > #div_copy {
         font-size: 12px;
