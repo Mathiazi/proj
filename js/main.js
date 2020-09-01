@@ -130,7 +130,8 @@ function obter_codigo() {
         /*62*/'226263',
         /*63*/'980001710',
         /*64*/'980015086',
-        /*65*/'391282'
+        /*65*/'391282',
+        /*66*/'980007173'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -221,7 +222,8 @@ function carregar_itens() {
         '62 limão taiti',
         '63 fanta peach 355ml',
         '64 coca cola cherry 355ml',
-        '65 sabonete granado glicerina 6x90g'
+        '65 sabonete granado glicerina 6x90g',
+        '66 Dueto Suave'
     ];
 
     const lista = document.getElementById('lista');
