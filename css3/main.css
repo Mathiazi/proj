@@ -28,11 +28,13 @@ body {
     background: rgb(209, 224, 255);
 }
 #div_logo {
-    background: rgb(209, 224, 255);
+    background: rgb(80, 102, 148);
 
     border-radius: 0 0 10px 10px;
 
     height: 140px;
+
+    margin: 0 5px 0 5px;
 }
 #div_logo > #img_logo {
     width: 140px;
@@ -50,7 +52,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(70, 70, 70);
+    color: rgb(0, 0, 0);
 }
 #div_main > #div_pesquisa,
 
@@ -73,7 +75,7 @@ body {
 
             margin: 0 2px 0 0;
 
-            color: rgb(68, 68, 68);
+            color: rgb(0, 0, 0);
 
             float: left;
             
@@ -94,9 +96,7 @@ body {
 
             height: 28px;
 
-            background: rgb(66, 89, 136);
-
-            padding: 3px;
+            background: rgb(209, 224, 255);
             
             border-radius: 0 7px 7px 0;
 
@@ -111,12 +111,12 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(202, 44, 44);
+    color: rgb(138, 22, 22);
 
     margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
 }
 #div_update {
     color: rgb(68, 68, 68);
@@ -147,20 +147,20 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
         font-size: 30px;
 
-        margin: 100px 0 0 0;
+        margin: 110px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 33px;
+        width: 30px;
 
         height: 33px;
 
-        margin: 0 0 0 -60px;
+        margin: 0 0 0 -35px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -200,7 +200,7 @@ body {
 
         height: 35px;
 
-        margin: 0 0 0 -60px;
+        margin: 0 0 0 -40px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -240,7 +240,7 @@ body {
 
         height: 40px;
 
-        margin: 0 0 0 -70px;
+        margin: 0 0 0 -45px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 

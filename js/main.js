@@ -3,7 +3,7 @@
 
         $(window).load(function(){
             
-            $('#preloader').fadeOut(1000);
+            $('#preloader').fadeOut(2200);
         });
         
     });
@@ -223,7 +223,7 @@ function carregar_itens() {
         '63 fanta peach 355ml',
         '64 coca cola cherry 355ml',
         '65 sabonete granado glicerina 6x90g',
-        '66 Dueto Suave'
+        '66 dueto suave'
     ];
 
     const lista = document.getElementById('lista');
