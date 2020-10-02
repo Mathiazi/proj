@@ -28,7 +28,7 @@ body {
     background: rgb(209, 224, 255);
 }
 #div_logo {
-    background: rgb(80, 102, 148);
+    background: rgb(44, 55, 78);
 
     border-radius: 0 0 10px 10px;
 
@@ -37,13 +37,24 @@ body {
     margin: 0 5px 0 5px;
 }
 #div_logo > #img_logo {
-    width: 140px;
+    width: 120px;
 
     height: 140px;
 
     display: block;
 
     margin: 0 auto;
+}
+#div_main > #div_frase {
+    margin: 55px 10px;
+}
+#div_main > #div_frase > p {
+
+    font-size: 11px;
+
+    margin: 10px 0;
+
+    text-align: center;
 }
 #div_main > .div_titulo {
     display: flex;
@@ -106,26 +117,28 @@ body {
     margin: 0 0 130px 0;
 }
 #div_main > #div_calcular > div {
-    margin: 40px auto 0 auto;
+    margin: 30px auto 0 auto;
 
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(138, 22, 22);
+    color: rgb(182, 0, 0);
 
     margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
     color: rgb(0, 0, 0);
+
+    font-size: 13px;
 }
 #div_update {
-    color: rgb(68, 68, 68);
+    color: rgb(112, 112, 112);
 
-    text-align: right;
+    text-align: center;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    margin: 0 10px 10px 0;
+    margin: 0 0 10px 0;
 }
 #div_footer {
     height: 150px;
@@ -143,6 +156,10 @@ body {
 }
 #div_footer > #div_wpp > a > #img_wpp {
     border-radius: 5px;
+
+    width: 27px;
+
+    height: 27px;
 }
 #div_footer > #div_copy {
     text-align: center;
@@ -153,14 +170,14 @@ body {
     #div_main > .div_titulo {
         font-size: 30px;
 
-        margin: 110px 0 0 0;
+        margin: 70px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 30px;
+        width: 35px;
 
-        height: 33px;
+        height: 35px;
 
-        margin: 0 0 0 -35px;
+        margin: 0 0 0 -45px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -196,11 +213,11 @@ body {
         margin: 90px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 35px;
+        width: 39px;
 
-        height: 35px;
+        height: 39px;
 
-        margin: 0 0 0 -40px;
+        margin: 0 0 0 -50px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -236,11 +253,11 @@ body {
         margin: 90px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 40px;
+        width: 43px;
 
-        height: 40px;
+        height: 43px;
 
-        margin: 0 0 0 -45px;
+        margin: 0 0 0 -54px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 

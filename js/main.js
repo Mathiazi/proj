@@ -132,7 +132,8 @@ function obter_codigo() {
         /*64*/'980015086',
         /*65*/'391282',
         /*66*/'980007173',
-        /*67*/'352107'
+        /*67*/'352107',
+        /*68*/'386711'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -225,7 +226,8 @@ function carregar_itens() {
         '64 coca cola cherry 355ml',
         '65 sabonete granado glicerina 6x90g',
         '66 dueto suave',
-        '67 mostarda heinz 2x255g'
+        '67 mostarda heinz 2x255g',
+        '68 adoçante stevia 2x50g'
     ];
 
     const lista = document.getElementById('lista');
