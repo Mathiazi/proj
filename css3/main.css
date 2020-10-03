@@ -32,18 +32,22 @@ body {
 
     border-radius: 0 0 10px 10px;
 
-    height: 140px;
+    height: 160px;
 
     margin: 0 5px 0 5px;
+
+    padding: 28px 0 0 0;
 }
 #div_logo > #img_logo {
-    width: 140px;
+    width: 100px;
 
-    height: 140px;
+    height: 100px;
 
     display: block;
     
     margin: 0 auto;
+
+    background: white;
 }
 #div_main > .div_titulo {
     display: flex;
@@ -127,7 +131,7 @@ body {
 
     background: rgb(209, 224, 255);
 
-    border-radius: 15px;
+    border-radius: 10px;
 }
 #div_main > #div_frase > #img_info {
     width: 40px;
