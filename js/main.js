@@ -133,7 +133,10 @@ function obter_codigo() {
         /*65*/'391282',
         /*66*/'980007173',
         /*67*/'352107',
-        /*68*/'386711'
+        /*68*/'386711',
+        /*69*/'980008161',
+        /*70*/'980002601',
+        /*71*/'980014743'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -227,7 +230,10 @@ function carregar_itens() {
         '65 sabonete granado glicerina 6x90g',
         '66 dueto suave',
         '67 mostarda heinz 2x255g',
-        '68 adoçante stevia 2x50g'
+        '68 adoçante stevia 2x50g',
+        '69 Veja Limpeza Pesada 2x1L',
+        '70 Dove Men Care Cuidado Total 3x89G',
+        '71 Fanta Lemon 330ML'
     ];
 
     const lista = document.getElementById('lista');
