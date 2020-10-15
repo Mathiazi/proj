@@ -25,16 +25,16 @@ body {
 
     height: 100vh;
 
-    background: rgb(147, 166, 204);
+    background: rgb(168, 179, 201);
 }
 #div_logo {
-    background: rgb(147, 166, 204);
+    background: rgb(105, 126, 167);
 
     border-radius: 0 0 10px 10px;
 
     height: 58px;
 
-    margin: 0 5px 0 5px;
+    margin: 0 3px 0 3px;
 
     padding: 8px 0 0 8px;
 }
@@ -81,13 +81,17 @@ body {
             
             border-radius: 7px 0 0 7px;
 
-            border: none;
+            border-style: solid;
+
+            border-width: 1px;
+
+            border-right: none;
+
+            border-color: rgb(168, 179, 201);
             
             text-align: center;
 
             font-size: 15px;
-
-            background: rgb(147, 166, 204);
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -96,9 +100,17 @@ body {
 
             height: 28px;
 
-            background: rgb(147, 166, 204);
+            border-width: 1px;
+
+            border-color: rgb(168, 179, 201);
+
+            border-style: solid;
             
             border-radius: 0 7px 7px 0;
+
+            border-left: none;
+
+            padding: 2px;
 
             cursor: pointer;
         }
@@ -125,9 +137,13 @@ body {
 
     padding: 10px;
 
-    background: rgb(147, 166, 204);
-
     border-radius: 10px;
+
+    border-width: 1px;
+
+    border-style: solid;
+
+    border-color: rgb(168, 179, 201);
 }
 #div_main > #div_frase > #img_info {
     width: 30px;
