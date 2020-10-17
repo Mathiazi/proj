@@ -30,13 +30,13 @@ body {
 #div_logo {
     background: rgb(105, 126, 167);
 
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
 
-    height: 58px;
+    height: 60px;
 
     margin: 0 3px 0 3px;
 
-    padding: 8px 0 0 8px;
+    padding: 10px;
 }
 #div_logo > #img_logo {
     width: 40px;
@@ -52,12 +52,12 @@ body {
 
     justify-content: center;
 
-    color: rgb(0, 0, 0);
+    color: rgb(105, 126, 167);
 }
 #div_main > #div_pesquisa,
 
         #div_main > #div_calcular {
-            padding: 30px 0 0 0;
+            padding: 40px 0 0 0;
         }
 #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -79,7 +79,7 @@ body {
 
             float: left;
             
-            border-radius: 7px 0 0 7px;
+            border-radius: 5px 0 0 5px;
 
             border-style: solid;
 
@@ -87,7 +87,7 @@ body {
 
             border-right: none;
 
-            border-color: rgb(168, 179, 201);
+            border-color: rgb(105, 126, 167);
             
             text-align: center;
 
@@ -102,11 +102,11 @@ body {
 
             border-width: 1px;
 
-            border-color: rgb(168, 179, 201);
+            border-color: rgb(105, 126, 167);
 
             border-style: solid;
             
-            border-radius: 0 7px 7px 0;
+            border-radius: 0 5px 5px 0;
 
             border-left: none;
 
@@ -123,27 +123,27 @@ body {
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(182, 0, 0);
+    color: rgb(124, 0, 0);
 
     margin: 0 6px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(0, 0, 0);
+    color: rgb(105, 126, 167);
 
     font-size: 13px;
 }
 #div_main > #div_frase {
-    margin: 0 30px 100px 30px;
+    margin: 0 3px 90px 3px;
 
     padding: 10px;
 
-    border-radius: 10px;
+    border-radius: 3px;
 
     border-width: 1px;
 
     border-style: solid;
 
-    border-color: rgb(168, 179, 201);
+    border-color: rgb(105, 126, 167);
 }
 #div_main > #div_frase > #img_info {
     width: 30px;
@@ -152,19 +152,19 @@ body {
 
     display: block;
 
-    margin: 0 auto;
+    margin: 20px auto;
 }
 #div_main > #div_frase > p {
     font-size: 13px;
 
-    color: rgb(99, 99, 99);
+    color: rgb(105, 126, 167);
 
-    margin: 12px 0 10px 0;
+    margin: 20px 0 20px 0;
 
     text-align: center;
 }
 #div_update {
-    color: rgb(112, 112, 112);
+    color: rgb(145, 145, 145);
 
     text-align: center;
 
@@ -179,7 +179,7 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(150, 150, 150);
+    border-color: rgb(105, 126, 167);
 
     padding: 25px;
 }
@@ -196,7 +196,7 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(99, 99, 99);
+    color: rgb(145, 145, 145);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
