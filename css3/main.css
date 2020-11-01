@@ -45,6 +45,33 @@ body {
 
     background: white;
 }
+#div_main > #div_frase {
+    margin: 0 3px 0 3px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-color: rgb(105, 126, 167);
+}
+#div_main > #div_frase > #img_info {
+    width: 30px;
+    
+    height: 30px;
+
+    display: block;
+
+    margin: 60px auto 0 auto;
+}
+#div_main > #div_frase > p {
+    font-size: 13px;
+
+    color: rgb(160, 179, 216);
+
+    margin: 20px 0 20px 0;
+
+    text-align: center;
+}
 #div_main > .div_titulo {
     display: flex;
 
@@ -87,7 +114,7 @@ body {
 
             border-right: none;
 
-            border-color: rgb(116, 116, 116);
+            border-color: rgb(187, 187, 187);
             
             text-align: center;
 
@@ -102,7 +129,7 @@ body {
 
             border-width: 1px;
 
-            border-color: rgb(145, 145, 145);
+            border-color: rgb(187, 187, 187);
 
             border-style: solid;
             
@@ -132,33 +159,6 @@ body {
 
     font-size: 13px;
 }
-#div_main > #div_frase {
-    margin: 0 3px 90px 3px;
-
-    padding: 10px;
-
-    border: none;
-
-    border-color: rgb(105, 126, 167);
-}
-#div_main > #div_frase > #img_info {
-    width: 30px;
-    
-    height: 30px;
-
-    display: block;
-
-    margin: 20px auto;
-}
-#div_main > #div_frase > p {
-    font-size: 13px;
-
-    color: rgb(160, 179, 216);
-
-    margin: 20px 0 20px 0;
-
-    text-align: center;
-}
 #div_update {
     color: rgb(145, 145, 145);
 
@@ -166,7 +166,7 @@ body {
 
     font-size: 11px;
 
-    margin: 0 0 8px 0;
+    margin: 100px 0 8px 0;
 }
 #div_footer {
     height: 150px;
@@ -238,7 +238,7 @@ body {
     #div_main > .div_titulo {
         font-size: 35px;
 
-        margin: 100px 0 0 0;
+        margin: 80px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 43px;
