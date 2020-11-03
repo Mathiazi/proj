@@ -20,7 +20,7 @@ function obter_final() {
             status = 'Digite a numeração do item ...';
         }
         else {
-            status = 'O item é inválido ...';
+            status = 'O item não é válido ...';
         }
     }
     else if (tamanho == 6) {
@@ -37,7 +37,7 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O dígito final é '" + digito + "'.";
+        status = "O dígito final é " + digito + "!";
     }
     else {
         digito =  Number(cod.substr(0, 1)) + 
@@ -56,7 +56,7 @@ function obter_final() {
             digito = 0;
         }
 
-        status = "O dígito final é '" + digito + "'.";
+        status = "O dígito final é " + digito + "!";
     }
     document.getElementById("lbl_resultado").innerHTML = status;
 }
@@ -138,7 +138,10 @@ function obter_codigo() {
         /*70*/'980002601',
         /*71*/'980014743',
         /*72*/'980008473',
-        /*73*/'980007231'
+        /*73*/'980007231',
+        /*74*/'980016233',
+        /*75*/'255729',
+        /*76*/'255736'
     ];
 
     const item_selecionado = document.getElementById("input_pesquisa").value;
@@ -237,7 +240,10 @@ function carregar_itens() {
         '70 Dove Men Care Cuidado Total 3x89G',
         '71 Fanta Lemon 330ML',
         '72 Rexona Clinical Men 3x91G',
-        '73 Finish Po 2.5KG'
+        '73 Finish Po 2.5KG',
+        '74 Sustagem Kids Choco Promo Pack 2x380GR',
+        '75 Esfiha Mista Candahar 12x580GR',
+        '76 Esfiha Calabresa Candahar 12x520GR'
     ];
 
     const lista = document.getElementById('lista');

@@ -9,7 +9,7 @@
 
     font-family: 'Roboto';
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 body {
     margin: 0 auto;
@@ -36,7 +36,7 @@ body {
 
     margin: 0 3px 0 3px;
 
-    padding: 10px;
+    padding: 9px;
 }
 #div_logo > #img_logo {
     width: 40px;
@@ -55,22 +55,27 @@ body {
     border-color: rgb(105, 126, 167);
 }
 #div_main > #div_frase > #img_info {
-    width: 30px;
+    width: 35px;
     
-    height: 30px;
+    height: 35px;
 
     display: block;
 
-    margin: 60px auto 0 auto;
+    margin: 40px auto 0 auto;
 }
 #div_main > #div_frase > p {
     font-size: 13px;
 
-    color: rgb(160, 179, 216);
+    color: rgb(216, 160, 160);
 
     margin: 20px 0 20px 0;
 
     text-align: center;
+}
+#div_main > .div_titulo > .div_imagem > .img_icon {
+    filter: grayscale(100%);
+
+    filter: opacity(50%);
 }
 #div_main > .div_titulo {
     display: flex;
@@ -79,12 +84,12 @@ body {
 
     justify-content: center;
 
-    color: rgb(105, 126, 167);
+    color: rgb(132, 153, 196);
 }
 #div_main > #div_pesquisa,
 
         #div_main > #div_calcular {
-            padding: 40px 0 0 0;
+            padding: 25px 0 0 0;
         }
 #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -98,15 +103,11 @@ body {
 
             height: 31px;
 
-            padding: 0 0 0 3px;
-
-            margin: 0 2px 0 0;
-
-            color: rgb(136, 136, 136);
-
             float: left;
             
-            border-radius: 5px 0 0 5px;
+            border-radius: 3px 0 0 3px;
+
+            color: rgb(62, 77, 141);
 
             border-style: solid;
 
@@ -114,11 +115,13 @@ body {
 
             border-right: none;
 
-            border-color: rgb(187, 187, 187);
+            border-color: rgb(163, 163, 163);
+
+            filter: opacity(50%);
             
             text-align: center;
 
-            font-size: 15px;
+            font-size: 14px;
         }
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
@@ -129,7 +132,7 @@ body {
 
             border-width: 1px;
 
-            border-color: rgb(187, 187, 187);
+            border-color: rgb(163, 163, 163);
 
             border-style: solid;
             
@@ -137,25 +140,24 @@ body {
 
             border-left: none;
 
-            padding: 2px;
+            padding: 4px;
 
             cursor: pointer;
+
+            filter: opacity(50%);
         }
-#div_main > #div_calcular {
-    margin: 0 0 100px 0;
-}
 #div_main > #div_calcular > div {
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
 
     text-align: left;
 }
 #div_main > #div_calcular > div > #lbl_status {
-    color: rgb(124, 0, 0);
+    color: rgb(216, 160, 160);
 
-    margin: 0 6px 0 0;
+    margin: 0 4px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(116, 116, 116);
+    color: rgb(165, 165, 165);
 
     font-size: 13px;
 }
@@ -166,7 +168,7 @@ body {
 
     font-size: 11px;
 
-    margin: 100px 0 8px 0;
+    margin: 100px 0 7px 0;
 }
 #div_footer {
     height: 150px;
@@ -177,17 +179,19 @@ body {
 
     border-color: rgb(223, 223, 223);
 
-    padding: 25px;
+    padding: 13px;
 }
 #div_footer > #div_wpp {
-    margin: 0 0 40px 0;
+    margin: 0 0 60px 0;
 }
 #div_footer > #div_wpp > a > #img_wpp {
-    border-radius: 5px;
+    border-radius: 3px;
 
-    width: 27px;
+    width: 30px;
 
-    height: 27px;
+    height: 30px;
+
+    filter: opacity(50%);
 }
 #div_footer > #div_copy {
     text-align: center;
@@ -198,14 +202,14 @@ body {
     #div_main > .div_titulo {
         font-size: 30px;
 
-        margin: 100px 0 0 0;
+        margin: 60px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 40px;
 
         height: 40px;
 
-        margin: 0 0 0 -50px;
+        margin: 0 0 0 -58px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -238,14 +242,14 @@ body {
     #div_main > .div_titulo {
         font-size: 35px;
 
-        margin: 80px 0 0 0;
+        margin: 60px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 43px;
 
         height: 43px;
 
-        margin: 0 0 0 -55px;
+        margin: 0 0 0 -59px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -278,14 +282,14 @@ body {
     #div_main > .div_titulo {
         font-size: 38px;
 
-        margin: 100px 0 0 0;
+        margin: 60px 0 0 0;
     }
     #div_main > .div_titulo > .div_imagem > .img_icon {
         width: 45px;
 
         height: 45px;
 
-        margin: 0 0 0 -60px;
+        margin: 0 0 0 -67px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
