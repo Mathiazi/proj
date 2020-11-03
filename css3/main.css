@@ -107,7 +107,7 @@ body {
             
             border-radius: 3px 0 0 3px;
 
-            color: rgb(62, 77, 141);
+            color: rgb(179, 187, 223);
 
             border-style: solid;
 
@@ -115,10 +115,8 @@ body {
 
             border-right: none;
 
-            border-color: rgb(163, 163, 163);
+            border-color: rgb(212, 212, 212);
 
-            filter: opacity(50%);
-            
             text-align: center;
 
             font-size: 14px;
