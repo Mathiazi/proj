@@ -57,25 +57,26 @@ body {
 
     display: block;
 
-    margin: 45px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 #div_main > #div_frase > p {
     font-size: 13px;
 
     color: rgb(117, 117, 117);
 
-    margin: 20px 0 20px 0;
+    margin: 20px 0 30px 0;
 
     text-align: center;
 }
 #div_main > .div_titulo {
+
     display: flex;
 
     flex-direction: row;
 
     justify-content: center;
 
-    color: rgb(199, 69, 69);
+    color: rgb(194, 194, 194);
 }
 #div_main > #div_pesquisa,
 
@@ -96,9 +97,9 @@ body {
 
             float: left;
             
-            border-radius: 15px 0 0 0px;
+            border-radius: 13px 0 0 13px;
 
-            color: rgb(117, 117, 117);
+            color: rgb(194, 194, 194);
 
             border-style: solid;
 
@@ -106,9 +107,9 @@ body {
 
             border-right: none;
 
-            border-color: rgb(117, 117, 117);
+            border-color: rgb(77, 77, 77);
 
-            background: transparent;
+            background: rgb(77, 77, 77);
 
             text-align: center;
 
@@ -117,25 +118,25 @@ body {
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         #div_main > #div_calcular > #form_calcular > .img_btn {
-            width: 28px;
+            width: 32px;
 
-            height: 28px;
+            height: 32px;
 
             border-width: 1px;
 
-            border-color: rgb(117, 117, 117);
+            border-color: rgb(77, 77, 77);
 
             border-style: solid;
             
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 13px 13px 0;
 
             border-left: none;
 
-            padding: 2px;
+            padding: 5px;
 
             cursor: pointer;
 
-            background: transparent;
+            background: rgb(77, 77, 77);
         }
 #div_main > #div_calcular > div {
     margin: 20px auto 0 auto;
@@ -168,7 +169,7 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(68, 68, 68);
 
     padding: 13px;
 }
@@ -195,13 +196,6 @@ body {
 
         margin: 60px 0 0 0;
     }
-    #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 35px;
-
-        height: 35px;
-
-        margin: 0 0 0 -58px;
-    }
     #div_main > #div_pesquisa > #form_pesquisa,
 
         #div_main > #div_calcular > #form_calcular {
@@ -219,7 +213,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 270px;
 
-            height: 28px;
+            height: 32px;
             
             font-size: 14px;
 
@@ -234,13 +228,6 @@ body {
         font-size: 35px;
 
         margin: 60px 0 0 0;
-    }
-    #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 37px;
-
-        height: 37px;
-
-        margin: 0 0 0 -59px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -259,7 +246,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 300px;
 
-            height: 28px;
+            height: 32px;
             
             font-size: 14px;
 
@@ -274,13 +261,6 @@ body {
         font-size: 38px;
 
         margin: 60px 0 0 0;
-    }
-    #div_main > .div_titulo > .div_imagem > .img_icon {
-        width: 45px;
-
-        height: 45px;
-
-        margin: 0 0 0 -67px;
     }
     #div_main > #div_pesquisa > #form_pesquisa,
 
@@ -299,7 +279,7 @@ body {
         #div_main > #div_calcular > #form_calcular > #input_item {
             width: 340px;
 
-            height: 28px;
+            height: 32px;
 
             font-size: 15px;
 
