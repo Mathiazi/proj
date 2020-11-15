@@ -96,7 +96,7 @@ body {
 
             float: left;
             
-            border-radius: 3px 0 0 3px;
+            border-radius: 15px 0 0 0px;
 
             color: rgb(117, 117, 117);
 
@@ -131,11 +131,11 @@ body {
 
             border-left: none;
 
-            padding: 1px;
+            padding: 2px;
 
             cursor: pointer;
 
-            background: rgb(117, 117, 117);
+            background: transparent;
         }
 #div_main > #div_calcular > div {
     margin: 20px auto 0 auto;
