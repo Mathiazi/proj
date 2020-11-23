@@ -17,8 +17,6 @@ body {
     min-width: 325px;
 
     max-width: 1366px;
-
-    background: rgb(49, 49, 49);
 }
 #preloader {
     position: absolute;
@@ -27,10 +25,10 @@ body {
 
     height: 100vh;
 
-    background: rgb(0, 0, 0);
+    background: rgb(217, 226, 255);
 }
 #div_logo {
-    background: rgb(26, 26, 26);
+    background: rgb(217, 226, 255);
 
     border-radius: 0 0 20px 20px;
 
@@ -39,6 +37,8 @@ body {
     margin: 0 5px 0 5px;
 
     padding: 14px;
+
+    filter: opacity(50%);
 }
 #div_logo > #img_logo {
     width: 43px;
@@ -58,11 +58,13 @@ body {
     display: block;
 
     margin: 50px auto 0 auto;
+
+    filter: opacity(50%);
 }
 #div_main > #div_frase > p {
     font-size: 13px;
 
-    color: rgb(117, 117, 117);
+    color: rgb(180, 180, 180);
 
     margin: 20px 0 30px 0;
 
@@ -76,7 +78,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(194, 194, 194);
+    color: rgb(0, 0, 0);
 }
 #div_main > #div_pesquisa,
 
@@ -99,7 +101,7 @@ body {
             
             border-radius: 13px 0 0 13px;
 
-            color: rgb(194, 194, 194);
+            color: rgb(0, 0, 0);
 
             border-style: solid;
 
@@ -107,9 +109,9 @@ body {
 
             border-right: none;
 
-            border-color: rgb(77, 77, 77);
+            border-color: rgb(212, 212, 212);
 
-            background: rgb(77, 77, 77);
+            background: rgb(212, 212, 212);
 
             text-align: center;
 
@@ -124,7 +126,7 @@ body {
 
             border-width: 1px;
 
-            border-color: rgb(77, 77, 77);
+            border-color: rgb(212, 212, 212);
 
             border-style: solid;
             
@@ -136,7 +138,7 @@ body {
 
             cursor: pointer;
 
-            background: rgb(77, 77, 77);
+            background: rgb(212, 212, 212);
         }
 #div_main > #div_calcular > div {
     margin: 20px auto 0 auto;
@@ -149,12 +151,12 @@ body {
     margin: 0 4px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(117, 117, 117);
+    color: rgb(0, 0, 0);
 
     font-size: 13px;
 }
 #div_update {
-    color: rgb(117, 117, 117);
+    color: rgb(180, 180, 180);
 
     text-align: center;
 
@@ -169,7 +171,7 @@ body {
 
     border-top-width: 1px;
 
-    border-color: rgb(68, 68, 68);
+    border-color: rgb(211, 211, 211);
 
     padding: 13px;
 }
@@ -188,7 +190,7 @@ body {
 #div_footer > #div_copy {
     text-align: center;
 
-    color: rgb(117, 117, 117);
+    color: rgb(180, 180, 180);
 }
 @media screen and (max-width: 360px) {
     #div_main > .div_titulo {
