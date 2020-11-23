@@ -1,3 +1,8 @@
+
+:root {
+    --default: rgb(220, 226, 255);
+}
+
 * {
     box-sizing: border-box;
 
@@ -25,10 +30,10 @@ body {
 
     height: 100vh;
 
-    background: rgb(217, 226, 255);
+    background: var(--default);
 }
 #div_logo {
-    background: rgb(217, 226, 255);
+    background: var(--default);
 
     border-radius: 0 0 20px 20px;
 
@@ -37,39 +42,20 @@ body {
     margin: 0 5px 0 5px;
 
     padding: 14px;
-
-    filter: opacity(50%);
 }
 #div_logo > #img_logo {
-    width: 43px;
+    width: 65px;
 
-    height: 43px;
-}
-#div_main > #div_frase {
-    margin: 0 5px 0 5px;
-
-    border: none;
-}
-#div_main > #div_frase > #img_info {
-    width: 33px;
-    
-    height: 33px;
+    height: 65px;
 
     display: block;
 
-    margin: 50px auto 0 auto;
-
-    filter: opacity(50%);
+    margin: 23px auto 0 auto;
 }
-#div_main > #div_frase > p {
-    font-size: 13px;
-
-    color: rgb(180, 180, 180);
-
-    margin: 20px 0 30px 0;
-
-    text-align: center;
+#div_main {
+    margin: 150px 0 0 0;
 }
+
 #div_main > .div_titulo {
 
     display: flex;
@@ -78,7 +64,7 @@ body {
 
     justify-content: center;
 
-    color: rgb(0, 0, 0);
+    color: rgb(88, 88, 88);
 }
 #div_main > #div_pesquisa,
 
@@ -101,7 +87,7 @@ body {
             
             border-radius: 13px 0 0 13px;
 
-            color: rgb(0, 0, 0);
+            color: rgb(88, 88, 88);
 
             border-style: solid;
 
@@ -109,9 +95,9 @@ body {
 
             border-right: none;
 
-            border-color: rgb(212, 212, 212);
+            border-color: var(--default);
 
-            background: rgb(212, 212, 212);
+            background: var(--default);
 
             text-align: center;
 
@@ -126,7 +112,7 @@ body {
 
             border-width: 1px;
 
-            border-color: rgb(212, 212, 212);
+            border-color: var(--default);
 
             border-style: solid;
             
@@ -138,10 +124,10 @@ body {
 
             cursor: pointer;
 
-            background: rgb(212, 212, 212);
+            background: var(--default);
         }
 #div_main > #div_calcular > div {
-    margin: 20px auto 0 auto;
+    margin: 30px auto 100px auto;
 
     text-align: left;
 }
@@ -151,7 +137,7 @@ body {
     margin: 0 4px 0 0;
 }
 #div_main > #div_calcular > div > #lbl_resultado {
-    color: rgb(0, 0, 0);
+    color: rgb(88, 88, 88);
 
     font-size: 13px;
 }
@@ -162,7 +148,7 @@ body {
 
     font-size: 11px;
 
-    margin: 100px 0 7px 0;
+    margin: 150px 0 7px 0;
 }
 #div_footer {
     height: 150px;
