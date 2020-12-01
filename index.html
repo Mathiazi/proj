@@ -6,128 +6,73 @@
 
         <meta charset="utf-8">
 
-        <title> CALCULADOR </title>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="imagens/icon/apple-touch-icon.png">
-
-        <link rel="icon" type="image/png" sizes="32x32" href="imagens/icon/favicon-32x32.png">
-
-        <link rel="icon" type="image/png" sizes="16x16" href="imagens/icon/favicon-16x16.png">
-
-        <link rel="manifest" href="imagens/icon/site.webmanifest">
-
-        <link rel="mask-icon" href="imagens/icon/safari-pinned-tab.svg" color="#5bbad5">
-
-        <link rel="shortcut icon" href="imagens/icon/favicon.ico">
-
-        <meta name="msapplication-TileColor" content="#603cba">
-
-        <meta name="msapplication-config" content="imagens/icon/browserconfig.xml">
-
-        <meta name="theme-color" content="#ffffff">
-        
-        <link rel="stylesheet" href="css3/main.css">
+        <title> ÚLTIMO DÍGITO </title>
+    
+        <link rel="stylesheet" href="css/main.css">
+    
+        <script type="text/javascript" src="js/main.js"> </script>
+    
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"> 
-        
-        <script type="text/javascript" src="js/main.js"> </script>
 
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        
     </head>
 
-    <body onload=carregar_itens()>
+    <body onload="CARREGAR_LISTA()">
 
-        <div id=preloader> </div>
+        <div class=LOGO>
 
-        <div id=div_logo>
+        </div>
+
+        <div class=MAIN>
+
+            <div class=TITULO1>
+
+                <label> Último Dígito </label>
+
+            </div>
+
+            <form onsubmit="return false">
             
-            <img id="img_logo" src="imagens/logo.png">
+                <input id=ITEM type="tel" maxlength="9" onkeypress="return BLOQUEIO(event)">
+
+                <div class=BOTAO1 onclick="FINAL()">
+
+                </div>
+            
+            </form>
+
+            <div class=RESULTADO>
+                
+                <label class=COR_STATUS> STATUS: </label>
+
+                <label id=STATUS> Não calculado... </label>
+
+            </div>
+
+
+
+
+            <div class=TITULO2>
+
+                <label> Lista de Itens </label>
+
+            </div>
+
+            <form onsubmit="return false">
+                    
+                <input id=ITENS class=myarrow type="search" list="lista">
+
+                <datalist id=lista> </datalist>
+
+                <div class=BOTAO2 onclick="CODIGO()">
+
+                </div>
+            
+            </form>
+
+        </div>
         
-        </div>
-
-        <div id=div_main>
-
-            <div class=div_titulo>
-
-                <div>
-                    
-                    <label> ÚLTIMO DÍGITO </label>
-               
-                </div>
-
-            </div>
-
-            <div id=div_calcular>
-        
-                <form id=form_calcular onsubmit="return false">
-                   
-                    <input id=input_item type="tel" maxlength="9" onkeypress="return char(event)">
-                    
-                    <img class=img_btn src="imagens/go.png" onclick="obter_final()">
-               
-                </form>
-
-                <div>
-                    
-                    <label id=lbl_status> STATUS: </label>
-
-                    <label id=lbl_resultado> Aguardando ... </label>
-
-                </div>
-
-            </div>
-            
-            <div class=div_titulo>
-
-                <div> 
-                    
-                    <label> LISTA DE ITENS </label>
-                
-                </div>
-
-            </div>
-
-            <div id=div_pesquisa>
-
-                <form id=form_pesquisa onsubmit="return false">
-                    
-                    <input id=input_pesquisa class=myarrow type="search" list="lista">
-
-                    <datalist id=lista> </datalist>
-
-                    <img class=img_btn src="imagens/lupa.png" onclick="obter_codigo()">
-                
-                </form>
-            
-            </div>
-
-            <div id=div_update> Atualização: 15.11.2020 01:23 </div>
-
-        </div>
-
-        <div id=div_footer>
-
-            <div id=div_wpp>
-                
-                <a href="https://bit.ly/2G9zJi4" target="_blank">
-                    
-                    <img id=img_wpp src="imagens/wpp.png">
-
-                </a>
-
-            </div>
-
-            <div id=div_copy>
-                
-                Copyright©2020, Lucas Mathiazi - Todos os direitos reservados.
-            
-            </div>
-
-        </div>
-
     </body>
 
 </html>

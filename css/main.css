@@ -1,0 +1,155 @@
+
+:root {
+    
+    --default: rgb(51, 51, 51);
+}
+
+* {
+    
+    font-family: 'Roboto';
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+body {
+    
+    margin: 0 auto;
+
+    min-width: 325px;
+
+    max-width: 1000px;
+}
+
+body > .LOGO {
+    
+    background: var(--default);
+
+    width: 95%;
+
+    height: 100px;
+
+    margin: 0 auto;
+
+    border-radius: 0 0 5px 5px;
+}
+
+body > .MAIN > .TITULO1 {
+    
+    margin: 100px auto 30px auto;
+
+    width: 95%;
+}
+
+body > .MAIN > .TITULO1 > label {
+    
+    font-size: 33px;
+}
+
+body > .MAIN > form {
+    
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+body > .MAIN > form > #ITEM {
+
+    background: var(--default);
+
+    color: rgb(255, 255, 255);
+
+    float: left;
+
+    width: 86%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-size: 25px;
+}
+
+body > .MAIN > form > .BOTAO1 {
+
+    background: var(--default);
+
+    width: 8%;
+
+    margin: 0 0 0 1%;
+
+    height: 40px;
+
+    border-radius: 5px;
+}
+
+body > .MAIN > .RESULTADO {
+
+    margin: 25px auto 0 auto;
+
+    width: 95%;
+
+    display: block;
+}
+
+body > .MAIN > .RESULTADO > .COR_STATUS {
+    
+    margin: 0 5px 0 0;
+
+    color: crimson;
+}
+
+body > .MAIN > .TITULO2 {
+    
+    margin: 70px auto 30px auto;
+
+    width: 95%;
+}
+
+body > .MAIN > .TITULO2 > label {
+    
+    font-size: 33px;
+}
+
+body > .MAIN > form > #ITENS {
+
+    background: var(--default);
+
+    color: rgb(255, 255, 255);
+
+    float: left;
+
+    width: 86%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+body > .MAIN > form > .BOTAO2 {
+
+    background: var(--default);
+
+    width: 8%;
+
+    margin: 0 0 0 1%;
+
+    height: 40px;
+
+    border-radius: 5px;
+}

@@ -1,29 +1,23 @@
+function FINAL ()
 {
-    $(document).ready(function(){
-
-        $(window).load(function(){
-            
-            $('#preloader').fadeOut(400);
-        });
-        
-    });
-}
-function obter_final() {
-    const cod = document.getElementById("input_item").value;
+    const cod = document.getElementById("ITEM").value;
     
     const tamanho = cod.length;
 
     var status, digito;
 
-    if (tamanho != 6 & tamanho != 9) {
-        if (tamanho == 0) {
-            status = 'Digite a numeração do item ...';
+    if (tamanho != 6 & tamanho != 9)
+    {
+        if (tamanho == 0)
+        {
+            status = 'Digite o item...';
         }
         else {
-            status = 'O item não é válido ...';
+            status = 'O item é inválido...';
         }
     }
-    else if (tamanho == 6) {
+    else if (tamanho == 6)
+    {
         digito = Number(cod.substr(1, 1)) + 
                     Number(cod.substr(3, 1)) + 
                         Number(cod.substr(5, 1));
@@ -33,13 +27,15 @@ function obter_final() {
                                         Number(cod.substr(4, 1));
         digito = 10 - (digito % 10);
 
-        if (digito == 10) {
+        if (digito == 10)
+        {
             digito = 0;
         }
 
-        status = "O dígito final é " + digito + "!";
+        status = "O final é " + digito + "!";
     }
-    else {
+    else
+    {
         digito =  Number(cod.substr(0, 1)) + 
                     Number(cod.substr(2, 1)) + 
                         Number(cod.substr(4, 1)) + 
@@ -52,17 +48,20 @@ function obter_final() {
                                             Number(cod.substr(7, 1));
         digito = 10 - (digito % 10);
 
-        if (digito == 10) {
+        if (digito == 10)
+        {
             digito = 0;
         }
 
-        status = "O dígito final é " + digito + "!";
+        status = "O final é " + digito + "!";
     }
-    document.getElementById("lbl_resultado").innerHTML = status;
+    
+    document.getElementById("STATUS").innerHTML = status;
 }
-function obter_codigo() {
 
-    var status = document.getElementById("lbl_resultado");
+function CODIGO () {
+
+    var status = document.getElementById("STATUS");
 
     const cod = [      
         /*00*/'980012483',
@@ -144,27 +143,32 @@ function obter_codigo() {
         /*76*/'255736'
     ];
 
-    const item_selecionado = document.getElementById("input_pesquisa").value;
+    const item_selecionado = document.getElementById("ITENS").value;
           
-    if (item_selecionado == "") {
-        status.innerHTML = "Pesquise um item pré-definido ...";
+    if (item_selecionado == "")
+    {
+        status.innerHTML = "Pesquise um item...";
     }
-    else{
+    else
+    {
         const posicao = Number(item_selecionado.substr(0, 2));
         
         const verifica = cod[posicao];
     
-        if (verifica == undefined) {
+        if (verifica == undefined)
+        {
             status.innerHTML = "O item não foi encontrado ...";
         }
-        else {
-            document.getElementById("input_item").value = verifica;
+        else
+        {
+            document.getElementById("ITEM").value = verifica;
     
-            obter_final();
+            FINAL();
         }
     }
 }
-function carregar_itens() {
+
+function CARREGAR_LISTA () {
 
     const itens = [
         '00 Pure Picme 6x100G',
@@ -248,7 +252,8 @@ function carregar_itens() {
 
     const lista = document.getElementById('lista');
 
-    itens.forEach(
+    itens.forEach
+    (
         item => {
             let option = document.createElement('option');
             
@@ -258,18 +263,20 @@ function carregar_itens() {
         }
     );
 }
-function char(e) { 
+
+function BLOQUEIO (e) { 
 
     var charCode = e.charCode ? e.charCode : e.keyCode;
     
-    if (charCode==13){
+    if (charCode==13)
+    {
     
-        obter_final();
+        FINAL();
     }
-    else if (charCode != 8 && charCode != 9) {  
-        
-        if (charCode < 48 || charCode > 57) {
-
+    else if (charCode != 8 && charCode != 9)
+    {  
+        if (charCode < 48 || charCode > 57)
+        {
             return false;
         }
     }
