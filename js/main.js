@@ -1,15 +1,6 @@
-{
-    $(document).ready(function(){
-
-        $(window).load(function(){
-            
-            $('#preloader').fadeOut(400);
-        });
-        
-    });
-}
 function obter_final() {
-    const cod = document.getElementById("input_item").value;
+    
+    const cod = document.getElementById("ITEM").value;
     
     const tamanho = cod.length;
 
@@ -58,7 +49,7 @@ function obter_final() {
 
         status = "O dígito final é " + digito + "!";
     }
-    document.getElementById("lbl_resultado").innerHTML = status;
+    document.getElementById("STATUS").innerHTML = status;
 }
 function obter_codigo() {
 
@@ -164,7 +155,7 @@ function obter_codigo() {
         }
     }
 }
-function carregar_itens() {
+function CARREGAR_LISTA() {
 
     const itens = [
         '00 Pure Picme 6x100G',

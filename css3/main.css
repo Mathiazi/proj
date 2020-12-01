@@ -37,7 +37,7 @@ body {
 
     border-radius: 0 0 20px 20px;
 
-    height: 70px;
+    height: 95px;
 
     margin: 0 5px 0 5px;
 
@@ -50,7 +50,7 @@ body {
 
     display: block;
 
-    margin: 23px auto 0 auto;
+    margin: 0 auto;
 }
 #div_main {
     margin: 150px 0 0 0;
@@ -76,33 +76,60 @@ body {
         #div_main > #div_calcular > #form_calcular {
             margin: 0 auto;
         }
-#div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa,
+#div_main > #div_pesquisa > #form_pesquisa > #input_pesquisa
+{
+    width: 350px;
 
-        #div_main > #div_calcular > #form_calcular > #input_item {
-            width: 300px;
+    height: 31px;
 
-            height: 31px;
+    float: left;
+    
+    border-radius: 13px 0 0 13px;
 
-            float: left;
-            
-            border-radius: 13px 0 0 13px;
+    color: rgb(88, 88, 88);
 
-            color: rgb(88, 88, 88);
+    border-style: solid;
 
-            border-style: solid;
+    border-width: 1px;
 
-            border-width: 1px;
+    border-right: none;
 
-            border-right: none;
+    border-color: var(--default);
 
-            border-color: var(--default);
+    background: var(--default);
 
-            background: var(--default);
+    text-align: center;
 
-            text-align: center;
+    font-size: 14px;
+}
 
-            font-size: 14px;
-        }
+#div_main > #div_calcular > #form_calcular > #input_item {
+
+    width: 300px;
+
+    height: 31px;
+
+    float: left;
+    
+    border-radius: 13px 0 0 13px;
+
+    color: rgb(88, 88, 88);
+
+    border-style: solid;
+
+    border-width: 1px;
+
+    border-right: none;
+
+    border-color: var(--default);
+
+    background: var(--default);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
 #div_main > #div_pesquisa > #form_pesquisa > .img_btn,
 
         #div_main > #div_calcular > #form_calcular > .img_btn {
