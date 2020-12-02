@@ -55,7 +55,7 @@ function FINAL ()
 
         status = "O final é " + digito + "!";
     }
-    
+
     document.getElementById("STATUS").innerHTML = status;
 }
 

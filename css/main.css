@@ -1,7 +1,7 @@
 
 :root {
     
-    --default: rgb(163, 173, 255);
+    --default: rgb(124, 124, 124);
 }
 
 * {
@@ -38,7 +38,7 @@ body > .LOGO {
 
     margin: 0 auto;
 
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 20px 20px;
 }
 
 body > .MAIN > .TITULO1 {
@@ -76,7 +76,7 @@ body > .MAIN > form > #ITEM {
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 20px;
 
     text-align: center;
 
@@ -93,7 +93,7 @@ body > .MAIN > form > .BOTAO1 {
 
     height: 43px;
 
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 body > .MAIN > .RESULTADO {
@@ -140,7 +140,7 @@ body > .MAIN > form > #ITENS {
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 20px;
 
     text-align: left;
 
@@ -157,7 +157,7 @@ body > .MAIN > form > .BOTAO2 {
 
     height: 30px;
 
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 body > .MAIN > .ATT {
