@@ -52,7 +52,7 @@ body > .LOGO > .IMGLOGO {
 
 body > .MAIN > .TITULO1 {
     
-    margin: 80px 0 20px 0;
+    margin: 100px 0 30px 0;
 
     text-align: center;
 }
@@ -79,7 +79,7 @@ body > .MAIN > form > #ITEM {
 
     float: left;
 
-    width: 86%;
+    width: 85%;
 
     height: 43px;
 
@@ -96,7 +96,7 @@ body > .MAIN > form > #BOTAO1 {
 
     background: var(--default);
 
-    width: 8%;
+    width: 9%;
 
     margin: 0 0 0 1%;
 
@@ -106,7 +106,7 @@ body > .MAIN > form > #BOTAO1 {
 
     border-radius: 20px;
 
-    color: rgb(97, 176, 212);
+    color: rgb(113, 198, 238);
 
     text-align: center;
 
@@ -115,7 +115,7 @@ body > .MAIN > form > #BOTAO1 {
 
 body > .MAIN > .TITULO2 {
     
-    margin: 80px 0 20px 0;
+    margin: 100px 0 30px 0;
 
     text-align: center;
 }
@@ -135,7 +135,7 @@ body > .MAIN > form > #ITENS {
 
     float: left;
 
-    width: 86%;
+    width: 85%;
 
     height: 30px;
 
@@ -154,7 +154,7 @@ body > .MAIN > form > .BOTAO2 {
 
     background: var(--default);
 
-    width: 8%;
+    width: 9%;
 
     margin: 0 0 0 1%;
 
@@ -184,7 +184,7 @@ body > .RODAPE {
 
     height: 100px;
 
-    padding: 40px 0 40px 0;
+    padding-top: 43px;
 
     border-top-style: solid;
 
