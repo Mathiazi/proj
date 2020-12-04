@@ -1,7 +1,7 @@
 
 :root {
     
-    --default: rgb(124, 124, 124);
+    --default: rgb(109, 109, 109);
 }
 
 * {
@@ -50,7 +50,7 @@ body > .MAIN > .TITULO1 {
 
 body > .MAIN > .TITULO1 > label {
     
-    font-size: 33px;
+    font-size: 35px;
 }
 
 body > .MAIN > form {
@@ -80,10 +80,10 @@ body > .MAIN > form > #ITEM {
 
     text-align: center;
 
-    font-size: 27px;
+    font-size: 30px;
 }
 
-body > .MAIN > form > .BOTAO1 {
+body > .MAIN > form > #BOTAO1 {
 
     background: var(--default);
 
@@ -91,23 +91,17 @@ body > .MAIN > form > .BOTAO1 {
 
     margin: 0 0 0 1%;
 
+    padding-top: 4px;
+
     height: 43px;
 
     border-radius: 20px;
-}
 
-body > .MAIN > .RESULTADO {
+    color: rgb(51, 255, 0);
 
-    margin: 20px auto 0 auto;
+    text-align: center;
 
-    width: 95%;
-}
-
-body > .MAIN > .RESULTADO > .COR_STATUS {
-    
-    margin: 0 5px 0 0;
-
-    color: crimson;
+    font-size: 30px;
 }
 
 body > .MAIN > .TITULO2 {
@@ -119,7 +113,7 @@ body > .MAIN > .TITULO2 {
 
 body > .MAIN > .TITULO2 > label {
     
-    font-size: 33px;
+    font-size: 35px;
 }
 
 body > .MAIN > form > #ITENS {

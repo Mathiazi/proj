@@ -4,17 +4,11 @@ function FINAL ()
     
     const tamanho = cod.length;
 
-    var status, digito;
+    var digito;
 
     if (tamanho != 6 & tamanho != 9)
     {
-        if (tamanho == 0)
-        {
-            status = 'Digite o item...';
-        }
-        else {
-            status = 'O item é inválido...';
-        }
+        digito = '?';
     }
     else if (tamanho == 6)
     {
@@ -31,8 +25,6 @@ function FINAL ()
         {
             digito = 0;
         }
-
-        status = "O final é " + digito + "!";
     }
     else
     {
@@ -52,11 +44,9 @@ function FINAL ()
         {
             digito = 0;
         }
-
-        status = "O final é " + digito + "!";
     }
 
-    document.getElementById("STATUS").innerHTML = status;
+    document.getElementById("BOTAO1").innerHTML = digito;
 }
 
 function CODIGO () {

@@ -34,21 +34,13 @@
 
             <form onsubmit="return false">
             
-                <input id=ITEM>
+                <input id=ITEM type="tel" maxlength="9" onkeypress="return BLOQUEIO(event)">
 
-                <div class=BOTAO1 onclick="FINAL()">
+                <div id=BOTAO1 onclick="FINAL()">
 
                 </div>
             
             </form>
-
-            <div class=RESULTADO>
-                
-                <label class=COR_STATUS> STATUS: </label>
-
-                <label id=STATUS> Não calculado... </label>
-
-            </div>
 
             <div class=TITULO2>
 
