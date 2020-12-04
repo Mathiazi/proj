@@ -34,7 +34,11 @@ body > .LOGO {
 
     width: 95%;
 
+    padding: 12px;
+
     margin: 0 auto;
+
+    height: 120px;
 
     border-radius: 0 0 20px 20px;
 }
@@ -180,6 +184,8 @@ body > .RODAPE {
 
     height: 100px;
 
+    padding: 40px 0 40px 0;
+
     border-top-style: solid;
 
     border-top-width: 1px;
@@ -195,7 +201,7 @@ body > .RODAPE > label {
 
     text-align: center;
 
-    margin-top: 65px;
-
     color: rgb(196, 196, 196);
+
+    background: red;
 }
