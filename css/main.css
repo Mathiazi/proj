@@ -16,7 +16,7 @@
 
     outline: none;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 body {
@@ -28,38 +28,42 @@ body {
     max-width: 1000px;
 }
 
-body > .LOGO {
-    
-    background: var(--default);
-
-    width: 95%;
-
-    padding: 12px;
+body > .MAIN {
 
     margin: 0 auto;
 
+    max-width: 500px;
+}
+
+body > .LOGO {
+
+    margin: 0 auto;
+
+    width: 95%;
+
     height: 120px;
 
-    border-radius: 0 0 20px 20px;
+    padding: 12px;
+
+    border-radius: 3px 3px 50px 50px;
+
+    background: var(--default);
 }
 
 body > .LOGO > .IMGLOGO {
 
-    display: block;
-
     margin: 0 auto;
+
+    display: block;
 }
 
 body > .MAIN > .TITULO1 {
     
-    margin: 100px 0 30px 0;
+    margin: 130px 0 10px -35px;
 
     text-align: center;
-}
 
-body > .MAIN > .TITULO1 > label {
-    
-    font-size: 35px;
+    font-size: 40px;
 }
 
 body > .MAIN > form {
@@ -73,67 +77,58 @@ body > .MAIN > form {
 
 body > .MAIN > form > #ITEM {
 
-    background: var(--default);
-
-    color: rgb(255, 255, 255);
-
-    float: left;
-
     width: 85%;
 
     height: 43px;
 
     border: none;
 
-    border-radius: 20px;
+    border-radius: 23px;
 
     text-align: center;
 
     font-size: 30px;
+
+    float: left;
+
+    color: rgb(255, 255, 255);
+
+    background: var(--default);
 }
 
 body > .MAIN > form > #BOTAO1 {
 
-    background: var(--default);
+    margin: 0 0 0 1%;
 
     width: 9%;
 
-    margin: 0 0 0 1%;
+    height: 43px;
 
     padding-top: 4px;
 
-    height: 43px;
-
-    border-radius: 20px;
-
-    color: rgb(113, 198, 238);
+    border-radius: 23px;
 
     text-align: center;
 
     font-size: 30px;
+
+    color: rgb(113, 198, 238);
+
+    background: var(--default);
 }
 
 body > .MAIN > .TITULO2 {
     
-    margin: 100px 0 30px 0;
+    margin: 130px 0 10px -35px;
 
     text-align: center;
-}
 
-body > .MAIN > .TITULO2 > label {
-    
-    font-size: 35px;
+    font-size: 40px;
 }
 
 body > .MAIN > form > #ITENS {
 
     margin: 0 0 80px 0;
-
-    background: var(--default);
-
-    color: rgb(255, 255, 255);
-
-    float: left;
 
     width: 85%;
 
@@ -143,24 +138,30 @@ body > .MAIN > form > #ITENS {
 
     border: none;
 
-    border-radius: 20px;
+    border-radius: 23px;
 
     text-align: left;
 
     font-size: 14px;
+
+    float: left;
+
+    color: rgb(255, 255, 255);
+
+    background: var(--default);
 }
 
 body > .MAIN > form > .BOTAO2 {
 
-    background: var(--default);
+    margin: 0 0 0 1%;
 
     width: 9%;
 
-    margin: 0 0 0 1%;
-
     height: 30px;
 
-    border-radius: 20px;
+    border-radius: 23px;
+
+    background: var(--default);
 }
 
 body > .MAIN > .ATT {
@@ -195,11 +196,11 @@ body > .RODAPE {
 
 body > .RODAPE > label {
 
-    font-size: 12px;
-
     display: block;
 
     text-align: center;
+
+    font-size: 12px;
 
     color: rgb(196, 196, 196);
 }
