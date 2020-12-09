@@ -6,16 +6,12 @@ function FINAL ()
 
     var digito;
 
-    if (tamanho != 6 & tamanho != 9)
-    {
-        digito = '?';
-    }
-    else if (tamanho == 6)
+    if (tamanho == 6)
     {
         digito = Number(cod.substr(1, 1)) + 
                     Number(cod.substr(3, 1)) + 
                         Number(cod.substr(5, 1));
-
+                        
         digito = (digito * 3) + Number(cod.substr(0, 1)) +
                                     Number(cod.substr(2, 1)) +
                                         Number(cod.substr(4, 1));
@@ -26,7 +22,7 @@ function FINAL ()
             digito = 0;
         }
     }
-    else
+    else if (tamanho == 9)
     {
         digito =  Number(cod.substr(0, 1)) + 
                     Number(cod.substr(2, 1)) + 
@@ -45,13 +41,30 @@ function FINAL ()
             digito = 0;
         }
     }
+    else {
+        digito = '?';
+    }
 
     document.getElementById("BOTAO1").innerHTML = digito;
 }
 
-function CODIGO () {
+var posicao;
 
-    var status = document.getElementById("STATUS");
+function PRECO () {
+
+    var Imagem;
+
+    if (posicao == 13)
+    {
+        Imagem = "https://i.ibb.co/TvJRxKr/IMG-20201201-152008.jpg";
+
+        document.getElementById("FOTO").src = Imagem;
+    }
+
+    FINAL();
+}
+
+function CODIGO () {
 
     const cod = [      
         /*00*/'980007472',
@@ -67,7 +80,7 @@ function CODIGO () {
         /*10*/'980012473',
         /*11*/'091962',
         /*12*/'980014286',
-        /*13*/'980013849',
+        /*13*/'631629',
         /*14*/'499404',
         /*15*/'396938',
         /*16*/'840908',
@@ -107,27 +120,31 @@ function CODIGO () {
         /*50*/'980006066'
     ];
 
+    var status = document.getElementById("BOTAO2");
+
     const item_selecionado = document.getElementById("ITENS").value;
           
     if (item_selecionado == "")
     {
-        status.innerHTML = "Pesquise um item...";
+        status.innerHTML = "?";
     }
     else
     {
-        const posicao = Number(item_selecionado.substr(0, 2));
+        posicao = Number(item_selecionado.substr(0, 2));
         
         const verifica = cod[posicao];
     
         if (verifica == undefined)
         {
-            status.innerHTML = "O item não foi encontrado ...";
+            status.innerHTML = "-";
         }
         else
         {
+            status.innerHTML = ">";
+
             document.getElementById("ITEM").value = verifica;
     
-            FINAL();
+            PRECO();
         }
     }
 }
@@ -140,15 +157,15 @@ function CARREGAR_LISTA () {
         '02 CERA BRAVO LAMINADOS 3X750ML',
         '03 REXONA CLINICAL MEN 3X91GR', 
         '04 MOLHO POMAROLA SACHE SABORIZADO 3X300GR',
-        '05 Abacaxi Pérola',
-        '06 Melancia',
+        '05 ABACAXI',
+        '06 MELANCIA',
         '07 Limpol Liquido Natural 6x500ML',
         '08 Saponaceo Cremoso Pinho 1L',
         '09 LIMAO TAITI',
         '10 CREM TRAT REVLON UNIQ ONE 150ML',
         '11 BRAVO 3X500ML LUSTRA MOVEIS',
         '12 MANTA INFANTIL COM CAPUZ',
-        '13 Cerveja Corona 6x330ML',
+        '13 YPE LIQ 6X500ML DETERG LIQ CLEAR',
         '14 Agua São Lorenco Com Gás 6x510ML',
         '15 Removedor Zulu Perfumado 2x900ML',
         '16 Limpol Gel Detergente Concentrado 3x511ML',
@@ -208,7 +225,6 @@ function BLOQUEIO (e) {
     
     if (charCode==13)
     {
-    
         FINAL();
     }
     else if (charCode != 8 && charCode != 9)
