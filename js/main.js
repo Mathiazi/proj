@@ -52,15 +52,12 @@ var posicao;
 
 function PRECO () {
 
-    var IMG = "https://cutt.ly/itemSams" + posicao;
+    var IMG = "https://cutt.ly/itemList" + posicao;
 
     if (posicao => 0 && posicao <= 50)
     {
-        if (posicao == 02 || posicao == 13)
-        {
-            document.getElementById("FOTO").src = IMG;
-                document.getElementById("LINK").href = IMG;
-        }
+        document.getElementById("FOTO").src = IMG;
+            document.getElementById("LINK").href = IMG;
     }
 
     FINAL();
@@ -83,7 +80,7 @@ function CODIGO () {
         /*11*/'091962',
         /*12*/'980014286',
         /*13*/'631629',
-        /*14*/'499404',
+        /*14*/'752168',
         /*15*/'396938',
         /*16*/'840908',
         /*17*/'980008232',
@@ -95,7 +92,7 @@ function CODIGO () {
         /*23*/'463156',
         /*24*/'980008164',
         /*25*/'980008344',
-        /*26*/'332992',
+        /*26*/'980003562',
         /*27*/'623681',
         /*28*/'177614',
         /*29*/'177607',
@@ -114,7 +111,7 @@ function CODIGO () {
         /*42*/'372529',
         /*43*/'980003923',
         /*44*/'980015083',
-        /*45*/'980014772',
+        /*45*/'980004676',
         /*46*/'980013867',
         /*47*/'980010197',
         /*48*/'980016991',
@@ -168,7 +165,7 @@ function CARREGAR_LISTA () {
         '11 BRAVO 3X500ML LUSTRA MOVEIS',
         '12 MANTA INFANTIL COM CAPUZ',
         '13 YPE LIQ 6X500ML DETERG LIQ CLEAR',
-        '14 Agua São Lorenco Com Gás 6x510ML',
+        '14 COCA COLA 6X1L',
         '15 Removedor Zulu Perfumado 2x900ML',
         '16 Limpol Gel Detergente Concentrado 3x511ML',
         '17 Saco Umbro',
@@ -180,7 +177,7 @@ function CARREGAR_LISTA () {
         '23 Agua Minalba Premium Com Gas 300ML',
         '24 Destac Pisos Laminados 3x750ML',
         '25 Sapólio Radium 2x450ML',
-        '26 Creme Avelã Nutella 650G',
+        '26 KIT JAMON ESPANHOL HACIENDAS',
         '27 Pipoca de Mic Natural Com Sal Verm 2x100G',
         '28 Pipoca de Mic Natural Amarelo 2x100G',
         '29 Pipoca de Mic Manteiga Azul 2x100G',
@@ -195,7 +192,7 @@ function CARREGAR_LISTA () {
         '38 Cebola 2KG',
         '39 Laranja 10KG',
         '40 Cenoura Baby 250G',
-        '41 Dog Chow Duo Integral 1KG',
+        '41 ASSADEIRA MM ALUMINIO 7.5L',
         '42 Kit Diversão Praia Com 19 Pecas',
         '43 Coca + Fanta',
         '44 Fanta Canada Dry',
