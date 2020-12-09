@@ -52,15 +52,15 @@ var posicao;
 
 function PRECO () {
 
-    var Imagem;
+    var IMG = "https://cutt.ly/itemSams" + posicao;
 
-    if (posicao == 13)
+    if (posicao => 0 && posicao <= 50)
     {
-        Imagem = "https://i.ibb.co/TvJRxKr/cod13.jpg";
-
-        document.getElementById("FOTO").src = Imagem;
-
-        document.getElementById("LINK").href = Imagem;
+        if (posicao == 02 || posicao == 13)
+        {
+            document.getElementById("FOTO").src = IMG;
+                document.getElementById("LINK").href = IMG;
+        }
     }
 
     FINAL();
