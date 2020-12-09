@@ -117,7 +117,7 @@ body > .MAIN > form > #BOTAO1 {
     background: var(--default);
 }
 
-body > .MAIN > div > #FOTO {
+body > .MAIN > div > a > #FOTO {
 
     margin: 30px auto 0 auto;
 

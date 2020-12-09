@@ -56,9 +56,11 @@ function PRECO () {
 
     if (posicao == 13)
     {
-        Imagem = "https://i.ibb.co/TvJRxKr/IMG-20201201-152008.jpg";
+        Imagem = "https://i.ibb.co/TvJRxKr/cod13.jpg";
 
         document.getElementById("FOTO").src = Imagem;
+
+        document.getElementById("LINK").href = Imagem;
     }
 
     FINAL();
