@@ -1,7 +1,9 @@
 
 :root {
     
-    --default: rgb(109, 109, 109);
+    --default: rgb(82, 82, 82);
+
+    --font: rgb(224, 224, 224);
 }
 
 * {
@@ -20,53 +22,53 @@
 }
 
 body {
-    
+
+    padding: 0 10px;
+
+    background: rgb(173, 173, 173);
+}
+
+.MAIN {
+
     margin: 0 auto;
 
-    min-width: 325px;
+    padding: 0 0 20px 0;
 
     max-width: 1000px;
+
+    min-width: 380px;
+
+    background: white;
 }
 
-body > .MAIN {
+.MAIN > .LOGO {
 
     margin: 0 auto;
 
-    max-width: 500px;
-}
+    width: 99%;
 
-body > .LOGO {
-
-    margin: 0 auto;
-
-    width: 95%;
-
-    height: 120px;
-
-    padding: 12px;
-
-    border-radius: 3px 3px 50px 50px;
+    border-radius: 0 0 10px 10px;
 
     background: var(--default);
 }
 
-body > .LOGO > .IMGLOGO {
+.MAIN > .LOGO > .IMGLOGO {
 
     margin: 0 auto;
 
     display: block;
 }
 
-body > .MAIN > .TITULO1 {
+.MAIN > .TITULO1 {
     
-    margin: 130px 0 10px -35px;
+    margin: 100px 0 30px 0;
 
     text-align: center;
 
-    font-size: 40px;
+    font-size: 38px;
 }
 
-body > .MAIN > form {
+.MAIN > form {
     
     display: flex;
 
@@ -75,134 +77,126 @@ body > .MAIN > form {
     justify-content: center;
 }
 
-body > .MAIN > form > #ITEM {
+.MAIN > form > #ITEM {
 
-    width: 85%;
+    width: 88%;
 
-    height: 43px;
+    height: 30px;
 
-    border: none;
+    padding: 0 0 0 15px;
 
-    border-radius: 23px;
-
-    text-align: center;
-
-    font-size: 30px;
+    font-size: 28px;
 
     float: left;
 
-    color: rgb(255, 255, 255);
+    border: none;
+
+    border-radius: 10px;
+
+    color: var(--font);
 
     background: var(--default);
 }
 
-body > .MAIN > form > #BOTAO1 {
+.MAIN > form > #BOTAO1 {
 
-    margin: 0 0 0 1%;
+    margin: 0 0 0 5px;
 
-    width: 9%;
+    width: 30px;
 
-    height: 43px;
+    height: 30px;
 
-    padding-top: 4px;
-
-    border-radius: 23px;
+    border-radius: 100%;
 
     text-align: center;
 
-    font-size: 30px;
+    font-size: 28px;
 
-    color: rgb(113, 198, 238);
+    color: var(--font);
 
     background: var(--default);
 }
 
-body > .MAIN > div > a > #FOTO {
+.MAIN > div > a > #FOTO {
 
-    margin: 30px auto 0 auto;
+    margin: 50px auto;
 
     display: block;
     
-    width: 100%;
+    width: 99%;
 
-    height: 80%;
+    border-radius: 10px;
 }
 
-body > .MAIN > .TITULO2 {
+.MAIN > .TITULO2 {
     
-    margin: 130px 0 10px -35px;
+    margin: 0 0 30px 0;
 
     text-align: center;
 
-    font-size: 40px;
+    font-size: 38px;
 }
 
-body > .MAIN > form > #ITENS {
+.MAIN > form > #ITENS {
 
-    margin: 0 0 80px 0;
+    margin: 0 0 100px 0;
 
-    width: 85%;
+    width: 88%;
 
     height: 30px;
 
-    padding: 0 0 0 10px;
+    padding: 0 0 0 15px;
 
     border: none;
 
-    border-radius: 23px;
+    border-radius: 10px;
 
-    text-align: left;
-
-    font-size: 14px;
+    font-size: 16px;
 
     float: left;
 
-    color: rgb(255, 255, 255);
+    color: var(--font);
 
     background: var(--default);
 }
 
-body > .MAIN > form > #BOTAO2 {
+.MAIN > form > #BOTAO2 {
 
-    margin: 0 0 0 1%;
+    margin: 0 0 0 5px;
 
-    width: 9%;
+    width: 30px;
 
     height: 30px;
 
-    border-radius: 23px;
+    border-radius: 100%;
 
     text-align: center;
 
     font-size: 23px;
 
-    color: rgb(113, 198, 238);
+    color: var(--font);
 
     background: var(--default);
 }
 
-body > .MAIN > .ATT {
+.MAIN > .ATT {
+
+    text-align: center;
     
     display: block;
 
-    text-align: right;
-
-    width: 97%;
+    width: 99%;
 
     font-size: 12px;
 
     color: rgb(196, 196, 196);
 }
 
-body > .RODAPE {
+.MAIN > .RODAPE {
 
-    margin: 30px auto 0 auto;
-
-    width: 95%;
+    margin-top: 30px;
 
     height: 100px;
-
-    padding-top: 43px;
 
     border-top-style: solid;
 
@@ -211,7 +205,7 @@ body > .RODAPE {
     border-top-color: rgb(196, 196, 196);
 }
 
-body > .RODAPE > label {
+.MAIN > .COPY {
 
     display: block;
 
