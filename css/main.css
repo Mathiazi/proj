@@ -1,7 +1,7 @@
 
 :root {
     
-    --default: rgb(82, 82, 82);
+    --default: rgb(107, 107, 107);
 
     --font: rgb(224, 224, 224);
 }
@@ -206,6 +206,8 @@ body {
 }
 
 .MAIN > .COPY {
+
+    padding: 15px 0;
 
     display: block;
 
