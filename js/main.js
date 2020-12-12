@@ -95,7 +95,8 @@ function CODIGO () {
         /*26*/'372529',
         /*27*/'980004676',
         /*28*/'352107',
-        /*29*/'980004882'
+        /*29*/'980004882',
+        /*30*/'980014772'
     ];
 
     var status = document.getElementById("BOTAO2");
@@ -159,7 +160,8 @@ function CARREGAR_LISTA () {
         '26 KIT PRAIA C 19 PEÇAS',
         '27 ASSADEIRA MM ALUMINIO 7.5L',
         '28 MOSTARDA HEINZ 2X255GR',
-        '29 KIT JAMON SERRANO HACIENDAS RES 6.5KG'
+        '29 KIT JAMON SERRANO HACIENDAS RES 6.5KG',
+        '30 PIJAMA M/C LUPO MASCULINO'
     ];
 
     const lista = document.getElementById('lista');
