@@ -94,7 +94,8 @@ function CODIGO () {
         /*25*/'980007145',
         /*26*/'372529',
         /*27*/'980004676',
-        /*28*/'352107'
+        /*28*/'352107',
+        /*29*/'980004882'
     ];
 
     var status = document.getElementById("BOTAO2");
@@ -157,7 +158,8 @@ function CARREGAR_LISTA () {
         '25 CENOURA BABY 250G',
         '26 KIT PRAIA C 19 PEÇAS',
         '27 ASSADEIRA MM ALUMINIO 7.5L',
-        '28 MOSTARDA HEINZ 2X255GR'
+        '28 MOSTARDA HEINZ 2X255GR',
+        '29 KIT JAMON SERRANO HACIENDAS RES 6.5KG'
     ];
 
     const lista = document.getElementById('lista');
