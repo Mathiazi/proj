@@ -1,9 +1,9 @@
 
 :root {
     
-    --default: rgb(180, 180, 180);
+    --default: rgb(77, 77, 77);
 
-    --font: rgb(255, 255, 255);
+    --font: rgb(216, 216, 216);
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 
     display: block;
 
-    background: var(--default);
+    background-image: url(../img/bgbody.png);
 }
 
 .MAIN {
@@ -40,7 +40,7 @@ body {
 
     min-width: 325px;
 
-    background: white;
+    background-image: url(../img/bgmain.png);
 }
 
 .MAIN > .LOGO {
@@ -203,7 +203,7 @@ body {
 
     font-size: 12px;
 
-    color: rgb(196, 196, 196);
+    color: rgb(151, 151, 151);
 }
 
 .MAIN > .RODAPE {
@@ -229,5 +229,5 @@ body {
 
     font-size: 12px;
 
-    color: rgb(196, 196, 196);
+    color: rgb(151, 151, 151);
 }
