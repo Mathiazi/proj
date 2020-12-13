@@ -71,7 +71,7 @@ function PRECO () {
 
     if (posicao <= 30)
     {
-        var carregar_imagem = "https://cutt.ly/item-" + posicao;
+        var carregar_imagem = "https://cutt.ly/itemSams-" + posicao;
 
         document.getElementById("FOTO").src = carregar_imagem;
         
