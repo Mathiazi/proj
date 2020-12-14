@@ -22,7 +22,7 @@
 
 body {
 
-    padding: 0 10px;
+    padding: 0 5px;
 
     margin: 0 auto;
 
@@ -56,7 +56,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#MAIN {
+.MAIN {
 
     margin: 0 auto;
 
@@ -67,7 +67,7 @@ body {
     background:rgb(255, 255, 255);
 }
 
-#MAIN > .LOGO {
+.MAIN > .LOGO {
 
     margin: 0 auto;
 
@@ -82,14 +82,14 @@ body {
     background: var(--default);
 }
 
-#MAIN > .LOGO > .IMGLOGO {
+.MAIN > .LOGO > .IMGLOGO {
 
     margin: 0 auto;
 
     display: block;
 }
 
-#MAIN > .TITULO1 {
+.MAIN > .TITULO1 {
     
     margin: 120px 0 35px 0;
 
@@ -98,7 +98,7 @@ body {
     font-size: 40px;
 }
 
-#MAIN > form {
+.MAIN > form {
     
     display: flex;
 
@@ -107,7 +107,7 @@ body {
     justify-content: center;
 }
 
-#MAIN > form > #ITEM {
+.MAIN > form > #ITEM {
 
     width: 89%;
 
@@ -132,7 +132,7 @@ body {
     background: var(--default);
 }
 
-#MAIN > form > #BOTAO1 {
+.MAIN > form > #BOTAO1 {
 
     margin: 0 0 0 5px;
 
@@ -151,7 +151,7 @@ body {
     background: var(--default);
 }
 
-#MAIN > .TITULO2 {
+.MAIN > .TITULO2 {
     
     margin: 100px 0 35px 0;
 
@@ -160,7 +160,7 @@ body {
     font-size: 40px;
 }
 
-#MAIN > form > #ITENS {
+.MAIN > form > #ITENS {
 
     width: 89%;
 
@@ -183,7 +183,7 @@ body {
     background: var(--default);
 }
 
-#MAIN > form > #BOTAO2 {
+.MAIN > form > #BOTAO2 {
 
     margin: 0 0 0 5px;
 
@@ -204,7 +204,7 @@ body {
     background: var(--default);
 }
 
-#MAIN > #PRECO {
+.MAIN > #PRECO {
 
     width: 99%;
 
@@ -215,7 +215,7 @@ body {
     margin: 35px auto;
 }
 
-#MAIN > #PRECO > a > #FOTO {
+.MAIN > #PRECO > a > #FOTO {
 
     border-radius: 10px;
 
@@ -226,7 +226,7 @@ body {
     filter:grayscale(1);
 }
 
-#MAIN > .ATT {
+.MAIN > .ATT {
 
     margin: 50px 0 50px -10px;
 
@@ -248,12 +248,12 @@ hr {
     color: rgb(243, 243, 243);
 }
 
-#MAIN > .RODAPE {
+.MAIN > .RODAPE {
 
     height: 100px;
 }
 
-#MAIN > .COPY {
+.MAIN > .COPY {
 
     padding: 15px 0;
 
