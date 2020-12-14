@@ -1,3 +1,9 @@
+
+$(document).ready(function() {
+
+    $('#PRELOADER').delay(400).fadeOut('slow');
+});
+
 function CARREGAR_LISTA () {
 
     const itens = [
