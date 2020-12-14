@@ -1,7 +1,7 @@
 
 :root {
     
-    --default: rgb(173, 173, 173);
+    --default: rgb(61, 72, 119);
 
     --font: rgb(255, 255, 255);
 }
@@ -23,7 +23,7 @@
 
 body {
 
-    padding: 0 8px 0 8px;
+    padding: 0 10px;
 
     margin: 0 auto;
 
@@ -36,22 +36,22 @@ body {
 
     margin: 0 auto;
 
-    max-width: 1000px;
+    max-width: 800px;
 
-    min-width: 325px;
+    min-width: 350px;
 
-    background-image: url(../img/bgmain.png);
+    background:rgb(255, 255, 255);
 }
 
 .MAIN > .LOGO {
 
     margin: 0 auto;
 
-    padding-top: 7px;
+    padding-top: 15px;
 
-    width: 98%;
+    width: 100%;
 
-    height: 105px;
+    height: 130px;
 
     border-radius: 0 0 20px 20px;
 
@@ -60,22 +60,18 @@ body {
 
 .MAIN > .LOGO > .IMGLOGO {
 
-    width: 90px;
-
     margin: 0 auto;
 
     display: block;
-
-    filter: grayscale(1);
 }
 
 .MAIN > .TITULO1 {
     
-    margin: 100px 0 30px 0;
+    margin: 120px 0 35px 0;
 
     text-align: center;
 
-    font-size: 38px;
+    font-size: 40px;
 }
 
 .MAIN > form {
@@ -89,11 +85,11 @@ body {
 
 .MAIN > form > #ITEM {
 
-    width: 88%;
+    width: 89%;
 
     max-width: 400px;
 
-    height: 33px;
+    height: 35px;
 
     padding: 0 0 0 15px;
 
@@ -116,9 +112,9 @@ body {
 
     margin: 0 0 0 5px;
 
-    width: 30px;
+    width: 35px;
 
-    height: 33px;
+    height: 35px;
 
     border-radius: 100%;
 
@@ -126,40 +122,27 @@ body {
 
     font-size: 28px;
 
-    color: rgb(224, 52, 87);
+    color: rgb(150, 230, 104);
 
     background: var(--default);
 }
 
-.MAIN > div > a > #FOTO {
-
-    margin: 50px auto;
-
-    display: block;
-    
-    width: 99%;
-
-    border-radius: 10px;
-}
-
 .MAIN > .TITULO2 {
     
-    margin: 0 0 30px 0;
+    margin: 100px 0 35px 0;
 
     text-align: center;
 
-    font-size: 38px;
+    font-size: 40px;
 }
 
 .MAIN > form > #ITENS {
 
-    margin: 0 0 100px 0;
-
-    width: 88%;
+    width: 89%;
 
     max-width: 400px;
 
-    height: 33px;
+    height: 35px;
 
     padding: 0 0 0 15px;
 
@@ -180,9 +163,9 @@ body {
 
     margin: 0 0 0 5px;
 
-    width: 30px;
+    width: 35px;
 
-    height: 33px;
+    height: 35px;
 
     padding-top: 2px;
 
@@ -192,35 +175,58 @@ body {
 
     font-size: 23px;
 
-    color: black;
+    color: rgb(150, 230, 104);
 
     background: var(--default);
 }
 
-.MAIN > .ATT {
+.MAIN > #PRECO {
 
-    text-align: center;
+    width: 99%;
+
+    max-width: 440px;
     
     display: block;
 
-    width: 99%;
+    margin: 35px auto;
+}
+
+.MAIN > #PRECO > a > #FOTO {
+
+    border-radius: 10px;
+
+    width: 100%;
+
+    max-width: 440px;
+
+    filter:grayscale(1);
+}
+
+.MAIN > .ATT {
+
+    margin: 50px 0 50px -10px;
+
+    text-align: right;
+    
+    display: block;
+
+    width: 100%;
 
     font-size: 12px;
 
     color: rgb(151, 151, 151);
 }
 
+hr {
+
+    border-style: solid;
+
+    color: rgb(243, 243, 243);
+}
+
 .MAIN > .RODAPE {
 
-    margin-top: 30px;
-
     height: 100px;
-
-    border-top-style: solid;
-
-    border-top-width: 1px;
-
-    border-top-color: rgb(196, 196, 196);
 }
 
 .MAIN > .COPY {
