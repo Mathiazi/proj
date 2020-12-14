@@ -74,9 +74,6 @@ function PRECO () {
         var carregar_imagem = "https://cutt.ly/itemSams-" + posicao;
 
         document.getElementById("FOTO").src = carregar_imagem;
-        
-        document.getElementById("LINK").href = carregar_imagem;
-
     }
 }
 
