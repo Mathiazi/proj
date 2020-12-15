@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    $('#PRELOADER').delay(400).fadeOut('slow');
+    $('#PRELOADER').delay(500).fadeOut('slow');
 });
 
 function CARREGAR_LISTA () {
