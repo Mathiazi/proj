@@ -28,14 +28,12 @@
 
 body {
 
-    margin: 0 auto;
+    margin: auto;
 
     display: block;
-
-    background-image: url(../img/bgbody.png);
 }
 
-#PRELOADER {
+#preloader {
     
     position: fixed;
     
@@ -49,9 +47,7 @@ body {
     
     height: 100%;
     
-    filter: opacity(0.6);
-    
-    background-color: rgba(255, 255, 255, 0.89);
+    background-color: rgba(255, 255, 255, 0.925);
 
     background-image: url(../img/loading.gif);
 
@@ -60,7 +56,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.MAIN {
+.main {
 
     margin: 0 auto;
 
@@ -85,42 +81,36 @@ body {
     border-radius:  10px;
 
     filter: opacity(0.6);
-}
+}  
 
-.MAIN > .LOGO {
+.logo {
 
-    margin: 0 auto;
+    padding:  0 0 0 5px;
 
-    padding-top: 15px;
+    position: sticky;
 
-    height: 110px;
+    top: 0;
 
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
 
     background: var(--default);
 }
 
-.MAIN > .LOGO > .IMGLOGO {
+ .imglogo {
 
-    width: 80px;
-
-    opacity: 0.8;
-
-    margin: auto;
-
-    display: block;
+    width: 40px;
 }
 
-.MAIN > .TITULO1 {
+.main > .TITULO1 {
     
-    margin: 80px 0 35px 0;
+    margin: 100px 0 40px 0;
 
     text-align: center;
 
     font-size: 40px;
 }
 
-.MAIN > form {
+.main > form {
     
     display: flex;
 
@@ -129,7 +119,7 @@ body {
     justify-content: center;
 }
 
-.MAIN > form > #ITEM {
+.main > form > #ITEM {
 
     width: 89%;
 
@@ -154,7 +144,7 @@ body {
     background: var(--default);
 }
 
-.MAIN > form > #BOTAO1 {
+.main > form > #BOTAO1 {
 
     margin: 0 0 0 5px;
 
@@ -173,16 +163,16 @@ body {
     background: var(--default);
 }
 
-.MAIN > .TITULO2 {
+.main > .TITULO2 {
     
-    margin: 80px 0 35px 0;
+    margin: 100px 0 40px 0;
 
     text-align: center;
 
     font-size: 40px;
 }
 
-.MAIN > form > #ITENS {
+.main > form > #ITENS {
 
     width: 89%;
 
@@ -205,7 +195,7 @@ body {
     background: var(--default);
 }
 
-.MAIN > form > #BOTAO2 {
+.main > form > #BOTAO2 {
 
     margin: 0 0 0 5px;
 
@@ -226,7 +216,7 @@ body {
     background: var(--default);
 }
 
-.MAIN > #PRECO {
+.main > #PRECO {
 
     width: 99%;
 
@@ -237,7 +227,7 @@ body {
     margin: 35px auto;
 }
 
-.MAIN > #PRECO > a > #FOTO {
+.main > #PRECO > a > #FOTO {
 
     border-radius: 10px;
 
@@ -246,7 +236,7 @@ body {
     max-width: 440px;
 }
 
-.MAIN > .ATT {
+.main > .ATT {
 
     margin: 50px 0 50px -10px;
 
@@ -268,12 +258,12 @@ hr {
     color: rgb(243, 243, 243);
 }
 
-.MAIN > .RODAPE {
+.main > .RODAPE {
 
     height: 100px;
 }
 
-.MAIN > .COPY {
+.main > .COPY {
 
     padding: 15px 0;
 
