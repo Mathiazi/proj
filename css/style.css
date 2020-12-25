@@ -28,7 +28,7 @@
 
 body {
 
-    padding: 0 8px;
+    padding: 0 5px;
 
     margin: 0 auto;
 
@@ -81,7 +81,7 @@ body {
 
     position: fixed;
 
-    right: 20px;
+    left: 20px;
     bottom: 30px;
 
     border-radius:  10px;
@@ -95,25 +95,27 @@ body {
 
     padding-top: 15px;
 
-    width: 99%;
+    height: 110px;
 
-    height: 130px;
-
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
 
     background: var(--default);
 }
 
 .MAIN > .LOGO > .IMGLOGO {
 
-    margin: 0 auto;
+    width: 80px;
+
+    opacity: 0.8;
+
+    margin: auto;
 
     display: block;
 }
 
 .MAIN > .TITULO1 {
     
-    margin: 120px 0 35px 0;
+    margin: 80px 0 35px 0;
 
     text-align: center;
 
@@ -137,7 +139,7 @@ body {
 
     height: 35px;
 
-    padding: 0 0 0 15px;
+    padding: 0 0 0 10px;
 
     font-size: 28px;
 
@@ -147,7 +149,7 @@ body {
 
     border: none;
 
-    border-radius: 15px;
+    border-radius: 10px;
 
     color: var(--font);
 
@@ -162,7 +164,7 @@ body {
 
     height: 35px;
 
-    border-radius: 100%;
+    border-radius: 10px;
 
     text-align: center;
 
@@ -175,7 +177,7 @@ body {
 
 .MAIN > .TITULO2 {
     
-    margin: 100px 0 35px 0;
+    margin: 80px 0 35px 0;
 
     text-align: center;
 
@@ -194,7 +196,7 @@ body {
 
     border: none;
 
-    border-radius: 15px;
+    border-radius: 10px;
 
     font-size: 16px;
 
@@ -215,7 +217,7 @@ body {
 
     padding-top: 2px;
 
-    border-radius: 100%;
+    border-radius: 10px;
 
     text-align: center;
 
@@ -244,8 +246,6 @@ body {
     width: 100%;
 
     max-width: 440px;
-
-    filter:grayscale(1);
 }
 
 .MAIN > .ATT {
