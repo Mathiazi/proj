@@ -1,14 +1,14 @@
-@font-face{
-    font-family: Roboto;
-
-    src: url("../font/Roboto-Regular.ttf");
-}
-
 :root {
     
     --default: rgb(61, 72, 119);
 
     --font: rgb(255, 255, 255);
+}
+
+@font-face{
+    font-family: Roboto;
+
+    src: url("../font/Roboto-Regular.ttf");
 }
 
 * {
@@ -28,7 +28,7 @@
 
 body {
 
-    padding: 0 5px;
+    padding: 0 8px;
 
     margin: 0 auto;
 
@@ -51,7 +51,7 @@ body {
     
     height: 100%;
     
-    opacity: 1;
+    filter: opacity(0.6);
     
     background-color: rgba(255, 255, 255, 0.89);
 
@@ -71,6 +71,22 @@ body {
     min-width: 350px;
 
     background:rgb(255, 255, 255);
+}
+
+#icon{
+
+    cursor: pointer;
+
+    width: 43px;
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 30px;
+
+    border-radius:  10px;
+
+    filter: opacity(0.6);
 }
 
 .MAIN > .LOGO {
