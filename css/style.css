@@ -76,7 +76,7 @@ body {
     left: 0.4px;
     bottom: 50px;
 
-    filter: opacity(0.6);
+    filter: opacity(0.8);
 }  
 
 .logo {
@@ -101,7 +101,7 @@ body {
 
 .title1 {
     
-    margin: 80px 0 30px 0;
+    margin: 110px 0 33px 0;
 
     text-align: center;
 
@@ -163,7 +163,7 @@ body {
 
 .main > .TITULO2 {
     
-    margin: 50px 0 30px 0;
+    margin: 100px 0 33px 0;
 
     text-align: center;
 
@@ -236,7 +236,7 @@ body {
 
 .main > .ATT {
 
-    margin: 0 0 10px -10px;
+    margin: 0 0 20px -10px;
 
     text-align: right;
     
@@ -258,7 +258,7 @@ hr {
 
 .main > .RODAPE {
 
-    height: 100px;
+    height: 110px;
 }
 
 .main > .COPY {
