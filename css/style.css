@@ -21,7 +21,7 @@
 
     outline: none;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 
     font-family: Roboto;
 }
@@ -29,8 +29,6 @@
 body {
 
     margin: auto;
-
-    display: block;
 }
 
 #preloader {
@@ -75,15 +73,15 @@ body {
 
     position: fixed;
 
-    left: 20px;
+    left: 0.4px;
     bottom: 30px;
-
-    border-radius:  10px;
 
     filter: opacity(0.6);
 }  
 
 .logo {
+
+    min-width: 350px;
 
     padding:  3px 0 0 3px;
 
@@ -260,7 +258,7 @@ hr {
 
 .main > .RODAPE {
 
-    height: 130px;
+    height: 80px;
 }
 
 .main > .COPY {
