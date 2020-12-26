@@ -58,7 +58,7 @@ body {
 
 .main {
 
-    margin: 0 auto;
+    margin: auto;
 
     max-width: 800px;
 
@@ -85,7 +85,7 @@ body {
 
 .logo {
 
-    padding:  0 0 0 5px;
+    padding:  3px 0 0 3px;
 
     position: sticky;
 
@@ -101,9 +101,9 @@ body {
     width: 40px;
 }
 
-.main > .TITULO1 {
+.title1 {
     
-    margin: 100px 0 40px 0;
+    margin: 100px 0 45px 0;
 
     text-align: center;
 
@@ -125,7 +125,7 @@ body {
 
     max-width: 400px;
 
-    height: 35px;
+    height: 33px;
 
     padding: 0 0 0 10px;
 
@@ -150,7 +150,7 @@ body {
 
     width: 35px;
 
-    height: 35px;
+    height: 33px;
 
     border-radius: 10px;
 
@@ -165,7 +165,7 @@ body {
 
 .main > .TITULO2 {
     
-    margin: 100px 0 40px 0;
+    margin: 100px 0 45px 0;
 
     text-align: center;
 
@@ -178,7 +178,7 @@ body {
 
     max-width: 400px;
 
-    height: 35px;
+    height: 33px;
 
     padding: 0 0 0 15px;
 
@@ -201,7 +201,7 @@ body {
 
     width: 35px;
 
-    height: 35px;
+    height: 33px;
 
     padding-top: 2px;
 
@@ -238,7 +238,7 @@ body {
 
 .main > .ATT {
 
-    margin: 50px 0 50px -10px;
+    margin: 60px 0 60px -10px;
 
     text-align: right;
     
@@ -260,7 +260,7 @@ hr {
 
 .main > .RODAPE {
 
-    height: 100px;
+    height: 130px;
 }
 
 .main > .COPY {
