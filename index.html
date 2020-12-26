@@ -32,7 +32,7 @@
 
     </head>
 
-    <body onload=CARREGAR_LISTA()>
+    <body onload="loadList()">
 
         <div id="preloader">
 
@@ -60,9 +60,9 @@
 
             <form onsubmit="return false">
             
-                <input id=ITEM type="tel" maxlength="9" onkeypress="return BLOQUEIO(event)">
+                <input id=ITEM type="tel" maxlength="9" onkeypress="return char(event)">
 
-                <div id=BOTAO1 onclick="FINAL()">
+                <div id=BOTAO1 onclick="final ()">
 
                 </div>
             
@@ -80,7 +80,7 @@
 
                 <datalist id=lista> </datalist>
 
-                <div id=BOTAO2 onclick="CODIGO()">
+                <div id=BOTAO2 onclick="codItem ()">
 
                 </div>
             

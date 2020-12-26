@@ -4,41 +4,134 @@ $(document).ready(function() {
     $('#preloader').delay(400).fadeOut('slow');
 });
 
-function CARREGAR_LISTA () {
+let itens = [
+    {
+        name: 'CERA BRAVO LAMINADOS 3X750ML',
+            cod: '157427',
+                image: 'https://cutt.ly/itemSams-0'},
+    {
+        name: 'REXONA CLINICAL MEN 3X91GR',
+            cod: '980008473',
+                image: 'https://cutt.ly/itemSams-1'}, 
+    {
+        name: 'ABACAXI',
+            cod: '722449',
+                image: 'https://cutt.ly/itemSams-2'},
+    {
+        name: 'MELANCIA',
+            cod: '131592',
+                image: 'https://cutt.ly/itemSams-3'},
+    {
+        name: 'LIMPOL LIQ NATURAL 6X500ML',
+            cod: '321994',
+                image: 'https://cutt.ly/itemSams-4'},
+    {
+        name: 'LIMAO TAITI',
+            cod: '226263',
+                image: 'https://cutt.ly/itemSams-5'},
+    {
+        name: 'CREM TRAT REVLON UNIQ ONE 150ML',
+            cod: '980012473',
+                image: 'https://cutt.ly/itemSams-6'},
+    {
+        name: 'BRAVO 3X500ML LUSTRA MOVEIS',
+            cod: '091962',
+                image: 'https://cutt.ly/itemSams-7'},
+    {
+        name: 'MANTA INFANTIL COM CAPUZ',
+            cod: '980014286',
+                image: 'https://cutt.ly/itemSams-8'},
+    {
+        name: 'YPE LIQ 6X500ML DETERG LIQ CLEAR',
+            cod: '631629',
+                image: 'https://cutt.ly/itemSams-9'},
+    {
+        name: 'COCA COLA 6X1L',
+                cod: '752168',
+                    image: 'https://cutt.ly/itemSams-10'},
+    {
+        name: 'LIMPOL GEL CONCENTRADO 3X511ML',
+            cod: '840908',
+                image: 'https://cutt.ly/itemSams-11'},
+    {
+        name: 'SACO UMBRO',
+            cod: '980008232',
+                image: 'https://cutt.ly/itemSams-12'},
+    {
+        name: 'KETCHUP HEINZ 2X397G',
+            cod: '310746',
+                image: 'https://cutt.ly/itemSams-13'},
+    {
+        name: 'VEJA LIMPEZA PESADA 2X1L',
+            cod: '980008161',
+                image: 'https://cutt.ly/itemSams-14'},
+    {
+        name: 'KIT JAMON ESPANHOL HACIENDAS',
+            cod: '980003562',
+                image: 'https://cutt.ly/itemSams-15'},
+    {
+        name: 'PIPOCA C SAL VERM 2X100G',
+            cod: '623681',
+                image: 'https://cutt.ly/itemSams-16'},
+    {
+        name: 'PIPOCA C SAL AMARELO 2X100G',
+            cod: '177614',
+                image: 'https://cutt.ly/itemSams-17'},
+    {
+        name: 'PIPOCA C MANTEIGA AZUL 2X100G',
+            cod: '177607',
+                image: 'https://cutt.ly/itemSams-18'},
+    {
+        name:  'BATATA 2KG',
+            cod: '226151',
+                image: 'https://cutt.ly/itemSams-19'},
+    {
+        name: 'MILHO VERDE',
+            cod: '166645',
+                image: 'https://cutt.ly/itemSams-20'},
+    {
+        name: 'ADOCANTE STEVIA 2X50GR',
+            cod: '386711',
+                image: 'https://cutt.ly/itemSams-21'},
+    {
+        name: 'COCO VERDE',
+            cod: '227853',
+                image: 'https://cutt.ly/itemSams-22'},
+    {
+        name: 'CEBOLA 2KG',
+            cod: '226158',
+                image: 'https://cutt.ly/itemSams-23'},
+    {
+        name: 'LARANJA 10KG',
+            cod: '628106',
+                image: 'https://cutt.ly/itemSams-24'},
+    {
+        name: 'CENOURA BABY 250G',
+            cod: '980007145',
+                image: 'https://cutt.ly/itemSams-25'},
+    {
+        name: 'KIT PRAIA C 19 PEÇAS',
+            cod: '372529',
+                image: 'https://cutt.ly/itemSams-26'},
+    {
+        name: 'ASSADEIRA MM ALUMINIO 7.5L',
+            cod: '980004676',
+                image: 'https://cutt.ly/itemSams-27'},
+    {
+        name: 'MOSTARDA HEINZ 2X255GR',
+            cod: '352107',
+                image: 'https://cutt.ly/itemSams-28'},
+    {
+        name: 'KIT JAMON SERRANO HACIENDAS RES 6.5KG',
+            cod: '980004882',
+                image: 'https://cutt.ly/itemSams-29'},
+    {
+        name: 'PIJAMA M/C LUPO MASCULINO',
+            cod: '980014772',
+                image: 'https://cutt.ly/itemSams-30'}  
+];
 
-    const itens = [
-        '00 CERA BRAVO LAMINADOS 3X750ML',
-        '01 REXONA CLINICAL MEN 3X91GR', 
-        '02 ABACAXI',
-        '03 MELANCIA',
-        '04 LIMPOL LIQ NATURAL 6X500ML',
-        '05 LIMAO TAITI',
-        '06 CREM TRAT REVLON UNIQ ONE 150ML',
-        '07 BRAVO 3X500ML LUSTRA MOVEIS',
-        '08 MANTA INFANTIL COM CAPUZ',
-        '09 YPE LIQ 6X500ML DETERG LIQ CLEAR',
-        '10 COCA COLA 6X1L',
-        '11 LIMPOL GEL CONCENTRADO 3X511ML',
-        '12 SACO UMBRO',
-        '13 KETCHUP HEINZ 2X397G',
-        '14 VEJA LIMPEZA PESADA 2X1L',
-        '15 KIT JAMON ESPANHOL HACIENDAS',
-        '16 PIPOCA C SAL VERM 2X100G',
-        '17 PIPOCA C SAL AMARELO 2X100G',
-        '18 PIPOCA C MANTEIGA AZUL 2X100G',
-        '19 BATATA 2KG',
-        '20 MILHO VERDE',
-        '21 ADOCANTE STEVIA 2X50GR',
-        '22 COCO VERDE',
-        '23 CEBOLA 2KG',
-        '24 LARANJA 10KG',
-        '25 CENOURA BABY 250G',
-        '26 KIT PRAIA C 19 PEÇAS',
-        '27 ASSADEIRA MM ALUMINIO 7.5L',
-        '28 MOSTARDA HEINZ 2X255GR',
-        '29 KIT JAMON SERRANO HACIENDAS RES 6.5KG',
-        '30 PIJAMA M/C LUPO MASCULINO'
-    ];
+function loadList () {
 
     const lista = document.getElementById('lista');
 
@@ -47,43 +140,27 @@ function CARREGAR_LISTA () {
         item => {
             let option = document.createElement('option');
             
-            option.value = item;
+            option.value = item.name;
             
             lista.appendChild(option); 
         }
     );
 }
 
-function BLOQUEIO (e) { 
+function codItem () {
 
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-    
-    if (charCode==13)
-    {
-        FINAL();
-    }
-    else if (charCode != 8 && charCode != 9)
-    {  
-        if (charCode < 48 || charCode > 57)
-        {
-            return false;
-        }
-    }
+    const selected = document.getElementById("ITENS").value;
+
+    const item = itens.find(item => item.name === selected);
+
+     document.getElementById("ITEM").value = item.cod;
+
+     document.getElementById("FOTO").src = item.image;
+
+     final();
 }
 
-var posicao;
-
-function PRECO () {
-
-    if (posicao <= 30)
-    {
-        var carregar_imagem = "https://cutt.ly/itemSams-" + posicao;
-
-        document.getElementById("FOTO").src = carregar_imagem;
-    }
-}
-
-function FINAL ()
+function final ()
 {
     const cod = document.getElementById("ITEM").value;
     
@@ -131,71 +208,21 @@ function FINAL ()
     }
 
     document.getElementById("BOTAO1").innerHTML = digito;
-
-    PRECO();
 }
 
-function CODIGO () {
+function char (e) { 
 
-    const cod = [
-        /*00*/'157427',
-        /*01*/'980008473',
-        /*02*/'722449',
-        /*03*/'131592',
-        /*04*/'321994',
-        /*05*/'226263',
-        /*06*/'980012473',
-        /*07*/'091962',
-        /*08*/'980014286',
-        /*09*/'631629',
-        /*10*/'752168',
-        /*11*/'840908',
-        /*12*/'980008232',
-        /*13*/'310746',
-        /*14*/'980008161',
-        /*15*/'980003562',
-        /*16*/'623681',
-        /*17*/'177614',
-        /*18*/'177607',
-        /*19*/'226151',
-        /*20*/'166645',
-        /*21*/'386711',
-        /*22*/'227853',
-        /*23*/'226158',
-        /*24*/'628106',
-        /*25*/'980007145',
-        /*26*/'372529',
-        /*27*/'980004676',
-        /*28*/'352107',
-        /*29*/'980004882',
-        /*30*/'980014772'
-    ];
-
-    var status = document.getElementById("BOTAO2");
-
-    const item_selecionado = document.getElementById("ITENS").value;
-          
-    if (item_selecionado == "")
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    
+    if (charCode==13)
     {
-        status.innerHTML = "?";
+        final();
     }
-    else
-    {
-        posicao = Number(item_selecionado.substr(0, 2));
-        
-        const verifica = cod[posicao];
-    
-        if (verifica == undefined)
+    else if (charCode != 8 && charCode != 9)
+    {  
+        if (charCode < 48 || charCode > 57)
         {
-            status.innerHTML = "-";
-        }
-        else
-        {
-            status.innerHTML = "";
-
-            document.getElementById("ITEM").value = verifica;
-    
-            FINAL();
+            return false;
         }
     }
 }
