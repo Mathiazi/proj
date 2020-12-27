@@ -155,7 +155,7 @@ function codItem () {
 
      document.getElementById("ITEM").value = item.cod;
 
-     document.getElementById("FOTO").src = item.image;
+     document.getElementById("photo").src = item.image;
 
      final();
 }
