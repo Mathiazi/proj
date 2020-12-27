@@ -1,15 +1,15 @@
-:root
-{   
-    --default: rgba(61, 72, 119, 0.808);
-
-    --font: rgb(255, 255, 255);
-}
-
 @font-face
 {
     font-family: Roboto;
 
     src: url("../font/Roboto-Regular.ttf");
+}
+
+:root
+{   
+    --default: rgba(61, 72, 119, 0.808);
+
+    --font: rgb(255, 255, 255);
 }
 
 * 
@@ -26,12 +26,10 @@
 
     font-family: Roboto;
 }
-
 body
 {
     margin: auto;
 }
-
 #preloader
 {    
     position: fixed;
@@ -54,7 +52,7 @@ body
     
     background-repeat: no-repeat;
 }
-.main
+main
 {
     margin: auto;
 
@@ -64,7 +62,6 @@ body
 
     background:rgb(255, 255, 255);
 }
-
 #icon
 {
     cursor: pointer;
@@ -73,13 +70,13 @@ body
 
     left: 0.4px;
 
-    bottom: 40px;
+    bottom: 60px;
 
-    filter: opacity(0.5);
+    filter: opacity(0.8);
 }  
 
-.logo {
-
+header
+{
     min-width: 350px;
 
     padding:  3px 0 0 3px;
@@ -95,10 +92,10 @@ body
 
  .imglogo {
 
-    width: 40px;
+    width: 45px;
 }
 
-.title1 {
+#title1 {
     
     margin: 140px 0 40px 0;
 
@@ -107,7 +104,7 @@ body
     font-size: 40px;
 }
 
-.main > form
+form
 {
     display: flex;
 
@@ -118,6 +115,8 @@ body
 
 #ITEM
 {
+    margin:  0 0 0 10px;
+
     width: 87%;
 
     max-width: 390px;
@@ -143,7 +142,7 @@ body
 
 #btn1 {
 
-    margin: 0 0 0 10px;
+    margin: 0 10px 0 10px;
 
     width: 35px;
 
@@ -157,12 +156,12 @@ body
 
     text-align: center;
 
-    font-size: 28px;
+    font-size: 25px;
 
-    color: rgb(201, 201, 201);
+    color: rgb(219, 144, 159);
 }
 
-.title2 {
+#title2 {
     
     margin: 140px 0 40px 0;
 
@@ -172,6 +171,8 @@ body
 }
 
 #ITENS {
+
+    margin:  0 0 0 10px;
 
     width: 87%;
 
@@ -196,20 +197,20 @@ body
 
 #search {
 
-    margin: 0 0 0 10px;
+    margin: 0 10px 0 10px;
 
     height: 30px;
 }
 
 #PRECO {
 
-    width: 99%;
+    width: 95%;
 
-    max-width: 425px;
+    max-width: 420px;
     
     display: block;
 
-    margin: 35px auto 50px auto;
+    margin: 50px auto;
 }
 
 #photo
@@ -221,7 +222,7 @@ body
     max-width: 440px;
 }
 
-.update
+#update
 {
     margin: 0 0 100px -10px;
 
@@ -243,14 +244,14 @@ hr {
     color: rgb(243, 243, 243);
 }
 
-.RODAPE {
+footer {
 
     height: 110px;
 }
 
-.main > .COPY {
+#copy {
 
-    padding: 15px 0;
+    padding: 0 0 10px 0;
 
     display: block;
 

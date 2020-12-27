@@ -34,77 +34,91 @@
 
     <body onload="loadList()">
 
-        <div id="preloader">
+        <section>
 
-        </div>
+            <div id="preloader"> </div>
 
-        <a href="mailto:lucas-mathiazi@bol.com.br">
-           
-            <img id="icon" src="img/message.png">
-      
-        </a>
-
-        <div class="logo">
-
-            <img class="imglogo"  src="img/iconLogo.png">
-
-        </div>
-
-        <div class="main">
-
-            <div class="title1">
-
-                <label> Último Dígito: </label>
-
-            </div>
-
-            <form onsubmit="return false">
+            <a href="mailto:lucas-mathiazi@bol.com.br">
             
-                <input id=ITEM type="tel" maxlength="9" onkeypress="return char(event)">
+                <img id="icon" src="img/message.png">
+        
+            </a>
 
-                <div id="btn1" onclick="final ()">
+        </section>
+
+        <header>
+
+            <nav>
+                
+                <img class="imglogo"  src="img/iconLogo.png">
+            
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section>
+
+                <div id="title1">
+
+                    <label> Último Dígito: </label>
 
                 </div>
+
+                <form onsubmit="return false">
+                
+                    <input id=ITEM type="tel" maxlength="9" onkeypress="return char(event)">
+
+                    <div id="btn1" onclick="final ()"> </div>
             
-            </form>
+                </form>
 
-            <div class="title2">
+            </section>
 
-                <label> Lista de Itens: </label>
+            <section>
 
-            </div>
+                <div id="title2">
 
-            <form onsubmit="return false">
-                    
-                <input id=ITENS class=myarrow type="search" list="lista">
+                    <label> Lista de Itens: </label>
 
-                <datalist id=lista> </datalist>
+                </div>
 
-                <img id="search" src="img/search.png" onclick="codItem ()">
-            
-            </form>
+                <form onsubmit="return false">
+                        
+                    <input id=ITENS class=myarrow type="search" list="lista">
 
-            <div id=PRECO>
+                    <datalist id=lista> </datalist>
 
-                <a id=LINK target="_blank">
+                    <img id="search" src="img/search.png" onclick="codItem ()">
+                
+                </form>
 
-                    <img id="photo">
+                <div id=PRECO>
 
-                </a>
+                    <a id=LINK target="_blank">
 
-            </div>
+                        <img id="photo">
 
-            <label class="update"> Atualização: 10:41 25.12.2020 </label>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <label id="update"> Atualização: 10:41 25.12.2020 </label>
+
+            </section>
 
             <hr>
 
-            <div class=RODAPE>
-    
-            </div>
+        </main>
 
-            <label class=COPY> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </label>
+        <footer> </footer>
 
-        </div>
+        <label id="copy"> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </label>
         
     </body>
 
