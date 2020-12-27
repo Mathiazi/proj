@@ -1,18 +1,19 @@
-:root {
-    
-    --default: rgb(61, 72, 119);
+:root
+{   
+    --default: rgba(61, 72, 119, 0.808);
 
     --font: rgb(255, 255, 255);
 }
 
-@font-face{
+@font-face
+{
     font-family: Roboto;
 
     src: url("../font/Roboto-Regular.ttf");
 }
 
-* {
-    
+* 
+{
     box-sizing: border-box;
 
     margin: 0;
@@ -26,13 +27,13 @@
     font-family: Roboto;
 }
 
-body {
-
+body
+{
     margin: auto;
 }
 
-#preloader {
-    
+#preloader
+{    
     position: fixed;
     
     z-index: 99999;
@@ -45,7 +46,7 @@ body {
     
     height: 100%;
     
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: rgba(255, 255, 255, 0.938);
 
     background-image: url(../img/loading.gif);
 
@@ -53,9 +54,8 @@ body {
     
     background-repeat: no-repeat;
 }
-
-.main {
-
+.main
+{
     margin: auto;
 
     max-width: 800px;
@@ -65,18 +65,17 @@ body {
     background:rgb(255, 255, 255);
 }
 
-#icon{
-
+#icon
+{
     cursor: pointer;
-
-    width: 43px;
 
     position: fixed;
 
     left: 0.4px;
-    bottom: 50px;
 
-    filter: opacity(0.8);
+    bottom: 40px;
+
+    filter: opacity(0.5);
 }  
 
 .logo {
@@ -91,7 +90,7 @@ body {
 
     border-radius: 0 0 5px 5px;
 
-    background: var(--default);
+    background: rgb(89, 99, 145);
 }
 
  .imglogo {
@@ -101,15 +100,15 @@ body {
 
 .title1 {
     
-    margin: 110px 0 33px 0;
+    margin: 140px 0 40px 0;
 
     text-align: center;
 
     font-size: 40px;
 }
 
-.main > form {
-    
+.main > form
+{
     display: flex;
 
     flex-direction: row;
@@ -117,8 +116,8 @@ body {
     justify-content: center;
 }
 
-.main > form > #ITEM {
-
+#ITEM
+{
     width: 89%;
 
     max-width: 400px;
@@ -142,13 +141,17 @@ body {
     background: var(--default);
 }
 
-.main > form > #BOTAO1 {
+#btn1 {
 
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
 
     width: 35px;
 
     height: 33px;
+
+    border-width: 2px;
+
+    border-style: solid;
 
     border-radius: 10px;
 
@@ -156,14 +159,12 @@ body {
 
     font-size: 28px;
 
-    color: rgb(150, 230, 104);
-
-    background: var(--default);
+    color: rgb(201, 201, 201);
 }
 
-.main > .TITULO2 {
+.title2 {
     
-    margin: 100px 0 33px 0;
+    margin: 140px 0 40px 0;
 
     text-align: center;
 
@@ -193,28 +194,14 @@ body {
     background: var(--default);
 }
 
-.main > form > #BOTAO2 {
+#search {
 
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
 
-    width: 35px;
-
-    height: 33px;
-
-    padding-top: 2px;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    font-size: 23px;
-
-    color: rgb(150, 230, 104);
-
-    background: var(--default);
+    height: 30px;
 }
 
-.main > #PRECO {
+#PRECO {
 
     width: 99%;
 
@@ -225,7 +212,7 @@ body {
     margin: 35px auto 50px auto;
 }
 
-.main > #PRECO > a > #FOTO {
+#FOTO {
 
     border-radius: 10px;
 
@@ -234,9 +221,9 @@ body {
     max-width: 440px;
 }
 
-.main > .ATT {
-
-    margin: 0 0 20px -10px;
+.update
+{
+    margin: 0 0 100px -10px;
 
     text-align: right;
     
@@ -246,7 +233,7 @@ body {
 
     font-size: 12px;
 
-    color: rgb(151, 151, 151);
+    color: rgb(216, 61, 92);
 }
 
 hr {
@@ -256,7 +243,7 @@ hr {
     color: rgb(243, 243, 243);
 }
 
-.main > .RODAPE {
+.RODAPE {
 
     height: 110px;
 }

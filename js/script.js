@@ -207,7 +207,7 @@ function final ()
         digito = '?';
     }
 
-    document.getElementById("BOTAO1").innerHTML = digito;
+    document.getElementById("btn1").innerHTML = digito;
 }
 
 function char (e) { 
