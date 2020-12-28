@@ -149,7 +149,7 @@ function loadList () {
 
 function codItem () {
 
-    const selected = document.getElementById("ITENS").value;
+    const selected = document.getElementById("itens").value;
 
     const item = itens.find(item => item.name === selected);
 
