@@ -21,6 +21,7 @@ body {
     margin: auto;
 }
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
     width: 100%;
@@ -49,6 +50,7 @@ main {
     margin: auto;
 }
 #icon {
+    z-index: 2;
     cursor: pointer;
     position: fixed;
     width: 43px;
@@ -121,11 +123,27 @@ section {
     width: 35px;
     cursor: pointer;
 }
+#contImg {
+    margin: 75px 0;
+    text-align: center;
+}
+#imgProd {
+    z-index: 3;
+    opacity: 0.7;
+    filter: grayscale(1);
+    border-radius: 15px;
+    width: 97%;
+    max-width: 400px;
+}
 footer {
-    margin: 150px auto 0 auto;
+    margin: auto;
     width: 100%;
     height: 150px;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: rgb(226, 226, 226);
+}
+#lblStatus {
+    font-size: 11px;
+    text-align: left;
 }

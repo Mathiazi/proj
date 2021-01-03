@@ -208,9 +208,11 @@ function cod ()
     {
         if ( obj[index].name.toLowerCase()  === equal.toLowerCase() )
         {
-            let i =  obj[index].cod;
+            let i =  obj[index];
 
-            document.getElementById("codItem").value = i;
+            document.getElementById("codItem").value = i.cod;
+
+            document.getElementById("imgProd").src = i.image;
         }
     }
 
