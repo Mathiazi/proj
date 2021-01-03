@@ -1,125 +1,83 @@
 <!DOCTYPE html>
 
-<html>
-
+<html lang="pt-br">
+    
     <head>
 
-        <title> App Itens </title>
-
-        <meta charset="utf-8">
-
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-        <meta name="msapplication-TileColor" content="#3d4877">
-
-        <meta name="theme-color" content="#3d4877">
-
-        <link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-touch-icon.png">
-       
-        <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-       
-        <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">   
+        <meta charset="UTF-8">
         
-        <link rel="manifest" href="/site.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3d4877">
+        <script src="scripts.js"> </script>
+        
+        <link rel="stylesheet" href="style.css">
 
-        <link rel="stylesheet" href="css/style.css">
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <script type="text/javascript" src="js/script.js"> </script>
-
+        <title>app Web</title>
+        
     </head>
 
-    <body onload="loadList()">
-
-        <section>
-
-            <div id="preloader"> </div>
-
-            <a href="mailto:lucas-mathiazi@bol.com.br">
-            
-                <img id="icon" src="img/message.png">
+    <body>
         
-            </a>
-
-        </section>
-
         <header>
 
-            <nav>
-                
-                <img class="imglogo"  src="img/iconLogo.png">
-            
-            </nav>
+            <img id="imgLogo"
+                    src="./assets/icon/logo.png">
+
+            <ul>
+                <li onclick="clearMemory ()"> Limpar </li>
+            </ul>
 
         </header>
 
         <main>
 
-            <section>
-
-                <div id="title1">
-
-                    <label> Último Dígito: </label>
-
-                </div>
-
-                <form onsubmit="return false">
-                
-                    <input id=ITEM type="tel" maxlength="9" onkeypress="return char(event)">
-
-                    <div id="btn1" onclick="final ()"> </div>
+            <a href="mailto:lucas-mathiazi@bol.com.br">
             
-                </form>
+                <img id="icon" src="assets/icon/email.png">
+        
+            </a>
 
-            </section>
+            <label> app Web Sams/Big </label>
 
-            <section>
-
-                <div id="title2">
-
-                    <label> Lista de Itens: </label>
-
-                </div>
-
-                <form onsubmit="return false">
-                        
-                    <input id="itens" type="search"  class=myarrow list="lista">
-
-                    <datalist id=lista> </datalist>
-
-                    <img id="search" src="img/search.png" onclick="codItem ()">
-                
-                </form>
-
-                <div id=PRECO>
-
-                    <a id=LINK target="_blank">
-
-                        <img id="photo">
-
-                    </a>
-
-                </div>
-
-            </section>
+            <h1 id="hUd"> ÚLTIMO DÍGITO </h2>
 
             <section>
+            
+                <input id="codItem"
+                        type="tel"
+                            maxlength="9" minlength="6"
+                                onkeypress="return char(event)">
 
-                <label id="update"> Atualização: 10:41 25.12.2020 </label>
+                <div id="dUd" onclick="calc ()"> </div>
 
             </section>
 
-            <hr>
+            <h1 id="hLi"> LISTA DE ITENS </h2>
+
+            <section>
+            
+                <input id="list"
+                        type="search"
+                            list="itens"
+                                oninput="saveMemory ()">
+
+                <datalist id="itens"> </datalist>
+
+                <img id="search"
+                        onclick="cod ()"
+                            src="./assets/icon/search.png">
+
+            </section>
 
         </main>
 
-        <footer> </footer>
+        <footer>
 
-        <label id="copy"> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </label>
+    
+        </footer>
+
+        <label> Copyright © 2020-21 - (Lucas Mathiazi). Todos os direitos reservados. </label>
         
     </body>
-
+    
 </html>
