@@ -9,7 +9,6 @@ function clearMemory ()
     localStorage.clear();
     document.location.reload();
 }
-
 let obj =
     [
         {
@@ -137,7 +136,6 @@ let obj =
                 cod: '980014772',
                     image: 'https://cutt.ly/itemSams-30'}  
     ];
-
 window.onload = function loadList ()
 {
     for (index in obj)
@@ -153,7 +151,6 @@ window.onload = function loadList ()
 
     loadMemory ();
 }
-
 function calc ()
 {
     const cod = document.getElementById("codItem").value;
@@ -203,7 +200,6 @@ function calc ()
 
     document.getElementById("dUd").innerText = digito;
 }
-
 function cod ()
 {
     let equal = document.getElementById("list").value;
@@ -220,13 +216,11 @@ function cod ()
 
     calc();
 }
-
 function saveMemory ()
 {
     let item = document.getElementById("list").value;
     localStorage.setItem("item", item);
 }
-
 function char (e)
 {
     var charCode = e.charCode ? e.charCode : e.keyCode;

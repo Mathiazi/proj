@@ -1,10 +1,13 @@
-@font-face
-{
+:root {
+    --color-bg: rgb(89, 99, 145);
+    --color-btn: rgb(112, 123, 168);
+    --color: rgb(89, 99, 145);
+}
+@font-face {
     font-family: Roboto;
     src: url("./assets/font/Roboto-Regular.ttf");
 }
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,110 +15,97 @@
     font-family: Roboto, Arial;
     letter-spacing: 2px;
 }
-body
-{
+body {
     max-width: 1200px;
     min-width: 300px;
     margin: auto;
 }
-header
-{
+header {
     position: sticky;
     top: 0;
     width: 100%;
     height: 50px;
-    background: rgb(123, 108, 207);
+    background: var(--color-bg);
     border-radius: 0 0 10px 10px;
 }
-#imgLogo
-{
+#imgLogo {
     width: 50px;
 }
-ul
-{
+ul {
     display: inline;
     list-style: none;
 }
-li
-{
+li {
     float: right;
     margin: 15px 10px 0 0;
     padding: 5px;
     cursor: pointer;
     border-radius: 10px;
     font-size: 13px;
-    color: rgb(226, 226, 226);
-    background: rgb(141, 127, 223);
+    color: white;
+    background: var(--color-btn);
 }
-main
-{
+main {
     margin: auto;
 }
-#icon
-{
+#icon {
     cursor: pointer;
     position: fixed;
     width: 43px;
     left: 0.4px;
     bottom: 80px;
-}  
-label
-{
+}
+label {
     margin: 10px;
     display: block;
     text-align: center;
     font-size: 14px;
     color: rgb(197, 197, 197);
 }
-section
-{
+section {
     margin: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-#hUd
-{
+#hUd {
     text-align: center;
     margin: 150px 0 50px 0;
     font-size: 33px;
     color: rgb(77, 77, 77);
 }
-#codItem
-{
+#codItem {
     width: 95%;
     max-width: 400px;
     height: 33px;
     padding: 0 0 0 10px;
     text-align: center;
     font-size: 30px;
-    color: rgb(123, 108, 207);
+    color: var(--color);
     border-width: 1px;
     border-style: solid;
     border-color: rgb(226, 226, 226);
     border-radius: 10px;
 }
-#dUd
-{
+#dUd {
     text-align: center;
     margin: 0 5px 0 5px;
     width: 35px;
     height: 33px;
+    cursor: pointer;
     font-size: 30px;
-    background: rgb(123, 108, 207);
+    background: var(--color-bg);
     color: white;
     border: none;
     border-radius: 10px;
 }
-#hLi
-{
+#hLi {
     text-align: center;
     margin: 150px 0 50px 0;
     font-size: 33px;
     color: rgb(77, 77, 77);
 }
-#list
-{
+#list {
     width: 95%;
     max-width: 400px;
     height: 33px;
@@ -126,13 +116,12 @@ section
     border-color: rgb(226, 226, 226);
     border-radius: 10px;
 }
-#search
-{
+#search {
     margin: 0 5px 0 5px;
     width: 35px;
+    cursor: pointer;
 }
-footer
-{
+footer {
     margin: 150px auto 0 auto;
     width: 100%;
     height: 150px;
