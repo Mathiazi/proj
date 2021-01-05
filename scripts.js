@@ -9,7 +9,7 @@ function clearMemory ()
     localStorage.clear();
     document.location.reload();
 }
-window.addEventListener ("load", function() {
+window.addEventListener ("load", function imgGit () {
     //brincando com o js :]
     
     //chamo a img pelo index
@@ -23,7 +23,7 @@ window.addEventListener ("load", function() {
     //flutua para direita
     y.style.float = "right";
     //afasto um pouco da borda
-    y.style.margin = "30px 8px 0 0";
+    y.style.margin = "27px 8px 0 0";
     //altero o estilo do cursor
     y.style.cursor = "pointer"
     //altero o i para setar o elemento pai chamando o index referente a imagem
