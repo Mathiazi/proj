@@ -18,7 +18,9 @@ window.addEventListener ("load", function imgGit () {
     i.setAttribute("id", "imgGit");
     //chamo novamente a funcao com o id que foi criado
     let y = document.getElementById("imgGit");
-    //altero apenas o tamanho, assim a altura continua proporcional
+    //adiciono o endereco para chamar a img
+    y.src = "./assets/icon/github.png"
+    //altero apenas o tamanho, assim a altura se mantem proporcional
     y.style.width = "35px";
     //flutua para direita
     y.style.float = "right";
@@ -26,10 +28,12 @@ window.addEventListener ("load", function imgGit () {
     y.style.margin = "27px 8px 0 0";
     //altero o estilo do cursor
     y.style.cursor = "pointer"
-    //altero o i para setar o elemento pai chamando o index referente a imagem
+    //altero o i para setar o elemento pai (link) chamando o index referente a imagem
     i =  document.getElementsByTagName("a")[1];
     //adiciono o target para abrir o link em uma nova pagina
     i.setAttribute("target", "_blank");
+    //adiciono o link fererente ao git
+    i.setAttribute("href", "https://github.com/mathiazi");
 
     //chega né, era mais simples pelo css :)
 }
