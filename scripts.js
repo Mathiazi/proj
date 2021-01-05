@@ -9,6 +9,31 @@ function clearMemory ()
     localStorage.clear();
     document.location.reload();
 }
+window.addEventListener ("load", function() {
+    //brincando com o js :]
+    
+    //chamo a img pelo index
+    let i = document.getElementsByTagName("img")[4];
+    //adiciono o id imgGit a img
+    i.setAttribute("id", "imgGit");
+    //chamo novamente a funcao com o id que foi criado
+    let y = document.getElementById("imgGit");
+    //altero apenas o tamanho, assim a altura continua proporcional
+    y.style.width = "35px";
+    //flutua para direita
+    y.style.float = "right";
+    //afasto um pouco da borda
+    y.style.margin = "30px 8px 0 0";
+    //altero o estilo do cursor
+    y.style.cursor = "pointer"
+    //altero o i para setar o elemento pai chamando o index referente a imagem
+    i =  document.getElementsByTagName("a")[1];
+    //adiciono o target para abrir o link em uma nova pagina
+    i.setAttribute("target", "_blank");
+
+    //chega né, era mais simples pelo css :)
+}
+)
 let obj =
     [
         {
