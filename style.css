@@ -1,151 +1,220 @@
 :root {
-    --color-bg: rgb(89, 99, 145);
-    --color-btn: rgb(112, 123, 168);
-    --color: rgb(89, 99, 145);
-    --color-border: rgb(204, 204, 204);
+    --color-bg:rgb(89, 99, 145);
+    --color-btn:rgb(112, 123, 168);
+    --color:rgb(89, 99, 145);
+    --color-border:rgb(221, 221, 221);
     --color-lbl:rgb(121, 121, 121);
 }
+
 @font-face {
     font-family: Roboto;
     src: url("./assets/font/Roboto-Regular.ttf");
 }
+
 * {
+    font-family: Roboto, Arial;
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
-    outline: none;
-    box-shadow: none;
-    font-family: Roboto, Arial;
+    
     letter-spacing: 2px;
+
+    outline: none;
 }
+
 body {
     max-width: 1200px;
-    min-width: 300px;
+    min-width: 330px;
+
     margin: auto;
 }
+
 header {
     z-index: 1;
     position: sticky;
+
     top: 0;
+
     width: 100%;
     height: 50px;
-    background: var(--color-bg);
+
     border-radius: 0 0 10px 10px;
+
+    background: var(--color-bg);
 }
+
 #imgLogo {
     width: 50px;
 }
+
 ul {
     display: inline;
+
     list-style: none;
 }
+
 li {
     float: right;
-    margin: 15px 10px 0 0;
+
+    margin: 12px 10px 0 0;
     padding: 5px;
+
     cursor: pointer;
+
     border-radius: 10px;
+
     font-size: 13px;
-    color: rgb(212, 212, 212);
+    color: rgb(255, 255, 255);
+
     background: var(--color-btn);
 }
+
 main {
     margin: auto;
 }
+
 #icon {
-    z-index: 2;
-    cursor: pointer;
+    z-index: 1;
+
     position: fixed;
-    width: 43px;
-    bottom: 80px;
+    bottom: 72px;
+
+    width: 40px;
+
+    cursor: pointer;
 }
-label {
-    margin: 10px;
+
+#lblName {
     display: block;
+
     text-align: center;
+
+    padding: 10px;
+
     font-size: 14px;
     color: var(--color-lbl)
 }
+
 section {
-    margin: 5px;
+    margin: 8px;
+
     display: flex;
+
     flex-direction: row;
+    
     justify-content: center;
 }
-#hUd {
+
+h1 {
     text-align: center;
-    margin: 150px 0 50px 0;
+    letter-spacing: 5px;
     font-size: 33px;
     color: rgb(77, 77, 77);
+
+    margin: 150px 0 50px 0;
 }
+
 #codItem {
-    width: 95%;
-    max-width: 400px;
+
+    width: 100%;
+    max-width: 450px;
     height: 33px;
+
     padding: 0 0 0 10px;
+
     text-align: center;
     font-size: 30px;
     color: var(--color);
+
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-border);
     border-radius: 10px;
 }
-#dUd {
+
+#btnResult {
     text-align: center;
-    margin: 0 5px 0 5px;
+    font-size: 30px;
+    color: white;
+
+    margin: 0 0 0 7px;
+
     width: 35px;
     height: 33px;
+
     cursor: pointer;
-    font-size: 30px;
+    
     background: var(--color-bg);
-    color: white;
+    
     border: none;
     border-radius: 10px;
 }
-#hLi {
-    text-align: center;
-    margin: 150px 0 50px 0;
-    font-size: 33px;
-    color: rgb(77, 77, 77);
-}
+
 #list {
-    width: 95%;
-    max-width: 400px;
-    height: 33px;
     font-size: 18px;
+
+    width: 100%;
+    max-width: 450px;
+    height: 33px;
+
     padding: 0 0 0 10px;
+
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-border);
     border-radius: 10px;
 }
+
 #search {
-    margin: 0 5px 0 5px;
-    width: 35px;
+    margin: 0 0 0 5px;
+
+    width: 36px;
+
     cursor: pointer;
 }
+
 #contImg {
     margin: 75px 0;
+
     text-align: center;
 }
+
 #imgProd {
-    z-index: 3;
-    opacity: 0.9;
-    filter: grayscale(1);
-    border-radius: 15px;
-    width: 97%;
+    z-index: 2;
+
+    width: 100%;
     max-width: 400px;
+    
+    opacity: 1;
+    filter: grayscale(1);
+
+    border-radius: 15px;
 }
+
 footer {
     margin: auto;
+
     width: 100%;
     height: 150px;
+
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: var(--color-border);
 }
-#lblStatus {
-    font-size: 11px;
-    text-align: left;
+
+.lblStatus {
+    font-size: 13px;
+    color: var(--color-lbl);
+
+    padding: 0 0 0 10px;
+}
+
+#lblCopy {
+    font-size: 14px;
+    color: var(--color-lbl);
+
+    display: block;
+    text-align: center;
 }

@@ -3,30 +3,23 @@
 <html lang="pt-br">
     
     <head>
-
-        <meta charset="UTF-8">
         
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lucas Mathiazi" />
+        <meta name="msapplication-TileColor" content="#596391">      
+        <meta name="theme-color" content="#596391">
+
+        <title>app Web sams/Big</title>
 
         <script src="scripts.js"> </script>
         
         <link rel="stylesheet" href="style.css">
-
-        <title>app Web sams/Big</title>
-
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/icon/shortcut/apple-touch-icon.png">
-
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/shortcut/favicon-32x32.png">
-        
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/shortcut/favicon-32x32.png">       
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/shortcut/favicon-16x16.png">
-        
         <link rel="manifest" href="./assets/icon/shortcut/site.webmanifest">
-        
         <link rel="mask-icon" href="./assets/icon/shortcut/safari-pinned-tab.svg" color="#596391">
-        
-        <meta name="msapplication-TileColor" content="#596391">
-        
-        <meta name="theme-color" content="#596391">
 
     </head>
 
@@ -38,7 +31,9 @@
                     src="./assets/icon/logo.png">
 
             <ul>
+
                 <li onclick="clearMemory ()"> Limpar </li>
+                
             </ul>
 
         </header>
@@ -51,22 +46,23 @@
         
             </a>
 
-            <label> app Web sams/Big </label>
+            <label id="lblName"> app Web sams/Big </label>
 
-            <h1 id="hUd"> ÚLTIMO DÍGITO </h2>
+            <h1> ÚLTIMO DÍGITO </h2>
 
             <section>
             
                 <input id="codItem"
                         type="tel"
-                            maxlength="9" minlength="6"
-                                onkeypress="return char(event)">
+                            maxlength="9"
+                                minlength="6"
+                                    onkeypress="return char(event)">
 
-                <div id="dUd" onclick="calc ()"> </div>
+                <div id="btnResult" onclick="calc ()"> </div>
 
             </section>
 
-            <h1 id="hLi"> LISTA DE ITENS </h2>
+            <h1> LISTA DE ITENS </h2>
 
             <section>
             
@@ -93,16 +89,19 @@
 
         <footer>
 
-                <label id="lblStatus"> change Log: v0.1 dom 3 jan 2021 18:42 </label>
-                <label id="lblStatus"> change Log: added imaging system </label>
+            <label class="lblStatus"> change Log: v0.1 dom 3 jan 2021 18:42 </label>
 
-                <a>
-                    <img>
-                </a>
+            <br>
+
+            <label class="lblStatus"> change Log: added imaging system </label>
+
+            <a>
+                <img>
+            </a>
                 
         </footer>
 
-        <label> Copyright © 2020-21 - (Lucas Mathiazi). Todos os direitos reservados. </label>
+        <label id="lblCopy"> Copyright© 2020-21 por Lucas Mathiazi. Todos os direitos reservados. </label>
         
     </body>
     

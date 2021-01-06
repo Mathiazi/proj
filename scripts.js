@@ -1,43 +1,3 @@
-function loadMemory ()
-{
-    let y = document.getElementById("list");
-
-    y.value = localStorage.getItem("item");
-}
-function clearMemory ()
-{
-    localStorage.clear();
-    document.location.reload();
-}
-window.addEventListener ("load", function imgGit () {
-    //brincando com o js :]
-    
-    //chamo a img pelo index
-    let i = document.getElementsByTagName("img")[4];
-    //adiciono o id imgGit a img
-    i.setAttribute("id", "imgGit");
-    //chamo novamente a funcao com o id que foi criado
-    let y = document.getElementById("imgGit");
-    //adiciono o endereco para chamar a img
-    y.src = "./assets/icon/github.png"
-    //altero apenas o tamanho, assim a altura se mantem proporcional
-    y.style.width = "35px";
-    //flutua para direita
-    y.style.float = "right";
-    //afasto um pouco da borda
-    y.style.margin = "27px 8px 0 0";
-    //altero o estilo do cursor
-    y.style.cursor = "pointer"
-    //altero o i para setar o elemento pai (link) chamando o index referente a imagem
-    i =  document.getElementsByTagName("a")[1];
-    //adiciono o target para abrir o link em uma nova pagina
-    i.setAttribute("target", "_blank");
-    //adiciono o link fererente ao git
-    i.setAttribute("href", "https://github.com/mathiazi");
-
-    //chega né, era mais simples pelo css :)
-}
-)
 let obj =
     [
         {
@@ -165,23 +125,65 @@ let obj =
                 cod: '980014772',
                     image: 'https://cutt.ly/itemSams-30'}  
     ];
-window.onload = function loadList ()
-{
-    for (index in obj)
+window.addEventListener ("load", function loadList ()
     {
-        var prod = obj[index].name.toLowerCase();
+        for (index in obj)
+        {
+            var prod = obj[index].name.toLowerCase();
 
-        let newObj = document.createElement("option");
-        newObj.value = prod;
+            let newObj = document.createElement("option");
+            newObj.value = prod;
 
-        let i = document.getElementById("itens");
-        i.appendChild(newObj);
+            let i = document.getElementById("itens");
+            i.appendChild(newObj);
+        }
+
+        loadMemory ();
     }
+)
 
-    loadMemory ();
+window.addEventListener ("load", function imgGit () {
+    //brincando com o js :]
+    
+    let i;
+
+    //adiciono o id imgGit ao elemento
+    i = document.getElementsByTagName("img")[4].setAttribute("id", "imgGit");
+    //chamo novamente a funcao com o id que foi criado
+    i = document.getElementById("imgGit");
+    //adiciono o endereco para chamar a img
+    i.src = "./assets/icon/github.png"
+    //altero apenas o tamanho, assim a altura se mantem proporcional
+    i.style.width = "34px";
+    //flutua para direita
+    i.style.float = "right";
+    //afasto um pouco da borda
+    i.style.margin = "50px 6px 0 0";
+    //altero o estilo do cursor
+    i.style.cursor = "pointer";
+    //agora altero o i para setar o elemento pai, chamando o index referente a imagem
+    i =  document.getElementsByTagName("a")[1];
+    //adiciono o target para abrir o link em uma nova pagina
+    i.setAttribute("target", "_blank");
+    //adiciono o link fererente ao git
+    i.setAttribute("href", "https://github.com/mathiazi");
+
+    //chega né, era mais simples pelo css :)
 }
-function calc ()
-{
+)
+
+function loadMemory () {
+    let y = document.getElementById("list");
+
+    y.value = localStorage.getItem("item");
+}
+
+function clearMemory () {
+    localStorage.clear();
+    document.location.reload();
+}
+
+function calc () {
     const cod = document.getElementById("codItem").value;
     
     const tamanho = cod.length;
@@ -227,10 +229,10 @@ function calc ()
         digito = 'N';
     }
 
-    document.getElementById("dUd").innerText = digito;
+    document.getElementById("btnResult").innerText = digito;
 }
-function cod ()
-{
+
+function cod () {
     let equal = document.getElementById("list").value;
 
     for (index in obj)
@@ -247,18 +249,18 @@ function cod ()
 
     calc();
 }
-function saveMemory ()
-{
+
+function saveMemory () {
     let item = document.getElementById("list").value;
     localStorage.setItem("item", item);
 }
-function char (e)
-{
+
+function char (e) {
     var charCode = e.charCode ? e.charCode : e.keyCode;
     
     if (charCode == 13)
     {
-        	//ENTER
+        	calc ();
     }
     else if (charCode != 8 && charCode != 9)
     {  
