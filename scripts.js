@@ -158,7 +158,7 @@ window.addEventListener ("load", function imgGit ()
         //flutua para direita
         i.style.float = "right";
         //afasto um pouco da borda
-        i.style.margin = "75px 6px 0 0";
+        i.style.margin = "60px 6px 0 0";
         //altero o estilo do cursor
         i.style.cursor = "pointer";
         //agora altero o i para setar o elemento pai, chamando o index referente a imagem
