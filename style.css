@@ -47,6 +47,8 @@
 }
 
 header {
+    z-index: 1;
+
     position: sticky;
     top: 0;
 
@@ -55,7 +57,10 @@ header {
 }
 
 #imgLogo {
+    margin: 0 0 0 10px;
+
     width: 50px;
+    cursor: pointer;
 }
 
 ul {
@@ -66,22 +71,22 @@ ul {
 
 li {
     float: right;
+}
 
-    margin: 13px 11px 0 0;
-    padding: 4px;
+#imgTrash {
+    margin: 10px 10px 0 0;
+
+    width: 32px;
 
     cursor: pointer;
 
-    border-radius: 8px;
-
-    font-size: 12px;
-    color: rgb(240, 240, 240);
+    border-radius: 10px;
 
     background: rgb(89, 99, 145);
 }
 
 body {
-    background-image: url(./assets/bg.png);
+    background-image: url(./assets/icon/bg.png);
 }
 
 #proj {
@@ -104,17 +109,12 @@ body {
     cursor: pointer;
 }
 
-#btnTheme {
-    margin: 15px 0 0 15px;
-    padding: 5px;
+#imgTheme {
+    width: 55px;
 
-    letter-spacing: 1px;
-    color: rgb(235, 235, 235);
+    margin: 15px 0 0 8px;
 
     cursor: pointer;
-
-    border: none;
-    border-radius: 8px;
 }
 
 #lblName {

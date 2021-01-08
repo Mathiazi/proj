@@ -141,7 +141,6 @@ window.addEventListener ("load", function loadList ()
         loadMemory ();
     }
 );
-
 window.addEventListener ("load", function imgGit ()
     {
         //brincando com o js :]
@@ -149,7 +148,7 @@ window.addEventListener ("load", function imgGit ()
         let i;
 
         //adiciono o id imgGit ao elemento
-        i = document.getElementsByTagName("img")[4].setAttribute("id", "imgGit");
+        i = document.getElementsByTagName("img")[6].setAttribute("id", "imgGit");
         //chamo novamente a funcao com o id que foi criado
         i = document.getElementById("imgGit");
         //adiciono o endereco para chamar a img
@@ -211,19 +210,7 @@ function loadTheme () {
     let lblCopy = document.getElementById("lblCopy");
             lblCopy.style.color = "var(--" + y + "-lblCopy-color)";
                 lblCopy.style.background = "var(--" + y + "-lblCopy-bg)";
-
-    let nameBtn = document.getElementById("btnTheme");
-    
-    if (y == "dark") {
-        nameBtn.innerText = "Theme Light";
-            nameBtn.style.background = "rgb(100, 100, 100)";
-    }
-    else {
-        nameBtn.innerText = "Theme Dark";
-            nameBtn.style.background = "rgb(112, 123, 168)";
-    }
 }
-
 function selectTheme () {
 
     let y = localStorage.getItem("status");
@@ -256,7 +243,7 @@ function loadMemory () {
 
 function clearMemory () {
     localStorage.clear();
-    document.location.reload();
+        document.location.reload();
 }
 
 function calc () {

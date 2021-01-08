@@ -37,12 +37,14 @@
         <header>
 
             <img id="imgLogo"
-                    src="./assets/icon/logo.png">
-    
+                    onclick="document.location.reload()"
+                        src="./assets/icon/logo.png">
             <ul>
-    
-                <li onclick="clearMemory ()"> Limpar </li>
-                
+                <li>
+                    <img id="imgTrash"
+                            onclick="clearMemory ()"
+                                src="./assets/icon/trash.png">
+                </li>
             </ul>
     
         </header>
@@ -50,14 +52,15 @@
         <div id="proj">
 
             <main>
-
                 <a href="mailto:lucas-mathiazi@bol.com.br">
                 
-                    <img id="icon" src="assets/icon/email.png">
-            
+                    <img id="icon"
+                            src="assets/icon/email.png">
                 </a>
 
-                <button id="btnTheme" onclick="selectTheme ()"> Theme Dark </button>
+                <img id="imgTheme"
+                        onclick="selectTheme ()"
+                            src="./assets/icon/theme.png">
 
                 <label id="lblName"> app Web sams/Big </label>
 
