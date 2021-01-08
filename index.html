@@ -5,104 +5,119 @@
     <head>
         
         <meta charset="UTF-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <meta name="author" content="Lucas Mathiazi" />
+        
         <meta name="msapplication-TileColor" content="#596391">      
+        
         <meta name="theme-color" content="#596391">
 
-        <title>app Web sams/Big</title>
+        <title> app Web sams/Big </title>
 
         <script src="scripts.js"> </script>
         
         <link rel="stylesheet" href="style.css">
+        
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/icon/shortcut/apple-touch-icon.png">
+        
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/shortcut/favicon-32x32.png">       
+        
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/shortcut/favicon-16x16.png">
+        
         <link rel="manifest" href="./assets/icon/shortcut/site.webmanifest">
+        
         <link rel="mask-icon" href="./assets/icon/shortcut/safari-pinned-tab.svg" color="#596391">
 
     </head>
 
     <body>
-        
+
         <header>
 
             <img id="imgLogo"
                     src="./assets/icon/logo.png">
-
+    
             <ul>
-
+    
                 <li onclick="clearMemory ()"> Limpar </li>
                 
             </ul>
-
+    
         </header>
 
-        <main>
+        <div id="proj">
 
-            <a href="mailto:lucas-mathiazi@bol.com.br">
-            
-                <img id="icon" src="assets/icon/email.png">
-        
-            </a>
+            <main>
 
-            <label id="lblName"> app Web sams/Big </label>
-
-            <h1> ÚLTIMO DÍGITO </h2>
-
-            <section>
-            
-                <input id="codItem"
-                        type="tel"
-                            maxlength="9"
-                                minlength="6"
-                                    onkeypress="return char(event)">
-
-                <div id="btnResult" onclick="calc ()"> </div>
-
-            </section>
-
-            <h1> LISTA DE ITENS </h2>
-
-            <section>
-            
-                <input id="list"
-                        type="search"
-                            list="itens"
-                                oninput="saveMemory ()">
-
-                <datalist id="itens"> </datalist>
-
-                <img id="search"
-                        onclick="cod ()"
-                            src="./assets/icon/search.png">
-
-            </section>
-
-            <div id="contImg">
+                <a href="mailto:lucas-mathiazi@bol.com.br">
                 
-                <img id="imgProd">
+                    <img id="icon" src="assets/icon/email.png">
             
-            </div>
+                </a>
 
-        </main>
+                <button id="theme" onclick="theme ()"> Theme Dark </button>
 
-        <footer>
+                <label id="lblName"> app Web sams/Big </label>
 
-            <label class="lblStatus"> change Log: v0.1 dom 3 jan 2021 18:42 </label>
+                <h1> ÚLTIMO DÍGITO </h2>
 
-            <br>
-
-            <label class="lblStatus"> change Log: added imaging system </label>
-
-            <a>
-                <img>
-            </a>
+                <section>
                 
-        </footer>
+                    <input id="codItem"
+                            type="tel"
+                                maxlength="9"
+                                    minlength="6"
+                                        onkeypress="return char(event)">
 
-        <label id="lblCopy"> Copyright© 2020-21 por Lucas Mathiazi. Todos os direitos reservados. </label>
-        
+                    <div id="btnResult" onclick="calc ()"> </div>
+
+                </section>
+
+                <h1> LISTA DE ITENS </h2>
+
+                <section>
+                
+                    <input id="list"
+                            type="search"
+                                list="itens"
+                                    oninput="saveMemory ()">
+
+                    <datalist id="itens"> </datalist>
+
+                    <img id="search"
+                            onclick="cod ()"
+                                src="./assets/icon/search.png">
+
+                </section>
+
+                <div id="contImg">
+                    
+                    <img id="imgProd">
+                
+                </div>
+
+            </main>
+
+            <footer>
+
+                <label class="lblStatus"> change Log: v0.2 sex 08 jan 2021 01:36 </label>
+
+                <br>
+
+                <label class="lblStatus"> change Log: added dark mode </label>
+
+                <a>
+                    <img>
+                </a>
+                    
+            </footer>
+
+            <label id="lblCopy"> Copyright© 2020-21 por Lucas Mathiazi. Todos os direitos reservados. </label>
+
+        </div>
+
     </body>
     
 </html>

@@ -1,9 +1,32 @@
 :root {
-    --color-bg:rgb(89, 99, 145);
-    --color-btn:rgb(112, 123, 168);
-    --color:rgb(89, 99, 145);
-    --color-border:rgb(221, 221, 221);
-    --color-lbl:rgb(121, 121, 121);
+
+    /* dark mode */
+
+    --dark-header-bg: rgb(117, 117, 117);
+    --dark-main-bg: rgb(71, 71, 71);
+    --dark-lblName-color: rgb(167, 167, 167);
+    --dark-h1-color: rgb(235, 235, 235);
+    --dark-codItem-bg: rgb(32, 32, 32);
+    --dark-list-bg: rgb(32, 32, 32);
+    --dark-footer-bg: rgb(71, 71, 71);
+    --dark-border-top-color: rgb(107, 107, 107);
+    --dark-lblStatus-color: rgb(167, 167, 167);
+    --dark-lblCopy-bg: rgb(71, 71, 71);
+    --dark-lblCopy-color: rgb(167, 167, 167);
+
+    /* light mode */
+
+    --light-header-bg: rgb(89, 99, 145);
+    --light-main-bg: rgb(255, 255, 255);
+    --light-lblName-color:  rgb(196, 196, 196);
+    --light-h1-color: rgb(77, 77, 77);
+    --light-codItem-bg: rgb(189, 189, 189);
+    --light-list-bg:  rgb(189, 189, 189);
+    --light-footer-bg: rgb(255, 255, 255);
+    --light-border-top-color: rgb(221, 221, 221);
+    --light-lblStatus-color: rgb(121, 121, 121);
+    --light-lblCopy-bg: rgb(255, 255, 255);
+    --light-lblCopy-color: rgb(121, 121, 121);
 }
 
 @font-face {
@@ -24,17 +47,8 @@
     outline: none;
 }
 
-body {
-    max-width: 1200px;
-    min-width: 330px;
-
-    margin: auto;
-}
-
 header {
-    z-index: 1;
     position: sticky;
-
     top: 0;
 
     width: 100%;
@@ -42,7 +56,7 @@ header {
 
     border-radius: 0 0 10px 10px;
 
-    background: var(--color-bg);
+    background: var(--light-header-bg);
 }
 
 #imgLogo {
@@ -58,21 +72,34 @@ ul {
 li {
     float: right;
 
-    margin: 12px 10px 0 0;
-    padding: 5px;
+    margin: 13px 11px 0 0;
+    padding: 4px;
 
     cursor: pointer;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
-    font-size: 13px;
+    font-size: 12px;
     color: rgb(255, 255, 255);
 
-    background: var(--color-btn);
+    background: rgb(112, 123, 168);
+}
+
+body {
+    background-image: url(./assets/bg.png);
+}
+
+#proj {
+    margin: auto;
+
+    max-width: 1000px;
+    min-width: 300px;
+
+    padding: 0 10px;
 }
 
 main {
-    margin: auto;
+    background: var(--light-main-bg);
 }
 
 #icon {
@@ -86,15 +113,29 @@ main {
     cursor: pointer;
 }
 
+#theme {
+    margin: 10px 0 0 10px;
+    padding: 5px;
+
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+
+    background: rgb(112, 123, 168);
+
+    border: none;
+
+    border-radius: 8px;
+}
+
 #lblName {
     display: block;
 
-    text-align: center;
-
-    padding: 10px;
+    padding: 40px;
 
     font-size: 14px;
-    color: var(--color-lbl)
+    text-align: center;
+    
+    color: var(--light-lblName-color);
 }
 
 section {
@@ -111,13 +152,12 @@ h1 {
     text-align: center;
     letter-spacing: 5px;
     font-size: 33px;
-    color: rgb(77, 77, 77);
+    color: var(--light-h1-color);
 
     margin: 150px 0 50px 0;
 }
 
 #codItem {
-
     width: 100%;
     max-width: 450px;
     height: 33px;
@@ -126,12 +166,12 @@ h1 {
 
     text-align: center;
     font-size: 30px;
-    color: var(--color);
+    color: rgb(89, 99, 145);
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--color-border);
     border-radius: 10px;
+    border: none;
+
+    background: var(--light-codItem-bg);
 }
 
 #btnResult {
@@ -146,14 +186,14 @@ h1 {
 
     cursor: pointer;
     
-    background: var(--color-bg);
+    background: rgb(89, 99, 145);
     
     border: none;
     border-radius: 10px;
 }
 
 #list {
-    font-size: 18px;
+    font-size: 15px;
 
     width: 100%;
     max-width: 450px;
@@ -161,10 +201,10 @@ h1 {
 
     padding: 0 0 0 10px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--color-border);
     border-radius: 10px;
+    border: none;
+
+    background: var(--light-list-bg);
 }
 
 #search {
@@ -176,7 +216,7 @@ h1 {
 }
 
 #contImg {
-    margin: 75px 0;
+    padding: 75px 0;
 
     text-align: center;
 }
@@ -201,20 +241,28 @@ footer {
 
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: var(--color-border);
+    border-top-color: var(--light-border-top-color);
+
+    background: var(--light-footer-bg);
 }
 
 .lblStatus {
     font-size: 13px;
-    color: var(--color-lbl);
+    color: var(--light-lblStatus-color);
 
     padding: 0 0 0 10px;
 }
 
 #lblCopy {
     font-size: 14px;
-    color: var(--color-lbl);
+    color: var(--light-lblCopy-color);
 
     display: block;
     text-align: center;
+
+    padding: 10px;
+
+    background: var(--light-lblCopy-bg);
+
+    border-radius: 0 0 10px 10px;
 }

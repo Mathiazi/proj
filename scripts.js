@@ -140,37 +140,92 @@ window.addEventListener ("load", function loadList ()
 
         loadMemory ();
     }
-)
+);
 
-window.addEventListener ("load", function imgGit () {
-    //brincando com o js :]
+window.addEventListener ("load", function imgGit ()
+    {
+        //brincando com o js :]
+        
+        let i;
+
+        //adiciono o id imgGit ao elemento
+        i = document.getElementsByTagName("img")[4].setAttribute("id", "imgGit");
+        //chamo novamente a funcao com o id que foi criado
+        i = document.getElementById("imgGit");
+        //adiciono o endereco para chamar a img
+        i.src = "./assets/icon/github.png"
+        //altero apenas o tamanho, assim a altura se mantem proporcional
+        i.style.width = "34px";
+        //flutua para direita
+        i.style.float = "right";
+        //afasto um pouco da borda
+        i.style.margin = "75px 6px 0 0";
+        //altero o estilo do cursor
+        i.style.cursor = "pointer";
+        //agora altero o i para setar o elemento pai, chamando o index referente a imagem
+        i =  document.getElementsByTagName("a")[1];
+        //adiciono o target para abrir o link em uma nova pagina
+        i.setAttribute("target", "_blank");
+        //adiciono o link fererente ao git
+        i.setAttribute("href", "https://github.com/mathiazi");
+
+        //chega né, era mais simples pelo css :)
+    }
+);
+
+var changeTheme = new Boolean(true);
+
+function theme () {
+
+    let mode;
+
+    let header = document.getElementsByTagName("header")[0];
     
-    let i;
+    let main = document.getElementsByTagName("main")[0];
+    
+    let lblName = document.getElementById("lblName");
 
-    //adiciono o id imgGit ao elemento
-    i = document.getElementsByTagName("img")[4].setAttribute("id", "imgGit");
-    //chamo novamente a funcao com o id que foi criado
-    i = document.getElementById("imgGit");
-    //adiciono o endereco para chamar a img
-    i.src = "./assets/icon/github.png"
-    //altero apenas o tamanho, assim a altura se mantem proporcional
-    i.style.width = "34px";
-    //flutua para direita
-    i.style.float = "right";
-    //afasto um pouco da borda
-    i.style.margin = "50px 6px 0 0";
-    //altero o estilo do cursor
-    i.style.cursor = "pointer";
-    //agora altero o i para setar o elemento pai, chamando o index referente a imagem
-    i =  document.getElementsByTagName("a")[1];
-    //adiciono o target para abrir o link em uma nova pagina
-    i.setAttribute("target", "_blank");
-    //adiciono o link fererente ao git
-    i.setAttribute("href", "https://github.com/mathiazi");
+    let h1 = document.getElementsByTagName("h1");
 
-    //chega né, era mais simples pelo css :)
+    let codItem = document.getElementById("codItem");
+
+    let list = document.getElementById("list");
+
+    let footer = document.getElementsByTagName("footer")[0];
+
+    let lblStatus = document.getElementsByClassName("lblStatus");
+
+    let lblCopy = document.getElementById("lblCopy");
+
+    changeTheme = !changeTheme;
+
+    if (changeTheme)
+        mode = "light";
+    else
+        mode = "dark";
+
+    header.style.background = "var(--" + mode + "-header-bg)";
+    
+    main.style.background = "var(--" + mode + "-main-bg)";
+    
+    lblName.style.color = "var(--" + mode + "-lblName-color)";
+
+    h1[0].style.color = "var(--" + mode + "-h1-color)";
+        h1[1].style.color = "var(--" + mode + "-h1-color)";
+
+    codItem.style.background = "var(--" + mode + "-codItem-bg)";
+
+    list.style.background = "var(--" + mode + "-list-bg)";
+
+    footer.style.borderTopColor = "var(--" + mode + "-border-top-color)";
+        footer.style.background = "var(--" + mode + "-footer-bg)";
+    
+    lblStatus[0].style.color = "var(--" + mode + "-lblStatus-color)";
+        lblStatus[1].style.color = "var(--" + mode + "-lblStatus-color)";
+    
+    lblCopy.style.color = "var(--" + mode + "-lblCopy-color)";
+        lblCopy.style.background = "var(--" + mode + "-lblCopy-bg)";
 }
-)
 
 function loadMemory () {
     let y = document.getElementById("list");
