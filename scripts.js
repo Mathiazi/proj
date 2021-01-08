@@ -173,76 +173,79 @@ window.addEventListener ("load", function imgGit ()
     }
 );
 
-function theme () {
-    let newTheme = localStorage.getItem("newTheme");
+function loadTheme () {
+
+    let y = localStorage.getItem("status");
+
+    if (y == null)
+        y = "light"
 
     let header = document.getElementsByTagName("header")[0];
-        header.style.background = "var(--" + newTheme + "-header-bg)";
+            header.style.background = "var(--" + y + "-header-bg)";
     
     let main = document.getElementsByTagName("main")[0];
-        main.style.background = "var(--" + newTheme + "-main-bg)";
+            main.style.background = "var(--" + y + "-main-bg)";
     
     let lblName = document.getElementById("lblName");
-        lblName.style.color = "var(--" + newTheme + "-lblName-color)";
+            lblName.style.color = "var(--" + y + "-lblName-color)";
 
     let h1 = document.getElementsByTagName("h1");
-        h1[0].style.color = "var(--" + newTheme + "-h1-color)";
-        h1[1].style.color = "var(--" + newTheme + "-h1-color)";
+            h1[0].style.color = "var(--" + y + "-h1-color)";
+                h1[1].style.color = "var(--" + y + "-h1-color)";
 
     let codItem = document.getElementById("codItem");
-        codItem.style.background = "var(--" + newTheme + "-codItem-bg)";
+            codItem.style.background = "var(--" + y + "-codItem-bg)";
 
     let list = document.getElementById("list");
-        list.style.background = "var(--" + newTheme + "-list-bg)";
-        list.style.color = "var(--" + newTheme + "-list-color)";
+            list.style.background = "var(--" + y + "-list-bg)";
+                list.style.color = "var(--" + y + "-list-color)";
 
     let footer = document.getElementsByTagName("footer")[0];
-        footer.style.borderTopColor = "var(--" + newTheme + "-border-top-color)";
-        footer.style.background = "var(--" + newTheme + "-footer-bg)";
+            footer.style.borderTopColor = "var(--" + y + "-border-top-color)";
+                footer.style.background = "var(--" + y + "-footer-bg)";
     
     let lblStatus = document.getElementsByClassName("lblStatus");
-        lblStatus[0].style.color = "var(--" + newTheme + "-lblStatus-color)";
-        lblStatus[1].style.color = "var(--" + newTheme + "-lblStatus-color)";
+            lblStatus[0].style.color = "var(--" + y + "-lblStatus-color)";
+                lblStatus[1].style.color = "var(--" + y + "-lblStatus-color)";
     
     let lblCopy = document.getElementById("lblCopy");
-        lblCopy.style.color = "var(--" + newTheme + "-lblCopy-color)";
-        lblCopy.style.background = "var(--" + newTheme + "-lblCopy-bg)";
+            lblCopy.style.color = "var(--" + y + "-lblCopy-color)";
+                lblCopy.style.background = "var(--" + y + "-lblCopy-bg)";
 
     let nameBtn = document.getElementById("btnTheme");
-    if (newTheme == "dark") {
+    
+    if (y == "dark") {
         nameBtn.innerText = "Theme Light";
-        nameBtn.style.background = "rgb(100, 100, 100)";
-    }
-    else if (newTheme == "light") {
-        nameBtn.innerText = "Theme Dark";
-        nameBtn.style.background = "rgb(112, 123, 168)";
+            nameBtn.style.background = "rgb(100, 100, 100)";
     }
     else {
-        console.log("erro no tema");
+        nameBtn.innerText = "Theme Dark";
+            nameBtn.style.background = "rgb(112, 123, 168)";
     }
 }
 
-window.addEventListener ("load", function loadTheme ()
-    {
-        let y = localStorage.getItem("newTheme");
-
-        if (y != null)
-            theme ();
-    }
-);
-
-var changeTheme = new Boolean(true);
 function selectTheme () {
 
-    let mode;
-    changeTheme = !changeTheme;
-    if (changeTheme)
-        mode = "light";
-    else
-        mode = "dark";
+    let y = localStorage.getItem("status");
 
-    localStorage.setItem("newTheme", mode);
-    theme ();
+    let mode;
+
+    if (y == null)
+    {
+        mode = "dark";
+    }
+    else if (y == "dark")
+    {
+        mode = "light";
+    }
+    else
+    {
+        mode = "dark";
+    }
+        
+    localStorage.setItem("status", mode)
+
+    loadTheme ();
 }
 
 function loadMemory () {
