@@ -13,6 +13,7 @@
     --dark-lblStatus-color: rgb(167, 167, 167);
     --dark-lblCopy-bg: rgb(71, 71, 71);
     --dark-lblCopy-color: rgb(167, 167, 167);
+    --dark-list-color: rgb(167, 167, 167);
 
     /* light mode */
 
@@ -27,6 +28,7 @@
     --light-lblStatus-color: rgb(121, 121, 121);
     --light-lblCopy-bg: rgb(255, 255, 255);
     --light-lblCopy-color: rgb(121, 121, 121);
+    --light-list-color: rgb(24, 24, 24);
 }
 
 @font-face {
@@ -95,7 +97,7 @@ body {
     max-width: 1000px;
     min-width: 300px;
 
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 main {
@@ -118,12 +120,13 @@ main {
     padding: 5px;
 
     letter-spacing: 1px;
-    color: rgb(255, 255, 255);
+    color: rgb(235, 235, 235);
 
     background: rgb(112, 123, 168);
 
-    border: none;
+    cursor: pointer;
 
+    border: none;
     border-radius: 8px;
 }
 
@@ -139,7 +142,7 @@ main {
 }
 
 section {
-    margin: 8px;
+    margin: 1px;
 
     display: flex;
 
@@ -204,6 +207,7 @@ h1 {
     border-radius: 10px;
     border: none;
 
+    color: var(--light-list-color);
     background: var(--light-list-bg);
 }
 

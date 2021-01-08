@@ -197,12 +197,20 @@ function theme () {
 
     let lblCopy = document.getElementById("lblCopy");
 
+    let nameBtn = document.getElementById("theme");
+
     changeTheme = !changeTheme;
 
-    if (changeTheme)
+    if (changeTheme) {
         mode = "light";
-    else
+        nameBtn.innerText = "Theme Dark";
+        nameBtn.style.background = "rgb(112, 123, 168)";
+    }
+    else {
         mode = "dark";
+        nameBtn.innerText = "Theme Light";
+        nameBtn.style.background = "rgb(100, 100, 100)";
+    }
 
     header.style.background = "var(--" + mode + "-header-bg)";
     
@@ -216,6 +224,7 @@ function theme () {
     codItem.style.background = "var(--" + mode + "-codItem-bg)";
 
     list.style.background = "var(--" + mode + "-list-bg)";
+        list.style.color = "var(--" + mode + "-list-color)";
 
     footer.style.borderTopColor = "var(--" + mode + "-border-top-color)";
         footer.style.background = "var(--" + mode + "-footer-bg)";
