@@ -173,67 +173,76 @@ window.addEventListener ("load", function imgGit ()
     }
 );
 
-var changeTheme = new Boolean(true);
-
 function theme () {
-
-    let mode;
+    let newTheme = localStorage.getItem("newTheme");
 
     let header = document.getElementsByTagName("header")[0];
+        header.style.background = "var(--" + newTheme + "-header-bg)";
     
     let main = document.getElementsByTagName("main")[0];
+        main.style.background = "var(--" + newTheme + "-main-bg)";
     
     let lblName = document.getElementById("lblName");
+        lblName.style.color = "var(--" + newTheme + "-lblName-color)";
 
     let h1 = document.getElementsByTagName("h1");
+        h1[0].style.color = "var(--" + newTheme + "-h1-color)";
+        h1[1].style.color = "var(--" + newTheme + "-h1-color)";
 
     let codItem = document.getElementById("codItem");
+        codItem.style.background = "var(--" + newTheme + "-codItem-bg)";
 
     let list = document.getElementById("list");
+        list.style.background = "var(--" + newTheme + "-list-bg)";
+        list.style.color = "var(--" + newTheme + "-list-color)";
 
     let footer = document.getElementsByTagName("footer")[0];
-
+        footer.style.borderTopColor = "var(--" + newTheme + "-border-top-color)";
+        footer.style.background = "var(--" + newTheme + "-footer-bg)";
+    
     let lblStatus = document.getElementsByClassName("lblStatus");
-
+        lblStatus[0].style.color = "var(--" + newTheme + "-lblStatus-color)";
+        lblStatus[1].style.color = "var(--" + newTheme + "-lblStatus-color)";
+    
     let lblCopy = document.getElementById("lblCopy");
+        lblCopy.style.color = "var(--" + newTheme + "-lblCopy-color)";
+        lblCopy.style.background = "var(--" + newTheme + "-lblCopy-bg)";
 
-    let nameBtn = document.getElementById("theme");
-
-    changeTheme = !changeTheme;
-
-    if (changeTheme) {
-        mode = "light";
+    let nameBtn = document.getElementById("btnTheme");
+    if (newTheme == "dark") {
+        nameBtn.innerText = "Theme Light";
+        nameBtn.style.background = "rgb(100, 100, 100)";
+    }
+    else if (newTheme == "light") {
         nameBtn.innerText = "Theme Dark";
         nameBtn.style.background = "rgb(112, 123, 168)";
     }
     else {
-        mode = "dark";
-        nameBtn.innerText = "Theme Light";
-        nameBtn.style.background = "rgb(100, 100, 100)";
+        console.log("erro no tema");
     }
+}
 
-    header.style.background = "var(--" + mode + "-header-bg)";
-    
-    main.style.background = "var(--" + mode + "-main-bg)";
-    
-    lblName.style.color = "var(--" + mode + "-lblName-color)";
+window.addEventListener ("load", function loadTheme ()
+    {
+        let y = localStorage.getItem("newTheme");
 
-    h1[0].style.color = "var(--" + mode + "-h1-color)";
-        h1[1].style.color = "var(--" + mode + "-h1-color)";
+        if (y != null)
+            theme ();
+    }
+);
 
-    codItem.style.background = "var(--" + mode + "-codItem-bg)";
+var changeTheme = new Boolean(true);
+function selectTheme () {
 
-    list.style.background = "var(--" + mode + "-list-bg)";
-        list.style.color = "var(--" + mode + "-list-color)";
+    let mode;
+    changeTheme = !changeTheme;
+    if (changeTheme)
+        mode = "light";
+    else
+        mode = "dark";
 
-    footer.style.borderTopColor = "var(--" + mode + "-border-top-color)";
-        footer.style.background = "var(--" + mode + "-footer-bg)";
-    
-    lblStatus[0].style.color = "var(--" + mode + "-lblStatus-color)";
-        lblStatus[1].style.color = "var(--" + mode + "-lblStatus-color)";
-    
-    lblCopy.style.color = "var(--" + mode + "-lblCopy-color)";
-        lblCopy.style.background = "var(--" + mode + "-lblCopy-bg)";
+    localStorage.setItem("newTheme", mode);
+    theme ();
 }
 
 function loadMemory () {
@@ -316,6 +325,7 @@ function cod () {
 
 function saveMemory () {
     let item = document.getElementById("list").value;
+    
     localStorage.setItem("item", item);
 }
 

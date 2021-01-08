@@ -115,8 +115,8 @@ main {
     cursor: pointer;
 }
 
-#theme {
-    margin: 10px 0 0 10px;
+#btnTheme {
+    margin: 15px 0 0 15px;
     padding: 5px;
 
     letter-spacing: 1px;
@@ -133,7 +133,7 @@ main {
 #lblName {
     display: block;
 
-    padding: 40px;
+    padding: 10px;
 
     font-size: 14px;
     text-align: center;
@@ -157,7 +157,7 @@ h1 {
     font-size: 33px;
     color: var(--light-h1-color);
 
-    margin: 150px 0 50px 0;
+    margin: 140px 0 50px 0;
 }
 
 #codItem {
