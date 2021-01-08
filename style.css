@@ -1,6 +1,7 @@
 :root {
     /* dark mode */
     --dark-header-bg: rgb(117, 117, 117);
+    --dark-clean-bg: rgb(63, 63, 63);
     --dark-main-bg: rgb(71, 71, 71);
     --dark-lblName-color: rgb(167, 167, 167);
     --dark-h1-color: rgb(235, 235, 235);
@@ -15,6 +16,7 @@
 
     /* light mode */
     --light-header-bg: rgb(89, 99, 145);
+    --light-clean-bg: rgb(117, 131, 192);
     --light-main-bg: rgb(255, 255, 255);
     --light-lblName-color:  rgb(196, 196, 196);
     --light-h1-color: rgb(77, 77, 77);
@@ -73,16 +75,17 @@ li {
     float: right;
 }
 
-#imgTrash {
-    margin: 10px 10px 0 0;
-
-    width: 32px;
-
-    cursor: pointer;
-
+#clean {
+    border: none;
     border-radius: 10px;
 
-    background: rgb(89, 99, 145);
+    margin: 13px 10px 0 0;
+
+    color: rgb(226, 226, 226);
+
+    padding: 5px;
+
+    cursor: pointer;
 }
 
 body {
@@ -94,8 +97,6 @@ body {
 
     max-width: 1000px;
     min-width: 300px;
-
-    padding: 0 5px;
 }
 
 #icon {
@@ -112,7 +113,7 @@ body {
 #imgTheme {
     width: 55px;
 
-    margin: 15px 0 0 8px;
+    margin: 10px 0 0 5px;
 
     cursor: pointer;
 }

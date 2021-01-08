@@ -148,7 +148,7 @@ window.addEventListener ("load", function imgGit ()
         let i;
 
         //adiciono o id imgGit ao elemento
-        i = document.getElementsByTagName("img")[6].setAttribute("id", "imgGit");
+        i = document.getElementsByTagName("img")[5].setAttribute("id", "imgGit");
         //chamo novamente a funcao com o id que foi criado
         i = document.getElementById("imgGit");
         //adiciono o endereco para chamar a img
@@ -181,6 +181,9 @@ function loadTheme () {
 
     let header = document.getElementsByTagName("header")[0];
             header.style.background = "var(--" + y + "-header-bg)";
+
+    let clean = document.getElementById("clean");
+            clean.style.background = "var(--" + y + "-clean-bg)";
     
     let main = document.getElementsByTagName("main")[0];
             main.style.background = "var(--" + y + "-main-bg)";
@@ -206,6 +209,7 @@ function loadTheme () {
     let lblStatus = document.getElementsByClassName("lblStatus");
             lblStatus[0].style.color = "var(--" + y + "-lblStatus-color)";
                 lblStatus[1].style.color = "var(--" + y + "-lblStatus-color)";
+                    lblStatus[2].style.color = "var(--" + y + "-lblStatus-color)";
     
     let lblCopy = document.getElementById("lblCopy");
             lblCopy.style.color = "var(--" + y + "-lblCopy-color)";
@@ -240,11 +244,11 @@ function loadMemory () {
 
     y.value = localStorage.getItem("item");
 }
-
 function clearMemory () {
     localStorage.clear();
         document.location.reload();
 }
+
 
 function calc () {
     const cod = document.getElementById("codItem").value;
@@ -294,7 +298,6 @@ function calc () {
 
     document.getElementById("btnResult").innerText = digito;
 }
-
 function cod () {
     let equal = document.getElementById("list").value;
 
