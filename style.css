@@ -87,6 +87,9 @@ li {
 
     cursor: pointer;
 }
+body > header > ul > li > button:focus {
+    outline: none!important;
+}
 
 body {
     background-image: url(./assets/icon/bg.png);
@@ -111,9 +114,9 @@ body {
 }
 
 #imgTheme {
-    width: 55px;
+    width: 45px;
 
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 11px;
 
     cursor: pointer;
 }
