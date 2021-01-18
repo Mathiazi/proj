@@ -36,30 +36,34 @@
 
         <header>
 
+            <img id="imgMenu"
+                    onclick="menu ()"
+                        src="./assets/icon/menu.png">
+
             <img id="imgLogo"
-                    onclick="document.location.reload()"
+                    onclick="document.location.reload ()"
                         src="./assets/icon/logo.png">
-            <ul>
-                <li>
-                    <button id="clean"
-                                onclick="clearMemory ()"> Limpar </button>
-                </li>
-            </ul>
-    
         </header>
 
         <div id="proj">
 
             <main>
+
+                <nav style="display: none;">
+                    
+                    <img id="imgTheme"
+                        onclick="selectTheme ()"
+                            src="./assets/icon/theme.png">
+        
+                    <button id="clean"
+                                onclick="clearMemory ()"> Limpar </button>
+                </nav>
+
                 <a href="mailto:lucas-mathiazi@bol.com.br">
                 
                     <img id="icon"
                             src="assets/icon/email.png">
                 </a>
-
-                <img id="imgTheme"
-                        onclick="selectTheme ()"
-                            src="./assets/icon/theme.png">
 
                 <label id="lblName"> app Web sams/Big </label>
 
@@ -104,11 +108,11 @@
 
             <footer>
 
-                <label class="lblStatus"> change Log: 1.0 sex 08 jan 2021 16:40 </label>
+                <label class="lblStatus"> change Log: v1.1 sex 18 jan 2021 01:03 </label>
 
                 <br>
 
-                <label class="lblStatus"> change Log: correções de pequenos bugs </label>
+                <label class="lblStatus"> change Log: BETA-menu lateral </label>
 
                 <br>
 

@@ -148,7 +148,7 @@ window.addEventListener ("load", function imgGit ()
         let i;
 
         //adiciono o id imgGit ao elemento
-        i = document.getElementsByTagName("img")[5].setAttribute("id", "imgGit");
+        i = document.getElementsByTagName("img")[6].setAttribute("id", "imgGit");
         //chamo novamente a funcao com o id que foi criado
         i = document.getElementById("imgGit");
         //adiciono o endereco para chamar a img
@@ -182,6 +182,9 @@ function loadTheme () {
     let header = document.getElementsByTagName("header")[0];
             header.style.background = "var(--" + y + "-header-bg)";
 
+    let nav = document.getElementsByTagName("nav")[0];
+            nav.style.background = "var(--" + y + "-nav-bg)";
+            
     let clean = document.getElementById("clean");
             clean.style.background = "var(--" + y + "-clean-bg)";
     
@@ -249,6 +252,20 @@ function clearMemory () {
         document.location.reload();
 }
 
+let men;
+function menu () {
+
+    men =! men;
+
+    let y = document.getElementsByTagName("nav")[0];
+
+    if (men) {
+        y.style.display = "none";
+    }
+    else {
+        y.style.display = "block"
+    }
+}
 
 function calc () {
     const cod = document.getElementById("codItem").value;

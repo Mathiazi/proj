@@ -1,6 +1,7 @@
 :root {
     /* dark mode */
     --dark-header-bg: rgb(117, 117, 117);
+    --dark-nav-bg: rgb(117, 117, 117);
     --dark-clean-bg: rgb(63, 63, 63);
     --dark-main-bg: rgb(71, 71, 71);
     --dark-lblName-color: rgb(167, 167, 167);
@@ -16,6 +17,7 @@
 
     /* light mode */
     --light-header-bg: rgb(89, 99, 145);
+    --light-nav-bg: rgb(89, 99, 145);
     --light-clean-bg: rgb(117, 131, 192);
     --light-main-bg: rgb(255, 255, 255);
     --light-lblName-color:  rgb(196, 196, 196);
@@ -58,37 +60,61 @@ header {
     height: 50px;
 }
 
+#imgMenu {
+    width: 35px;
+    height: 30px;
+
+    margin: 0 0 10px 10px;
+    cursor: pointer;
+}
+
 #imgLogo {
     margin: 0 0 0 10px;
+
+    padding: 3px;
 
     width: 50px;
     cursor: pointer;
 }
 
-ul {
-    display: inline;
+nav {
+    background: rgb(89, 99, 145);
+    
+    position: fixed;
 
-    list-style: none;
+    width: 105px;
+
+    border-top-style: solid;
+
+    border-width: 1px;
+
+    border-color: rgb(168, 168, 168);
+
+    border-radius: 0 0 10px 0;
 }
 
-li {
-    float: right;
-}
+#imgTheme {
+    display: block;
+    margin: 30px auto;
 
-#clean {
-    border: none;
-    border-radius: 10px;
-
-    margin: 13px 10px 0 0;
-
-    color: rgb(226, 226, 226);
-
-    padding: 5px;
+    width: 50px;
 
     cursor: pointer;
 }
-body > header > ul > li > button:focus {
-    outline: none!important;
+
+#clean {
+    display: block;
+    margin: 0 auto 30px auto;
+
+
+    border: none;
+    border-radius: 10px;
+
+    color: rgb(226, 226, 226);
+
+    padding: 2px 5px;
+
+    cursor: pointer;
 }
 
 body {
@@ -109,14 +135,6 @@ body {
     bottom: 72px;
 
     width: 40px;
-
-    cursor: pointer;
-}
-
-#imgTheme {
-    width: 45px;
-
-    margin: 10px 0 0 11px;
 
     cursor: pointer;
 }
