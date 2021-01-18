@@ -47,6 +47,8 @@
     
     letter-spacing: 2px;
 
+    outline: none;
+
     -webkit-tap-highlight-color: transparent;
 }
 
