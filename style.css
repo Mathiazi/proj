@@ -47,6 +47,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+}
+
 header {
     z-index: 1;
     position: sticky;
@@ -82,7 +87,7 @@ header {
 nav {
     z-index: 1;
     position: fixed;
-    padding: 10px;
+    padding: 15px;
     border-top-style: solid;
     border-width: 1px;
     border-color: rgb(168, 168, 168);
@@ -99,6 +104,7 @@ li {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: rgb(168, 168, 168);
+    cursor: pointer;
 }
 
 li::before{
@@ -109,7 +115,7 @@ li::before{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 40px 0 0;
+    margin: 0 45px 0 0;
     vertical-align: middle;
 }
 
@@ -122,11 +128,12 @@ li::after{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 0 0 40px;
+    margin: 0 0 0 45px;
     vertical-align: middle;
 }
 
 #theme::before {background-image: url("./assets/icon/theme.png");}
+#sendEmail::before {background-image: url("./assets/icon/email-menu.png");}
 #cleanAll::before {background-image: url("./assets/icon/reset.png");}
 
 body {
