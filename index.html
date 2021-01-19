@@ -5,20 +5,16 @@
     <head>
         
         <meta charset="UTF-8">
+
+        <title> app Web sams/Big </title>
+
+        <meta name="author" content="Lucas Mathiazi" />
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="Lucas Mathiazi" />
         
         <meta name="msapplication-TileColor" content="#596391">      
         
         <meta name="theme-color" content="#596391">
-
-        <title> app Web sams/Big </title>
-
-        <script src="scripts.js"> </script>
-        
-        <link rel="stylesheet" href="style.css">
         
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/icon/shortcut/apple-touch-icon.png">
         
@@ -30,19 +26,27 @@
         
         <link rel="mask-icon" href="./assets/icon/shortcut/safari-pinned-tab.svg" color="#596391">
 
+        <script src="scripts.js"> </script>
+
+        <link rel="stylesheet" href="style.css">
+
     </head>
 
     <body onload = loadTheme()>
 
         <header>
 
-            <img id="imgMenu"
-                    onclick="menu ()"
-                        src="./assets/icon/menu.png">
+            <div id="content">
 
-            <img id="imgLogo"
-                    onclick="document.location.reload ()"
-                        src="./assets/icon/logo.png">
+                <img id="imgMenu"
+                        onclick="menu ()"
+                            src="./assets/icon/menu.png">
+
+                <img id="imgLogo"
+                        onclick="document.location.reload ()"
+                            src="./assets/icon/logo.png">
+            </div>
+
         </header>
 
         <div id="proj">
@@ -50,13 +54,16 @@
             <main>
 
                 <nav style="display: none;">
-                    
-                    <img id="imgTheme"
-                        onclick="selectTheme ()"
-                            src="./assets/icon/theme.png">
-        
-                    <button id="clean"
-                                onclick="clearMemory ()"> Limpar </button>
+
+                    <ul>
+                        <li id="theme"
+                                onclick="selectTheme ()"> Trocar Tema </li>
+
+                        <li id="cleanAll"
+                                onclick="clearMemory ()"> Limpar Tudo </li>
+                        
+                    </ul>
+
                 </nav>
 
                 <a href="mailto:lucas-mathiazi@bol.com.br">
