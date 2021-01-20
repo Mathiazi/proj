@@ -152,7 +152,7 @@ window.addEventListener ("load", function imgGit ()
         //chamo novamente a funcao com o id que foi criado
         i = document.getElementById("imgGit");
         //adiciono o endereco para chamar a img
-        i.src = "./assets/icon/github.png"
+        i.src = "./assets/image/icon/main/github.png"
         //altero apenas o tamanho, assim a altura se mantem proporcional
         i.style.width = "34px";
         //flutua para direita
