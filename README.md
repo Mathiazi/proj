@@ -1,4 +1,4 @@
-# app Web sams/Big
+# app Web samsClub/Big
 
 Feito com o intuito de agilizar o calculo do último dígito dos produtos do estabelecimento;
 
