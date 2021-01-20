@@ -1,4 +1,4 @@
-# app Web samsClub/Big
+# Aplicativo Web - Sams Club 4932 - Último Dígito
 
 Feito com o intuito de agilizar o calculo do último dígito dos produtos do estabelecimento;
 
