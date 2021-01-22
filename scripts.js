@@ -148,7 +148,7 @@ window.addEventListener ("load", function imgGit ()
         let i;
 
         //adiciono o id imgGit ao elemento
-        i = document.getElementsByTagName("img")[5].setAttribute("id", "imgGit");
+        i = document.getElementsByTagName("img")[4].setAttribute("id", "imgGit");
         //chamo novamente a funcao com o id que foi criado
         i = document.getElementById("imgGit");
         //adiciono o endereco para chamar a img

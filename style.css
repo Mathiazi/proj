@@ -167,16 +167,6 @@ li::after {
 
 body {background-image: url("./assets/image/icon/bg.png");}
 
-#icon {
-    width: 40px;
-
-    z-index: 1;
-    position: fixed;
-    bottom: 72px;
-
-    cursor: pointer;
-}
-
 #lblName {
     padding: 10px;
 
