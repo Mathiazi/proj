@@ -1,0 +1,37 @@
+:root {
+    --dark-header-bg:rgb(66, 66, 66);
+    --light-header-bg: rgb(89, 99, 145);
+
+    --dark-color-font: rgb(226, 226, 226);
+    --light-color-font: rgb(226, 226, 226);
+
+    --dark-color-font-appweb: rgb(220, 20, 60);
+    --light-color-font-appweb: rgb(220, 20, 60);
+
+    --dark-color-font-log: rgb(119, 119, 119);
+    --light-color-font-log: rgb(29, 29, 29);
+
+    --dark-color-font-up: rgb(173, 255, 166);
+    --light-color-font-up: rgb(67, 194, 55);
+
+    --dark-color-font-copy: rgb(119, 119, 119);
+    --light-color-font-copy: rgb(119, 119, 119);
+
+    --dark-color-font-h1: rgb(94, 94, 94);
+    --light-color-font-h1: rgb(89, 99, 145);
+
+    --dark-inp-font-color:rgb(182, 182, 182);
+    --light-inp-font-color:rgb(54, 54, 54);
+
+    --dark-border-color: rgb(114, 114, 114);
+    --light-border-color: rgb(165, 165, 165);
+    
+    --dark-divcont-bg:rgb(24, 24, 24);
+    --light-divcont-bg:rgb(255, 255, 255);
+    
+    --dark-inp-bg:rgb(66, 66, 66);
+    --light-inp-bg:rgb(207, 207, 207);
+    
+    --dark-default-bg: rgb(89, 99, 145);
+    --light-default-bg: rgb(89, 99, 145);
+}

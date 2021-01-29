@@ -1,0 +1,93 @@
+header {
+    position: sticky;
+    top: 0;
+}
+    #menu-cont {
+        display: block;
+        margin: auto;
+        max-width: 1200px;
+    }
+    #menu-cont>#logo {
+        margin: 0 0 0 8px;
+        padding: 3px 0 0 0;
+        height: 50px;
+        cursor: pointer;
+    }
+    #menu-cont>#nav-desktop { float: right; }
+    #menu-cont>#nav-desktop>ul {
+        margin: 15px 0 0 0;
+        list-style: none;
+    }
+    #menu-cont>#nav-desktop>ul>li {
+        display: inline;
+        margin: 0 13px;
+        padding: 2px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    #menu-cont>#nav-desktop>ul>li:last-child {margin-right: 5px;}
+    #menu-cont>#nav-desktop>ul>li:first-child {margin-left: 0;}
+    #menu-cont>#nav-desktop>ul>li::before {
+        display: inline-block;
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        margin: 0 3px 0 0;
+        width: 30px;
+        height: 30px;
+    }
+    #theme-desktop::before {background-image: url("../files/image/menu/theme.png");}
+    #sendEmail-desktop::before {background-image: url("../files/image/menu/email-menu.png");}
+    #cleanAll-desktop::before {background-image: url("../files/image/menu/reset.png");}
+    #menu-cont>#nav-desktop>#icon-menu-mobile {
+        display: none;
+        margin: 13px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+@media (max-width: 700px) {
+    header>#menu-cont>#nav-desktop>ul { display: none; }
+           #menu-cont>#nav-desktop>#icon-menu-mobile { display: inline; }
+    header>#subMenu {
+        position: fixed;
+        right: 0;
+        border-top: 1px solid;
+        font-size: 15px;
+    }
+        #subMenu>ul>li {
+            margin: 20px;
+            border-bottom: 1px solid;
+            cursor: pointer;
+        }
+        #subMenu>ul>li::before {
+            display: inline-block;
+            content: '';
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+        }
+        #subMenu>ul>li::after {
+            display: inline-block;
+            content: '';
+            background-image: url("../files/image/menu/go.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 13px;
+            height: 13px;
+        }
+        #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
+        #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
+        #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
+}
+
+@media (min-width: 701px) { #subMenu, #subMenu>ul, #subMenu>ul>li { display: none;} }

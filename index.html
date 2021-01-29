@@ -3,136 +3,137 @@
 <html lang="pt-br">
     
     <head>
-        
         <meta charset="UTF-8">
+        <title> app web Sams Club </title>
 
-        <title> app Web sams/Big </title>
-
-        <meta name="author" content="Lucas Mathiazi" />
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="msapplication-TileColor" content="#596391">      
-        
-        <meta name="theme-color" content="#596391">
-        
-        <link rel="apple-touch-icon" sizes="76x76" href="./assets/image/icon/shortcut/apple-touch-icon.png">
-        
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/icon/shortcut/favicon-32x32.png">       
-        
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/image/icon/shortcut/favicon-16x16.png">
-        
-        <link rel="manifest" href="./assets/image/icon/shortcut/site.webmanifest">
-        
-        <link rel="mask-icon" href="./assets/image/icon/shortcut/safari-pinned-tab.svg" color="#596391">
 
-        <script src="scripts.js"> </script>
+        <!--#region styleSheet-->
+            <link rel="stylesheet" href="./css/theme.css">     
+            <link rel="stylesheet" href="./css/reset.css"> 
+            <link rel="stylesheet" href="./css/header.css">
+            <link rel="stylesheet" href="./css/main.css">
+            <link rel="stylesheet" href="./css/footer.css">     
+        <!--#endregion-->
 
-        <link rel="stylesheet" href="style.css">
-
+        <!--#region jS-->
+            <script src="./js/scripts.js"> </script>
+            <script src="./js/theme.js"> </script>
+        <!--#endregion-->
     </head>
 
-    <body onload = loadTheme()>
+    <body onload="theme ()">
 
         <header>
+            <div id="menu-cont">
 
-            <div id="content">
-
-                <img id="imgMenu"
-                        onclick="menu ()"
-                            src="./assets/image/icon/menu/menu.png">
-
-                <img id="imgLogo"
-                        onclick="document.location.reload ()"
-                            src="./assets/image/icon/logo.png">
-            </div>
-
-        </header>
-
-        <div id="proj">
-
-            <main>
-
-                <nav style="display: none;">
-
+                <img id="logo"
+                        src="./files/image/logo.png"
+                            onclick="document.location.reload ()">
+                
+                <nav id="nav-desktop">
                     <ul>
-                        <li id="theme"
-                                onclick="selectTheme ()"> Trocar Tema </li>
-
-                        <li id="sendEmail">
-
-                            <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a>
+                        <li id="theme-desktop"
+                                onclick="changeTheme ()"> Trocar Tema </li>
                         
+                        <li id="sendEmail-desktop">
+                            <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a>
                         </li>
-
-                        <li id="cleanAll"
+                        
+                        <li id="cleanAll-desktop"
                                 onclick="clearMemory ()"> Limpar Tudo </li>
                     </ul>
 
+                    <img id="icon-menu-mobile"
+                                src="./files/image/menu/menu.png"
+                                    onclick="subMenu ()">
                 </nav>
+            </div>
 
-                <label id="lblName"> app Web sams/Big </label>
+            <div id="subMenu"
+                    style="display: none;">
 
-                <h1> ÚLTIMO DÍGITO </h2>
-
-                <section>
-                
-                    <input id="codItem"
-                            type="tel"
-                                maxlength="9"
-                                    minlength="6"
-                                        onkeypress="return char(event)">
-
-                    <div id="btnResult" onclick="calc ()"> </div>
-
-                </section>
-
-                <h1> LISTA DE ITENS </h2>
-
-                <section>
-                
-                    <input id="list"
-                            type="search"
-                                list="itens"
-                                    oninput="saveMemory ()">
-
-                    <datalist id="itens"> </datalist>
-
-                    <img id="search"
-                            onclick="cod ()"
-                                src="./assets/image/icon/main/search.png">
-                </section>
-
-                <div id="contImg">
+                <ul>
+                    <li id="theme-mob"
+                            onclick="changeTheme ()"> Trocar Tema </li>
                     
-                    <img id="imgProd">
-                
+                    <li id="sendEmail-mob">
+                        <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a> 
+                    </li>
+                    
+                    <li id="cleanAll-mob"
+                            onclick="clearMemory ()"> Limpar Tudo </li>
+
+                </ul>
+            </div>
+        </header>
+
+        <div id="div-cont">
+
+            <label> app web Sams Club </label>
+
+            <main id="main-cont">
+
+                <div class="format div-calc">
+
+                    <h1> ÚLTIMO DÍGITO </h1>
+
+                    <div>
+                        
+                        <input class="inp input-calc"
+                                    type="tel"
+                                        maxlength="9"
+                                            minlength="6"
+                                                spellcheck="false"
+                                                    onkeypress="return char(event)"
+                                                        style="text-align: center; padding-left: 35px;">
+                        <img id="img-arrow"
+                                src="./files/image/inp/arrow-right.png"
+                                    onclick="calc ()">
+
+                    </div>
+
+                    <div id="div-result"> </div>
+
+                </div>
+
+                <div class="format div-search">
+
+                    <h1> ITEM PRÉ-DEFINIDO </h1>
+
+                    <div>
+
+                        <input class="inp input-search"
+                                type="search"
+                                    list="itens"
+                                        spellcheck="false"
+                                            oninput="saveMemory ()"
+                                                style="font-size: 17px; padding-left: 15px;">
+                        
+                        <img id="img-search"
+                                src="./files/image/inp/search.png"
+                                    onclick="getcodItem ()">
+
+                        <datalist id="itens"> </datalist>
+
+                    </div>
+    
                 </div>
 
             </main>
 
+            <label style="text-align: left;"> changeLog: release-project final version</label>
+            <label style="text-align: left;"> changeLog: responsive interface </label>
+            <label style="text-align: right;"> update: 29 jan 2021 02:22 </label>
+
             <footer>
 
-                <label class="lblStatus"> change Log: v1.1 sex 18 jan 2021 01:03 </label>
+                <div id="copyright">
+                    © 2020–2021 Copyright Lucas Mathiazi. All rights reserved.
+                </div>
 
-                <br>
-
-                <label class="lblStatus"> change Log: BETA-menu lateral </label>
-
-                <br>
-
-                <label class="lblStatus"> change Log: release dark theme </label>
-
-                <a>
-                    <img>
-                </a>
-                    
             </footer>
-
-            <label id="lblCopy"> Copyright© 2020-21 por Lucas Mathiazi. Todos os direitos reservados. </label>
-
+        
         </div>
-
     </body>
-    
 </html>
