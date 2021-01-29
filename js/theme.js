@@ -24,7 +24,7 @@ function theme () {
     //#endregion
     //#region main
         let body = document.getElementsByTagName("body");
-        body[0].style.backgroundImage = "url('../files/image/" + theme + "-bg.png')";
+        body[0].style.backgroundImage = "url('./files/image/" + theme + "-bg.png')";
 
         let divcont = document.getElementById("div-cont");
         divcont.style.background = "var(--" + theme + "-divcont-bg)"
