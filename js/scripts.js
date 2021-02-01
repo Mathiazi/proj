@@ -1,127 +1,82 @@
-let obj =
-       [{   name: 'CERA BRAVO LAMINADOS 3X750ML',
-                cod: '157427'},
-        {
-            name: 'REXONA CLINICAL MEN 3X91GR',
-                cod: '980008473'}, 
-        {
-            name: 'ABACAXI',
-                cod: '722449'},
-        {
-            name: 'MELANCIA',
-                cod: '131592'},
-        {
-            name: 'LIMPOL LIQ NATURAL 6X500ML',
-                cod: '321994'},
-        {
-            name: 'LIMAO TAITI',
-                cod: '226263'},
-        {
-            name: 'CREM TRAT REVLON UNIQ ONE 150ML',
-                cod: '980012473'},
-        {
-            name: 'BRAVO 3X500ML LUSTRA MOVEIS',
-                cod: '091962'},
-        {
-            name: 'MANTA INFANTIL COM CAPUZ',
-                cod: '980014286'},
-        {
-            name: 'YPE LIQ 6X500ML DETERG LIQ CLEAR',
-                cod: '631629'},
-        {
-            name: 'COCA COLA 6X1L',
-                    cod: '752168'},
-        {
-            name: 'LIMPOL GEL CONCENTRADO 3X511ML',
-                cod: '840908'},
-        {
-            name: 'SACO UMBRO',
-                cod: '980008232'},
-        {
-            name: 'KETCHUP HEINZ 2X397G',
-                cod: '310746'},
-        {
-            name: 'VEJA LIMPEZA PESADA 2X1L',
-                cod: '980008161'},
-        {
-            name: 'KIT JAMON ESPANHOL HACIENDAS',
-                cod: '980003562'},
-        {
-            name: 'PIPOCA C SAL VERM 2X100G',
-                cod: '623681'},
-        {
-            name: 'PIPOCA C SAL AMARELO 2X100G',
-                cod: '177614'},
-        {
-            name: 'PIPOCA C MANTEIGA AZUL 2X100G',
-                cod: '177607'},
-        {
-            name:  'BATATA 2KG',
-                cod: '226151'},
-        {
-            name: 'MILHO VERDE',
-                cod: '166645'},
-        {
-            name: 'ADOCANTE STEVIA 2X50GR',
-                cod: '386711'},
-        {
-            name: 'COCO VERDE',
-                cod: '227853'},
-        {
-            name: 'CEBOLA 2KG',
-                cod: '226158'},
-        {
-            name: 'LARANJA 10KG',
-                cod: '628106'},
-        {
-            name: 'CENOURA BABY 250G',
-                cod: '980007145'},
-        {
-            name: 'KIT PRAIA C 19 PEÇAS',
-                cod: '372529'},
-        {
-            name: 'ASSADEIRA MM ALUMINIO 7.5L',
-                cod: '980004676'},
-        {
-            name: 'MOSTARDA HEINZ 2X255GR',
-                cod: '352107'},
-        {
-            name: 'KIT JAMON SERRANO HACIENDAS RES 6.5KG',
-                cod: '980004882'},
-        {
-            name: 'PIJAMA M/C LUPO MASCULINO',
-                cod: '980014772'}  
+var obj = [
+    { name: 'CERA BRAVO LAMINADOS 3X750ML', cod: '157427' },
+    { name: 'REXONA CLINICAL MEN 3X91GR', cod: '980008473' }, 
+    { name: 'ABACAXI', cod: '722449' },
+    { name: 'MELANCIA', cod: '131592'},
+    { name: 'LIMPOL LIQ NATURAL 6X500ML', cod: '321994'},
+    { name: 'LIMAO TAITI', cod: '226263'},
+    { name: 'CREM TRAT REVLON UNIQ ONE 150ML', cod: '980012473'},
+    { name: 'BRAVO 3X500ML LUSTRA MOVEIS', cod: '091962'},
+    { name: 'MANTA INFANTIL COM CAPUZ', cod: '980014286'},
+    { name: 'YPE LIQ 6X500ML DETERG LIQ CLEAR', cod: '631629'},
+    { name: 'COCA COLA 6X1L', cod: '752168'},
+    { name: 'LIMPOL GEL CONCENTRADO 3X511ML', cod: '840908'},
+    { name: 'SACO UMBRO', cod: '980008232'},
+    { name: 'KETCHUP HEINZ 2X397G', cod: '310746'},
+    { name: 'VEJA LIMPEZA PESADA 2X1L', cod: '980008161'},
+    { name: 'KIT JAMON ESPANHOL HACIENDAS', cod: '980003562'},
+    { name: 'PIPOCA C SAL VERM 2X100G', cod: '623681'},
+    { name: 'PIPOCA C SAL AMARELO 2X100G', cod: '177614'},
+    { name: 'PIPOCA C MANTEIGA AZUL 2X100G', cod: '177607'},
+    { name:  'BATATA 2KG', cod: '226151'},
+    { name: 'MILHO VERDE', cod: '166645'},
+    { name: 'ADOCANTE STEVIA 2X50GR', cod: '386711'},
+    { name: 'COCO VERDE', cod: '227853'},
+    { name: 'CEBOLA 2KG', cod: '226158'},
+    { name: 'LARANJA 10KG', cod: '628106'},
+    { name: 'CENOURA BABY 250G', cod: '980007145'},
+    { name: 'KIT PRAIA C 19 PEÇAS', cod: '372529'},
+    { name: 'ASSADEIRA MM ALUMINIO 7.5L', cod: '980004676'},
+    { name: 'MOSTARDA HEINZ 2X255GR', cod: '352107'},
+    { name: 'KIT JAMON SERRANO HACIENDAS RES 6.5KG', cod: '980004882'},
+    { name: 'PIJAMA M/C LUPO MASCULINO', cod: '980014772'},
+    { name: 'AGUA BONAFONT S/G 24X500ML', cod: '224639'}
 ];
-window.addEventListener ("load", function loadList ()
-    {
-        for (index in obj)
-        {
-            var prod = obj[index].name;
 
-            let newObj = document.createElement("option");
-            newObj.value = prod;
+window.addEventListener ("load", function() {
+        //carrega o item-list
+        for (let index in obj) {
+            
+            let prod = obj[index].name;
 
-            let i = document.getElementById("itens");
-            i.appendChild(newObj);
+            let newOpt = document.createElement("option");
+                newOpt.value = prod;
+
+            document.getElementById("itens").appendChild(newOpt);
         }
+        //carrega o ultimo texto digitado no input-search
+        let y = document.getElementsByClassName("input-search")[0];
+            y.value = localStorage.getItem("item");
     }
 );
 
-let y = new Boolean (true);
+//abre e fecha o menu mobile
+let Status = true;
 function subMenu () {
     let menu = document.getElementById("subMenu").style;
+    let ulMob = document.getElementById("ul-mobile").style;
     let icon = document.getElementById("icon-menu-mobile");
-    if (y) {
+    if (Status) {
         menu.display = "block";
+        menu.animationName = "openMenu";
+        menu.animationDirection = "normal";
+
+        setTimeout( () => {ulMob.display = "block";}, 400);
+
         icon.src = "./files/image/menu/close.png";
     }
     else {
-        menu.display = "none";
-        icon.src = "./files/image/menu/menu.png";
-    }
-    y = !y;
-}
+        ulMob.display = "none";
+        menu.animationName = "closeMenu";
+        menu.animationDirection = "reverse";
 
+        icon.src = "./files/image/menu/menu.png";
+
+        setTimeout( () => {menu.display = "none";}, 400);
+    }
+
+    Status =! Status;
+}
 function calc () {
     const cod = document.getElementsByClassName("input-calc")[0].value;
     
@@ -183,34 +138,23 @@ function getcodItem () {
 
     calc ();
 }
-
-window.addEventListener ("load", function loadMemory ()
-    {
-        document.getElementsByClassName("input-search")[0].value = localStorage.getItem("item");
-    }
-);
-
+//salva os dados na memoria
 function saveMemory () {
     let item = document.getElementsByClassName("input-search")[0].value;
     localStorage.setItem("item", item);
 }
+//limpa a memoria
 function clearMemory () {
     localStorage.clear();
-        document.location.reload();
+    document.location.reload();
 }
-
+//bloqueia todos os chars, exceto numero
 function char (e) {
-    var charCode = e.charCode ? e.charCode : e.keyCode;
-    
+    let charCode = e.charCode ? e.charCode : e.keyCode;
     if (charCode == 13)
-    {
-        	calc ();
-    }
-    else if (charCode != 8 && charCode != 9)
-    {  
+        calc ();
+    else if (charCode != 8 && charCode != 9) {  
         if (charCode < 48 || charCode > 57)
-        {
             return false;
-        }
     }
 }
