@@ -1,33 +1,32 @@
 header {
-    position: sticky;
+    position: static;
     top: 0;
+    padding: 5px;
 }
-    #menu-cont {
+    #menu-desktop {
         display: block;
         margin: auto;
         max-width: 1200px;
     }
-    #menu-cont>#logo {
-        margin: 0 0 0 8px;
-        padding: 3px 0 0 0;
+    #menu-desktop #icon-menu-mobile { display: none; }
+    #menu-desktop #logo {
         height: 50px;
         cursor: pointer;
     }
-    #menu-cont>#nav-desktop { float: right; }
-    #menu-cont>#nav-desktop>ul {
+    #menu-desktop #nav-desktop { float: right; }
+    #menu-desktop #nav-desktop ul {
         margin: 15px 0 0 0;
-        list-style: none;
     }
-    #menu-cont>#nav-desktop>ul>li {
+    #menu-desktop #nav-desktop ul li {
         display: inline;
         margin: 0 13px;
         padding: 2px;
         font-size: 14px;
         cursor: pointer;
     }
-    #menu-cont>#nav-desktop>ul>li:last-child {margin-right: 5px;}
-    #menu-cont>#nav-desktop>ul>li:first-child {margin-left: 0;}
-    #menu-cont>#nav-desktop>ul>li::before {
+    #menu-desktop #nav-desktop ul li:last-child {margin-right: 5px;}
+    #menu-desktop #nav-desktop ul li:first-child {margin-left: 0;}
+    #menu-desktop #nav-desktop ul li::before {
         display: inline-block;
         content: '';
         background-position: center;
@@ -41,69 +40,66 @@ header {
     #theme-desktop::before {background-image: url("../files/image/menu/theme.png");}
     #sendEmail-desktop::before {background-image: url("../files/image/menu/email-menu.png");}
     #cleanAll-desktop::before {background-image: url("../files/image/menu/reset.png");}
-    #menu-cont>#nav-desktop>#icon-menu-mobile {
-        display: none;
-        margin: 13px;
-        width: 30px;
-        cursor: pointer;
-    }
 
 @media (max-width: 700px) {
-    header>#menu-cont>#nav-desktop>ul { display: none; }
-           #menu-cont>#nav-desktop>#icon-menu-mobile { display: inline; }
-    
+    header #menu-desktop #nav-desktop ul { display: none; }
+        #menu-desktop #logo {
+            display: block;
+            margin: auto;
+        }
+        #menu-desktop #icon-menu-mobile {
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            width: 30px;
+            cursor: pointer;
+        }
     @keyframes openMenu {
         0% {width: 0;}
-            100% {width: 300px;}
+            100% {width: 340px;}
     }
     @keyframes closeMenu {
-        100% {width: 300px;}
+        100% {width: 340px;}
             0% {width: 0;}
     }
-    header>#subMenu {
-        width: 300px;
+    header #menu-mobile {
+        width: 340px;
         height: 100vh;
-        position: fixed;
+        position: absolute;
+        top: 60px;
         right: 0;
         border-top: 1px solid;
         font-size: 15px;
 
         animation-duration: 450ms;
     }
-        #subMenu>ul>li {
+        #menu-mobile ul span {
+            display: block;
             text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+        #menu-mobile ul li {
             font-size: 13px;
-            margin: 50px 40px;
-            padding: 10px 0;
-            border-bottom: 1px solid;
+            margin: 20px;
             cursor: pointer;
         }
-        #subMenu>ul>li::before {
+        #menu-mobile ul li::before {
             display: inline-block;
             content: '';
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             vertical-align: middle;
-            margin-right: 35px;
+            margin-right: 10px;
             width: 25px;
             height: 25px;
         }
-        #subMenu>ul>li::after {
-            display: inline-block;
-            content: '';
-            background-image: url("../files/image/menu/go.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            vertical-align: middle;
-            margin-left: 35px;
-            width: 13px;
-            height: 13px;
-        }
         #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
         #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
+        #git-mob::before {background-image: url("../files/image/menu/git.png");}
+        #wpp-mob::before {background-image: url("../files/image/menu/wpp.png");}
         #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
 }
 
-@media (min-width: 701px) { #subMenu, #subMenu>ul, #subMenu>ul>li { display: none;} }
+@media (min-width: 701px) { #menu-mobile, #menu-mobile ul, #menu-mobile ul li, span { display: none;} }

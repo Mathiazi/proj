@@ -22,53 +22,73 @@
         <!--#endregion-->
     </head>
 
-    <body onload="theme ()">
-
+    <body onload="theme()">
         <header>
-            <div id="menu-cont">
+            <div id="menu-desktop">
 
-                <img id="logo"
-                        src="./files/image/logo.png"
-                            onclick="document.location.reload ()">
+                <img onclick="menuMobile()"
+                     id="icon-menu-mobile" src="./files/image/menu/menu.png">
+
+                <img onclick="document.location.reload()"
+                     id="logo" src="./files/image/logo.png">
                 
                 <nav id="nav-desktop">
                     <ul>
-                        <li id="theme-desktop"
-                                onclick="changeTheme ()"> Trocar Tema </li>
+                        <li onclick="changeTheme()"
+                            id="theme-desktop"> Trocar Tema </li>
                         
                         <li id="sendEmail-desktop">
                             <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a>
                         </li>
                         
-                        <li id="cleanAll-desktop"
-                                onclick="clearMemory ()"> Limpar Tudo </li>
+                        <li onclick="clearMemory()"
+                            id="cleanAll-desktop"> Limpar Tudo </li>
                     </ul>
-
-                    <img id="icon-menu-mobile"
-                                src="./files/image/menu/menu.png"
-                                    onclick="subMenu ()">
                 </nav>
             </div>
+            <div id="menu-mobile" style="display: none;">
 
-            <div id="subMenu"
-                    style="display: none;">
-
-                <ul id="ul-mobile"
-                        style="display: none;">
+                <ul id="ul-mobile" style="display: none;">
                     
-                        <li id="theme-mob"
-                            onclick="changeTheme ()"> Trocar Tema </li>
+                    <span>Tema</span>
+                    <li onclick="changeTheme()"
+                        id="theme-mob"> Trocar Tema </li>
                     
+                    <span>Contato</span>
                     <li id="sendEmail-mob">
                         <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a> 
                     </li>
                     
-                    <li id="cleanAll-mob"
-                            onclick="clearMemory ()"> Limpar Tudo </li>
+                    <li id="git-mob">
+                        <a href="https://github.com/Mathiazi">Github</a> 
+                    </li>
 
+                    <li id="wpp-mob">
+                        <a href="https://api.whatsapp.com/send?phone=5511933038319">WhatsApp</a> 
+                    </li>
+                    
+                    <span>Limpeza</span>
+                    <li onclick="clearMemory()"
+                        id="cleanAll-mob"> Limpar Tudo </li>
                 </ul>
             </div>
         </header>
+
+        <div id="menu-mobile" style="display: none;">
+
+            <ul id="ul-mobile" style="display: none;">
+                
+                <li onclick="changeTheme()"
+                    id="theme-mob"> Trocar Tema </li>
+                
+                <li id="sendEmail-mob">
+                    <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a> 
+                </li>
+                
+                <li onclick="clearMemory()"
+                    id="cleanAll-mob"> Limpar Tudo </li>
+            </ul>
+        </div>
 
         <div id="div-cont">
 
@@ -81,22 +101,18 @@
                     <h1> ÚLTIMO DÍGITO </h1>
 
                     <div>
-                        
-                        <input class="inp input-calc"
-                                    type="tel"
-                                        maxlength="9"
-                                            minlength="6"
-                                                spellcheck="false"
-                                                    onkeypress="return char(event)"
-                                                        style="text-align: center; padding-left: 35px;">
-                        <img id="img-arrow"
-                                src="./files/image/inp/arrow-right.png"
-                                    onclick="calc ()">
+                        <input onkeypress="return char(event)"
+                               class="inp input-calc"
+                               type="tel"
+                               maxlength="9" minlength="6"
+                               spellcheck="false"
+                               style="text-align: center; padding-left: 35px;">
 
+                        <img onclick="calc()"
+                             id="img-arrow" src="./files/image/inp/arrow-right.png">
                     </div>
 
                     <div id="div-result"> </div>
-
                 </div>
 
                 <div class="format div-search">
@@ -104,24 +120,19 @@
                     <h1> ITEM PRÉ-DEFINIDO </h1>
 
                     <div>
-
                         <input class="inp input-search"
                                     type="search"
                                         list="itens"
                                             spellcheck="false"
                                                 oninput="saveMemory ()"
                                                     style="font-size: 17px; padding-left: 15px;">
-                        
                         <img id="img-search"
                                 src="./files/image/inp/search.png"
                                     onclick="getcodItem ()">
 
                         <datalist id="itens"> </datalist>
-
                     </div>
-    
                 </div>
-
             </main>
 
             <label style="text-align: left;"> changeLog: release-project final version</label>
@@ -129,13 +140,10 @@
             <label style="text-align: right;"> update: 01 fev 2021 08:22 </label>
 
             <footer>
-
                 <div id="copyright">
                     © 2020–2021 Copyright by Lucas Mathiazi. All rights reserved.
                 </div>
-
             </footer>
-        
         </div>
     </body>
 </html>

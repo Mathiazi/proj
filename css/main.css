@@ -5,7 +5,7 @@ label {
     padding: 6px;
     font-size: 13px;
 }
-body>#div-cont {
+body #div-cont {
     max-width: 1150px;
     margin: auto;
 }
@@ -16,7 +16,7 @@ body>#div-cont {
         align-content: center;
         height: 650px;
     }
-    #main-cont>.format {
+    #main-cont .format {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -24,7 +24,7 @@ body>#div-cont {
         width: 350px;
         height: 300px;
     }
-    #main-cont>.div-search>div { margin-bottom: 80px; }
+    #main-cont .div-search div { margin-bottom: 80px; }
     h1 { margin-bottom: 50px; }
     .inp {
         float: left;
@@ -36,15 +36,15 @@ body>#div-cont {
         font-size: 30px;
         text-transform: uppercase;
     }
-    #main-cont>.div-calc>div>#img-arrow,
-    #main-cont>.div-search>div>#img-search {
+    #main-cont .div-calc div #img-arrow,
+    #main-cont .div-search div #img-search {
         float: right;
         padding: 2px;
         width: 35px;
         border-radius: 0 10px 10px 0;
         cursor: pointer;
     }
-    #main-cont>.div-calc>#div-result {
+    #main-cont .div-calc #div-result {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,5 +54,5 @@ body>#div-cont {
         border-radius: 15px;
         font-size: 25px;
     }
-    @media (max-width: 699px) { #div-cont>#main-cont>.div-calc { border-bottom: 1px solid; } }
+    @media (max-width: 699px) { #div-cont #main-cont .div-calc { border-bottom: 1px solid; } }
     @media (min-width: 800px) { .format {margin: 20px;} }

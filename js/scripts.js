@@ -52,8 +52,8 @@ window.addEventListener ("load", function() {
 
 //abre e fecha o menu mobile
 let Status = true;
-function subMenu () {
-    let menu = document.getElementById("subMenu").style;
+function menuMobile () {
+    let menu = document.getElementById("menu-mobile").style;
     let ulMob = document.getElementById("ul-mobile").style;
     let icon = document.getElementById("icon-menu-mobile");
     if (Status) {
@@ -61,7 +61,7 @@ function subMenu () {
         menu.animationName = "openMenu";
         menu.animationDirection = "normal";
 
-        setTimeout( () => {ulMob.display = "block";}, 400);
+        setTimeout( () => {ulMob.display = "block";}, 500);
 
         icon.src = "./files/image/menu/close.png";
     }
@@ -70,9 +70,9 @@ function subMenu () {
         menu.animationName = "closeMenu";
         menu.animationDirection = "reverse";
 
-        icon.src = "./files/image/menu/menu.png";
-
         setTimeout( () => {menu.display = "none";}, 400);
+
+        icon.src = "./files/image/menu/menu.png";
     }
 
     Status =! Status;

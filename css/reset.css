@@ -1,22 +1,21 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../files/font/Roboto-Regular.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
     border: none;
-
     outline: none;
-
     font-family: Roboto, Arial;
     text-decoration: none;
     list-style: none;
     letter-spacing: 2px;
-
     -webkit-tap-highlight-color: transparent;
 }
 
-@font-face {
-    font-family: Roboto;
-    src: url("../files/font/Roboto-Regular.ttf");
+a {
+    color: rgb(226, 226, 226);
 }
