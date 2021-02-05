@@ -12,10 +12,9 @@
     font-family: Roboto, Arial;
     text-decoration: none;
     list-style: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    
     -webkit-tap-highlight-color: transparent;
 }
 
-a {
-    color: rgb(226, 226, 226);
-}
+a { color: rgb(226, 226, 226); }

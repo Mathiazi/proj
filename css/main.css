@@ -3,8 +3,9 @@ label {
     display: block;
     text-align: center;
     padding: 6px;
-    font-size: 13px;
+    font-size: 14px;
 }
+label:first-child { padding: 30px; }
 body #div-cont {
     max-width: 1150px;
     margin: auto;

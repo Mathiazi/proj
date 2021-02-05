@@ -45,16 +45,16 @@ function theme () {
         let input = document.getElementsByClassName("inp");
         input[0].style.background = "var(--" + theme + "-inp-bg)";
         input[0].style.color = "var(--" + theme + "-inp-font-color)";
-        input[1].style.background = "var(--" + theme + "-inp-bg)";
-        input[1].style.color = "var(--" + theme + "-inp-font-color)";
+            input[1].style.background = "var(--" + theme + "-inp-bg)";
+            input[1].style.color = "var(--" + theme + "-inp-font-color)";
 
         let divcalc = document.getElementsByClassName("div-calc");
         divcalc[0].style.borderColor = "var(--" + theme + "-border-color)";
 
         let divresult = document.getElementById("div-result");
-        divresult.style.color = "var(--" + theme + "-inp-font-color)";
         divresult.style.background = "var(--" + theme + "-default-bg)";
-
+        divresult.style.color = "rgb(182, 182, 182)";
+       
         let img_arrow = document.getElementById("img-arrow");
         img_arrow.style.background = "var(--" + theme + "-default-bg)";
 
@@ -66,7 +66,6 @@ function theme () {
         border_footer[0].style.borderColor = "var(--" + theme + "-border-color)";
     //#endregion
 }
-
 function changeTheme () {
     
     let mode;

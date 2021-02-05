@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
-    
+<html lang="pt-br">  
     <head>
         <meta charset="UTF-8">
         <title> app web Sams Club </title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!--#region styleSheet-->
+            
             <link rel="stylesheet" href="./css/theme.css">     
             <link rel="stylesheet" href="./css/reset.css"> 
             <link rel="stylesheet" href="./css/header.css">
             <link rel="stylesheet" href="./css/main.css">
-            <link rel="stylesheet" href="./css/footer.css">     
-        <!--#endregion-->
+            <link rel="stylesheet" href="./css/footer.css">  
 
+        <!--#endregion-->
         <!--#region jS-->
+            
+            <!--#region firebase -->
+            
+                <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+                <script src="./js/db.js"></script>
+
+            <!--#endregion-->
+
             <script src="./js/scripts.js"> </script>
             <script src="./js/theme.js"> </script>
+
         <!--#endregion-->
     </head>
-
     <body onload="theme()">
         <header>
             <div id="menu-desktop">
@@ -104,7 +110,7 @@
                         <input onkeypress="return char(event)"
                                class="inp input-calc"
                                type="tel"
-                               maxlength="9" minlength="6"
+                               minlength="6"
                                spellcheck="false"
                                style="text-align: center; padding-left: 35px;">
 
@@ -135,9 +141,11 @@
                 </div>
             </main>
 
-            <label style="text-align: left;"> changeLog: release-project final version</label>
-            <label style="text-align: left;"> changeLog: responsive interface </label>
-            <label style="text-align: right;"> update: 01 fev 2021 08:22 </label>
+            <label style="text-align: left;"> Log: responsividade </label>
+            <label style="text-align: left;"> Log: integração com firebase</label>
+            <br>
+                <label style="text-align: right;"> Atualização: 05 fev 2021 04:20 </label>
+            <br>
 
             <footer>
                 <div id="copyright">
