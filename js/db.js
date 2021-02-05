@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyAsM-wXNJZxezK8fgESTUT_Z68Z3sG9uW4",
     authDomain: "list-itens.firebaseapp.com",
@@ -10,44 +11,41 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
 let db = firebase.firestore();
 
-window.addEventListener ("load", ()=> {
+window.addEventListener ("load", getList=> {
 
     db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
-        .then (doc=> {
-
+                                                      .then(doc=> {
         let getItem = doc.data()['itens-sams'];
-    
         for (let index in getItem) {
-
             let getItemName = getItem[index].name;
-
             let opt = document.createElement('option');
-            opt.value = getItemName;
-
+            opt.value = getItemName.toUpperCase();
             document.getElementById("itens").appendChild(opt);
         }
     })
+    .catch(error=> {
+        alert(error);
+    });
 });
 
 function getcodItem () {
-
     let getValue = document.getElementsByClassName("input-search")[0].value;
     let setValue = document.getElementsByClassName("input-calc")[0];
-
     db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
-    .then (doc=> {
-
+                                                      .then(doc=> {
         let getItem = doc.data()['itens-sams'];
-
         for (let index in getItem) {
-
             let i = getItem[index];
-
-            if (i.name ==  getValue)
+            if (i.name.toUpperCase() ==  getValue.toUpperCase()) {
                 setValue.value = i.cod;
+                calc ();
+            }
         }
-        calc ();
+    })
+    .catch (error=> {
+        alert(error);
     });
 }

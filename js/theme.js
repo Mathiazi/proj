@@ -1,9 +1,7 @@
 function theme () {
     let theme = localStorage.getItem("status");
-
     if (theme == null)
         theme = "light";
-
     //#region header
         let header = document.getElementsByTagName("header");
         header[0].style.background = "var(--" + theme + "-header-bg)";
@@ -67,23 +65,14 @@ function theme () {
     //#endregion
 }
 function changeTheme () {
-    
     let mode;
-
     let x = localStorage.getItem("status");
-    if (x == null) {
+    if (x == null)
         mode = "dark";
-    }
-
-    else if (x == "dark") {
+    else if (x == "dark")
         mode = "light";
-    }
-        
-    else {
+    else
         mode = "dark";
-    }  
-        
     localStorage.setItem("status", mode)
-
     theme ();
 }

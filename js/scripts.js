@@ -1,7 +1,6 @@
-window.addEventListener ("load", function() {
-        //carrega o ultimo texto digitado no input-search
+window.addEventListener ("load", loadtext=> {
         let y = document.getElementsByClassName("input-search")[0];
-            y.value = localStorage.getItem("item");
+        y.value = localStorage.getItem("item");
     }
 );
 let Status = true;
@@ -27,18 +26,13 @@ function menuMobile () {
 
         icon.src = "./files/image/menu/menu.png";
     }
-
     Status =! Status;
 }
 function calc () {
     const cod = document.getElementsByClassName("input-calc")[0].value;
-    
     const tamanho = cod.length;
-
-    var digito;
-
-    if (tamanho == 6)
-    {
+    let digito;
+    if (tamanho == 6) {
         digito = Number(cod.substr(1, 1)) + 
                     Number(cod.substr(3, 1)) + 
                         Number(cod.substr(5, 1));
@@ -47,14 +41,8 @@ function calc () {
                                     Number(cod.substr(2, 1)) +
                                         Number(cod.substr(4, 1));
         digito = 10 - (digito % 10);
-
-        if (digito == 10)
-        {
-            digito = 0;
-        }
     }
-    else if (tamanho == 9)
-    {
+    else if (tamanho == 9) {
         digito =  Number(cod.substr(0, 1)) + 
                     Number(cod.substr(2, 1)) + 
                         Number(cod.substr(4, 1)) + 
@@ -66,14 +54,14 @@ function calc () {
                                         Number(cod.substr(5, 1)) +
                                             Number(cod.substr(7, 1));
         digito = 10 - (digito % 10);
-
-        if (digito == 10)
-        {
-            digito = 0;
-        }
     }
-    else { digito = ""; }
+    else if (tamanho == 13)
+            digito = "upc";
+    else
+        digito = "err";
 
+    if (digito == 10)
+        digito = 0;
     document.getElementById("div-result").innerText = digito;
 }
 function saveMemory () {
