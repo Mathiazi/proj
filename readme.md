@@ -1,13 +1,9 @@
 linguagens usadas:
 
-.html
+* html
 
-.css
+* css
 
-.js
+* js
 
-desc:
-
-. calcula o ultimo digito baseado no codigo do item (apenas item, nao UPC);
-
-. adicionado lista pre-definida de itens mais usados;
+* integração com firebase

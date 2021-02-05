@@ -1,8 +1,4 @@
-header {
-    position: static;
-    top: 0;
-    padding: 5px;
-}
+header { padding: 5px; }
     #menu-desktop {
         display: block;
         margin: auto;
@@ -56,19 +52,21 @@ header {
         }
     @keyframes openMenu {
         0% {width: 0;}
-            100% {width: 340px;}
+            100% {width: 290px;}
     }
     @keyframes closeMenu {
-        100% {width: 340px;}
+        100% {width: 290px;}
             0% {width: 0;}
     }
     header #menu-mobile {
-        width: 340px;
-        height: 100vh;
+        width: 290px;
+        height: 420px;
+        padding: 0 0 0 10px;
         position: absolute;
         top: 60px;
         right: 0;
         border-top: 1px solid;
+        border-radius: 10px 0 0 10px;
         font-size: 15px;
 
         animation-duration: 450ms;
@@ -78,6 +76,7 @@ header {
             text-align: center;
             padding: 10px;
             font-size: 12px;
+            color: rgb(175, 175, 175);
         }
         #menu-mobile ul li {
             font-size: 13px;
