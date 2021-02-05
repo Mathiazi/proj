@@ -60,12 +60,11 @@ header { padding: 5px; }
     }
     header #menu-mobile {
         width: 290px;
-        height: 420px;
+        height: 500px;
         padding: 0 0 0 10px;
         position: absolute;
-        top: 60px;
+        top: 62px;
         right: 0;
-        border-top: 1px solid;
         border-radius: 10px 0 0 10px;
         font-size: 15px;
 
@@ -94,6 +93,7 @@ header { padding: 5px; }
             width: 25px;
             height: 25px;
         }
+        #adm-mob::before {background-image: url("../files/image/menu/adm.png");}
         #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
         #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
         #git-mob::before {background-image: url("../files/image/menu/git.png");}

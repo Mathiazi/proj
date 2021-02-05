@@ -15,10 +15,9 @@ function theme () {
         a[0].style.color = "var(--" + theme + "-color-font)";
         a[1].style.color = "var(--" + theme + "-color-font)";
         
-        let border_li = document.querySelectorAll("#menu-mobile>ul>li");
+        let border_li = document.querySelectorAll("#menu-mobile ul li");
         border_li[0].style.borderColor = "var(--" + theme + "-border-color)";
         border_li[1].style.borderColor = "var(--" + theme + "-border-color)";
-        border_li[2].style.borderColor = "var(--" + theme + "-border-color)";
     //#endregion
     //#region main
         let body = document.getElementsByTagName("body");
