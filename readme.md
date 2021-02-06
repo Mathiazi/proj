@@ -1,6 +1,9 @@
-linguagens usadas para o desenvolvimento do app:
+linguagens:
+
 html
+
 css
+
 javaScript
 
 backend: firebase

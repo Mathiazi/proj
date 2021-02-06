@@ -1,148 +1,162 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">  
-    
-    <head>
+<html lang="pt-br">
 
-        <meta charset="UTF-8">
-        
-        <title> app web Sams Club </title>
+<head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-        <!--#region styleSheet-->
-            
-            <link rel="stylesheet" href="./css/reset.css">
-            <link rel="stylesheet" href="./css/theme.css">     
-            <link rel="stylesheet" href="./css/header.css">
-            <link rel="stylesheet" href="./css/main.css">
-            <link rel="stylesheet" href="./css/footer.css">  
+    <title> app web Sams Club </title>
 
-        <!--#endregion-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--#region jS-->
-            
-            <!--#region firebase -->
-            
-                <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
-                <script src="./js/db.js"></script>
+    <!--#region styleSheet-->
 
-            <!--#endregion-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
-            <script src="./js/scripts.js"> </script>
-            <script src="./js/theme.js"> </script>
+    <!--#endregion-->
 
-        <!--#endregion-->
-   
-    </head>
+    <!--#region jS-->
 
-    <body onload="theme()">
-        
-        <header>
-            <div id="menu-desktop">
+    <!--#region firebase -->
 
-                <img onclick="menuMobile()"
-                     id="icon-menu-mobile" src="./files/image/menu/menu.png">
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script src="./js/db.js"></script>
 
-                <img onclick="document.location.reload()"
-                     id="logo" src="./files/image/logo.png">
-                
-                <nav id="nav-desktop">
-                    <ul>
-                        <li onclick="changeTheme()"
-                            id="theme-desktop"> Trocar Tema </li>
-                        
-                        <li onclick="clearMemory()"
-                            id="cleanAll-desktop"> Limpar Tudo </li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="menu-mobile" style="display: none;">
+    <!--#endregion-->
 
-                <ul id="ul-mobile" style="display: none;">
-                    <span>Administrador</span>
-                    <li id="adm-mob"> Painel </li>
-                    
-                    <span>Tema</span>
+    <script src="./js/scripts.js"> </script>
+    <script src="./js/theme.js"> </script>
+    <script src="./js/adm/auth.js"> </script>
+
+    <!--#endregion-->
+
+</head>
+
+<body onload="theme()">
+
+    <header>
+
+        <div id="menu-desktop">
+
+            <img onclick="menuMobile()"
+                 id="icon-menu-mobile"
+                 src="./files/image/menu/menu.png">
+
+            <img onclick="document.location.reload()"
+                 id="logo"
+                 src="./files/image/logo.png">
+
+            <nav id="nav-desktop">
+                <ul>
                     <li onclick="changeTheme()"
-                        id="theme-mob"> Trocar Tema </li>
-                    
-                    <span>Contato</span>
-                    <li id="sendEmail-mob">
-                        <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a> 
-                    </li>
-                    
-                    <li id="git-mob">
-                        <a href="https://github.com/Mathiazi">GitHub</a> 
-                    </li>
+                        id="theme-desktop"> Trocar Tema </li>
 
-                    <li id="wpp-mob">
-                        <a href="https://api.whatsapp.com/send?phone=5511933038319">WhatsApp</a> 
-                    </li>
-                    
-                    <span>Limpeza</span>
                     <li onclick="clearMemory()"
-                        id="cleanAll-mob"> Limpar Tudo </li>
+                        id="cleanAll-desktop"> Limpar Tudo </li>
                 </ul>
-            </div>
-        </header>
-
-        <div id="div-cont">
-
-            <label> app web Sams Club </label>
-
-            <main id="main-cont">
-
-                <div class="format div-calc">
-
-                    <h1> ÚLTIMO DÍGITO </h1>
-
-                    <div>
-                        <input onkeypress="return char(event)"
-                               class="inp input-calc"
-                               type="tel"
-                               minlength="6"
-                               spellcheck="false"
-                               style="text-align: center; padding-left: 35px;">
-
-                        <img onclick="calc()"
-                             id="img-arrow" src="./files/image/inp/arrow-right.png">
-                    </div>
-
-                    <div id="div-result"> </div>
-                </div>
-
-                <div class="format div-search">
-
-                    <h1> ITEM PRÉ-DEFINIDO </h1>
-
-                    <div>
-                        <input class="inp input-search"
-                                    type="search"
-                                        list="itens"
-                                            spellcheck="false"
-                                                oninput="saveMemory ()"
-                                                    style="font-size: 17px; padding-left: 15px;">
-                        <img id="img-search"
-                                src="./files/image/inp/search.png"
-                                    onclick="getcodItem ()">
-
-                        <datalist id="itens"> </datalist>
-                    </div>
-                </div>
-            </main>
-
-            <label style="text-align: left;"> Log: responsividade </label>
-            <label style="text-align: left;"> Log: integração com firebase</label>
-            <label style="text-align: right;"> Atualização: 05 fev 2021 04:20 </label>
-            <br>
-
-            <footer>
-                <div id="copyright">
-                    ©2020, 21 Copyright by Lucas Mathiazi. All rights reserved.
-                </div>
-            </footer>
+            </nav>
         </div>
-    </body>
+
+        <div id="menu-mobile" style="display: none;">
+            <ul id="ul-mobile" style="display: none;">
+                <span>Administrador</span>
+                <li onclick="admLogin()" id="adm-mob"> Painel </li>
+
+                <span>Tema</span>
+                <li onclick="changeTheme()" id="theme-mob"> Trocar Tema </li>
+
+                <span>Contato</span>
+                <li id="sendEmail-mob">
+                    <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a>
+                </li>
+
+                <li id="git-mob">
+                    <a href="https://github.com/Mathiazi">GitHub</a>
+                </li>
+
+                <li id="wpp-mob">
+                    <a href="https://api.whatsapp.com/send?phone=5511933038319">WhatsApp</a>
+                </li>
+
+                <span>Limpeza</span>
+                <li onclick="clearMemory()" id="cleanAll-mob"> Limpar Tudo </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div id="div-cont">
+
+        <label> app web Sams Club </label>
+
+        <form id="form-login"
+              style="display: none;">
+
+            <img onclick="closeAuth()"
+                 src="./files/image/menu/close.png"
+                 style="cursor: pointer;">
+
+            <div style="margin-bottom: 30px;">
+                <span style="display: block;"> Email do usuário: </span>
+                <input type="text" id="email" placeholder="email@exemple.com">
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <span style="display: block;"> Senha: </span>
+                <input type="password" id="pass">
+            </div>
+
+            <button id="btn-login"> Entrar </button>
+            <button id="btn-clean"> Limpar </button>
+
+        </form>
+
+        <main id="main-cont">
+
+            <div class="format div-calc">
+
+                <h1> ÚLTIMO DÍGITO </h1>
+
+                <div>
+                    <input onkeypress="return char(event)" class="inp input-calc" type="tel" minlength="6"
+                        spellcheck="false" style="text-align: center; padding-left: 35px;">
+
+                    <img onclick="calc()" id="img-arrow" src="./files/image/inp/arrow-right.png">
+                </div>
+
+                <div id="div-result"> </div>
+            </div>
+
+            <div class="format div-search">
+
+                <h1> ITEM PRÉ-DEFINIDO </h1>
+
+                <div>
+                    <input class="inp input-search" type="search" list="itens" spellcheck="false"
+                        oninput="saveMemory ()" style="font-size: 17px; padding-left: 15px;">
+                    <img id="img-search" src="./files/image/inp/search.png" onclick="getcodItem ()">
+
+                    <datalist id="itens"> </datalist>
+                </div>
+            </div>
+
+        </main>
+
+        <label style="text-align: left;"> Log: responsividade </label>
+        <label style="text-align: left;"> Log: integração com firebase</label>
+        <label style="text-align: right;"> Atualização: 05 fev 2021 04:20 </label>
+        <br>
+
+        <footer>
+            <div id="copyright"> ©2020, 21 Copyright by Lucas Mathiazi. All rights reserved. </div>
+        </footer>
+    </div>
+</body>
+
 </html>

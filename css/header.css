@@ -1,4 +1,4 @@
-header { padding: 5px; }
+header { padding: 3px; }
     #menu-desktop {
         display: block;
         margin: auto;
@@ -60,10 +60,10 @@ header { padding: 5px; }
     }
     header #menu-mobile {
         width: 290px;
-        height: 500px;
+        height: 510px;
         padding: 0 0 0 10px;
         position: absolute;
-        top: 62px;
+        top: 59px;
         right: 0;
         border-radius: 10px 0 0 10px;
         font-size: 15px;
@@ -101,4 +101,9 @@ header { padding: 5px; }
         #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
 }
 
-@media (min-width: 701px) { #menu-mobile, #menu-mobile ul, #menu-mobile ul li, span { display: none;} }
+@media (min-width: 701px) {
+    #menu-mobile,
+    #menu-mobile ul,
+    #menu-mobile ul li,
+    span { display: none;}
+}

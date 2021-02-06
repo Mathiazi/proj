@@ -14,10 +14,10 @@ firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
 
-window.addEventListener ("load", getList=> {
-
-    db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
-                                                      .then(doc=> {
+db.collection("itens")
+    .doc("SfYOawlpa1ti6SQGVH3L")
+    .get()
+    .then(doc => {
         let getItem = doc.data()['itens-sams'];
         for (let index in getItem) {
             let getItemName = getItem[index].name;
@@ -26,26 +26,27 @@ window.addEventListener ("load", getList=> {
             document.getElementById("itens").appendChild(opt);
         }
     })
-    .catch(error=> {
+    .catch(error => {
         alert(error);
     });
-});
 
-function getcodItem () {
+function getcodItem() {
     let getValue = document.getElementsByClassName("input-search")[0].value;
     let setValue = document.getElementsByClassName("input-calc")[0];
-    db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
-                                                      .then(doc=> {
-        let getItem = doc.data()['itens-sams'];
-        for (let index in getItem) {
-            let i = getItem[index];
-            if (i.name.toUpperCase() ==  getValue.toUpperCase()) {
-                setValue.value = i.cod;
-                calc ();
+    db.collection("itens")
+        .doc("SfYOawlpa1ti6SQGVH3L")
+        .get()
+        .then(doc => {
+            let getItem = doc.data()['itens-sams'];
+            for (let index in getItem) {
+                let i = getItem[index];
+                if (i.name.toUpperCase() == getValue.toUpperCase()) {
+                    setValue.value = i.cod;
+                    calc();
+                }
             }
-        }
-    })
-    .catch (error=> {
-        alert(error);
-    });
+        })
+        .catch(error => {
+            alert(error);
+        });
 }
