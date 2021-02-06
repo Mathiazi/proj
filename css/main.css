@@ -1,5 +1,7 @@
 body { min-width: 350px; }
 
+/* #region form login*/
+
 #div-cont #form-login {
     position: absolute;
     top: 59px;
@@ -43,6 +45,8 @@ body { min-width: 350px; }
         margin: 0 30px;
         border-radius: 5px;
     }
+
+/* #endregion */
 
 label {
     display: block;
