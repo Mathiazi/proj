@@ -54,6 +54,9 @@
 
             <nav id="nav-desktop">
                 <ul>
+                    <li onclick="admLoginDesktop()"
+                        id="adm-desktop"> Painel </li>
+
                     <li onclick="changeTheme()"
                         id="theme-desktop"> Trocar Tema </li>
 
@@ -66,10 +69,12 @@
         <div id="menu-mobile" style="display: none;">
             <ul id="ul-mobile" style="display: none;">
                 <span>Administrador</span>
-                <li onclick="admLogin()" id="adm-mob"> Painel </li>
+                <li onclick="admLoginMob()"
+                    id="adm-mob"> Painel </li>
 
                 <span>Tema</span>
-                <li onclick="changeTheme()" id="theme-mob"> Trocar Tema </li>
+                <li onclick="changeTheme()"
+                    id="theme-mob"> Trocar Tema </li>
 
                 <span>Contato</span>
                 <li id="sendEmail-mob">
@@ -85,7 +90,8 @@
                 </li>
 
                 <span>Limpeza</span>
-                <li onclick="clearMemory()" id="cleanAll-mob"> Limpar Tudo </li>
+                <li onclick="clearMemory()"
+                    id="cleanAll-mob"> Limpar Tudo </li>
             </ul>
         </div>
 
@@ -111,9 +117,9 @@
                 <span style="display: block;"> Senha: </span>
                 <input type="password" id="pass">
             </div>
-
-            <button id="btn-login"> Entrar </button>
+            
             <button id="btn-clean"> Limpar </button>
+            <button id="btn-login"> Entrar </button>
 
         </form>
 

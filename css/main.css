@@ -2,17 +2,16 @@ body { min-width: 350px; }
 
 #div-cont #form-login {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 59px;
     left: 0;
     right: 0;
 
     margin: auto;
     padding: 40px;
 
-    width: 85%;
-    max-width: 400px;
-    height: 260px;
+    width: 90%;
+    max-width: 450px;
+    height: 280px;
 
     text-align: center;
 
@@ -21,9 +20,9 @@ body { min-width: 350px; }
 }
     #form-login img {
         position: absolute;
-        top: -20px;
-        left: -20px;
-        width: 28px;
+        top: 7px;
+        right: 7px;
+        width: 30px;
     }
     #form-login div span {
         margin: 10px 0;
@@ -33,15 +32,15 @@ body { min-width: 350px; }
     }
     #form-login div input {
         width: 100%;
-        height: 25px;
+        height: 30px;
         border-radius: 5px;
         padding-left: 10px;
     }
     #form-login #btn-login,
     #form-login #btn-clean {
         width: 70px;
-        height: 25px;
-        margin: 0 10px;
+        height: 30px;
+        margin: 0 30px;
         border-radius: 5px;
     }
 
