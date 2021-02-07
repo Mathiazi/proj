@@ -1,4 +1,4 @@
-header { padding: 3px; }
+
     #menu-desktop {
         display: block;
         margin: auto;
@@ -12,8 +12,9 @@ header { padding: 3px; }
     }
     #menu-desktop #nav-desktop { float: right; }
     #menu-desktop #nav-desktop ul {
-        margin: 15px 0 0 0;
+        margin-top: 15px;
     }
+    #menu-desktop #nav-desktop ul li:first-child {margin-left: 0;}
     #menu-desktop #nav-desktop ul li {
         display: inline;
         margin: 0 13px;
@@ -21,8 +22,6 @@ header { padding: 3px; }
         font-size: 13px;
         cursor: pointer;
     }
-    #menu-desktop #nav-desktop ul li:last-child {margin-right: 5px;}
-    #menu-desktop #nav-desktop ul li:first-child {margin-left: 0;}
     #menu-desktop #nav-desktop ul li::before {
         display: inline-block;
         content: '';
@@ -37,7 +36,6 @@ header { padding: 3px; }
     #adm-desktop::before {background-image: url("../files/image/menu/adm.png");}
     #theme-desktop::before {background-image: url("../files/image/menu/theme.png");}
     #cleanAll-desktop::before {background-image: url("../files/image/menu/reset.png");}
-
 @media (max-width: 700px) {
     header #menu-desktop #nav-desktop ul { display: none; }
         #menu-desktop #logo {
@@ -47,24 +45,25 @@ header { padding: 3px; }
         #menu-desktop #icon-menu-mobile {
             display: inline-block;
             position: absolute;
-            top: 15px;
+            top: 10px;
+            left: 10px;
             width: 30px;
             cursor: pointer;
         }
     @keyframes openMenu {
         0% {width: 0;}
-            100% {width: 290px;}
+            100% {width: 270px;}
     }
     @keyframes closeMenu {
-        100% {width: 290px;}
+        100% {width: 270px;}
             0% {width: 0;}
     }
     header #menu-mobile {
-        width: 290px;
-        height: 510px;
+        width: 270px;
+        height: 500px;
         padding: 0 0 0 10px;
         position: absolute;
-        top: 59px;
+        top: 53px;
         right: 0;
         border-radius: 10px 0 0 10px;
         font-size: 15px;
@@ -75,13 +74,8 @@ header { padding: 3px; }
             display: block;
             text-align: center;
             padding: 10px;
-            font-size: 12px;
-            color: rgb(175, 175, 175);
-        }
-        #menu-mobile ul li {
             font-size: 13px;
-            margin: 20px;
-            cursor: pointer;
+            color: rgb(226, 226, 226);
         }
         #menu-mobile ul li::before {
             display: inline-block;
@@ -94,6 +88,11 @@ header { padding: 3px; }
             width: 25px;
             height: 25px;
         }
+        #menu-mobile ul li {
+            font-size: 13px;
+            margin: 20px;
+            cursor: pointer;
+        }
         #adm-mob::before {background-image: url("../files/image/menu/adm.png");}
         #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
         #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
@@ -101,7 +100,6 @@ header { padding: 3px; }
         #wpp-mob::before {background-image: url("../files/image/menu/wpp.png");}
         #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
 }
-
 @media (min-width: 701px) {
     #menu-mobile,
     #menu-mobile ul,

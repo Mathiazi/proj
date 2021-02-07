@@ -9,11 +9,10 @@ var firebaseConfig = {
     appId: "1:849149979243:web:e3c0c7fdaca301f3265f2e",
     measurementId: "G-YGTEH12ZTR"
 };
-
 firebase.initializeApp(firebaseConfig);
 
+//#region loadList
 let db = firebase.firestore();
-
 db.collection("itens")
     .doc("SfYOawlpa1ti6SQGVH3L")
     .get()
@@ -50,3 +49,25 @@ function getcodItem() {
             alert(error);
         });
 }
+//#endregion 
+
+//#region auth
+function closeAuth() {
+    var formLogin = document.getElementById("form-login");
+    formLogin.style.display = "none";
+}
+function admLoginDesktop() {
+    setTimeout(() => {
+        let formLogin = document.getElementById("form-login");
+        formLogin.style.display = 'block';
+    }, 400)
+}
+function admLoginMob() {
+    menuMobile();
+
+    setTimeout(() => {
+        let formLogin = document.getElementById("form-login");
+        formLogin.style.display = 'block';
+    }, 1000)
+}
+//#endregion

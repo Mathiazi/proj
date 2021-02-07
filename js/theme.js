@@ -26,18 +26,12 @@ function theme() {
     let divcont = document.getElementById("div-cont");
     divcont.style.background = "var(--" + theme + "-divcont-bg)"
 
-    let lbl = document.getElementsByTagName("label");
-    lbl[0].style.color = "var(--" + theme + "-color-font-appweb)";
-    lbl[1].style.color = "var(--" + theme + "-color-font-log)";
-    lbl[2].style.color = "var(--" + theme + "-color-font-log)";
-    lbl[3].style.color = "var(--" + theme + "-color-font-up)";
-
     let copy = document.getElementById("copyright");
     copy.style.color = "var(--" + theme + "-color-font-copy)";
 
-    let h1 = document.getElementsByTagName("h1");
-    h1[0].style.color = "var(--" + theme + "-color-font-h1)";
-    h1[1].style.color = "var(--" + theme + "-color-font-h1)";
+    let label = document.getElementsByTagName("label");
+    label[0].style.color = "var(--" + theme + "-color-font-label)";
+    label[1].style.color = "var(--" + theme + "-color-font-label)";
 
     let input = document.getElementsByClassName("inp");
     input[0].style.background = "var(--" + theme + "-inp-bg)";

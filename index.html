@@ -28,11 +28,10 @@
 
     <!--#region javaScript-->
 
+    <script src="./js/db.js"></script>
     <script src="./js/scripts.js"> </script>
     <script src="./js/theme.js"> </script>
-    <script src="./js/db.js"></script>
-    <script src="./js/adm/auth.js"> </script>
-
+    
     <!--#endregion-->
 
 </head>
@@ -98,8 +97,6 @@
 
     <div id="div-cont">
 
-        <label> app web Sams Club </label>
-
         <form id="form-login"
               style="display: none;">
 
@@ -116,9 +113,6 @@
                 <span style="display: block;"> Senha: </span>
                 <input type="password" id="pass">
             </div>
-            
-            <button id="btn-clean"> Limpar </button>
-            <button id="btn-login"> Entrar </button>
 
         </form>
 
@@ -126,13 +120,19 @@
 
             <div class="format div-calc">
 
-                <h1> ÚLTIMO DÍGITO </h1>
+                <label> ÚLTIMO DÍGITO </label>
 
                 <div>
-                    <input onkeypress="return char(event)" class="inp input-calc" type="tel" minlength="6"
-                        spellcheck="false" style="text-align: center; padding-left: 35px;">
+                    <input onkeypress="return char(event)"
+                           class="inp input-calc"
+                           type="tel"
+                           minlength="6"
+                           spellcheck="false"
+                           style="text-align: center; padding-left: 35px;">
 
-                    <img onclick="calc()" id="img-arrow" src="./files/image/inp/arrow-right.png">
+                    <img onclick="calc()"
+                         id="img-arrow"
+                         src="./files/image/inp/arrow-right.png">
                 </div>
 
                 <div id="div-result"> </div>
@@ -140,12 +140,19 @@
 
             <div class="format div-search">
 
-                <h1> ITEM PRÉ-DEFINIDO </h1>
+                <label> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
-                    <input class="inp input-search" type="search" list="itens" spellcheck="false"
-                        oninput="saveMemory ()" style="font-size: 17px; padding-left: 15px;">
-                    <img id="img-search" src="./files/image/inp/search.png" onclick="getcodItem ()">
+                    <input class="inp input-search"
+                           type="search"
+                           list="itens" 
+                           spellcheck="false"
+                           oninput="saveMemory ()"
+                           style="font-size: 17px; padding-left: 15px;">
+                    
+                           <img id="img-search"
+                                src="./files/image/inp/search.png"
+                                onclick="getcodItem ()">
 
                     <datalist id="itens"> </datalist>
                 </div>
@@ -153,13 +160,8 @@
 
         </main>
 
-        <label style="text-align: left;"> Log: adicionado painel adm </label>
-        <label style="text-align: left;"> Log: integração com firebase </label>
-        <label style="text-align: right;"> Atualização: 06 fev 2021 04:40 </label>
-        <br>
-
         <footer>
-            <div id="copyright"> ©2020, 21 Copyright by Lucas Mathiazi. All rights reserved. </div>
+            <div id="copyright"> Copyright©2020-2020, Lucas Mathiazi. Todos os direitos reservados. </div>
         </footer>
     </div>
 </body>
