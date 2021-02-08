@@ -13,6 +13,9 @@
     --dark-divcont-bg:rgb(24, 24, 24);
     --light-divcont-bg:rgb(255, 255, 255);
 
+    --dark-login-bg: rgb(66, 66, 66);
+    --light-login-bg: rgb(89, 99, 145);
+
     --dark-color-font-label: rgb(173, 173, 173);
     --light-color-font-label: rgb(89, 99, 145);
 

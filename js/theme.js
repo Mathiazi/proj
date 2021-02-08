@@ -14,6 +14,11 @@ function theme() {
     let body = document.getElementsByTagName("body");
         body[0].style.backgroundImage = "url('./files/image/" + theme + "-bg.png')";
 
+    let login = document.getElementById('form-login');
+        login.style.background = "var(--" + theme + "-login-bg)";
+    let addProd = document.getElementById('add-prod');
+        addProd.style.background = "var(--" + theme + "-login-bg)";
+
     let divcont = document.getElementById("div-cont");
         divcont.style.background = "var(--" + theme + "-divcont-bg)";
 
