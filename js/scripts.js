@@ -13,20 +13,12 @@ function menuMobile() {
     let icon = document.getElementById("icon-menu-mobile");
     if (Status) {
         menu.display = "block";
-        menu.animationName = "openMenu";
-        menu.animationDirection = "normal";
-
         setTimeout(() => { ulMob.display = "block"; }, 500);
-
         icon.src = "./files/image/menu/close.png";
     }
     else {
-        ulMob.display = "none";
-        menu.animationName = "closeMenu";
-        menu.animationDirection = "reverse";
-
+        ulMob.display = "none";  
         setTimeout(() => { menu.display = "none"; }, 400);
-
         icon.src = "./files/image/menu/menu.png";
     }
     Status = !Status;
