@@ -2,37 +2,38 @@
     font-family: Roboto;
     src: url('../files/font/Roboto-Regular.ttf');
 }
-
 /* cores dos temas dark/light */
 :root {
     --dark-header-bg:rgb(66, 66, 66);
     --light-header-bg: rgb(89, 99, 145);
 
-    --dark-color-font: rgb(226, 226, 226);
-    --light-color-font: rgb(226, 226, 226);
+    --dark-color-li-font: rgb(255, 255, 255);
+    --light-color-li-font: rgb(255, 255, 255);
 
-    --dark-color-font-copy: rgb(119, 119, 119);
-    --light-color-font-copy: rgb(139, 139, 139);
+    --dark-divcont-bg:rgb(24, 24, 24);
+    --light-divcont-bg:rgb(255, 255, 255);
 
-    --dark-color-font-label: rgb(94, 94, 94);
+    --dark-color-font-label: rgb(173, 173, 173);
     --light-color-font-label: rgb(89, 99, 145);
 
+    --dark-inp-bg:rgb(66, 66, 66);
+    --light-inp-bg:rgb(207, 207, 207);
+
     --dark-inp-font-color:rgb(182, 182, 182);
-    --light-inp-font-color:rgb(66, 66, 66);
+    --light-inp-font-color:rgb(46, 46, 46);
+
+    --dark-color-font-result: rgb(182, 182, 182);
+    --light-color-font-result: rgb(255, 255, 255);
 
     --dark-border-color: rgb(37, 37, 37);
     --light-border-color: rgb(223, 223, 223);
-    
-    --dark-divcont-bg:rgb(24, 24, 24);
-    --light-divcont-bg:rgb(255, 255, 255);
-    
-    --dark-inp-bg:rgb(66, 66, 66);
-    --light-inp-bg:rgb(207, 207, 207);
-    
+
     --dark-default-bg: rgb(89, 99, 145);
     --light-default-bg: rgb(89, 99, 145);
-}
 
+    --dark-color-font-copy: rgb(119, 119, 119);
+    --light-color-font-copy: rgb(139, 139, 139);
+}
 * {
     margin: 0;
     padding: 0;
@@ -46,5 +47,4 @@
     
     -webkit-tap-highlight-color: transparent;
 }
-
-a { color: rgb(226, 226, 226); }
+a { color: rgb(255, 255, 255); }

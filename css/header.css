@@ -11,9 +11,7 @@
         cursor: pointer;
     }
     #menu-desktop #nav-desktop { float: right; }
-    #menu-desktop #nav-desktop ul {
-        margin-top: 15px;
-    }
+    #menu-desktop #nav-desktop ul { margin-top: 15px; }
     #menu-desktop #nav-desktop ul li:first-child {margin-left: 0;}
     #menu-desktop #nav-desktop ul li {
         display: inline;
@@ -33,7 +31,6 @@
         width: 25px;
         height: 25px;
     }
-    #adm-desktop::before {background-image: url("../files/image/menu/adm.png");}
     #theme-desktop::before {background-image: url("../files/image/menu/theme.png");}
     #cleanAll-desktop::before {background-image: url("../files/image/menu/reset.png");}
 @media (max-width: 700px) {
@@ -46,22 +43,22 @@
             display: inline-block;
             position: absolute;
             top: 10px;
-            left: 10px;
+            left: 15px;
             width: 30px;
             cursor: pointer;
         }
     @keyframes openMenu {
         0% {width: 0;}
-            100% {width: 270px;}
+            100% {width: 95%;}
     }
     @keyframes closeMenu {
-        100% {width: 270px;}
+        100% {width: 95%;}
             0% {width: 0;}
     }
     header #menu-mobile {
-        width: 270px;
-        height: 500px;
-        padding: 0 0 0 10px;
+        width: 95%;
+        height: 470px;
+        padding-left: 20px;
         position: absolute;
         top: 53px;
         right: 0;
@@ -75,7 +72,7 @@
             text-align: center;
             padding: 10px;
             font-size: 13px;
-            color: rgb(226, 226, 226);
+            color: rgb(168, 168, 168);
         }
         #menu-mobile ul li::before {
             display: inline-block;
@@ -89,15 +86,15 @@
             height: 25px;
         }
         #menu-mobile ul li {
-            font-size: 13px;
+            width: 150px;
             margin: 20px;
+            font-size: 13px;
             cursor: pointer;
         }
         #adm-mob::before {background-image: url("../files/image/menu/adm.png");}
         #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
         #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
         #git-mob::before {background-image: url("../files/image/menu/git.png");}
-        #wpp-mob::before {background-image: url("../files/image/menu/wpp.png");}
         #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
 }
 @media (min-width: 701px) {

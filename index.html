@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
 
-    <title> app web Sams Club </title>
+    <title> itemList Sams Club </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,10 +28,10 @@
 
     <!--#region javaScript-->
 
-    <script src="./js/db.js"></script>
-    <script src="./js/scripts.js"> </script>
     <script src="./js/theme.js"> </script>
-    
+    <script src="./js/scripts.js"> </script>
+    <script src="./js/db.js"></script>
+
     <!--#endregion-->
 
 </head>
@@ -39,125 +39,99 @@
 <body onload="theme()">
 
     <header>
-
         <div id="menu-desktop">
-
-            <img onclick="menuMobile()"
-                 id="icon-menu-mobile"
-                 src="./files/image/menu/menu.png">
-
-            <img onclick="document.location.reload()"
-                 id="logo"
-                 src="./files/image/logo.png">
-
+            <img onclick="menuMobile()" id="icon-menu-mobile" src="./files/image/menu/menu.png">
+            <img onclick="document.location.reload()" id="logo" src="./files/image/logo.png">
+            
             <nav id="nav-desktop">
                 <ul>
-                    <li onclick="admLoginDesktop()"
-                        id="adm-desktop"> Painel </li>
+                    <li onclick="changeTheme()" id="theme-desktop"> Dark Mode </li>
 
-                    <li onclick="changeTheme()"
-                        id="theme-desktop"> Trocar Tema </li>
-
-                    <li onclick="clearMemory()"
-                        id="cleanAll-desktop"> Limpar Tudo </li>
+                    <li onclick="clearMemory()" id="cleanAll-desktop"> Limpar Dados </li>
                 </ul>
             </nav>
         </div>
 
         <div id="menu-mobile" style="display: none;">
             <ul id="ul-mobile" style="display: none;">
-                <span>Administrador</span>
-                <li onclick="admLoginMob()"
-                    id="adm-mob"> Painel </li>
+                <span>ADM</span>
+                <li onclick="authAdm()" id="adm-mob"> Administrador </li>
 
                 <span>Tema</span>
-                <li onclick="changeTheme()"
-                    id="theme-mob"> Trocar Tema </li>
+                <li onclick="changeTheme()" id="theme-mob"> Dark Mode </li>
 
                 <span>Contato</span>
                 <li id="sendEmail-mob">
-                    <a href="mailto:lucas-mathiazi@bol.com.br">Enviar Email</a>
+                    <a href="mailto:lucas-mathiazi@bol.com.br">Email</a>
                 </li>
 
                 <li id="git-mob">
                     <a href="https://github.com/Mathiazi">GitHub</a>
                 </li>
 
-                <li id="wpp-mob">
-                    <a href="https://api.whatsapp.com/send?phone=5511933038319">WhatsApp</a>
-                </li>
-
-                <span>Limpeza</span>
-                <li onclick="clearMemory()"
-                    id="cleanAll-mob"> Limpar Tudo </li>
+                <span>Dados</span>
+                <li onclick="clearMemory()" id="cleanAll-mob"> Limpar Dados </li>
             </ul>
         </div>
-
     </header>
 
     <div id="div-cont">
-
-        <form id="form-login"
-              style="display: none;">
-
-            <img onclick="closeAuth()"
-                 src="./files/image/menu/close.png"
-                 style="cursor: pointer;">
+        <form id="form-login" style="display: none;">
+            <img onclick="authClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
 
             <div style="margin-bottom: 30px;">
                 <span style="display: block;"> Email do usuário: </span>
-                <input type="text" id="email" placeholder="email@exemple.com">
+                <input oninput="saveMemory()" spellcheck="false" id="userEmail" type="text">
             </div>
 
             <div style="margin-bottom: 30px;">
                 <span style="display: block;"> Senha: </span>
-                <input type="password" id="pass">
+                <input id="userPass" type="password">
             </div>
 
+            <div onclick="authUser()" id="btn-login"> Sign In </div>
+        </form>
+
+        <form id="add-prod" style="display: none;">
+            <img onclick="authClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+
+            <div style="margin-bottom: 30px;">
+                <span style="display: block;"> Nome do produto: </span>
+                <input type="text" id="name">
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <span style="display: block;"> código do item: </span>
+                <input type="text" id="cod">
+            </div>
+
+            <div onclick="addItem()" id="btn-prod"> Cadastrar </div>
         </form>
 
         <main id="main-cont">
-
             <div class="format div-calc">
-
                 <label> ÚLTIMO DÍGITO </label>
-
                 <div>
-                    <input onkeypress="return char(event)"
-                           class="inp input-calc"
-                           type="tel"
-                           minlength="6"
-                           spellcheck="false"
-                           style="text-align: center; padding-left: 35px;">
+                    <input onkeypress="return char(event)" class="inp input-calc" type="tel" minlength="6"
+                        spellcheck="false" style="text-align: center; padding-left: 35px;">
 
-                    <img onclick="calc()"
-                         id="img-arrow"
-                         src="./files/image/inp/arrow-right.png">
+                    <img onclick="calc()" id="img-arrow" src="./files/image/inp/arrow-right.png">
                 </div>
 
                 <div id="div-result"> </div>
             </div>
-
+            
             <div class="format div-search">
-
                 <label> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
-                    <input class="inp input-search"
-                           type="search"
-                           list="itens" 
-                           spellcheck="false"
-                           oninput="saveMemory ()"
-                           style="font-size: 17px; padding-left: 15px;">
-                    
-                           <img id="img-search"
-                                src="./files/image/inp/search.png"
-                                onclick="getcodItem ()">
-
+                    <input oninput="saveMemory ()" class="inp input-search" type="search" list="itens"
+                        spellcheck="false" style="font-size: 14px; padding-left: 15px;">
                     <datalist id="itens"> </datalist>
+
+                    <img onclick="getcodItem ()" id="img-search" src="./files/image/inp/search.png" >
                 </div>
             </div>
-
         </main>
 
         <footer>

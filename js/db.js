@@ -1,4 +1,3 @@
-
 var firebaseConfig = {
     apiKey: "AIzaSyAsM-wXNJZxezK8fgESTUT_Z68Z3sG9uW4",
     authDomain: "list-itens.firebaseapp.com",
@@ -11,11 +10,9 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-//#region loadList
 let db = firebase.firestore();
-db.collection("itens")
-    .doc("SfYOawlpa1ti6SQGVH3L")
-    .get()
+//#region lista de itens
+db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
     .then(doc => {
         let getItem = doc.data()['itens-sams'];
         for (let index in getItem) {
@@ -28,13 +25,12 @@ db.collection("itens")
     .catch(error => {
         alert(error);
     });
-
+//#endregion
+//#region codigo do item
 function getcodItem() {
     let getValue = document.getElementsByClassName("input-search")[0].value;
     let setValue = document.getElementsByClassName("input-calc")[0];
-    db.collection("itens")
-        .doc("SfYOawlpa1ti6SQGVH3L")
-        .get()
+    db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
         .then(doc => {
             let getItem = doc.data()['itens-sams'];
             for (let index in getItem) {
@@ -49,25 +45,52 @@ function getcodItem() {
             alert(error);
         });
 }
-//#endregion 
-
-//#region auth
-function closeAuth() {
-    var formLogin = document.getElementById("form-login");
-    formLogin.style.display = "none";
-}
-function admLoginDesktop() {
-    setTimeout(() => {
-        let formLogin = document.getElementById("form-login");
-        formLogin.style.display = 'block';
-    }, 400)
-}
-function admLoginMob() {
-    menuMobile();
-
-    setTimeout(() => {
-        let formLogin = document.getElementById("form-login");
-        formLogin.style.display = 'block';
-    }, 1000)
-}
 //#endregion
+
+let auth = firebase.auth();
+function authClose() {
+    setTimeout(() => {
+        let form = document.getElementById("form-login");
+        form.style.display = "none";
+
+        form = document.getElementById("add-prod");
+        form.style.display = "none";
+    }, 100);
+}
+function authAdm() {
+    menuMobile();
+    setTimeout(() => {
+        let form = document.getElementById("form-login");
+        form.style.display = "block";
+    }, 1000);
+}
+function authUser() {
+    let userEmail = document.getElementById('userEmail').value;
+    let userPass = document.getElementById('userPass').value;
+    auth.signInWithEmailAndPassword(userEmail, userPass)
+        .then(() => {
+            let form = document.getElementById("form-login");
+            form.style.display = "none";
+            setTimeout(() => {
+                form = document.getElementById("add-prod");
+                form.style.display = "block";
+            }, 1000)
+        })
+        .catch(error => {
+            alert(error);
+        });
+}
+function addItem() {
+    db.collection('itens').doc('teste')
+        .update(
+            {
+                item: firebase.firestore.FieldValue.arrayUnion("lucas")
+            }
+        )
+        .then(item => {
+            alert(item);
+        })
+        .catch(error => {
+            alert(error);
+        })
+}

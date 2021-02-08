@@ -1,6 +1,9 @@
-window.addEventListener("load", ()=> {
-    let y = document.getElementsByClassName("input-search")[0];
-    y.value = localStorage.getItem("item");
+window.addEventListener("load", () => {
+    let item = document.getElementsByClassName("input-search")[0];
+    item.value = localStorage.getItem("item");
+    
+    let userEmail = document.getElementById('userEmail');
+    userEmail.value = localStorage.getItem("email");
 }
 );
 let Status = true;
@@ -27,7 +30,7 @@ function menuMobile() {
         icon.src = "./files/image/menu/menu.png";
     }
     Status = !Status;
-    closeAuth();
+    authClose();
 }
 function calc() {
     const cod = document.getElementsByClassName("input-calc")[0].value;
@@ -68,6 +71,9 @@ function calc() {
 function saveMemory() {
     let item = document.getElementsByClassName("input-search")[0].value;
     localStorage.setItem("item", item);
+
+    let userEmail = document.getElementById('userEmail').value;
+    localStorage.setItem("email", userEmail);
 }
 function clearMemory() {
     localStorage.clear();
