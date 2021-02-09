@@ -19,24 +19,9 @@
 
     <!--#endregion-->
 
-    <!--#region firebase -->
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
-
-    <!--#endregion-->
-
-    <!--#region javaScript-->
-
-    <script src="./js/theme.js"> </script>
-    <script src="./js/scripts.js"> </script>
-    <script src="./js/db.js"></script>
-
-    <!--#endregion-->
-
 </head>
 
-<body onload="theme()">
+<body>
 
     <header>
         <div id="menu-desktop">
@@ -45,7 +30,7 @@
             
             <nav id="nav-desktop">
                 <ul>
-                    <li onclick="changeTheme()" id="theme-desktop"> Dark Mode </li>
+                    <li onclick="theme()" class='theme-name' id="theme-desktop"> </li>
 
                     <li onclick="clearMemory()" id="cleanAll-desktop"> Limpar Dados </li>
                 </ul>
@@ -58,7 +43,7 @@
                 <li onclick="authAdm()" id="adm-mob"> Administrador </li>
 
                 <span>Tema</span>
-                <li onclick="changeTheme()" id="theme-mob"> Dark Mode </li>
+                <li onclick="theme()" class='theme-name' id="theme-mob"> </li>
 
                 <span>Contato</span>
                 <li id="sendEmail-mob">
@@ -129,15 +114,24 @@
                         spellcheck="false" style="font-size: 14px; padding-left: 15px;">
                     <datalist id="itens"> </datalist>
 
-                    <img onclick="getcodItem ()" id="img-search" src="./files/image/inp/search.png" >
+                    <img onclick="getcodItem()" id="img-search" src="./files/image/inp/search.png" >
                 </div>
             </div>
         </main>
 
         <footer>
-            <div id="copyright"> Copyright©2020-2020, Lucas Mathiazi. Todos os direitos reservados. </div>
+            <div id="copyright"> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </div>
         </footer>
     </div>
+        <!--#region firebase -->
+            <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+        <!--#endregion-->
+        <!--#region javaScript-->
+            <script src="./js/theme.js"> </script>
+            <script src="./js/scripts.js"> </script>
+            <script src="./js/db.js"></script>
+        <!--#endregion-->
 </body>
 
 </html>
