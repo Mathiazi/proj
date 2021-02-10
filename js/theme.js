@@ -1,75 +1,47 @@
-window.addEventListener("load", () => {
-    let theme = localStorage.getItem("status");
-    if (theme == null)
-        theme = "light";
+$('load', () => {
 
-    let themeName = document.getElementsByClassName('theme-name');
-    if (theme == 'dark') {
-        themeName[0].innerHTML = 'Light Mode';
-        themeName[1].innerHTML = 'Light Mode';
-    }
-    else {
-        themeName[0].innerHTML = 'Dark Mode';
-        themeName[1].innerHTML = 'Dark Mode';
-    }
+    let theme = localStorage.getItem("status");
+    if (theme == null) theme = "light";
+
+    if (theme != 'dark')
+        $('.theme-name').text('Dark Mode');
+    else
+        $('.theme-name').text('Light Mode');
 
     //#region header
-    let header = document.getElementsByTagName("header");
-    header[0].style.background = "var(--" + theme + "-header-bg)";
-    header[0].style.color = "var(--" + theme + "-color-li-font)";
+        $('header').css({
+            'background': 'var(--' + theme + '-header-bg)',
+            'color': 'var(--' + theme + '-color-li-font)'
+        });
 
-    let menuMobile = document.getElementById("menu-mobile");
-    menuMobile.style.background = "var(--" + theme + "-header-bg)";
+        $('#menu-mobile').css({ 'background': 'var(--' + theme + '-header-bg)' });
     //#endregion
     //#region main
-    let body = document.getElementsByTagName("body");
-    body[0].style.backgroundImage = "url('./files/image/" + theme + "-bg.png')";
+        $('body').css({ 'backgroundImage': 'url(./files/image/' + theme + '-bg.png)' });
+        $('.form').css({ 'background': 'var(--' + theme + '-login-bg)' });
+        $('#div-cont').css({ 'background': 'var(--' + theme + '-divcont-bg)' });
+        $('.lbl').css({ 'color': 'var(--' + theme + '-color-font-label)' });
+        $('#lbl-addProd').css({ 'color': 'rgb(168, 168, 168)' });
 
-    let login = document.getElementById('form-login');
-    login.style.background = "var(--" + theme + "-login-bg)";
-    let addProd = document.getElementById('add-prod');
-    addProd.style.background = "var(--" + theme + "-login-bg)";
+        $('.inp').css({
+            'background': 'var(--' + theme + '-inp-bg)',
+            'color': 'var(--' + theme + '-inp-font-color)'
+        });
 
-    let divcont = document.getElementById("div-cont");
-    divcont.style.background = "var(--" + theme + "-divcont-bg)";
+        $('.div-calc').css({ 'borderColor': 'var(--' + theme + '-border-color)' });
 
-    let lblLastDigit = document.getElementById("lbl-lastDigit");
-    lblLastDigit.style.color = "var(--" + theme + "-color-font-label)";
+        $('#div-result').css({
+            'background': 'var(--' + theme + '-default-bg)',
+            'color': 'var(--' + theme + '-color-font-result)'
+        });
 
-    let lblList = document.getElementById('lbl-list');
-    lblList.style.color = "var(--" + theme + "-color-font-label)";
-
-    let lbladdprod = document.getElementById("lbl-addProd");
-    lbladdprod.style.color = "rgb(168, 168, 168)";
-
-    let input = document.getElementsByClassName("inp");
-    input[0].style.background = "var(--" + theme + "-inp-bg)";
-    input[1].style.background = "var(--" + theme + "-inp-bg)";
-
-    input[0].style.color = "var(--" + theme + "-inp-font-color)";
-    input[1].style.color = "var(--" + theme + "-inp-font-color)";
-
-    let divcalc = document.getElementsByClassName("div-calc");
-    divcalc[0].style.borderColor = "var(--" + theme + "-border-color)";
-
-    let divresult = document.getElementById("div-result");
-    divresult.style.background = "var(--" + theme + "-default-bg)";
-    divresult.style.color = "var(--" + theme + "-color-font-result)";
-
-    let img_arrow = document.getElementById("img-arrow");
-    img_arrow.style.background = "var(--" + theme + "-default-bg)";
-
-    let img_search = document.getElementById("img-search");
-    img_search.style.background = "var(--" + theme + "-default-bg)";
+        $('.inp-img').css({ 'background': 'var(--' + theme + '-default-bg)' });
     //#endregion
-    //#region footer 
-    let border_footer = document.getElementsByTagName("footer");
-    border_footer[0].style.borderColor = "var(--" + theme + "-border-color)";
-
-    let copy = document.getElementById("copyright");
-    copy.style.color = "var(--" + theme + "-color-font-copy)";
+    //#region footer
+        $('footer').css({ 'borderColor': 'var(--' + theme + '-border-color)' });
+        $('#copyright').css({ 'color': 'var(--' + theme + '-color-font-copy)' });
     //#endregion
-})
+});
 
 function theme() {
     let mode;

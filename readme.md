@@ -1,9 +1,12 @@
 linguagens:
 
-html
+    .html
 
-css
+    .css
 
-javaScript
+    .javaScript
+        .jQuerry
 
-backend: firebase
+backend:
+    
+    .firebase
