@@ -10,7 +10,9 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
+let auth = firebase.auth();
 let db = firebase.firestore();
+
 //#region lista de itens
 db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
     .then(doc => {
@@ -47,80 +49,82 @@ function getcodItem() {
 }
 //#endregion
 
-let auth = firebase.auth();
-function formClose() {
-    setTimeout(() => {
-        let form = document.getElementById("form-login");
-        form.style.display = "none";
+function windowClose() {
 
-        form = document.getElementById("add-prod");
-        form.style.display = "none";
+    setTimeout(() => {
+        document.getElementById("form-login").style.display = "none";
+        document.getElementById("add-prod").style.display = "none";
+        document.getElementById("icon-menu-mobile").style.display = 'block';
     }, 100);
 }
+
 function formLogIn() {
 
-    setTimeout(() => {
-        let menu = document.getElementById("menu-mobile");
-        menu.style.display = 'none';
-    }, 200);
+    menu();
 
-    if (auth.currentUser != null) {
+    document.getElementById("icon-menu-mobile").style.display = 'none';
+
+    let logged = auth.currentUser;
+
+    if (logged != null) {
+
         setTimeout(() => {
-            let form = document.getElementById("add-prod");
-            form.style.display = "block";
+            document.getElementById("add-prod").style.display = "block";
         }, 1000)
     }
     else {
+
         setTimeout(() => {
-            let form = document.getElementById("form-login");
-            form.style.display = "block";
+            document.getElementById("form-login").style.display = "block";
         }, 1000);
     }
 }
 
 function authUser() {
+
     let userEmail = document.getElementById('userEmail').value;
     let userPass = document.getElementById('userPass').value;
 
     auth.signInWithEmailAndPassword(userEmail, userPass)
         .then(() => {
+
             alert('logado com sucesso!');
-            
-            let form = document.getElementById("form-login");
-            form.style.display = "none";
+
+            document.getElementById("form-login").style.display = "none";
 
             setTimeout(() => {
-                form = document.getElementById("add-prod");
-                form.style.display = "block";
+                document.getElementById("add-prod").style.display = "block";
             }, 1000)
         })
         .catch(error => {
             alert(error);
         });
 }
+
 function addItem() {
+
     let name = document.getElementById('name').value;
     let item = document.getElementById('cod').value;
 
-    if ( name != '' &&
-         item != '' ) {
+    if (name != '' &&
+        item != '') {
 
         db.collection('itens').doc('SfYOawlpa1ti6SQGVH3L')
-        .update({
-            itens: firebase.firestore.FieldValue.arrayUnion(
-                {
-                    name: name,
-                    cod: item
-                }
+            .update({
+                'itens-sams': firebase.firestore.FieldValue.arrayUnion(
+                    {
+                        name: name,
+                        cod: item
+                    }
+                )
+            })
+            .then(
+                alert('Item Sams adicionado com sucesso!')
             )
-        })
-        .then(
-            alert('Item Sams adicionado com sucesso!')
-        )
-        .catch(error => {
-            alert(error);
-        })
+            .catch(error => {
+                alert(error);
+            })
     }
-    else 
+    else
         alert('Preencha todos os campos antes de continuar.')
 }

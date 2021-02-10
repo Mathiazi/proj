@@ -48,12 +48,12 @@
             cursor: pointer;
         }
     header #menu-mobile {
-        width: 99%;
+        width: 95%;
         max-width: 500px;
         min-width: 350px;
         height: 350px;
         position: absolute;
-        top: 53px;
+        top: 51px;
         left: 0;
         right: 0;
         margin: auto;

@@ -5,31 +5,36 @@ window.addEventListener("load", () => {
     let userEmail = document.getElementById('userEmail');
     userEmail.value = localStorage.getItem("email");
 });
-let Status = true;
-function menuMobile() {
-    let menu = document.getElementById("menu-mobile");
-    let ulMob = document.getElementById("ul-mobile");
+
+let statusMenu = true;
+function menu () {
+
+    let menu = document.getElementById("menu-mobile").style;
+    let ul = document.getElementById("ul-mobile").style;
     let icon = document.getElementById("icon-menu-mobile");
-    if (Status) {
-        menu.style.display = "block";
+    
+    if (statusMenu == true) {
+        icon.src = "./files/image/menu/close.png";
+
+        menu.display = "block";
 
         setTimeout(() => {
-            ulMob.style.display = "block";
-        }, 500);
-        
-        icon.src = "./files/image/menu/close.png";
+            ul.display = "block";
+        }, 600);
     }
     else {
-        ulMob.style.display = "none";
+        icon.src = "./files/image/menu/menu.png";
+
+        ul.display = "none";
 
         setTimeout(() => {
-            menu.style.display = "none";
-        }, 400);
-
-        icon.src = "./files/image/menu/menu.png";
+            menu.display = "none";
+        }, 600);
     }
-    Status = !Status;
+
+    statusMenu =! statusMenu;
 }
+
 function calc() {
     const cod = document.getElementsByClassName("input-calc")[0].value;
     const tamanho = cod.length;
@@ -66,6 +71,7 @@ function calc() {
         digito = 0;
     document.getElementById("div-result").innerText = digito;
 }
+
 function saveMemory() {
     let item = document.getElementsByClassName("input-search")[0].value;
     localStorage.setItem("item", item);
@@ -73,10 +79,12 @@ function saveMemory() {
     let userEmail = document.getElementById('userEmail').value;
     localStorage.setItem("email", userEmail);
 }
+
 function clearMemory() {
     localStorage.clear();
     document.location.reload();
 }
+
 function char(e) {
     let charCode = e.charCode ? e.charCode : e.keyCode;
     if (charCode == 13)

@@ -1,139 +1,171 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
+<html lang='pt-br'>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title> itemList Sams Club </title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <!--#region styleSheet-->
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/footer.css">
+    <link rel='stylesheet' href='./css/reset.css'>
+    <link rel='stylesheet' href='./css/header.css'>
+    <link rel='stylesheet' href='./css/main.css'>
+    <link rel='stylesheet' href='./css/footer.css'>
     <!--#endregion-->
     <!-- #region javaScript -->
-        <script src="./js/theme.js"> </script>
+    <script src='./js/theme.js'> </script>
     <!-- #endregion -->
 </head>
 
 <body>
 
     <header>
-        <div id="menu-desktop">
-            <img onclick="menuMobile()" id="icon-menu-mobile" src="./files/image/menu/menu.png">
-            <img onclick="document.location.reload()" id="logo" src="./files/image/logo.png">
-            
-            <nav id="nav-desktop">
-                <ul>
-                    <li onclick="theme()" class='theme-name' id="theme-desktop"> </li>
+        <div id='menu-desktop'>
+            <img onclick='menu ()' id='icon-menu-mobile'
+                    src='./files/image/menu/menu.png'>
 
-                    <li onclick="clearMemory()" id="cleanAll-desktop"> Limpar Dados </li>
+            <img onclick='document.location.reload ()' id='logo'
+                    src='./files/image/logo.png'>
+
+            <!-- #region menu-desktop -->
+            <nav id='nav-desktop'>
+                <ul>
+                    <li onclick='theme()' id='theme-desktop' class='theme-name'> </li>
+
+                    <li onclick='clearMemory()' id='cleanAll-desktop'> Limpar Dados </li>
                 </ul>
             </nav>
+            <!-- #endregion -->
+
         </div>
 
-        <div id="menu-mobile" style="display: none;">
-            <ul id="ul-mobile" style="display: none;">
+        <!-- #region menu-mobile -->
+        <div id='menu-mobile' style='display: none;'>
+            <ul id='ul-mobile' style='display: none;'>
                 <span>ADM</span>
-                <li onclick="formLogIn()" id="adm-mob"> Administrador </li>
+                <li onclick='formLogIn()' id='adm-mob'> Administrador </li>
 
                 <span>Tema</span>
-                <li onclick="theme()" class='theme-name' id="theme-mob"> </li>
+                <li onclick='theme()' class='theme-name' id='theme-mob'> </li>
 
                 <span>Contato</span>
-                <li id="sendEmail-mob">
-                    <a href="mailto:lucas-mathiazi@bol.com.br">Email</a>
+                <li id='sendEmail-mob'>
+                    <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a>
                 </li>
 
-                <li id="git-mob">
-                    <a href="https://github.com/Mathiazi">GitHub</a>
+                <li id='git-mob'>
+                    <a href='https://github.com/Mathiazi'>GitHub</a>
                 </li>
 
                 <span>Dados</span>
-                <li onclick="clearMemory()" id="cleanAll-mob"> Limpar Dados </li>
+                <li onclick='clearMemory()' id='cleanAll-mob'> Limpar Dados </li>
             </ul>
         </div>
+        <!-- #endregion -->
+
     </header>
 
-    <div id="div-cont">
+    <div id='div-cont'>
 
-       <!-- #region form Login -->
-        <form id="form-login" style="display: none;">
-            <img onclick="formClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+        <!-- #region form Login -->
+        <form id='form-login' 
+                style='display: none;'>
 
-            <div style="margin-bottom: 30px;">
-                <span style="display: block;"> Email do usuário: </span>
-                <input oninput="saveMemory()" spellcheck="false" id="userEmail" type="text">
+            <img onclick='windowClose ()' src='./files/image/menu/close.png'
+                    style='cursor: pointer;'>
+
+            <div
+                style='margin-bottom: 30px;'>
+
+                <span
+                    style='display: block;'> Email do usuário: </span>
+                
+                    <input oninput='saveMemory()' spellcheck='false' id='userEmail' type='text'>
             </div>
 
-            <div style="margin-bottom: 30px;">
-                <span style="display: block;"> Senha: </span>
-                <input id="userPass" type="password">
+            <div
+                style='margin-bottom: 30px;'>
+                
+                <span
+                    style='display: block;'> Senha: </span>
+                
+                <input id='userPass' type='password'>
             </div>
 
-            <div onclick="authUser()" id="btn-login"> Sign In </div>
+            <div onclick='authUser()' id='btn-login'> Sign In </div>
         </form>
         <!-- #endregion -->
+
         <!-- #region form Add-Prod -->
-        <form id="add-prod" style="display: none;">
-            <img onclick="formClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+        <form id='add-prod'
+                style='display: none;'>
+
+            <img onclick='windowClose ()' src='./files/image/menu/close.png'
+                    style='cursor: pointer;'>
 
             <label id='lbl-addProd'> Adicionar novo item </label>
 
-            <div style="margin-bottom: 30px;">
-                <span style="display: block;"> Nome do Item: </span>
-                <input type="text" id="name">
+            <div
+                style='margin-bottom: 30px;'>
+                
+                <span
+                    style='display: block;'> Nome do Item: </span>
+                
+                    <input type='text' id='name'>
             </div>
 
-            <div style="margin-bottom: 30px;">
-                <span style="display: block;"> Item / UPC: </span>
-                <input type="text" id="cod">
+            <div
+                style='margin-bottom: 30px;'>
+                
+                <span
+                    style='display: block;'> Item / UPC: </span>
+                
+                    <input type='text' id='cod'>
             </div>
 
-            <div onclick="addItem()" id="btn-prod"> Cadastrar </div>
+            <div onclick='addItem()' id='btn-prod'> Cadastrar </div>
         </form>
         <!-- #endregion -->
 
-        <main id="main-cont">
-            <div class="format div-calc">
+        <main id='main-cont'>
+            <div class='format div-calc'>
                 <label id='lbl-lastDigit'> ÚLTIMO DÍGITO </label>
                 <div>
-                    <input onkeypress="return char(event)" class="inp input-calc" type="tel" minlength="6"
-                        spellcheck="false" style="text-align: center; padding-left: 35px;">
+                    <input onkeypress='return char(event)' class='inp input-calc' type='tel' minlength='6'
+                        spellcheck='false' style='text-align: center; padding-left: 35px;'>
 
-                    <img onclick="calc()" id="img-arrow" src="./files/image/inp/arrow-right.png">
+                    <img onclick='calc()' id='img-arrow' src='./files/image/inp/arrow-right.png'>
                 </div>
 
-                <div id="div-result"> </div>
+                <div id='div-result'> </div>
             </div>
-            
-            <div class="format div-search">
+
+            <div class='format div-search'>
                 <label id='lbl-list'> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
-                    <input oninput="saveMemory ()" class="inp input-search" type="search" list="itens"
-                        spellcheck="false" style="font-size: 14px; padding-left: 15px;">
-                    <datalist id="itens"> </datalist>
+                    <input oninput='saveMemory ()' class='inp input-search' type='search' list='itens'
+                        spellcheck='false' style='font-size: 14px; padding-left: 15px;'>
+                    <datalist id='itens'> </datalist>
 
-                    <img onclick="getcodItem()" id="img-search" src="./files/image/inp/search.png" >
+                    <img onclick='getcodItem()' id='img-search' src='./files/image/inp/search.png'>
                 </div>
             </div>
         </main>
 
         <footer>
-            <div id="copyright"> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </div>
+            <div id='copyright'> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </div>
         </footer>
     </div>
     <!--#region firebase -->
-        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase.js'></script>
+    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js'></script>
     <!--#endregion-->
     <!--#region javaScript-->
-            <script src="./js/scripts.js"> </script>
-            <script src="./js/db.js"></script>
+    <script src='./js/db.js'></script>
+    <script src='./js/scripts.js'> </script>
     <!--#endregion-->
 </body>
 

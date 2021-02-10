@@ -40,7 +40,7 @@ window.addEventListener("load", ()=> {
         lblList.style.color = "var(--" + theme + "-color-font-label)";
 
     let lbladdprod = document.getElementById("lbl-addProd");
-        lbladdprod.style.color = "rgb(224, 224, 224)";
+        lbladdprod.style.color = "rgb(168, 168, 168)";
 
     let input = document.getElementsByClassName("inp");
     input[0].style.background = "var(--" + theme + "-inp-bg)";
