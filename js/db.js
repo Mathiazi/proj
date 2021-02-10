@@ -118,33 +118,19 @@ function addItem() {
     if (name != '' &&
         item != '') {
 
-        db.collection('itens').doc('SfYOawlpa1ti6SQGVH3L')
+        db.collection('itens')
+            .doc('SfYOawlpa1ti6SQGVH3L')
             .update({
-                'itens-sams': firebase.firestore.FieldValue.arrayUnion(
-                    {
+                'itens-sams': firebase.firestore.FieldValue.arrayUnion({
                         name: name,
                         cod: item
                     }
                 )
             })
-            .then(
-                alert('Item Sams adicionado com sucesso!'),
-                setTimeout(()=> {
-                    
-                    auth.signOut()
-                        .then(
-                            alert('O administrador foi deslogado automáticamente.'),
-                            document.location.reload()
-                        )
-                        .catch(error => {
-                            alert(error);
-                        });
-
-                }, 2000)
-            )
+            .then(alert('O item foi criado com sucesso!'))
             .catch(error => {
                 alert(error);
-            });
+            })
     }
     else
         alert('Preencha todos os campos antes de continuar.');
