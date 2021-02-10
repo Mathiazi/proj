@@ -128,22 +128,24 @@ function addItem() {
                 )
             })
             .then(
-
                 alert('Item Sams adicionado com sucesso!'),
+                setTimeout(()=> {
+                    
+                    auth.signOut()
+                        .then(
+                            alert('O administrador foi deslogado automáticamente.'),
+                            document.location.reload()
+                        )
+                        .catch(error => {
+                            alert(error);
+                        });
 
-                auth.signOut()
-                    .then(
-                        alert('O usuário foi deslogado.'),
-                        document.location.reload()
-                    )
-                    .catch(error => {
-                        alert(error);
-                    })
+                }, 2000)
             )
             .catch(error => {
                 alert(error);
-            })
+            });
     }
     else
-        alert('Preencha todos os campos antes de continuar.')
+        alert('Preencha todos os campos antes de continuar.');
 }

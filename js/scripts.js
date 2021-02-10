@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$("load", ()=> {
     let item = document.getElementsByClassName("input-search")[0];
     item.value = localStorage.getItem("item");
 
