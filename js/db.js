@@ -14,9 +14,18 @@ let auth = firebase.auth();
 let db = firebase.firestore();
 
 //#region lista de itens
+function order(a, b) {
+
+    if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
+    if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+
+    return 0;
+}
 db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
     .then(doc => {
-        let getItem = doc.data()['itens-sams'];
+
+        let getItem = doc.data()['itens-sams'].sort(order);
+
         for (let index in getItem) {
             let getItemName = getItem[index].name;
             let opt = document.createElement('option');
@@ -119,7 +128,17 @@ function addItem() {
                 )
             })
             .then(
-                alert('Item Sams adicionado com sucesso!')
+
+                alert('Item Sams adicionado com sucesso!'),
+
+                auth.signOut()
+                    .then(
+                        alert('O usuário foi deslogado.'),
+                        document.location.reload()
+                    )
+                    .catch(error => {
+                        alert(error);
+                    })
             )
             .catch(error => {
                 alert(error);

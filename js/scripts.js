@@ -1,18 +1,18 @@
 window.addEventListener("load", () => {
     let item = document.getElementsByClassName("input-search")[0];
     item.value = localStorage.getItem("item");
-    
+
     let userEmail = document.getElementById('userEmail');
     userEmail.value = localStorage.getItem("email");
 });
 
 let statusMenu = true;
-function menu () {
+function menu() {
 
     let menu = document.getElementById("menu-mobile").style;
     let ul = document.getElementById("ul-mobile").style;
     let icon = document.getElementById("icon-menu-mobile");
-    
+
     if (statusMenu == true) {
         icon.src = "./files/image/menu/close.png";
 
@@ -32,7 +32,7 @@ function menu () {
         }, 600);
     }
 
-    statusMenu =! statusMenu;
+    statusMenu = !statusMenu;
 }
 
 function calc() {

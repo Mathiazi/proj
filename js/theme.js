@@ -1,4 +1,4 @@
-window.addEventListener("load", ()=> {
+window.addEventListener("load", () => {
     let theme = localStorage.getItem("status");
     if (theme == null)
         theme = "light";
@@ -34,13 +34,13 @@ window.addEventListener("load", ()=> {
     divcont.style.background = "var(--" + theme + "-divcont-bg)";
 
     let lblLastDigit = document.getElementById("lbl-lastDigit");
-        lblLastDigit.style.color = "var(--" + theme + "-color-font-label)";
+    lblLastDigit.style.color = "var(--" + theme + "-color-font-label)";
 
     let lblList = document.getElementById('lbl-list');
-        lblList.style.color = "var(--" + theme + "-color-font-label)";
+    lblList.style.color = "var(--" + theme + "-color-font-label)";
 
     let lbladdprod = document.getElementById("lbl-addProd");
-        lbladdprod.style.color = "rgb(168, 168, 168)";
+    lbladdprod.style.color = "rgb(168, 168, 168)";
 
     let input = document.getElementsByClassName("inp");
     input[0].style.background = "var(--" + theme + "-inp-bg)";
@@ -80,7 +80,7 @@ function theme() {
         mode = "light";
     else
         mode = "dark";
-    
+
     localStorage.setItem("status", mode);
     document.location.reload();
 }
