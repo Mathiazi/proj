@@ -4,25 +4,31 @@ window.addEventListener("load", () => {
     
     let userEmail = document.getElementById('userEmail');
     userEmail.value = localStorage.getItem("email");
-}
-);
+});
 let Status = true;
 function menuMobile() {
-    let menu = document.getElementById("menu-mobile").style;
-    let ulMob = document.getElementById("ul-mobile").style;
+    let menu = document.getElementById("menu-mobile");
+    let ulMob = document.getElementById("ul-mobile");
     let icon = document.getElementById("icon-menu-mobile");
     if (Status) {
-        menu.display = "block";
-        setTimeout(() => { ulMob.display = "block"; }, 500);
+        menu.style.display = "block";
+
+        setTimeout(() => {
+            ulMob.style.display = "block";
+        }, 500);
+        
         icon.src = "./files/image/menu/close.png";
     }
     else {
-        ulMob.display = "none";  
-        setTimeout(() => { menu.display = "none"; }, 400);
+        ulMob.style.display = "none";
+
+        setTimeout(() => {
+            menu.style.display = "none";
+        }, 400);
+
         icon.src = "./files/image/menu/menu.png";
     }
     Status = !Status;
-    authClose();
 }
 function calc() {
     const cod = document.getElementsByClassName("input-calc")[0].value;

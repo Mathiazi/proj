@@ -48,7 +48,7 @@ function getcodItem() {
 //#endregion
 
 let auth = firebase.auth();
-function authClose() {
+function formClose() {
     setTimeout(() => {
         let form = document.getElementById("form-login");
         form.style.display = "none";
@@ -57,20 +57,38 @@ function authClose() {
         form.style.display = "none";
     }, 100);
 }
-function authAdm() {
-    menuMobile();
+function formLogIn() {
+
     setTimeout(() => {
-        let form = document.getElementById("form-login");
-        form.style.display = "block";
-    }, 1000);
+        let menu = document.getElementById("menu-mobile");
+        menu.style.display = 'none';
+    }, 200);
+
+    if (auth.currentUser != null) {
+        setTimeout(() => {
+            let form = document.getElementById("add-prod");
+            form.style.display = "block";
+        }, 1000)
+    }
+    else {
+        setTimeout(() => {
+            let form = document.getElementById("form-login");
+            form.style.display = "block";
+        }, 1000);
+    }
 }
+
 function authUser() {
     let userEmail = document.getElementById('userEmail').value;
     let userPass = document.getElementById('userPass').value;
+
     auth.signInWithEmailAndPassword(userEmail, userPass)
         .then(() => {
+            alert('logado com sucesso!');
+            
             let form = document.getElementById("form-login");
             form.style.display = "none";
+
             setTimeout(() => {
                 form = document.getElementById("add-prod");
                 form.style.display = "block";
@@ -81,16 +99,28 @@ function authUser() {
         });
 }
 function addItem() {
-    db.collection('itens').doc('teste')
-        .update(
-            {
-                item: firebase.firestore.FieldValue.arrayUnion("lucas")
-            }
-        )
-        .then(item => {
-            alert(item);
+    let name = document.getElementById('name').value;
+    let item = document.getElementById('cod').value;
+
+    if ( name != '' &&
+         item != '' ) {
+
+        db.collection('itens').doc('SfYOawlpa1ti6SQGVH3L')
+        .update({
+            itens: firebase.firestore.FieldValue.arrayUnion(
+                {
+                    name: name,
+                    cod: item
+                }
+            )
         })
+        .then(
+            alert('Item Sams adicionado com sucesso!')
+        )
         .catch(error => {
             alert(error);
         })
+    }
+    else 
+        alert('Preencha todos os campos antes de continuar.')
 }

@@ -3,22 +3,20 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <title> itemList Sams Club </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--#region styleSheet-->
-
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/footer.css">
     <!--#endregion-->
-
+    <!-- #region javaScript -->
+        <script src="./js/theme.js"> </script>
+    <!-- #endregion -->
 </head>
 
 <body>
@@ -40,7 +38,7 @@
         <div id="menu-mobile" style="display: none;">
             <ul id="ul-mobile" style="display: none;">
                 <span>ADM</span>
-                <li onclick="authAdm()" id="adm-mob"> Administrador </li>
+                <li onclick="formLogIn()" id="adm-mob"> Administrador </li>
 
                 <span>Tema</span>
                 <li onclick="theme()" class='theme-name' id="theme-mob"> </li>
@@ -61,8 +59,10 @@
     </header>
 
     <div id="div-cont">
+
+       <!-- #region form Login -->
         <form id="form-login" style="display: none;">
-            <img onclick="authClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+            <img onclick="formClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
 
             <div style="margin-bottom: 30px;">
                 <span style="display: block;"> Email do usuário: </span>
@@ -76,26 +76,30 @@
 
             <div onclick="authUser()" id="btn-login"> Sign In </div>
         </form>
-
+        <!-- #endregion -->
+        <!-- #region form Add-Prod -->
         <form id="add-prod" style="display: none;">
-            <img onclick="authClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+            <img onclick="formClose()" src="./files/image/menu/close.png" style="cursor: pointer;">
+
+            <label id='lbl-addProd'> Adicionar novo item </label>
 
             <div style="margin-bottom: 30px;">
-                <span style="display: block;"> Nome do produto: </span>
+                <span style="display: block;"> Nome do Item: </span>
                 <input type="text" id="name">
             </div>
 
             <div style="margin-bottom: 30px;">
-                <span style="display: block;"> código do item: </span>
+                <span style="display: block;"> Item / UPC: </span>
                 <input type="text" id="cod">
             </div>
 
             <div onclick="addItem()" id="btn-prod"> Cadastrar </div>
         </form>
+        <!-- #endregion -->
 
         <main id="main-cont">
             <div class="format div-calc">
-                <label> ÚLTIMO DÍGITO </label>
+                <label id='lbl-lastDigit'> ÚLTIMO DÍGITO </label>
                 <div>
                     <input onkeypress="return char(event)" class="inp input-calc" type="tel" minlength="6"
                         spellcheck="false" style="text-align: center; padding-left: 35px;">
@@ -107,7 +111,7 @@
             </div>
             
             <div class="format div-search">
-                <label> ITEM PRÉ-DEFINIDO </label>
+                <label id='lbl-list'> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
                     <input oninput="saveMemory ()" class="inp input-search" type="search" list="itens"
@@ -123,15 +127,14 @@
             <div id="copyright"> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </div>
         </footer>
     </div>
-        <!--#region firebase -->
-            <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
-        <!--#endregion-->
-        <!--#region javaScript-->
-            <script src="./js/theme.js"> </script>
+    <!--#region firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <!--#endregion-->
+    <!--#region javaScript-->
             <script src="./js/scripts.js"> </script>
             <script src="./js/db.js"></script>
-        <!--#endregion-->
+    <!--#endregion-->
 </body>
 
 </html>

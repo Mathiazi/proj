@@ -1,5 +1,9 @@
 body { min-width: 350px; }
-
+label {
+    font-size: 30px;
+    margin-bottom: 55px;
+    font-weight: bolder;
+}
 /* #region form login*/
 #div-cont #form-login,
 #div-cont #add-prod {
@@ -11,7 +15,7 @@ body { min-width: 350px; }
     width: 99%;
     max-width: 500px;
     min-width: 350px;
-    height: 250px;
+    height: 270px;
 
     text-align: center;
 
@@ -27,6 +31,10 @@ body { min-width: 350px; }
         right: 7px;
         width: 30px;
     }
+    #lbl-addProd {
+        font-size: 15px;
+        font-weight: normal;
+    }
     #form-login div span,
     #add-prod div span {
         margin: 10px 0;
@@ -41,6 +49,7 @@ body { min-width: 350px; }
         height: 30px;
         font-size: 16px;
         color: rgb(133, 133, 133);
+        background: rgb(219, 219, 219);
         border-radius: 5px;
         padding-left: 10px;
     }
@@ -70,11 +79,6 @@ body #div-cont {
         justify-content: center;
         align-content: center;
         height: 650px;
-    }
-    label {
-        font-size: 30px;
-        margin-bottom: 55px;
-        font-weight: bolder;
     }
     #main-cont .format {
         display: flex;

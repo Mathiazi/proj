@@ -33,9 +33,14 @@ window.addEventListener("load", ()=> {
     let divcont = document.getElementById("div-cont");
     divcont.style.background = "var(--" + theme + "-divcont-bg)";
 
-    let label = document.getElementsByTagName("label");
-    label[0].style.color = "var(--" + theme + "-color-font-label)";
-    label[1].style.color = "var(--" + theme + "-color-font-label)";
+    let lblLastDigit = document.getElementById("lbl-lastDigit");
+        lblLastDigit.style.color = "var(--" + theme + "-color-font-label)";
+
+    let lblList = document.getElementById('lbl-list');
+        lblList.style.color = "var(--" + theme + "-color-font-label)";
+
+    let lbladdprod = document.getElementById("lbl-addProd");
+        lbladdprod.style.color = "rgb(224, 224, 224)";
 
     let input = document.getElementsByClassName("inp");
     input[0].style.background = "var(--" + theme + "-inp-bg)";
