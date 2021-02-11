@@ -2,7 +2,7 @@ $("load", ()=> {
     let item = document.getElementsByClassName("input-search")[0];
     item.value = localStorage.getItem("item");
 
-    let userEmail = document.getElementById('userEmail');
+    let userEmail = document.getElementById('email');
     userEmail.value = localStorage.getItem("email");
 });
 
@@ -76,7 +76,7 @@ function saveMemory() {
     let item = document.getElementsByClassName("input-search")[0].value;
     localStorage.setItem("item", item);
 
-    let userEmail = document.getElementById('userEmail').value;
+    let userEmail = document.getElementById('email').value;
     localStorage.setItem("email", userEmail);
 }
 

@@ -12,20 +12,17 @@ firebase.initializeApp(firebaseConfig);
 
 let auth = firebase.auth();
 let db = firebase.firestore();
+let user = firebase.auth().currentUser;
 
 //#region lista de itens
 function order(a, b) {
-
     if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
     if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-
-    return 0;
+    return false;
 }
 db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
     .then(doc => {
-
         let getItem = doc.data()['itens-sams'].sort(order);
-
         for (let index in getItem) {
             let getItemName = getItem[index].name;
             let opt = document.createElement('option');
@@ -59,79 +56,85 @@ function getcodItem() {
 //#endregion
 
 function windowClose() {
+    $('.lbl-status').text('Finalizando ...');
 
     setTimeout(() => {
-        document.getElementById("form-login").style.display = "none";
-        document.getElementById("add-prod").style.display = "none";
-        document.getElementById("icon-menu-mobile").style.display = 'block';
-    }, 100);
+        $('.form').css({ 'display': 'none' });
+        $('#icon-menu-mobile').css({ 'display': 'block' });
+    }, 1200);
 }
 
 function formLogIn() {
-
+    $('.lbl-status').text('Esperando login do usuário ...');
     menu();
-
-    document.getElementById("icon-menu-mobile").style.display = 'none';
-
-    let logged = auth.currentUser;
-
-    if (logged != null) {
-
-        setTimeout(() => {
-            document.getElementById("add-prod").style.display = "block";
-        }, 1000)
-    }
-    else {
-
-        setTimeout(() => {
-            document.getElementById("form-login").style.display = "block";
-        }, 1000);
-    }
+    $('#icon-menu-mobile').css({ 'display': 'none' });
+    setTimeout(() => {
+        if (user)
+            $('#add-prod').css({ 'display': 'block' });
+        else
+            $('#form-login').css({ 'display': 'block' });
+    }, 1000);
 }
 
 function authUser() {
 
-    let userEmail = document.getElementById('userEmail').value;
-    let userPass = document.getElementById('userPass').value;
+    let email = $('#email').val();
+    let pass = $('#pass').val();
 
-    auth.signInWithEmailAndPassword(userEmail, userPass)
-        .then(() => {
+    if (email != '' && pass != '') {
 
-            alert('logado com sucesso!');
+        auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
+            .then(() => {
 
-            document.getElementById("form-login").style.display = "none";
+                auth.signInWithEmailAndPassword(email, pass)
+                    .then(() => {
+                        $('.lbl-status').text('Logado com sucesso!');
 
-            setTimeout(() => {
-                document.getElementById("add-prod").style.display = "block";
-            }, 1000)
-        })
-        .catch(error => {
-            alert(error);
-        });
+                        setTimeout(() => {
+                            $('#form-login').css({ 'display': 'none' });
+                        }, 1200);
+
+                        setTimeout(() => {
+                            $('.lbl-status').text('Adicione um novo item ...');
+                            $('#add-prod').css({ 'display': 'block' });
+                        }, 1200);
+                    })
+                    .catch(error => {
+                        alert(error);
+                    });
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+    else
+        $('.lbl-status').text('Preencha todos os campos ...');
 }
 
 function addItem() {
 
-    let name = document.getElementById('name').value;
-    let item = document.getElementById('cod').value;
+    let name = $('#name').val();
+    let cod = $('#cod').val();
 
-    if (name != '' &&
-        item != '') {
-
+    if (name != '' && cod != '') {
         db.collection('itens')
             .doc('SfYOawlpa1ti6SQGVH3L')
             .update({
                 'itens-sams': firebase.firestore.FieldValue.arrayUnion({
-                        name: name,
-                        cod: item
-                    }
-                )
+                    name: name,
+                    cod: cod
+                })
             })
-            .then(alert('O item foi criado com sucesso!'))
+            .then(() => {
+                $('.lbl-status').text('item criado com sucesso!');
+                setTimeout(() => {
+                    windowClose();
+                }, 2000);
+            })
             .catch(error => {
                 alert(error);
-            })
+            });
     }
     else
-        alert('Preencha todos os campos antes de continuar.');
+        $('.lbl-status').text('Preencha todos os campos ...');
 }

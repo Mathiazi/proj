@@ -83,7 +83,7 @@
                 <span
                     style='display: block;'> Email do usuário: </span>
 
-                <input oninput='saveMemory()' spellcheck='false' id='userEmail' type='text'>
+                <input oninput='saveMemory()' spellcheck='false' id='email' type='text'>
             </div>
 
             <div
@@ -92,8 +92,14 @@
                 <span
                     style='display: block;'> Senha: </span>
 
-                <input id='userPass' type='password'>
+                <input id='pass' type='password'>
             </div>
+
+            <label class='status'
+                    style="float: left;">STATUS:</label>
+                    
+            <label class='lbl-status'
+                    style="float: left;">...</label>
 
             <div onclick='authUser()' id='btn-login'> Sign In </div>
         </form>
@@ -117,7 +123,8 @@
                 <input type='text' id='name'>
             </div>
 
-            <div style='margin-bottom: 30px;'>
+            <div
+                style='margin-bottom: 30px;'>
 
                 <span
                     style='display: block;'> Item / UPC: </span>
@@ -125,6 +132,12 @@
                 <input type='text' id='cod'>
             </div>
 
+            <label class='status'
+                    style="float: left;">STATUS:</label>
+
+            <label class='lbl-status'
+                    style="float: left;"></label>
+            
             <div onclick='addItem()' id='btn-prod'> Cadastrar </div>
         </form>
         <!-- #endregion -->

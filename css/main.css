@@ -15,7 +15,6 @@ label {
     width: 95%;
     max-width: 500px;
     min-width: 350px;
-    height: 270px;
 
     text-align: center;
 
@@ -24,6 +23,8 @@ label {
 
     border-radius: 0 0 10px 10px;
 }
+    #form-login {height: 245px;}
+    #add-prod {height: 265px;}
     #form-login img,
     #add-prod img {
         position: absolute;
@@ -37,25 +38,36 @@ label {
     }
     #form-login div span,
     #add-prod div span {
-        margin: 10px 0;
+        margin: 7px 0;
         text-align: left;
         font-size: 13px;
-        color: rgb(168, 168, 168);
+        color: rgb(223, 223, 223);
         cursor: default;
     }
     #form-login div input,
     #add-prod div input {
         width: 100%;
         height: 30px;
-        font-size: 16px;
-        color: rgb(133, 133, 133);
-        background: rgb(226, 226, 226);
+        font-size: 15px;
+        color: rgb(128, 128, 128);
+        background: rgb(235, 235, 235);
         border-radius: 5px;
         padding-left: 10px;
+    }
+    .status,
+    .lbl-status {
+        font-size: 13px;
+        color: rgb(255, 125, 151);
+        font-weight: normal;
+    }
+    .lbl-status {
+        margin-left: 10px;
+        color: rgb(223, 223, 223);
     }
     #form-login #btn-login,
     #add-prod #btn-prod {
         float: right;
+        margin-top: 10px;
         padding: 7px;
         width: 80px;
         text-align: center;
