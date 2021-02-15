@@ -5,7 +5,7 @@ linguagens:
     .css
 
     .javaScript
-        .jQuerry
+        .jQuery
 
 backend:
     
