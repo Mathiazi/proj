@@ -4,54 +4,76 @@
 
 <head>
     <meta charset='UTF-8'>
+    
     <title> itemList Sams Club </title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <!--#region styleSheet-->
+    <!-- #region -->
     <link rel='stylesheet' href='./css/reset.css'>
     <link rel='stylesheet' href='./css/header.css'>
     <link rel='stylesheet' href='./css/main.css'>
     <link rel='stylesheet' href='./css/footer.css'>
-    <!--#endregion-->
-    <!--#region jQuerry-->
+
+    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase.js'></script>
+    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js'></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--#endregion-->
-    <!--#region javaScript-->
+    
     <script src='./js/theme.js'> </script>
+    <script src='./js/scripts.js'> </script>
+    <script src='./js/db.js'></script>
     <!-- #endregion -->
+
 </head>
 
 <body>
-
     <header>
+       
         <div id='menu-desktop'>
-            <img onclick='menu ()' id='icon-menu-mobile' src='./files/image/menu/menu.png'>
-
-            <img onclick='document.location.reload ()' id='logo' src='./files/image/logo.png'>
-
+            
+            <img id='icon-menu-mobile'
+                 onclick='menu()'
+                 src='./files/image/menu/menu.png'>
+            
+            <img id='logo'
+                 onclick='document.location.reload()'
+                 src='./files/image/logo.png'>
+            
             <!-- #region menu-desktop -->
             <nav id='nav-desktop'>
                 <ul>
-                    <li onclick='theme()' id='theme-desktop' class='theme-name'> </li>
+                    <li id='theme-desktop'
+                        class='theme-name'
+                        onclick='theme()'> </li>
 
-                    <li onclick='clearMemory()' id='cleanAll-desktop'> Limpar Dados </li>
+                    <li id='cleanAll-desktop'
+                        onclick='clearMemory()' > Limpar Dados </li>
                 </ul>
             </nav>
             <!-- #endregion -->
-
+        
         </div>
 
         <!-- #region menu-mobile -->
-        <div id='menu-mobile' style='display: none;'>
-            <ul id='ul-mobile' style='display: none;'>
+        <div style='display: none;'
+             id='menu-mobile'>
+            
+            <ul style='display: none;'
+                id='ul-mobile'>
+
                 <span>ADM</span>
-                <li onclick='formLogIn()' id='adm-mob'> Administrador </li>
+
+                <li id='adm-mob'> Administrador </li>
 
                 <span>Tema</span>
-                <li onclick='theme()' class='theme-name' id='theme-mob'> </li>
+
+                <li id='theme-mob'
+                    class='theme-name'
+                    onclick='theme()'> </li>
 
                 <span>Contato</span>
+
                 <li id='sendEmail-mob'>
                     <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a>
                 </li>
@@ -61,8 +83,11 @@
                 </li>
 
                 <span>Dados</span>
-                <li onclick='clearMemory()' id='cleanAll-mob'> Limpar Dados </li>
+
+                <li id='cleanAll-mob'
+                    onclick='clearMemory()'> Limpar Dados </li>
             </ul>
+
         </div>
         <!-- #endregion -->
 
@@ -71,116 +96,143 @@
     <div id='div-cont'>
 
         <!-- #region form Login -->
-        <form class='form' id='form-login'
-                style='display: none;'>
+        
+        <form style='display: none;'
+              id='form-login'
+              class='form' >
 
-            <img onclick='windowClose ()' src='./files/image/menu/close.png'
-                    style='cursor: pointer;'>
+            <img style='cursor: pointer;'
+                 class='close-form'
+                 src='./files/image/menu/close.png' >
 
-            <div
-                style='margin-bottom: 30px;'>
+            <div style='margin-bottom: 30px;'>
 
-                <span
-                    style='display: block;'> Email do usuário: </span>
+                <span style='display: block;'> Email do usuário: </span>
 
-                <input oninput='saveMemory()' spellcheck='false' id='email' type='text'>
+                <input id='email'
+                       oninput='saveMemory()'
+                       type='text'
+                       spellcheck='false'  >
             </div>
 
-            <div
-                style='margin-bottom: 30px;'>
+            <div style='margin-bottom: 30px;'>
 
-                <span
-                    style='display: block;'> Senha: </span>
+                <span style='display: block;'> Senha: </span>
 
-                <input id='pass' type='password'>
+                <input id='pass'
+                       type='password'>
             </div>
 
-            <label class='status'
-                    style="float: left;">STATUS:</label>
-                    
-            <label class='lbl-status'
-                    style="float: left;">...</label>
+            <label style="float: left;"
+                   class='status'>STATUS:</label>
 
-            <div onclick='authUser()' id='btn-login'> Sign In </div>
+            <label style="float: left;"
+                   class='lbl-status'>...</label>
+
+            <div id='btn-login'> Sign In </div>
+
         </form>
+
         <!-- #endregion -->
 
         <!-- #region form Add-Prod -->
-        <form class='form' id='add-prod'
-                style='display: none;'>
+        
+        <form style='display: none;'
+              class='form'
+              id='add-prod'>
 
-            <img onclick='windowClose ()' src='./files/image/menu/close.png'
-                    style='cursor: pointer;'>
+            <img style='cursor: pointer;'
+                 class='close-form'
+                 src='./files/image/menu/close.png'>
 
             <label id='lbl-addProd'> Adicionar novo item </label>
 
-            <div
-                style='margin-bottom: 30px;'>
+            <div style='margin-bottom: 30px;'>
 
-                <span
-                    style='display: block;'> Nome do Item: </span>
+                <span style='display: block;'> Nome do Item: </span>
 
-                <input type='text' id='name'>
+                <input id='name'
+                       type='text'>
             </div>
 
-            <div
-                style='margin-bottom: 30px;'>
+            <div style='margin-bottom: 30px;'>
 
-                <span
-                    style='display: block;'> Item / UPC: </span>
+                <span style='display: block;'> Item / UPC: </span>
 
-                <input type='text' id='cod'>
+                <input id='cod'
+                       type='text'>
             </div>
 
-            <label class='status'
-                    style="float: left;">STATUS:</label>
+            <label style="float: left;"
+                   class='status'>STATUS:</label>
 
-            <label class='lbl-status'
-                    style="float: left;"></label>
-            
-            <div onclick='addItem()' id='btn-prod'> Cadastrar </div>
+            <label style="float: left;"
+                   class='lbl-status'></label>
+
+            <div id='btn-prod'> Cadastrar </div>
         </form>
+        
         <!-- #endregion -->
 
         <main id='main-cont'>
-            <div class='format div-calc'>
-                <label class='lbl' id='lbl-lastDigit'> ÚLTIMO DÍGITO </label>
-                <div>
-                    <input onkeypress='return char(event)' class='inp input-calc' type='tel' minlength='6' spellcheck='false'
-                            style='text-align: center; padding-left: 35px;'>
 
-                    <img onclick='calc()' class='inp-img' id='img-arrow' src='./files/image/inp/arrow-right.png'>
+            <!-- #region ultimo digito -->
+            <div class='format div-calc'>
+
+                <label id='lbl-lastDigit'
+                       class='lbl'> ÚLTIMO DÍGITO </label>
+
+                <div>
+                    <input style='text-align: center; padding-left: 35px;'
+                           class='inp input-calc'
+                           onkeypress='return char(event)'
+                           minlength='6'
+                           type='tel' 
+                           spellcheck='false'>
+
+                    <img id='img-arrow'
+                         class='inp-img'
+                         onclick='calc()'
+                         src='./files/image/inp/arrow-right.png'>
                 </div>
 
                 <div id='div-result'> </div>
-            </div>
 
+            </div>
+            <!-- #endregion -->
+
+            <!-- #region item pre-definido -->
             <div class='format div-search'>
-                <label class='lbl' id='lbl-list'> ITEM PRÉ-DEFINIDO </label>
+
+                <label id='lbl-list'
+                       class='lbl'> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
-                    <input oninput='saveMemory ()' class='inp input-search' type='search' list='itens' spellcheck='false'
-                            style='font-size: 14px; padding-left: 15px;'>
-                    
-                            <datalist id='itens'> </datalist>
+                    <input style='font-size: 14px; padding-left: 15px;'
+                           class='inp input-search'
+                           oninput='saveMemory ()'
+                           list='itens'
+                           type='search'
+                           spellcheck='false'>
 
-                    <img onclick='getcodItem()' class='inp-img' id='img-search' src='./files/image/inp/search.png'>
+                    <datalist id='itens'> </datalist>
+
+                    <img id='img-search'
+                         class='inp-img'
+                         src='./files/image/inp/search.png'>
                 </div>
+
             </div>
+            <!-- #endregion -->
+
         </main>
 
         <footer>
             <div id='copyright'> Copyright©2020-2021, Lucas Mathiazi. Todos os direitos reservados. </div>
         </footer>
+
     </div>
-    <!--#region firebase-->
-    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js'></script>
-    <!--#endregion-->
-    <!--#region javaScript-->
-    <script src='./js/db.js'></script>
-    <script src='./js/scripts.js'> </script>
-    <!--#endregion-->
+
 </body>
 
 </html>

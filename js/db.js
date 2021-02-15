@@ -8,43 +8,61 @@ var firebaseConfig = {
     appId: "1:849149979243:web:e3c0c7fdaca301f3265f2e",
     measurementId: "G-YGTEH12ZTR"
 };
+
 firebase.initializeApp(firebaseConfig);
 
 let auth = firebase.auth();
-let db = firebase.firestore();
-let user = firebase.auth().currentUser;
 
-//#region lista de itens
-function order(a, b) {
-    if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-    if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-    return false;
+let db = firebase.firestore();
+
+function orderList(a, b) {
+    if (a.name.toUpperCase() < b.name.toUpperCase())
+        return -1;
+    if (a.name.toUpperCase() > b.name.toUpperCase())
+        return 1;
 }
-db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
-    .then(doc => {
-        let getItem = doc.data()['itens-sams'].sort(order);
-        for (let index in getItem) {
-            let getItemName = getItem[index].name;
-            let opt = document.createElement('option');
-            opt.value = getItemName.toUpperCase();
-            document.getElementById("itens").appendChild(opt);
-        }
-    })
-    .catch(error => {
-        alert(error);
-    });
-//#endregion
-//#region codigo do item
-function getcodItem() {
-    let getValue = document.getElementsByClassName("input-search")[0].value;
-    let setValue = document.getElementsByClassName("input-calc")[0];
-    db.collection("itens").doc("SfYOawlpa1ti6SQGVH3L").get()
+$('load', () => {
+
+    db.collection("itens")
+        .doc("SfYOawlpa1ti6SQGVH3L")
+        .get()
         .then(doc => {
-            let getItem = doc.data()['itens-sams'];
+            let getItem = doc.data()['itens-sams'].sort(orderList);
+
             for (let index in getItem) {
+
+                let getItemName = getItem[index].name;
+
+                let opt = document.createElement('option');
+
+                opt.value = getItemName.toUpperCase();
+
+                $('#itens').append(opt);
+            }
+        })
+        .catch(error => {
+            alert(error);
+        });
+});
+$(document).on('click', '#img-search', () => {
+
+    let getVal = $('.input-search').val();
+
+    db.collection("itens")
+        .doc("SfYOawlpa1ti6SQGVH3L")
+        .get()
+        .then(doc => {
+
+            let getItem = doc.data()['itens-sams'];
+
+            for (let index in getItem) {
+
                 let i = getItem[index];
-                if (i.name.toUpperCase() == getValue.toUpperCase()) {
-                    setValue.value = i.cod;
+
+                if (i.name.toUpperCase() == getVal.toUpperCase()) {
+
+                    $('.input-calc').val(i.cod);
+
                     calc();
                 }
             }
@@ -52,31 +70,36 @@ function getcodItem() {
         .catch(error => {
             alert(error);
         });
-}
-//#endregion
+});
 
-function windowClose() {
+/* form login */
+$(document).on('click', '.close-form', () => {
+
     $('.lbl-status').text('Finalizando ...');
 
     setTimeout(() => {
         $('.form').css({ 'display': 'none' });
         $('#icon-menu-mobile').css({ 'display': 'block' });
-    }, 1200);
-}
-
-function formLogIn() {
-    $('.lbl-status').text('Esperando login do usuário ...');
+    }, 2000);
+});
+$(document).on('click', '#adm-mob', () => {
     menu();
+
     $('#icon-menu-mobile').css({ 'display': 'none' });
+
     setTimeout(() => {
+        let user = firebase.auth().currentUser;
+
         if (user)
             $('#add-prod').css({ 'display': 'block' });
-        else
+        else {
             $('#form-login').css({ 'display': 'block' });
-    }, 1000);
-}
+            $('.lbl-status').text('Aguardando usuário ...');
+        }
 
-function authUser() {
+    }, 1000);
+});
+$(document).on('click', '#btn-login', () => {
 
     let email = $('#email').val();
     let pass = $('#pass').val();
@@ -88,15 +111,17 @@ function authUser() {
 
                 auth.signInWithEmailAndPassword(email, pass)
                     .then(() => {
-                        $('.lbl-status').text('Logado com sucesso!');
+                        $('.lbl-status').text('Autenticado com sucesso!');
 
                         setTimeout(() => {
                             $('#form-login').css({ 'display': 'none' });
+
                         }, 1200);
 
                         setTimeout(() => {
-                            $('.lbl-status').text('Adicione um novo item ...');
                             $('#add-prod').css({ 'display': 'block' });
+                            $('.lbl-status').text('Adicione um novo item ...');
+
                         }, 1200);
                     })
                     .catch(error => {
@@ -109,9 +134,8 @@ function authUser() {
     }
     else
         $('.lbl-status').text('Preencha todos os campos ...');
-}
-
-function addItem() {
+});
+$(document).on('click', '#btn-prod', ()=> {
 
     let name = $('#name').val();
     let cod = $('#cod').val();
@@ -127,9 +151,8 @@ function addItem() {
             })
             .then(() => {
                 $('.lbl-status').text('item criado com sucesso!');
-                setTimeout(() => {
-                    windowClose();
-                }, 2000);
+
+                setTimeout(() => { document.location.reload(); }, 3000);
             })
             .catch(error => {
                 alert(error);
@@ -137,4 +160,4 @@ function addItem() {
     }
     else
         $('.lbl-status').text('Preencha todos os campos ...');
-}
+});

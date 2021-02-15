@@ -1,4 +1,4 @@
-$("load", ()=> {
+$('load', ()=> {
     let item = document.getElementsByClassName("input-search")[0];
     item.value = localStorage.getItem("item");
 
@@ -20,7 +20,7 @@ function menu() {
 
         setTimeout(() => {
             ul.display = "block";
-        }, 600);
+        }, 800);
     }
     else {
         icon.src = "./files/image/menu/menu.png";
@@ -29,7 +29,7 @@ function menu() {
 
         setTimeout(() => {
             menu.display = "none";
-        }, 600);
+        }, 800);
     }
 
     statusMenu = !statusMenu;

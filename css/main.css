@@ -23,8 +23,8 @@ label {
 
     border-radius: 0 0 10px 10px;
 }
-    #form-login {height: 245px;}
-    #add-prod {height: 265px;}
+    #form-login {height: 265px;}
+    #add-prod {height: 295px;}
     #form-login img,
     #add-prod img {
         position: absolute;
@@ -54,6 +54,7 @@ label {
         border-radius: 5px;
         padding-left: 10px;
     }
+
     .status,
     .lbl-status {
         font-size: 13px;
@@ -67,7 +68,7 @@ label {
     #form-login #btn-login,
     #add-prod #btn-prod {
         float: right;
-        margin-top: 10px;
+        margin-top: 30px;
         padding: 7px;
         width: 80px;
         text-align: center;
@@ -77,6 +78,9 @@ label {
         background: rgba(0, 0, 0, 0.418);
         cursor: pointer;
     }
+        #add-prod #btn-prod {
+            margin-top: 40px;
+        }
 /* #endregion */
 
 /* #region body */
