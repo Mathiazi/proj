@@ -1,11 +1,10 @@
-
     #menu-desktop {
         display: block;
         margin: auto;
         max-width: 1200px;
         min-width: 350px;
     }
-    #menu-desktop #icon-menu-mobile { display: none; }
+    #menu-desktop #icon-menu { display: none; }
     #menu-desktop #logo {
         height: 50px;
         cursor: pointer;
@@ -39,7 +38,7 @@
             display: block;
             margin: auto;
         }
-        #menu-desktop #icon-menu-mobile {
+        #menu-desktop #icon-menu {
             display: inline-block;
             position: absolute;
             top: 10px;
@@ -84,7 +83,7 @@
             font-size: 13px;
             cursor: pointer;
         }
-        #adm-mob::before {background-image: url("../files/image/menu/adm.png");}
+        #adm::before {background-image: url("../files/image/menu/adm.png");}
         #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
         #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
         #git-mob::before {background-image: url("../files/image/menu/git.png");}

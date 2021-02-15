@@ -21,7 +21,7 @@ function orderList(a, b) {
     if (a.name.toUpperCase() > b.name.toUpperCase())
         return 1;
 }
-$('load', () => {
+$(window).on('load', () => {
 
     db.collection("itens")
         .doc("SfYOawlpa1ti6SQGVH3L")
@@ -39,11 +39,13 @@ $('load', () => {
 
                 $('#itens').append(opt);
             }
+            setTimeout( () => { $('#preloader').fadeOut(1000); }, 1000)
         })
         .catch(error => {
             alert(error);
         });
 });
+
 $(document).on('click', '#img-search', () => {
 
     let getVal = $('.input-search').val();
@@ -78,14 +80,15 @@ $(document).on('click', '.close-form', () => {
     $('.lbl-status').text('Finalizando ...');
 
     setTimeout(() => {
-        $('.form').css({ 'display': 'none' });
-        $('#icon-menu-mobile').css({ 'display': 'block' });
+
+        document.location.reload();
+        
     }, 2000);
 });
-$(document).on('click', '#adm-mob', () => {
-    menu();
+$(document).on('click', '#adm', () => {
 
-    $('#icon-menu-mobile').css({ 'display': 'none' });
+    $('#icon-menu').css({ 'display': 'none' });
+    $('#menu-mobile').css({ 'display': 'none' });
 
     setTimeout(() => {
         let user = firebase.auth().currentUser;
@@ -96,7 +99,6 @@ $(document).on('click', '#adm-mob', () => {
             $('#form-login').css({ 'display': 'block' });
             $('.lbl-status').text('Aguardando usuário ...');
         }
-
     }, 1000);
 });
 $(document).on('click', '#btn-login', () => {
@@ -135,7 +137,7 @@ $(document).on('click', '#btn-login', () => {
     else
         $('.lbl-status').text('Preencha todos os campos ...');
 });
-$(document).on('click', '#btn-prod', ()=> {
+$(document).on('click', '#btn-prod', () => {
 
     let name = $('#name').val();
     let cod = $('#cod').val();

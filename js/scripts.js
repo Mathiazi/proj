@@ -1,42 +1,46 @@
-$('load', ()=> {
-    let item = document.getElementsByClassName("input-search")[0];
-    item.value = localStorage.getItem("item");
-
-    let userEmail = document.getElementById('email');
-    userEmail.value = localStorage.getItem("email");
+$(window).on('load', () => {
+    $('.input-search').val( localStorage.getItem('item') );
+    $('#email').val( localStorage.getItem('email') );
+    $('#pass').val( localStorage.getItem('pass') );
 });
 
-let statusMenu = true;
-function menu() {
+$(Document).on('click', '#logo', () => { document.location.reload(); });
 
-    let menu = document.getElementById("menu-mobile").style;
-    let ul = document.getElementById("ul-mobile").style;
-    let icon = document.getElementById("icon-menu-mobile");
+let statusMenu = true;
+$(document).on('click', '#icon-menu', () => {
+
+    let icon = $('#icon-menu');
+    let menu = $('#menu-mobile');
+    let ul = $('#ul-mobile');
 
     if (statusMenu == true) {
-        icon.src = "./files/image/menu/close.png";
-
-        menu.display = "block";
+        menu.css({ 'display': 'block' });
 
         setTimeout(() => {
-            ul.display = "block";
-        }, 800);
+
+            ul.css({ 'display': 'block' });
+
+        }, 500);
+
+        icon.attr('src', './files/image/menu/close.png');
     }
     else {
-        icon.src = "./files/image/menu/menu.png";
-
-        ul.display = "none";
+        ul.css({ 'display': 'none' });
 
         setTimeout(() => {
-            menu.display = "none";
-        }, 800);
+
+            menu.css({ 'display': 'none' });
+
+        }, 500);
+
+        icon.attr('src', './files/image/menu/menu.png');
     }
 
     statusMenu = !statusMenu;
-}
+});
 
 function calc() {
-    const cod = document.getElementsByClassName("input-calc")[0].value;
+    const cod = document.getElementsByClassName('input-calc')[0].value;
     const tamanho = cod.length;
     let digito;
     if (tamanho == 6) {
@@ -63,27 +67,25 @@ function calc() {
         digito = 10 - (digito % 10);
     }
     else if (tamanho == 13)
-        digito = "upc";
+        digito = 'upc';
     else
-        digito = "err";
+        digito = 'err';
 
     if (digito == 10)
         digito = 0;
-    document.getElementById("div-result").innerText = digito;
+    document.getElementById('div-result').innerText = digito;
 }
 
 function saveMemory() {
-    let item = document.getElementsByClassName("input-search")[0].value;
-    localStorage.setItem("item", item);
-
-    let userEmail = document.getElementById('email').value;
-    localStorage.setItem("email", userEmail);
+    localStorage.setItem('item', $('.input-search').val() );
+    localStorage.setItem('email', $('#email').val() );
+    localStorage.setItem('pass', $('#pass').val() );
 }
 
-function clearMemory() {
+$(document).on('click', '.clean', () =>  {
     localStorage.clear();
     document.location.reload();
-}
+});
 
 function char(e) {
     let charCode = e.charCode ? e.charCode : e.keyCode;

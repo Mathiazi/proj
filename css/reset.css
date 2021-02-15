@@ -2,6 +2,7 @@
     font-family: Roboto;
     src: url('../files/font/Roboto-Regular.ttf');
 }
+
 /* cores dos temas dark/light */
 :root {
     --dark-header-bg:rgb(66, 66, 66);
@@ -37,6 +38,10 @@
     --dark-color-font-copy: rgb(119, 119, 119);
     --light-color-font-copy: rgb(139, 139, 139);
 }
+a { color: rgb(255, 255, 255); }
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -50,4 +55,20 @@
     
     -webkit-tap-highlight-color: transparent;
 }
-a { color: rgb(255, 255, 255); }
+
+#preloader {
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+#img-preloader {
+    position:fixed;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 120px;
+}

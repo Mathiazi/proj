@@ -1,4 +1,4 @@
-$('load', () => {
+$(window).on('load', () => {
 
     let theme = localStorage.getItem("status");
     if (theme == null) theme = "light";
