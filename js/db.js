@@ -39,7 +39,7 @@ $(window).on('load', () => {
 
                 $('#itens').append(opt);
             }
-            setTimeout( () => { $('#preloader').fadeOut(1000); }, 1000)
+            setTimeout( () => { $('#preloader').fadeOut(900); }, 600)
         })
         .catch(error => {
             alert(error);
