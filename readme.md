@@ -1,4 +1,4 @@
-linguagens
+linguagens:
 
     .html
 
@@ -7,6 +7,6 @@ linguagens
     .javaScript
         .jQuery
 
-backend
+backend:
     
     .firebase

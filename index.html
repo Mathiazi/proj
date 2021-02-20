@@ -4,12 +4,11 @@
 
 <head>
     <meta charset='UTF-8'>
-    
-    <title> itemList Sams Club </title>
+
+    <title> projeto Sams </title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <!-- #region -->
     <link rel='stylesheet' href='./css/reset.css'>
     <link rel='stylesheet' href='./css/header.css'>
     <link rel='stylesheet' href='./css/main.css'>
@@ -19,218 +18,100 @@
     <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js'></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <script src='./js/theme.js'> </script>
-    <script src='./js/scripts.js'> </script>
-    <script src='./js/db.js'></script>
-    <!-- #endregion -->
-
 </head>
 
 <body>
-
-    <div id='preloader'>
-
-        <img id='img-preloader' src='./files/image/load.gif'>
-
-    </div>
+    <div id='preloader'> </div>
 
     <header>
-       
+        
         <div id='menu-desktop'>
             
-            <img id='icon-menu'
-                 src='./files/image/menu/menu.png'>
-            
-            <img id='logo'
-                 src='./files/image/logo.png'>
-            
-            <!-- #region menu-desktop -->
-            <nav id='nav-desktop'>
-                <ul>
-                    <li id='theme-desktop'
-                        class='theme-name'
-                        onclick='theme()'> </li>
+            <img id='icon-menu' src='./files/image/menu/menu.png'>
+            <img id='icon-logo' src='./files/image/logo.png'>
 
-                    <li id='cleanAll-desktop'
-                        class='clean'> Limpar Dados </li>
+            <nav id='nav-desktop'>
+                
+                <ul id='ul-desktop'>
+
+                    <li class='icon-adm' target='_blank'> <a href='./auth.html'>Painel ADM</a> </li>
+    
+                    <li class='icon-email'> <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a> </li>
+    
+                    <li class='icon-gitHub'> <a href='https://github.com/Mathiazi'>GitHub</a> </li>
+    
+                    <li class='icon-reset'> Resetar </li>
+
                 </ul>
+
             </nav>
-            <!-- #endregion -->
-        
+
         </div>
 
-        <!-- #region menu-mobile -->
-        <div style='display: none;'
-             id='menu-mobile'>
-            
-            <ul style='display: none;'
-                id='ul-mobile'>
+        <div style='display: none;' id='menu-mobile'>
 
-                <span>ADM</span>
+            <ul style='display: none;' id='ul-mobile'>
 
-                <li id='adm'> Administrador </li>
+                <span>Administrador</span>
 
-                <span>Tema</span>
+                <li class='icon-adm' target='_blank'> <a href='./auth.html'>Painel ADM</a> </li>
 
-                <li id='theme-mob'
-                    class='theme-name'
-                    onclick='theme()'> </li>
 
                 <span>Contato</span>
 
-                <li id='sendEmail-mob'>
-                    <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a>
-                </li>
+                <li class='icon-email'> <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a> </li>
 
-                <li id='git-mob'>
-                    <a href='https://github.com/Mathiazi'>GitHub</a>
-                </li>
+                <li class='icon-gitHub'> <a href='https://github.com/Mathiazi'>GitHub</a> </li>
+
 
                 <span>Dados</span>
 
-                <li id='cleanAll-mob'
-                    class='clean'> Limpar Dados </li>
+                <li class='icon-reset'> Resetar </li>
+
             </ul>
 
         </div>
-        <!-- #endregion -->
-
     </header>
 
     <div id='div-cont'>
 
-        <!-- #region form Login -->
-        
-        <form style='display: none;'
-              id='form-login'
-              class='form' >
-
-            <img style='cursor: pointer;'
-                 class='close-form'
-                 src='./files/image/menu/close.png' >
-
-            <div style='margin-bottom: 30px;'>
-
-                <span style='display: block;'> Email do usuário: </span>
-
-                <input id='email'
-                       oninput='saveMemory()'
-                       type='text'
-                       spellcheck='false'  >
-            </div>
-
-            <div style='margin-bottom: 30px;'>
-
-                <span style='display: block;'> Senha: </span>
-
-                <input id='pass'
-                       oninput='saveMemory()'
-                       type='password'>
-            </div>
-
-            <label style="float: left;"
-                   class='status'>STATUS:</label>
-
-            <label style="float: left;"
-                   class='lbl-status'>...</label>
-
-            <div id='btn-login'> Sign In </div>
-
-        </form>
-
-        <!-- #endregion -->
-
-        <!-- #region form Add-Prod -->
-        
-        <form style='display: none;'
-              class='form'
-              id='add-prod'>
-
-            <img style='cursor: pointer;'
-                 class='close-form'
-                 src='./files/image/menu/close.png'>
-
-            <label id='lbl-addProd'> Adicionar novo item </label>
-
-            <div style='margin-bottom: 30px;'>
-
-                <span style='display: block;'> Nome do Item: </span>
-
-                <input id='name'
-                       type='text'>
-            </div>
-
-            <div style='margin-bottom: 30px;'>
-
-                <span style='display: block;'> Item / UPC: </span>
-
-                <input id='cod'
-                       type='tel'>
-            </div>
-
-            <label style="float: left;"
-                   class='status'>STATUS:</label>
-
-            <label style="float: left;"
-                   class='lbl-status'></label>
-
-            <div id='btn-prod'> Cadastrar </div>
-        </form>
-        
-        <!-- #endregion -->
-
         <main id='main-cont'>
 
-            <!-- #region ultimo digito -->
-            <div class='format div-calc'>
-
-                <label id='lbl-lastDigit'
-                       class='lbl'> ÚLTIMO DÍGITO </label>
+            <div id='div-calc'>
+                <label> ÚLTIMO DÍGITO </label>
 
                 <div>
-                    <input style='text-align: center; padding-left: 35px;'
-                           class='inp input-calc'
-                           onkeypress='return char(event)'
-                           minlength='6'
-                           type='tel' 
-                           spellcheck='false'>
+                    <input
+                        style='text-align: center; padding-left: 35px;'
+                        id='input-calc'
+                        onkeypress='return char(event)'
+                        minlength='6'
+                        type='tel'
+                        spellcheck='false'>
 
-                    <img id='img-arrow'
-                         class='inp-img'
-                         onclick='calc()'
-                         src='./files/image/inp/arrow-right.png'>
+                    <img id='img-arrow' class='inp-img' onclick='calc()' src='./files/image/inp/arrow-right.png'>
                 </div>
-
+                
                 <div id='div-result'> </div>
-
             </div>
-            <!-- #endregion -->
 
-            <!-- #region item pre-definido -->
-            <div class='format div-search'>
-
-                <label id='lbl-list'
-                       class='lbl'> ITEM PRÉ-DEFINIDO </label>
+            <div id='div-search'>
+                <label> ITEM PRÉ-DEFINIDO </label>
 
                 <div>
-                    <input style='font-size: 14px; padding-left: 15px;'
-                           class='inp input-search'
-                           oninput='saveMemory ()'
-                           list='itens'
-                           type='search'
-                           spellcheck='false'>
+                    <input
+                        style='font-size: 14px; padding-left: 15px;'
+                        id='input-search'
+                        list='itens'
+                        type='search'
+                        spellcheck='false'>
 
                     <datalist id='itens'> </datalist>
 
-                    <img id='img-search'
-                         class='inp-img'
-                         src='./files/image/inp/search.png'>
+                    <img id='img-search' class='inp-img' src='./files/image/inp/search.png'>
                 </div>
 
             </div>
-            <!-- #endregion -->
-
         </main>
 
         <footer>
@@ -239,6 +120,8 @@
 
     </div>
 
+    <script src='./js/scripts.js'> </script>
+    <script src='./js/db.js'> </script>
 </body>
 
 </html>

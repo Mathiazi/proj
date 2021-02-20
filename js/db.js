@@ -1,4 +1,5 @@
 var firebaseConfig = {
+    
     apiKey: "AIzaSyAsM-wXNJZxezK8fgESTUT_Z68Z3sG9uW4",
     authDomain: "list-itens.firebaseapp.com",
     databaseURL: "https://list-itens-default-rtdb.firebaseio.com",
@@ -7,6 +8,7 @@ var firebaseConfig = {
     messagingSenderId: "849149979243",
     appId: "1:849149979243:web:e3c0c7fdaca301f3265f2e",
     measurementId: "G-YGTEH12ZTR"
+
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -16,91 +18,68 @@ let auth = firebase.auth();
 let db = firebase.firestore();
 
 function orderList(a, b) {
-    if (a.name.toUpperCase() < b.name.toUpperCase())
-        return -1;
-    if (a.name.toUpperCase() > b.name.toUpperCase())
-        return 1;
-}
-$(window).on('load', () => {
+    
+    if (a.name.toUpperCase() < b.name.toUpperCase()) {
 
-    db.collection("itens")
-        .doc("SfYOawlpa1ti6SQGVH3L")
+        return -1;
+    }
+
+    if (a.name.toUpperCase() > b.name.toUpperCase()) {
+        
+        return 1;
+    }
+}
+
+$(window).on('load', () => {
+    
+    db.collection('itens')
+        .doc('SfYOawlpa1ti6SQGVH3L')
         .get()
-        .then(doc => {
+        .then( doc => {
+            
             let getItem = doc.data()['itens-sams'].sort(orderList);
 
-            for (let index in getItem) {
+            for (let idx in getItem) {
 
-                let getItemName = getItem[index].name;
-
+                let getItemName = getItem[idx].name;
                 let opt = document.createElement('option');
 
                 opt.value = getItemName.toUpperCase();
 
                 $('#itens').append(opt);
             }
-            setTimeout( () => { $('#preloader').fadeOut(900); }, 600)
+
+            $('#preloader').fadeOut();
         })
-        .catch(error => {
-            alert(error);
-        });
+        .catch(error => { alert(error); });
 });
 
 $(document).on('click', '#img-search', () => {
 
-    let getVal = $('.input-search').val();
+    let getVal = $('#input-search').val();
 
-    db.collection("itens")
-        .doc("SfYOawlpa1ti6SQGVH3L")
+    db.collection('itens')
+        .doc('SfYOawlpa1ti6SQGVH3L')
         .get()
         .then(doc => {
 
             let getItem = doc.data()['itens-sams'];
 
-            for (let index in getItem) {
+            for (let idx in getItem) {
 
-                let i = getItem[index];
+                let i = getItem[idx];
 
                 if (i.name.toUpperCase() == getVal.toUpperCase()) {
 
-                    $('.input-calc').val(i.cod);
+                    $('#input-calc').val(i.cod);
 
-                    calc();
+                    calc ();
                 }
             }
         })
-        .catch(error => {
-            alert(error);
-        });
+        .catch(error => { alert(error); });
 });
 
-/* form login */
-$(document).on('click', '.close-form', () => {
-
-    $('.lbl-status').text('Finalizando ...');
-
-    setTimeout(() => {
-
-        document.location.reload();
-        
-    }, 2000);
-});
-$(document).on('click', '#adm', () => {
-
-    $('#icon-menu').css({ 'display': 'none' });
-    $('#menu-mobile').css({ 'display': 'none' });
-
-    setTimeout(() => {
-        let user = firebase.auth().currentUser;
-
-        if (user)
-            $('#add-prod').css({ 'display': 'block' });
-        else {
-            $('#form-login').css({ 'display': 'block' });
-            $('.lbl-status').text('Aguardando usuário ...');
-        }
-    }, 1000);
-});
 $(document).on('click', '#btn-login', () => {
 
     let email = $('#email').val();
@@ -113,33 +92,33 @@ $(document).on('click', '#btn-login', () => {
 
                 auth.signInWithEmailAndPassword(email, pass)
                     .then(() => {
-                        $('.lbl-status').text('Autenticado com sucesso!');
+
+                        $('#span-status-login').text('Status: Autenticado com sucesso!');
 
                         setTimeout(() => {
+                            
                             $('#form-login').css({ 'display': 'none' });
 
-                        }, 1200);
+                        }, 1500);
 
                         setTimeout(() => {
-                            $('#add-prod').css({ 'display': 'block' });
-                            $('.lbl-status').text('Adicione um novo item ...');
+                            
+                            $('#form-prod').css({ 'display': 'block' });
 
-                        }, 1200);
+                            $('#span-status-prod').text('Status: Adicione um novo item ...');
+
+                        }, 1500);
                     })
-                    .catch(error => {
-                        alert(error);
-                    });
+                    .catch(error => { alert(error); });
             })
-            .catch(error => {
-                alert(error);
-            });
-    }
-    else
-        $('.lbl-status').text('Preencha todos os campos ...');
+            .catch(error => { alert(error); });
+    } else
+        $('#span-status-login').text('Status: Preencha todos os campos ...');
 });
+
 $(document).on('click', '#btn-prod', () => {
 
-    let name = $('#name').val();
+    let name = $('#prod').val();
     let cod = $('#cod').val();
 
     if (name != '' && cod != '') {
@@ -152,14 +131,15 @@ $(document).on('click', '#btn-prod', () => {
                 })
             })
             .then(() => {
-                $('.lbl-status').text('item criado com sucesso!');
+                $('#span-status-prod').text('Status: Item cadastrado com sucesso!');
 
-                setTimeout(() => { document.location.reload(); }, 3000);
+                setTimeout(() => {
+
+                    window.history.back();
+                
+                }, 3000);
             })
-            .catch(error => {
-                alert(error);
-            });
-    }
-    else
-        $('.lbl-status').text('Preencha todos os campos ...');
+            .catch(error => { alert(error); });
+    } else
+        $('#span-status-prod').text('Status: Preencha todos os campos ...');
 });

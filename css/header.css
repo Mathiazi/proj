@@ -1,97 +1,128 @@
-    #menu-desktop {
+a,
+li {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+img { cursor: pointer; }
+
+header {
+
+    width: 100%;
+    min-width: 400px;
+    height: 50px;
+
+    background: rgb(89, 99, 145);
+}
+
+div#menu-desktop {
+
+    display: block;
+    margin: auto;
+    max-width: 1200px;
+}
+
+img#icon-menu { display: none; }
+
+img#icon-logo { height: 50px; }
+
+nav#nav-desktop { float: right; }
+
+ul#ul-desktop { margin-top: 20px; }
+
+ul#ul-desktop > li:first-child { margin-left: 0; }
+
+ul#ul-desktop > li {
+
+    display: inline;
+    margin: 0 13px;
+    padding: 2px;
+    font-size: 13px;
+}
+
+ul#ul-desktop > li:before {
+
+    display: inline-block;
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 700px) {
+
+    nav#nav-desktop { display: none; }
+
+    img#icon-logo {
         display: block;
         margin: auto;
-        max-width: 1200px;
-        min-width: 350px;
     }
-    #menu-desktop #icon-menu { display: none; }
-    #menu-desktop #logo {
-        height: 50px;
-        cursor: pointer;
+
+    img#icon-menu {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
     }
-    #menu-desktop #nav-desktop { float: right; }
-    #menu-desktop #nav-desktop ul { margin-top: 15px; }
-    #menu-desktop #nav-desktop ul li:first-child {margin-left: 0;}
-    #menu-desktop #nav-desktop ul li {
-        display: inline;
-        margin: 0 13px;
-        padding: 2px;
+
+    div#menu-mobile {
+        position: absolute;
+        top: 51px;
+        left: 0;
+        margin: auto;
+        width: 400px;
+        border-radius: 0 0 5px 5px;
         font-size: 13px;
-        cursor: pointer;
+
+        background: rgb(114, 126, 180);
     }
-    #menu-desktop #nav-desktop ul li::before {
+
+    ul#ul-mobile>span:first-child {  padding-top: 15px; }
+
+    ul#ul-mobile>span {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        cursor: default;
+
+        color: rgb(207, 206, 206);
+    }
+
+    ul#ul-mobile>li::before {
         display: inline-block;
         content: '';
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         vertical-align: middle;
-        margin: 0 3px 0 0;
+        margin-right: 10px;
         width: 25px;
         height: 25px;
     }
-    #theme-desktop::before {background-image: url("../files/image/menu/theme.png");}
-    #cleanAll-desktop::before {background-image: url("../files/image/menu/reset.png");}
-@media (max-width: 700px) {
-    header #menu-desktop #nav-desktop ul { display: none; }
-        #menu-desktop #logo {
-            display: block;
-            margin: auto;
-        }
-        #menu-desktop #icon-menu {
-            display: inline-block;
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            width: 30px;
-            cursor: pointer;
-        }
-    header #menu-mobile {
-        width: 95%;
-        max-width: 500px;
-        min-width: 350px;
-        height: 350px;
-        position: absolute;
-        top: 51px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 0 0 10px 10px;
-        font-size: 15px;
+
+    ul#ul-mobile>li {
+        width: 150px;
+        margin: 10px 0 20px 20px;
+        font-size: 13px;
+        cursor: pointer;
     }
-        #menu-mobile ul span:first-child {padding-top: 10px;}
-        #menu-mobile ul span {
-            display: block;
-            text-align: center;
-            font-size: 13px;
-            color: rgb(168, 168, 168);
-        }
-        #menu-mobile ul li::before {
-            display: inline-block;
-            content: '';
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            vertical-align: middle;
-            margin-right: 10px;
-            width: 25px;
-            height: 25px;
-        }
-        #menu-mobile ul li {
-            width: 150px;
-            margin: 10px 0 20px 20px;
-            font-size: 13px;
-            cursor: pointer;
-        }
-        #adm::before {background-image: url("../files/image/menu/adm.png");}
-        #theme-mob::before {background-image: url("../files/image/menu/theme.png");}
-        #sendEmail-mob::before {background-image: url("../files/image/menu/email-menu.png");}
-        #git-mob::before {background-image: url("../files/image/menu/git.png");}
-        #cleanAll-mob::before {background-image: url("../files/image/menu/reset.png");}
 }
-@media (min-width: 701px) {
-    #menu-mobile,
-    #menu-mobile ul,
-    #menu-mobile ul li,
-    span { display: none;}
+
+.icon-adm::before { background-image: url("../files/image/menu/adm.png"); }
+.icon-email::before { background-image: url("../files/image/menu/email.png"); }
+.icon-gitHub::before { background-image: url("../files/image/menu/git.png"); }
+.icon-reset::before { background-image: url("../files/image/menu/reset.png"); }
+
+@media (min-width: 700px) {
+
+    div#menu-mobile,
+    ul#ul-mobile,
+    ul#ul-mobile>span,
+    ul#ul-mobile>li { display: none; }
 }
