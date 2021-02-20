@@ -9,7 +9,7 @@ img { cursor: pointer; }
 header {
 
     width: 100%;
-    min-width: 400px;
+    min-width: 340px;
     height: 50px;
 
     background: rgb(89, 99, 145);
@@ -76,7 +76,8 @@ ul#ul-desktop > li:before {
         top: 51px;
         left: 0;
         margin: auto;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         border-radius: 0 0 5px 5px;
         font-size: 13px;
 
