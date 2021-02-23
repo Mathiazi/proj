@@ -5,26 +5,18 @@ let statusMenu = true;
 $(document).on('click', '#icon-menu', () => {
 
     let icon = $('#icon-menu');
-    
-    let menu = $('#menu-mobile');
-
-    let ul = $('#ul-mobile');
 
     if (statusMenu) {
 
-        icon.attr('src', './files/image/menu/close.png');
-        
-        menu.css({ 'display': 'block' });
+        $('#menu-mobile').fadeIn('slow');
 
-        ul.css({ 'display': 'block' });
+        icon.attr('src', './files/image/menu/close.png');
 
     } else {
+        
+        $('#menu-mobile').fadeOut('slow');
 
         icon.attr('src', './files/image/menu/menu.png');
-
-        ul.css({ 'display': 'none' });
-
-        menu.css({ 'display': 'none' });
     }
 
     statusMenu = !statusMenu;
