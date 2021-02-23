@@ -3,7 +3,7 @@ label {
     margin-bottom: 55px;
     font-weight: bolder;
 
-    color: rgb(89, 99, 145);
+    color: rgb(112, 112, 112);
 }
 
 body { background-image: url(../files/image/bg.png); }
@@ -47,12 +47,14 @@ input#input-search {
     padding: 5px 0;
     width: 300px;
     height: 35px;
-    border-radius: 10px 0 0 10px;
+
+    border-radius: 15px 0 0 15px;
+
     font-size: 25px;
     text-transform: uppercase;
 
     color: rgb(112, 112, 112);
-    background: rgb(221, 221, 221);
+    background: rgb(230, 230, 230);
 }
 
 div#div-search>div { margin-bottom: 80px; }
@@ -62,9 +64,12 @@ img#img-search {
     
     float: right;
     width: 35px;
-    border-radius: 0 10px 10px 0;
 
-    background: rgb(152, 160, 192);
+    padding: 2px;
+
+    border-radius: 0 15px 15px 0;
+
+    background: rgb(172, 0, 172);
 }
 
 div#div-result {
@@ -81,11 +86,11 @@ div#div-result {
     border-radius: 15px;
     font-size: 25px;
 
-    color: rgb(248, 248, 248);
-    background: rgb(152, 160, 192);
+    color: rgb(255, 255, 255);
+    background: rgba(172, 0, 172, 0.774);
 }
 
 @media (max-width: 699px) {
 
-    div#div-calc { border-bottom: rgb(224, 224, 224) 1px solid; }
+    div#div-calc { border-bottom: rgb(228, 228, 228) 1px solid; }
 }
