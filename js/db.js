@@ -96,18 +96,18 @@ $(document).on('click', '#btn-login', () => {
                         $('#span-status-login').text('Status: Autenticado com sucesso!');
 
                         setTimeout(() => {
-                            
-                            $('#form-login').css({ 'display': 'none' });
+
+                            $('#form-login').fadeOut('slow');
 
                         }, 1500);
 
                         setTimeout(() => {
                             
-                            $('#form-prod').css({ 'display': 'block' });
+                            $('#form-prod').fadeIn('slow');
 
                             $('#span-status-prod').text('Status: Adicione um novo item ...');
 
-                        }, 1500);
+                        }, 3000);
                     })
                     .catch(error => { alert(error); });
             })

@@ -69,7 +69,7 @@ img#img-search {
 
     border-radius: 0 15px 15px 0;
 
-    background: rgb(216, 0, 216);
+    background: rgb(89, 99, 145);
 }
 
 div#div-result {
@@ -87,7 +87,7 @@ div#div-result {
     font-size: 25px;
 
     color: rgb(255, 255, 255);
-    background: rgb(216, 0, 216);
+    background: rgb(89, 99, 145);
 }
 
 @media (max-width: 699px) {

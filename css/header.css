@@ -12,7 +12,7 @@ header {
     min-width: 340px;
     height: 50px;
 
-    background: rgb(216, 0, 216);
+    background: rgb(89, 99, 145);
 }
 
 div#menu-desktop {
@@ -73,7 +73,7 @@ ul#ul-desktop > li:before {
 
     div#menu-mobile {
         position: absolute;
-        top: 50px;
+        top: 51px;
         left: 0;
         margin: auto;
         width: 98%;
@@ -81,7 +81,7 @@ ul#ul-desktop > li:before {
         border-radius: 0 0 10px 0;
         font-size: 13px;
 
-        background: rgb(197, 0, 197);
+        background: rgb(89, 99, 145);
     }
 
     ul#ul-mobile>span:first-child {  padding-top: 15px; }
