@@ -73,18 +73,22 @@ ul#ul-desktop > li:before {
 
     div#menu-mobile {
         position: absolute;
-        top: 51px;
+        top: 50px;
         left: 0;
+
         margin: auto;
+
+        border-top: 1px solid rgba(169, 169, 169, 0.295);
+
         width: 98%;
         max-width: 400px;
-        border-radius: 0 0 10px 0;
+
         font-size: 13px;
 
-        background: rgb(89, 99, 145);
+        background: rgb(104, 114, 160);
     }
 
-    ul#ul-mobile>span:first-child {  padding-top: 15px; }
+    ul#ul-mobile>span:first-child {  padding-top: 20px; }
 
     ul#ul-mobile>span {
         display: block;
@@ -92,7 +96,8 @@ ul#ul-desktop > li:before {
         font-size: 13px;
         cursor: default;
 
-        color: rgb(255, 255, 255);
+        font-style: italic;
+        color: rgb(211, 211, 211);
     }
 
     ul#ul-mobile>li::before {
@@ -109,10 +114,10 @@ ul#ul-desktop > li:before {
 
     ul#ul-mobile>li {
         width: 150px;
-        margin: 10px 0 20px 20px;
+        margin: 20px 0 20px 10px;
         font-size: 13px;
-        cursor: pointer;
     }
+    ul#ul-mobile>li:hover { font-size: 15px; }
 }
 
 .icon-adm::before { background-image: url("../files/image/menu/adm.png"); }

@@ -48,8 +48,6 @@ input#input-search {
     width: 300px;
     height: 35px;
 
-    border-radius: 15px 0 0 15px;
-
     font-size: 25px;
     text-transform: uppercase;
 
@@ -65,11 +63,7 @@ img#img-search {
     float: right;
     width: 35px;
 
-    padding: 2px;
-
-    border-radius: 0 15px 15px 0;
-
-    background: rgb(89, 99, 145);
+    background: rgba(54, 54, 54, 0.767);
 }
 
 div#div-result {
@@ -82,12 +76,10 @@ div#div-result {
     width: 40px;
     height: 40px;
 
-    padding: 0 5px;
-    border-radius: 15px;
-    font-size: 25px;
+    font-size: 22px;
 
     color: rgb(255, 255, 255);
-    background: rgb(89, 99, 145);
+    background: rgba(54, 54, 54, 0.767);
 }
 
 @media (max-width: 699px) {
