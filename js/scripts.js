@@ -1,25 +1,17 @@
-$(document).on('click', '#icon-logo', () => { document.location.reload(); });
+$(document).on('click', '#icon-logo', () => {
+    
+    document.location.reload();
+});
 
-let statusMenu = true;
 
 $(document).on('click', '#icon-menu', () => {
+    
+    $('#menu-mobile').fadeIn('fast');
+});
 
-    let icon = $('#icon-menu');
-
-    if (statusMenu) {
-
-        $('#menu-mobile').fadeIn('slow');
-
-        icon.attr('src', './files/image/menu/close.png');
-
-    } else {
-        
-        $('#menu-mobile').fadeOut('slow');
-
-        icon.attr('src', './files/image/menu/menu.png');
-    }
-
-    statusMenu = !statusMenu;
+$(document).on('click', '#div-cont', () => {
+    
+    $('#menu-mobile').fadeOut('fast');
 });
 
 function calc () {

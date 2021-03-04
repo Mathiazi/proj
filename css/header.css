@@ -1,6 +1,6 @@
 a,
 li {
-    color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -10,9 +10,9 @@ header {
 
     width: 100%;
     min-width: 340px;
-    height: 55px;
+    height: 50px;
 
-    background-image: linear-gradient( to bottom, rgb(230, 230, 230), rgb(202, 202, 202) );
+    background: rgb(255, 255, 255);
 }
 
 div#menu-desktop {
@@ -25,7 +25,7 @@ div#menu-desktop {
 
 img#icon-menu { display: none; }
 
-img#icon-logo { height: 55px; }
+img#icon-logo { height: 50px; }
 
 nav#nav-desktop { float: right; }
 
@@ -68,29 +68,27 @@ ul#ul-desktop > li:before {
     img#icon-menu {
         display: inline-block;
         position: absolute;
-        top: 13px;
+        top: 10px;
         left: 15px;
         width: 30px;
     }
 
     div#menu-mobile {
-        position: absolute;
-        top: 56px;
+        position: fixed;
+        top: 0;
         left: 0;
 
-        margin: auto;
-
         width: 98%;
-        max-width: 400px;
+        max-width: 300px;
 
-        border-radius: 0 10px 10px 0;
+        height: 100vh;
 
         font-size: 13px;
 
-        background-image: linear-gradient( to bottom, rgb(230, 230, 230), rgb(202, 202, 202) );
+        background:rgb(89, 99, 145);
     }
 
-    ul#ul-mobile > span:first-child {  padding-top: 20px; }
+    ul#ul-mobile > span:first-child {  padding-top: 40px; }
 
     ul#ul-mobile > span {
         display: block;
@@ -101,7 +99,7 @@ ul#ul-desktop > li:before {
         font-size: 13px;
 
         font-style: italic;
-        color: rgb(89, 99, 145);
+        color: rgb(221, 221, 221);
     }
 
     ul#ul-mobile > li::before {
@@ -113,8 +111,8 @@ ul#ul-desktop > li:before {
         background-size: cover;
         vertical-align: middle;
         margin-right: 10px;
-        width: 30px;
-        height: 30px;
+        width: 33px;
+        height: 33px;
     }
 
     ul#ul-mobile>li {
