@@ -58,10 +58,7 @@ ul#ul-desktop > li:before {
 
 @media (max-width: 700px) {
 
-    header {
-
-        background: rgb(255, 255, 255);
-    }
+    header { background: rgb(255, 255, 255); }
 
     nav#nav-desktop { display: none; }
 
@@ -85,11 +82,11 @@ ul#ul-desktop > li:before {
         bottom: 0;
 
         width: 98%;
-        max-width: 300px;
+        max-width: 250px;
 
         font-size: 13px;
 
-        background:rgb(89, 99, 145);
+        background:rgb(109, 121, 173);
     }
 
     ul#ul-mobile > span:first-child {  padding-top: 40px; }
@@ -126,9 +123,7 @@ ul#ul-desktop > li:before {
         font-size: 13px;
     }
 
-    ul#ul-mobile>li:last-child {
-        margin-bottom: 40px;
-    }
+    ul#ul-mobile>li:last-child { margin-bottom: 40px; }
 }
 
 .icon-adm::before { background-image: url("../files/image/menu/adm.png"); }

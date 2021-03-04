@@ -1,7 +1,7 @@
 label {
     font-size: 35px;
 
-    margin-bottom: 55px;
+    margin-bottom: 65px;
 
     color: rgb(110, 110, 110);
 }
@@ -46,7 +46,7 @@ input#input-search {
     float: left;
     padding: 5px 0;
     width: 300px;
-    height: 35px;
+    height: 31px;
 
     border-radius: 5px 0 0 5px;
 
@@ -57,13 +57,13 @@ input#input-search {
     background: rgb(230, 230, 230);
 }
 
-div#div-search>div { margin-bottom: 80px; }
+div#div-search>div { margin-bottom: 76px; }
 
 img#img-arrow,
 img#img-search {
     
     float: right;
-    width: 35px;
+    width: 31px;
 
     border-radius: 0 5px 5px 0;
 
@@ -77,8 +77,8 @@ div#div-result {
     align-items: center;
     margin: 20px;
 
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 
     font-size: 22px;
 
