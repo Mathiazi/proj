@@ -97,17 +97,17 @@ $(document).on('click', '#btn-login', () => {
 
                         setTimeout(() => {
 
-                            $('#form-login').fadeOut('slow');
+                            $('#form-login').fadeOut();
 
-                        }, 1500);
+                        }, 1000);
 
                         setTimeout(() => {
                             
-                            $('#form-prod').fadeIn('slow');
+                            $('#form-prod').fadeIn();
 
                             $('#span-status-prod').text('Status: Adicione um novo item ...');
 
-                        }, 3000);
+                        }, 1500);
                     })
                     .catch(error => { alert(error); });
             })

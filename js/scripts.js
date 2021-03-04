@@ -6,12 +6,14 @@ $(document).on('click', '#icon-logo', () => {
 
 $(document).on('click', '#icon-menu', () => {
     
-    $('#menu-mobile').fadeIn('fast');
+    $('#menu-mobile').fadeIn();
+    $('body').css('overflow', 'hidden');
 });
 
 $(document).on('click', '#div-cont', () => {
     
-    $('#menu-mobile').fadeOut('fast');
+    $('#menu-mobile').fadeOut();
+    $('body').css('overflow', 'visible');
 });
 
 function calc () {
