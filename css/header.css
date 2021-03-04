@@ -1,6 +1,6 @@
 a,
 li {
-    color: rgb(255, 255, 255);
+    color: rgb(48, 48, 48);
     cursor: pointer;
 }
 
@@ -10,21 +10,22 @@ header {
 
     width: 100%;
     min-width: 340px;
-    height: 50px;
+    height: 55px;
 
-    background: rgb(89, 99, 145);
+    background-image: linear-gradient( to bottom, rgb(230, 230, 230), rgb(202, 202, 202) );
 }
 
 div#menu-desktop {
 
     display: block;
+    
     margin: auto;
     max-width: 1200px;
 }
 
 img#icon-menu { display: none; }
 
-img#icon-logo { height: 50px; }
+img#icon-logo { height: 55px; }
 
 nav#nav-desktop { float: right; }
 
@@ -39,6 +40,7 @@ ul#ul-desktop > li {
     padding: 2px;
     font-size: 13px;
 }
+ul#ul-desktop > li:hover { font-size: 14px; }
 
 ul#ul-desktop > li:before {
 
@@ -66,41 +68,44 @@ ul#ul-desktop > li:before {
     img#icon-menu {
         display: inline-block;
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 13px;
+        left: 15px;
         width: 30px;
     }
 
     div#menu-mobile {
         position: absolute;
-        top: 50px;
+        top: 56px;
         left: 0;
 
         margin: auto;
 
-        border-top: 1px solid rgba(169, 169, 169, 0.295);
-
         width: 98%;
         max-width: 400px;
 
+        border-radius: 0 10px 10px 0;
+
         font-size: 13px;
 
-        background: rgb(104, 114, 160);
+        background-image: linear-gradient( to bottom, rgb(230, 230, 230), rgb(202, 202, 202) );
     }
 
-    ul#ul-mobile>span:first-child {  padding-top: 20px; }
+    ul#ul-mobile > span:first-child {  padding-top: 20px; }
 
-    ul#ul-mobile>span {
+    ul#ul-mobile > span {
         display: block;
-        text-align: center;
-        font-size: 13px;
+
         cursor: default;
 
+        text-align: center;
+        font-size: 13px;
+
         font-style: italic;
-        color: rgb(211, 211, 211);
+        color: rgb(89, 99, 145);
     }
 
-    ul#ul-mobile>li::before {
+    ul#ul-mobile > li::before {
+
         display: inline-block;
         content: '';
         background-position: center;
@@ -108,16 +113,20 @@ ul#ul-desktop > li:before {
         background-size: cover;
         vertical-align: middle;
         margin-right: 10px;
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 
     ul#ul-mobile>li {
         width: 150px;
-        margin: 20px 0 20px 10px;
+        margin: 20px 0 20px 20px;
+
         font-size: 13px;
     }
-    ul#ul-mobile>li:hover { font-size: 15px; }
+
+    ul#ul-mobile>li:last-child {
+        margin-bottom: 40px;
+    }
 }
 
 .icon-adm::before { background-image: url("../files/image/menu/adm.png"); }

@@ -1,9 +1,9 @@
 label {
-    font-size: 30px;
-    margin-bottom: 55px;
-    font-weight: bolder;
+    font-size: 35px;
 
-    color: rgb(112, 112, 112);
+    margin-bottom: 55px;
+
+    color: rgb(48, 48, 48);
 }
 
 body { background-image: url(../files/image/bg.png); }
@@ -48,6 +48,8 @@ input#input-search {
     width: 300px;
     height: 35px;
 
+    border-radius: 5px 0 0 5px;
+
     font-size: 25px;
     text-transform: uppercase;
 
@@ -63,7 +65,9 @@ img#img-search {
     float: right;
     width: 35px;
 
-    background: rgba(54, 54, 54, 0.767);
+    border-radius: 0 5px 5px 0;
+
+    background: rgb(89, 99, 145);
 }
 
 div#div-result {
@@ -78,8 +82,12 @@ div#div-result {
 
     font-size: 22px;
 
+    cursor:wait;
+
+    border-radius: 5px;
+
     color: rgb(255, 255, 255);
-    background: rgba(54, 54, 54, 0.767);
+    background: rgb(89, 99, 145);
 }
 
 @media (max-width: 699px) {

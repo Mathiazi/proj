@@ -3,8 +3,10 @@ footer {
     flex-flow: row wrap;
     justify-content: center;
     align-content: flex-end;
+    
     width: 100%;
     height: 200px;
+
     border-top: rgb(224, 224, 224) 1px solid;
 }
 
