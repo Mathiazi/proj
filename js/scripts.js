@@ -1,20 +1,6 @@
-$(document).on('click', '#icon-logo', () => {
-    
-    document.location.reload();
-});
-
-
-$(document).on('click', '#icon-menu', () => {
-    
-    $('#menu-mobile').fadeIn();
-    $('body').css('overflow', 'hidden');
-});
-
-$(document).on('click', '#div-cont', () => {
-    
-    $('#menu-mobile').fadeOut();
-    $('body').css('overflow', 'visible');
-});
+$(document).on('click', '#icon-logo', () => { document.location.reload(); });
+$(document).on('click', '#icon-menu', () => { $('#menu-mobile').fadeIn(); });
+$(document).on('click', '#div-cont', () => { $('#menu-mobile').fadeOut(); });
 
 function calc () {
 

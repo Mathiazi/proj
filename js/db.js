@@ -1,5 +1,4 @@
 var firebaseConfig = {
-    
     apiKey: "AIzaSyAsM-wXNJZxezK8fgESTUT_Z68Z3sG9uW4",
     authDomain: "list-itens.firebaseapp.com",
     databaseURL: "https://list-itens-default-rtdb.firebaseio.com",
@@ -8,26 +7,15 @@ var firebaseConfig = {
     messagingSenderId: "849149979243",
     appId: "1:849149979243:web:e3c0c7fdaca301f3265f2e",
     measurementId: "G-YGTEH12ZTR"
-
 };
-
 firebase.initializeApp(firebaseConfig);
 
 let auth = firebase.auth();
-
 let db = firebase.firestore();
 
 function orderList(a, b) {
-    
-    if (a.name.toUpperCase() < b.name.toUpperCase()) {
-
-        return -1;
-    }
-
-    if (a.name.toUpperCase() > b.name.toUpperCase()) {
-        
-        return 1;
-    }
+    if (a.name.toUpperCase() < b.name.toUpperCase()) { return -1; }
+    if (a.name.toUpperCase() > b.name.toUpperCase()) { return 1; }
 }
 
 $(window).on('load', () => {
