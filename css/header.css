@@ -1,6 +1,16 @@
+#test {
+    color: rgb(216, 216, 216);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 11px;
+}
+
 a,
 li {
-    color: rgb(255, 255, 255);
+    color: rgb(248, 248, 248);
     cursor: pointer;
 }
 
@@ -82,14 +92,14 @@ ul#ul-desktop > li:before {
         bottom: 0;
 
         width: 98%;
-        max-width: 250px;
+        max-width: 290px;
 
         font-size: 13px;
 
-        background:rgb(109, 121, 173);
+        background:rgb(128, 128, 128);
     }
 
-    ul#ul-mobile > span:first-child {  padding-top: 40px; }
+    ul#ul-mobile > span:first-child {  padding-top: 20px; }
 
     ul#ul-mobile > span {
         display: block;
@@ -99,8 +109,7 @@ ul#ul-desktop > li:before {
         text-align: center;
         font-size: 13px;
 
-        font-style: italic;
-        color: rgb(221, 221, 221);
+        color: rgb(214, 214, 214);
     }
 
     ul#ul-mobile > li::before {
