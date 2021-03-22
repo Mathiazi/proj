@@ -13,6 +13,7 @@
     <link rel='stylesheet' href='./css/header.css'>
     <link rel='stylesheet' href='./css/main.css'>
     <link rel='stylesheet' href='./css/footer.css'>
+    <link rel='stylesheet' href='./css/auth/auth.css'>
 
     <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase.js'></script>
     <script src='https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js'></script>
@@ -35,7 +36,7 @@
                 
                 <ul id='ul-desktop'>
 
-                    <li class='icon-adm' target='_blank'> <a href='./auth.html'>Administrador</a> </li>
+                    <li class='icon-adm'>Administrador</li>
     
                     <li class='icon-email'> <a href='mailto:lucas-mathiazi@bol.com.br'>Email</a> </li>
     
@@ -53,8 +54,7 @@
 
                 <span>Login</span>
 
-                <li class='icon-adm' target='_blank'> <a href='./auth.html'>Administrador</a> </li>
-
+                <li class='icon-adm'>Administrador</li>
 
                 <span>Contato</span>
 
@@ -71,6 +71,50 @@
     </header>
 
     <div id='div-cont'>
+
+        <form id='form-login' style='display: none'>
+
+            <span class='span-name'> Login do Usuário </span>
+    
+            <span id='span-email'> Email: </span>
+            <input
+                id='email'
+                type='email'
+                spellcheck='false'>
+    
+            <span id='span-pass'> Senha: </span>
+            <input
+                id='pass'
+                type='password'
+                spellcheck='false'>
+    
+            <span id='span-status-login'> Status: Aguardando... </span>
+    
+            <div id='btn-login'> Entrar </div>
+    
+        </form>
+    
+        <form id='form-prod' style='display: none;'>
+    
+            <span class='span-name'> Adicione um novo produto </span>
+    
+            <span id='span-prod'> Nome do produto: </span>
+            <input
+                id='prod'
+                type='text'
+                spellcheck='false'>
+    
+            <span id='span-cod'> Código do item: </span>
+            <input
+                id='cod'
+                type='tel'
+                spellcheck='false'>
+    
+            <span id='span-status-prod'> Status: Aguardando... </span>
+    
+            <div id='btn-prod'> Confirmar </div>
+    
+        </form>
 
         <main id='main-cont'>
 

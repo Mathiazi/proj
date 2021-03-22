@@ -1,6 +1,27 @@
 $(document).on('click', '#icon-logo', () => { document.location.reload(); });
-$(document).on('click', '#icon-menu', () => { $('#menu-mobile').fadeIn(); });
 $(document).on('click', '#div-cont', () => { $('#menu-mobile').fadeOut(); });
+
+var panel = false;
+
+$(document).on('click', '#icon-menu', () => {
+    $('#form-login').fadeOut();
+    $('#form-prod').fadeOut();
+    
+    if (panel == true)
+        $('#menu-mobile').fadeOut();
+    else
+        $('#menu-mobile').fadeIn();
+
+    panel = false;
+});
+
+$(document).on('click', '.icon-adm', () => {
+    
+    $('#menu-mobile').fadeOut();
+    $('#form-login').fadeIn();
+
+    panel = true;
+});
 
 function calc () {
 

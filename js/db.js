@@ -123,7 +123,7 @@ $(document).on('click', '#btn-prod', () => {
 
                 setTimeout(() => {
 
-                    window.history.back();
+                    document.location.reload();
                 
                 }, 3000);
             })

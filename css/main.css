@@ -88,9 +88,7 @@ div#div-result {
 
     border-radius: 15px;
 
-    color: rgb(0, 0, 0);
-    
-    background: rgb(240, 240, 240);
+    color: rgb(89, 99, 145);
 }
 
 @media (max-width: 699px) {
