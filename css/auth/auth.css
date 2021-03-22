@@ -13,6 +13,8 @@ form#form-prod {
     width: 100%;
     max-width: 400px;
 
+    height: 275px;
+
     border-radius: 13px;
 
     background:rgba(128, 128, 128, 0.966);
