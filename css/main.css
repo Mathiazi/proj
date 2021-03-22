@@ -91,6 +91,12 @@ div#div-result {
     color: rgb(89, 99, 145);
 }
 
+label.info-adm {
+    font-size: 12px;
+    float: left;
+    margin: 0 0 8px 10px;
+}
+
 @media (max-width: 699px) {
 
     div#div-calc { border-bottom: rgb(228, 228, 228) 1px solid; }
