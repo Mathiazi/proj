@@ -138,7 +138,7 @@ ul#ul-desktop > li:before {
 .icon-adm::before { background-image: url("../files/image/menu/adm.png"); }
 .icon-email::before { background-image: url("../files/image/menu/email.png"); }
 .icon-gitHub::before { background-image: url("../files/image/menu/git.png"); }
-.icon-reset::before { background-image: url("../files/image/menu/reset.png"); }
+.icon-fb::before { background-image: url("../files/image/fb.png"); }
 
 @media (min-width: 700px) {
 
